@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T14:07:05.007Z",
+  "updatedAt": "2026-09-27T14:19:20.341Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00",
@@ -78,10 +78,10 @@
     },
     {
       "name": "융화",
-      "todayCount": 7,
-      "totalCount": 7,
-      "lastSavedAt": "2026-09-27T14:06:45.098Z",
-      "lastFile": "호랑이 융화.png의 사본",
+      "todayCount": 6,
+      "totalCount": 6,
+      "lastSavedAt": "2026-09-27T12:55:12.532Z",
+      "lastFile": "용 융화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -138,6 +138,20 @@
       "totalCount": 12,
       "lastSavedAt": "2026-09-27T08:27:37.934Z",
       "lastFile": "우엉 펄퍼스.png",
+      "driveStatus": "ok",
+      "todayAttempts": null,
+      "todayRegenerations": null,
+      "avgAttempts": null,
+      "successRate": null,
+      "avgDurationSeconds": null,
+      "lastResult": "success"
+    },
+    {
+      "name": "한국풍",
+      "todayCount": 1,
+      "totalCount": 1,
+      "lastSavedAt": "2026-09-27T14:18:18.383Z",
+      "lastFile": "한국풍_01.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
