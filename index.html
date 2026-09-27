@@ -22,7 +22,8 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["파키스탄","붓결","1nNFZtJJR7tGSqZjOy5dM83AnoLOluDNs"],
 ["카자흐스탄","붓결","1lhPHz-DBp1V-otnHrOPRI-oQLeaEJyvw"],
 ["우즈베키스탄","붓결","1Fr5lVQC49mzENIBT3qpThg49kE2q6_Wq"],
-["알래스카","붓결","1tYbmydNJ4QyAYi091oyEIhvxoMKNlgKe"]];
+["알래스카","붓결","1tYbmydNJ4QyAYi091oyEIhvxoMKNlgKe"],
+["그린란드","붓결","1XNlTtlhtMHFvXFZJ2mzQ1p8idKFcoV4j"]];
 const cats=["전체",...new Set(works.map(work=>work[1]).filter(Boolean))];let active="전체";document.querySelector("#seriesCount").textContent=(cats.length-1)+" SERIES";
 const img=id=>"https://drive.google.com/thumbnail?id="+id+"&sz=w1200";
 function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
