@@ -33,7 +33,7 @@ async function loadStatus(){try{const r=await fetch("automation-status.json?ts="
 let statusTimer=null;
 async function sha256(v){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(v));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")}
 const ADMIN_ID_HASH="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918";
-const ADMIN_PW_HASH="5a98b88ad9d2e736c05c33961c9b00e74913f1d43a5976e3e8d5f5b6c20f8750";
+const ADMIN_PW_HASH="47c5fbf51c636da0b48309ad799e2e4d0443b9c25b055c6b762d6b6f6d95fc52";
 function openAdmin(){adminModal.classList.add("open");adminModal.setAttribute("aria-hidden","false");setTimeout(()=>adminId.focus(),0)}
 function closeAdmin(){adminModal.classList.remove("open");adminModal.setAttribute("aria-hidden","true");loginError.textContent="";adminForm.reset()}
 function unlockAdmin(){control.hidden=false;adminBtn.textContent="ADMIN ✓";sessionStorage.setItem("artAdmin","1");loadStatus();if(!statusTimer)statusTimer=setInterval(loadStatus,60000);setTimeout(()=>control.scrollIntoView({behavior:"smooth"}),50)}
