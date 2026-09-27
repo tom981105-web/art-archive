@@ -16,7 +16,7 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["한국풍_01","한국풍","1f2ukkfqwNXwthfmXN062D_O0xtkAX0Ih"],
 ["일본","붓결","142UYtspXzr522lzizNqDL38tRualdIjW"],
 ["중국","붓결","1miHeaZLQgtoexm3MvaQgAMeE8m9_Ilf9"]];
-const cats=["전체","크레스트","묵수","신수","수채화","펄퍼스","잉크","성수","융화"];let active="전체";
+const cats=["전체",...new Set(works.map(work=>work[1]).filter(Boolean))];let active="전체";
 const img=id=>"https://drive.google.com/thumbnail?id="+id+"&sz=w1200";
 function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
 series.innerHTML=cats.slice(1).map(c=>'<button onclick="active=\''+c+'\';location.hash=\'works\';sync()">'+c+'<br><small>'+works.filter(w=>w[1]===c).length+' WORKS</small></button>').join("");
