@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T14:26:09.206Z",
+  "updatedAt": "2026-09-27T14:30:26.220Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00",
@@ -38,8 +38,8 @@
       "name": "붓결",
       "todayCount": 3,
       "totalCount": 3,
-      "lastSavedAt": "2026-09-27T14:25:04.268Z",
-      "lastFile": "중국 붓결.png",
+      "lastSavedAt": "2026-09-27T14:29:51.589Z",
+      "lastFile": "한국 붓결.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
