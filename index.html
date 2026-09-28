@@ -1756,6 +1756,33 @@ body.crest-mode{overflow:hidden!important;}
     place-items:center!important;
   }
 }
+
+/* Watercolor series button skin */
+.series button[data-series="수채화"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10)),
+    url("https://drive.google.com/thumbnail?id=1XFpQxp0cVL3tN8Ev20SluiAurXcZPium&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(112,142,155,.24)!important;
+  color:#355867!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.55)!important;
+}
+.series button[data-series="수채화"] strong,
+.series button[data-series="수채화"] span{
+  color:#355867!important;
+}
+.series button[data-series="수채화"] small{
+  color:#b88472!important;
+  text-shadow:none!important;
+}
+.series button[data-series="수채화"]:hover{
+  filter:saturate(1.02) contrast(1.02)!important;
+  transform:translateY(-1px)!important;
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
