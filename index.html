@@ -560,6 +560,22 @@ body.crest-mode{overflow:hidden!important;}
  margin-top:54px!important;
  height:calc(100vh - 54px)!important;
 }
+
+/* Crest v27 — ACTUAL series controls: restore original full-width top bar */
+.crest-mode .series-view-head{
+ position:absolute!important;top:0!important;left:0!important;right:0!important;
+ width:100%!important;max-width:none!important;height:54px!important;
+ margin:0!important;padding:0 4vw!important;box-sizing:border-box!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ background:#f5f0e6!important;border-bottom:1px solid #d7c7aa!important;z-index:1000!important;
+}
+.crest-mode .series-view-head .series-home{
+ position:static!important;inset:auto!important;margin:0!important;transform:none!important;
+}
+.crest-mode .series-view-head #seriesClose{
+ position:static!important;inset:auto!important;margin:0!important;transform:none!important;
+}
+.crest-mode .series-view-hero{padding-top:54px!important;}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
