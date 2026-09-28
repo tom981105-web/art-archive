@@ -33,7 +33,8 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["산호 물결 고양이","유영","1q9wYrj12gsRtmA1AGvJ4GU9eWMnpqb53"],
 ["푸른 물감 파도 펭귄","유영","1ZZHHVjVKPAl35lkhmjjy-zQ1XwwwDq1c"],
 ["주황빛 포근 여우","유영","1MPpHAoLFJKYqEcEBZKgY1HgfsPG2oMFf"],
-["노랑 물감 질주 고양이","유영","1cQccWzJd-3vae1klIANADkvgqFH_879R"]];
+["노랑 물감 질주 고양이","유영","1cQccWzJd-3vae1klIANADkvgqFH_879R"],
+["핑크 물감 춤 플라밍고","유영","1Bjt8BjFPFzr8KYuSVMHzTjx_6pMp8uTN"]];
 const cats=["전체",...new Set(works.map(work=>work[1]).filter(Boolean))];let active="전체";document.querySelector("#seriesCount").textContent=(cats.length-1)+" SERIES";
 const img=id=>"https://drive.google.com/thumbnail?id="+id+"&sz=w1200";
 function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
