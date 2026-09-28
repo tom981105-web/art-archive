@@ -393,6 +393,48 @@ transition:transform .25s ease,box-shadow .25s ease,background-size .35s ease}
   line-height:1.65!important;
   font-size:11px!important;
 }
+
+/* Crest v22 — repair header and place text deliberately */
+header, .site-header{
+  position:relative!important;
+  top:auto!important; left:auto!important; right:auto!important;
+  width:100%!important;
+  height:54px!important;
+  min-height:54px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  padding:0 4vw!important;
+  box-sizing:border-box!important;
+  z-index:100!important;
+}
+header .brand, .site-header .brand{margin:0!important;}
+header .back-link, .site-header .back-link{margin-left:auto!important;}
+
+.crest-mode .series-view-head{
+  position:absolute!important;
+  left:6.4vw!important;
+  top:6.4vh!important;
+  width:24vw!important;
+  max-width:330px!important;
+  padding:0!important;
+}
+.crest-mode .series-view-head h2{
+  margin:7px 0 11px!important;
+  font-size:clamp(52px,4.4vw,78px)!important;
+}
+.crest-mode .series-view-head .series-desc{
+  max-width:300px!important;
+  margin-top:18px!important;
+}
+.crest-mode .crest-feature-copy{
+  position:absolute!important;
+  left:6.4vw!important;
+  top:42.5%!important;
+  width:24vw!important;
+  max-width:300px!important;
+  padding:4px 0 4px 18px!important;
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
