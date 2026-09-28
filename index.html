@@ -1783,6 +1783,141 @@ body.crest-mode{overflow:hidden!important;}
   filter:saturate(1.02) contrast(1.02)!important;
   transform:translateY(-1px)!important;
 }
+
+/* Pulpus v1 — playful fruit character-sheet archive */
+@media(min-width:1100px){
+  .series-view.pulpus-mode{
+    background:#fffaf0!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1JNCjJd4I7vwPMparqJ03qBB4WrNKYL0n&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .pulpus-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(255,250,239,.82)!important;
+    border-bottom:1px solid rgba(204,165,92,.20)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .pulpus-mode .series-view-hero{
+    position:absolute!important;left:7.1vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:0!important;background:transparent!important;z-index:4!important;
+  }
+  .pulpus-mode .series-view-hero:before,
+  .pulpus-mode .series-view-hero:after{display:none!important}
+  .pulpus-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;
+    font:700 9px/1.2 Arial,sans-serif!important;letter-spacing:.30em!important;
+    color:#9b7663!important;
+  }
+  .pulpus-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Noto Sans KR","Malgun Gothic",sans-serif!important;
+    font-size:clamp(48px,3.7vw,67px)!important;font-weight:900!important;
+    line-height:.96!important;letter-spacing:-.07em!important;color:#7a4f4f!important;
+    text-transform:none!important;
+  }
+  .pulpus-mode #seriesTitle:after{
+    content:"PULPUS"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#d4a34f!important;
+  }
+  .pulpus-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#8b7567!important;background:transparent!important;
+  }
+  .pulpus-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c88b65!important;
+  }
+
+  .pulpus-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .pulpus-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:10px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,249,237,.72)!important;
+    border:1px solid rgba(202,156,87,.25)!important;
+    box-shadow:0 15px 34px rgba(144,101,62,.12)!important;
+  }
+  .pulpus-mode .crest-feature-art:before,
+  .pulpus-mode .crest-feature-art:after{display:none!important}
+  .pulpus-mode .crest-feature-art img{
+    width:99%!important;height:99%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.16)!important;
+  }
+  .pulpus-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 10px)!important;
+    width:100%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .pulpus-mode .crest-feature-copy:before,
+  .pulpus-mode .crest-feature-copy .eyebrow,
+  .pulpus-mode .crest-feature-copy p{display:none!important}
+  .pulpus-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Noto Sans KR","Malgun Gothic",sans-serif!important;
+    font-size:18px!important;font-weight:900!important;color:#7a4f4f!important;letter-spacing:-.04em!important;
+  }
+
+  .pulpus-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(255,250,238,.16)!important;border:0!important;overflow:visible!important;z-index:5!important;
+    backdrop-filter:blur(.8px)!important;
+  }
+  .pulpus-mode .series-view-body:before{
+    content:"PULPUS ARCHIVE"!important;display:block!important;
+    margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(202,156,87,.28)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#8b655c!important;
+  }
+  .pulpus-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .pulpus-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(202,156,87,.25)!important;background:rgba(255,250,238,.70)!important;
+    box-shadow:0 6px 16px rgba(144,101,62,.10)!important;
+  }
+  .pulpus-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;padding:0!important;
+    background:#fffaf0!important;display:block!important;
+  }
+  .pulpus-mode .series-view-body .card .meta{
+    min-height:29px!important;padding:5px 8px!important;
+    background:rgba(122,79,79,.82)!important;color:#fff8ef!important;
+  }
+  .pulpus-mode .series-view-body .card .meta b{
+    font-family:"Noto Sans KR","Malgun Gothic",sans-serif!important;
+    font-size:10.5px!important;font-weight:900!important;color:#fff8ef!important;
+  }
+  .pulpus-mode .series-view-body .card .meta small{
+    font-size:6.5px!important;color:#f4d7b7!important;opacity:.92!important;
+  }
+  .pulpus-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:flex-end!important;
+    margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#9a7366!important;
+  }
+  .pulpus-mode .crest-pager button{
+    width:26px!important;height:26px!important;flex:0 0 26px!important;padding:0!important;
+    display:grid!important;place-items:center!important;
+    border:1px solid rgba(202,156,87,.32)!important;background:rgba(255,250,238,.72)!important;color:#8a6158!important;
+  }
+  .pulpus-mode .crest-pager button:hover:not(:disabled){background:#a96f68!important;color:#fff!important}
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
@@ -1845,7 +1980,7 @@ function renderSeriesGallery(items,isPaged){
   next.addEventListener("click",()=>{if(crestPage<totalPages-1){crestPage++;renderSeriesGallery(items,true)}});
   body.appendChild(pager);
 }
-function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";const isCrest=s==="크레스트",isMuksu=s==="묵수",isShinsu=s==="신수",isWatercolor=s==="수채화",isShowcase=isCrest||isMuksu||isShinsu||isWatercolor;seriesView.classList.toggle("crest-mode",isCrest);seriesView.classList.toggle("muksu-mode",isMuksu);seriesView.classList.toggle("shinsu-mode",isShinsu);seriesView.classList.toggle("watercolor-mode",isWatercolor);crestPage=0;renderSeriesGallery(a,isShowcase);const cf=document.querySelector("#crestFeature");if(isShowcase&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
+function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";const isCrest=s==="크레스트",isMuksu=s==="묵수",isShinsu=s==="신수",isWatercolor=s==="수채화",isPulpus=s==="펄퍼스",isShowcase=isCrest||isMuksu||isShinsu||isWatercolor||isPulpus;seriesView.classList.toggle("crest-mode",isCrest);seriesView.classList.toggle("muksu-mode",isMuksu);seriesView.classList.toggle("shinsu-mode",isShinsu);seriesView.classList.toggle("watercolor-mode",isWatercolor);seriesView.classList.toggle("pulpus-mode",isPulpus);crestPage=0;renderSeriesGallery(a,isShowcase);const cf=document.querySelector("#crestFeature");if(isShowcase&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
 function closeSeries(){seriesView.classList.remove("open");document.body.style.overflow="";}document.querySelector("#seriesClose").addEventListener("click",closeSeries);document.querySelector("#seriesHome").addEventListener("click",()=>{closeSeries();history.replaceState(null,"",location.pathname);window.scrollTo({top:0,behavior:"smooth"});});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&seriesView.classList.contains("open"))closeSeries()});
 document.querySelector("#series").addEventListener("click",e=>{const b=e.target.closest("button");if(b&&b.dataset.series)openSeries(b.dataset.series)});
 const latestWorks=[...cats.slice(1)].map(s=>{for(let i=works.length-1;i>=0;i--){if(works[i][1]===s)return works[i]}return null}).filter(Boolean);
@@ -1855,7 +1990,7 @@ const lightbox=document.querySelector("#lightbox"),lightboxImg=document.querySel
 document.addEventListener("click",e=>{
  const im=e.target.closest(".card img, .latest-card img");
  if(!im)return;
- const showcaseOpen=!!document.querySelector(".series-view.crest-mode, .series-view.muksu-mode, .series-view.shinsu-mode, .series-view.watercolor-mode");
+ const showcaseOpen=!!document.querySelector(".series-view.crest-mode, .series-view.muksu-mode, .series-view.shinsu-mode, .series-view.watercolor-mode, .series-view.pulpus-mode");
  const inShowcaseGallery=!!im.closest("#seriesGallery");
  if(showcaseOpen&&inShowcaseGallery){
    e.preventDefault();e.stopImmediatePropagation();
