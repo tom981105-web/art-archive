@@ -50,6 +50,20 @@ footer{line-height:1.8}.home-logo{border:0;background:transparent;padding:0;colo
 .crest-mode .crest-feature-art{height:40vh;padding:10px!important;display:grid;place-items:center;background:rgba(248,244,235,.24)}
 .crest-mode .crest-feature-art img{height:100%!important;width:100%!important;object-fit:contain!important}
 .crest-mode .series-view-body{padding:28px 5vw 70px!important}
+}/* Crest desktop composition fix: background skin stays decorative, UI fits one viewport */
+@media(min-width:1100px){
+.crest-mode{background-image:none!important;background:#f7f2e7!important}
+.crest-mode:before{content:"";position:fixed;z-index:-1;inset:58px 0 0;background:url("https://drive.google.com/thumbnail?id=1RxUahVTis8FA5v8V6onXy1O6YoqGblCf&sz=w2400") center/contain no-repeat;opacity:1;pointer-events:none}
+.crest-mode .series-view-hero,.crest-mode .crest-feature{position:absolute!important;z-index:1}
+.crest-mode .series-view-hero{left:6.5vw;top:10vh;width:31vw;height:auto!important;padding:0!important}
+.crest-mode #seriesTitle{font-size:clamp(58px,6vw,96px)!important;max-width:none!important;line-height:.88!important}
+.crest-mode #seriesDesc{max-width:430px!important;background:transparent!important;font-size:12px!important}
+.crest-mode .crest-feature{right:7vw;top:15vh;width:50vw;height:70vh!important;display:block!important;padding:0!important}
+.crest-mode .crest-feature-copy{position:absolute;left:-31vw;top:27vh;width:25vw;padding:0!important}
+.crest-mode .crest-feature-art{height:58vh!important;width:100%!important;padding:0!important;background:transparent!important}
+.crest-mode .crest-feature-art:before,.crest-mode .crest-feature-art:after{display:none!important}
+.crest-mode .crest-feature-art img{max-height:58vh!important;max-width:100%!important;object-fit:contain!important}
+.crest-mode .series-view-body{position:absolute!important;top:100vh;left:0;right:0;z-index:3;background:#f7f2e7!important;padding:55px 5vw 80px!important}
 }</style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
