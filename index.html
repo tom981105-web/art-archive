@@ -64,7 +64,16 @@ footer{line-height:1.8}.home-logo{border:0;background:transparent;padding:0;colo
 .crest-mode .crest-feature-art:before,.crest-mode .crest-feature-art:after{display:none!important}
 .crest-mode .crest-feature-art img{max-height:58vh!important;max-width:100%!important;object-fit:contain!important}
 .crest-mode .series-view-body{position:absolute!important;top:100vh;left:0;right:0;z-index:3;background:#f7f2e7!important;padding:55px 5vw 80px!important}
-}</style></head><body>
+}/* Crest collection card artwork */
+.series button[data-series="크레스트"]{
+background-image:linear-gradient(rgba(247,242,231,.08),rgba(247,242,231,.08)),url("https://drive.google.com/thumbnail?id=19A1qlQTH_OKnSMrFLIQbeP1y9buBBl-O&sz=w1600")!important;
+background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+color:#0b1c31!important;text-shadow:0 1px 8px rgba(247,242,231,.95);min-height:78px;
+border:1px solid #b58b4c!important;box-shadow:inset 0 0 0 1px rgba(247,242,231,.55);
+transition:transform .25s ease,box-shadow .25s ease,background-size .35s ease}
+.series button[data-series="크레스트"] small{color:#8b642d!important;font-weight:700}
+.series button[data-series="크레스트"]:before,.series button[data-series="크레스트"]:after{display:none!important}
+.series button[data-series="크레스트"]:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(12,26,43,.14),inset 0 0 0 1px rgba(247,242,231,.7)}</style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
 <section class="section" id="collection"><div class="eyebrow">The collection</div><h2 id="seriesCount">0 SERIES</h2><div class="series" id="series"></div></section>
