@@ -435,6 +435,32 @@ header .back-link, .site-header .back-link{margin-left:auto!important;}
   max-width:300px!important;
   padding:4px 0 4px 18px!important;
 }
+
+/* Crest v23 — final viewport composition reset */
+body.crest-mode{overflow:hidden!important;}
+.crest-mode header,.crest-mode .site-header{
+ position:fixed!important;top:0!important;left:0!important;right:0!important;
+ height:52px!important;min-height:52px!important;width:100%!important;
+ padding:0 4vw!important;margin:0!important;background:#f5f0e6!important;
+ border-top:1px solid #0b1e33!important;border-bottom:1px solid #d7c7aa!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ box-sizing:border-box!important;z-index:999!important;
+}
+.crest-mode header .brand,.crest-mode .site-header .brand{position:static!important;margin:0!important;transform:none!important;}
+.crest-mode header .back-link,.crest-mode .site-header .back-link{position:static!important;margin:0!important;transform:none!important;}
+.crest-mode .series-view{position:relative!important;margin-top:52px!important;height:calc(100vh - 52px)!important;min-height:0!important;}
+.crest-mode .series-view-head{
+ position:absolute!important;left:6.4vw!important;top:6.3%!important;
+ width:25vw!important;max-width:340px!important;margin:0!important;padding:0!important;
+}
+.crest-mode .series-view-head h2{font-size:clamp(48px,4vw,70px)!important;line-height:.94!important;margin:8px 0 12px!important;}
+.crest-mode .series-view-head .series-desc{margin-top:17px!important;max-width:300px!important;}
+.crest-mode .crest-feature-copy{
+ position:absolute!important;left:6.4vw!important;top:43.2%!important;
+ width:25vw!important;max-width:310px!important;margin:0!important;
+ padding:5px 0 5px 18px!important;border-left:2px solid #b78c50!important;
+}
+.crest-mode .crest-feature-copy h3{font-size:30px!important;margin:3px 0 12px!important;}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
