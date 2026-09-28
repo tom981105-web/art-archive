@@ -16,7 +16,8 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["눈길을 건너는 겨울 행상단","포근","1AIWQEgbnzZ17nqptvw9t7lRzSxxgXXWb"],
 ["폭포 마을에서 즐기는 낚시 오후","포근","1G-JqN9gY0bqDmUxZX4mhdWc4_xuo0Riw"],
 ["구름섬을 건너는 낮잠 비행","포근","1k78xFA2IJPAPx5qGa1jatZ_wV2chtZUh"],
-["비 오는 날의 작은 재봉실","포근","1xcWDM2Ib81B_jGj35lgmT59Affr3lvTf"]];
+["비 오는 날의 작은 재봉실","포근","1xcWDM2Ib81B_jGj35lgmT59Affr3lvTf"],
+["빗속 찻집에서 쉬어가는 시간","포근","11HqX5Rz3V0exnC-poeTWTiiOp4fM4ivd"]];
 const cats=["전체",...new Set(works.map(work=>work[1]).filter(Boolean))];let active="전체";document.querySelector("#seriesCount").textContent=(cats.length-1)+" SERIES";
 const img=id=>"https://drive.google.com/thumbnail?id="+id+"&sz=w1200";
 function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
