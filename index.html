@@ -325,7 +325,13 @@ transition:transform .25s ease,box-shadow .25s ease,background-size .35s ease}
 .crest-mode .crest-feature-art{
   transform:translateY(-2px)!important;
 }
-}</style></head><body>
+}/* Crest v19 — slightly wider feature/archive gutter + selectable feature */
+@media(min-width:1100px){
+.crest-mode .crest-archive{margin-left:5.8vw!important;}
+}
+.crest-mode .crest-archive .art-card{cursor:pointer;}
+.crest-mode .crest-archive .art-card:hover{transform:translateY(-2px);transition:transform .18s ease;}
+</style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
 <section class="section" id="collection"><div class="eyebrow">The collection</div><h2 id="seriesCount">0 SERIES</h2><div class="series" id="series"></div></section>
@@ -387,4 +393,16 @@ adminCancel.addEventListener("click",closeAdmin);adminModal.addEventListener("cl
 adminForm.addEventListener("submit",async e=>{e.preventDefault();const [u,p]=await Promise.all([sha256(adminId.value),sha256(adminPw.value)]);if(u===ADMIN_ID_HASH&&p===ADMIN_PW_HASH){closeAdmin();unlockAdmin()}else{loginError.textContent="아이디 또는 비밀번호가 올바르지 않습니다.";adminPw.value="";adminPw.focus()}});
 if(sessionStorage.getItem("artAdmin")==="1")unlockAdmin();
 
+</script><script>
+document.addEventListener('click',function(e){
+  const card=e.target.closest('.crest-mode .crest-archive .art-card');
+  if(!card) return;
+  const img=card.querySelector('img');
+  if(!img) return;
+  const feature=document.querySelector('.crest-mode .crest-feature-art img');
+  if(feature) feature.src=img.src.replace(/sz=w\d+/,'sz=w1600');
+  const name=card.querySelector('.art-name, h3, strong');
+  const latest=document.querySelector('.crest-mode .crest-latest-title');
+  if(latest && name) latest.textContent=name.textContent.trim();
+});
 </script></body></html>
