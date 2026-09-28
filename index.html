@@ -1394,6 +1394,48 @@ body.crest-mode{overflow:hidden!important;}
   }
   .shinsu-mode .crest-pager button:disabled{opacity:.28;cursor:default}
 }
+
+/* Shinsu v2 — refine contrast, featured art scale, captions, archive separation */
+@media(min-width:1100px){
+  .shinsu-mode #seriesDesc{
+    color:#44585e!important;
+    font-weight:500!important;
+    text-shadow:0 1px 0 rgba(255,255,255,.18)!important;
+  }
+  .shinsu-mode #seriesWorkCount{
+    color:#9a7446!important;
+    font-weight:800!important;
+  }
+
+  .shinsu-mode .crest-feature-art{
+    padding:10px!important;
+    background:rgba(232,224,207,.56)!important;
+  }
+  .shinsu-mode .crest-feature-art img{
+    width:99%!important;
+    height:99%!important;
+  }
+
+  .shinsu-mode .series-view-body{
+    padding:10px 10px 8px!important;
+    background:rgba(238,231,216,.10)!important;
+    backdrop-filter:blur(1.5px)!important;
+    border-radius:2px!important;
+  }
+  .shinsu-mode .series-view-body .card .meta{
+    min-height:31px!important;
+    padding:5px 9px!important;
+    background:rgba(30,48,54,.84)!important;
+  }
+  .shinsu-mode .series-view-body .card .meta b{
+    font-size:11px!important;
+    line-height:1.15!important;
+  }
+  .shinsu-mode .series-view-body .card .meta small{
+    font-size:7px!important;
+    opacity:.92!important;
+  }
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
