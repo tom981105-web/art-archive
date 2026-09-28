@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-28T05:49:38.386Z",
+  "updatedAt": "2026-09-28T05:49:48.255Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00",
     "17:00"
   ],
   "dailyPlanned": 14,
-  "todayTotal": 93,
+  "todayTotal": 94,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 40,
-      "totalCount": 40,
-      "lastSavedAt": "2026-09-28T05:49:35.135Z",
-      "lastFile": "오로라 아래 캠프 여운.png",
+      "todayCount": 41,
+      "totalCount": 41,
+      "lastSavedAt": "2026-09-28T05:49:41.764Z",
+      "lastFile": "산골 마을의 느린 오후 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
