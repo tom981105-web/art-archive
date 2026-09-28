@@ -32,7 +32,25 @@ footer{line-height:1.8}.home-logo{border:0;background:transparent;padding:0;colo
 .crest-mode .crest-feature-art{background:rgba(248,244,235,.34);padding:48px}
 .crest-mode .crest-feature-art:before{border-color:#b58b4c}.crest-mode .crest-feature-art:after{border-color:rgba(181,139,76,.28)}
 .crest-mode .series-view-body{background:rgba(248,244,235,.93);border-top:1px solid rgba(181,139,76,.35)}
-@media(max-width:760px){.crest-mode{background-size:auto 1250px}.crest-mode .series-view-hero{min-height:auto;padding:72px 7vw 38px}.crest-mode #seriesTitle,.crest-mode #seriesDesc,.crest-mode #seriesWorkCount{max-width:100%}.crest-mode .crest-feature{min-height:auto;padding:20px 7vw 55px}.crest-mode .crest-feature-art{padding:24px}}</style></head><body>
+@media(max-width:760px){.crest-mode{background-size:auto 1250px}.crest-mode .series-view-hero{min-height:auto;padding:72px 7vw 38px}.crest-mode #seriesTitle,.crest-mode #seriesDesc,.crest-mode #seriesWorkCount{max-width:100%}.crest-mode .crest-feature{min-height:auto;padding:20px 7vw 55px}.crest-mode .crest-feature-art{padding:24px}}/* Crest single-screen showcase */
+@media(min-width:761px){
+.crest-mode{background-size:auto 100vh!important;background-position:center top!important;background-attachment:fixed!important}
+.crest-mode .series-view-head{height:58px;padding:10px 4vw}
+.crest-mode .series-view-hero{height:31vh!important;min-height:0!important;padding:7vh 7vw 1.5vh!important;box-sizing:border-box}
+.crest-mode .series-view-hero .eyebrow{margin-bottom:8px;font-size:9px}
+.crest-mode #seriesTitle{font-size:clamp(50px,6.2vw,88px)!important;line-height:.82!important;margin:0 0 12px!important}
+.crest-mode #seriesTitle:after{margin-top:9px;font-size:8px}
+.crest-mode #seriesDesc{font-size:11px!important;line-height:1.65!important;max-width:31%!important;padding:5px 10px 5px 0!important;margin-bottom:5px!important}
+.crest-mode #seriesWorkCount{font-size:10px;line-height:1.2!important;margin-top:8px!important}
+.crest-mode .crest-feature{height:44vh!important;min-height:0!important;padding:0 7vw 1vh!important;grid-template-columns:.72fr 1.28fr!important;gap:4vw!important;box-sizing:border-box}
+.crest-mode .crest-feature-copy{padding-top:2vh!important}
+.crest-mode .crest-feature-copy:before{margin-bottom:9px!important;font-size:8px}
+.crest-mode .crest-feature-copy h3{font-size:clamp(24px,3vw,42px)!important;margin-bottom:8px!important}
+.crest-mode .crest-feature-copy p{font-size:10px!important;line-height:1.6!important}
+.crest-mode .crest-feature-art{height:40vh;padding:10px!important;display:grid;place-items:center;background:rgba(248,244,235,.24)}
+.crest-mode .crest-feature-art img{height:100%!important;width:100%!important;object-fit:contain!important}
+.crest-mode .series-view-body{padding:28px 5vw 70px!important}
+}</style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
 <section class="section" id="collection"><div class="eyebrow">The collection</div><h2 id="seriesCount">0 SERIES</h2><div class="series" id="series"></div></section>
