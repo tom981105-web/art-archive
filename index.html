@@ -1146,6 +1146,71 @@ body.crest-mode{overflow:hidden!important;}
   .muksu-mode .crest-pager button:hover:not(:disabled){background:#435861;color:#fff}
   .muksu-mode .crest-pager button:disabled{opacity:.28;cursor:default}
 }
+
+/* Muksu v2 — ink typography + cleaner archive cards */
+@media(min-width:1100px){
+  .muksu-mode #seriesTitle{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(54px,4.1vw,72px)!important;
+    font-weight:700!important;
+    line-height:.94!important;
+    letter-spacing:-.07em!important;
+    color:#2f3d42!important;
+    text-shadow:0 1px 0 rgba(255,255,255,.35)!important;
+    margin-bottom:14px!important;
+  }
+  .muksu-mode #seriesTitle:after{
+    color:#81929a!important;
+    letter-spacing:.46em!important;
+    font-size:8px!important;
+    margin-top:12px!important;
+  }
+  .muksu-mode .series-view-hero .eyebrow{
+    color:#52666e!important;
+  }
+  .muksu-mode #seriesDesc{
+    color:#6f7d83!important;
+  }
+  .muksu-mode #seriesWorkCount{
+    color:#758a93!important;
+  }
+
+  .muksu-mode .series-view-body{
+    background:transparent!important;
+  }
+  .muksu-mode .series-view-body .gallery{
+    gap:10px!important;
+  }
+  .muksu-mode .series-view-body .card{
+    background:transparent!important;
+    border:1px solid rgba(66,82,90,.18)!important;
+    box-shadow:0 6px 14px rgba(52,68,76,.05)!important;
+    overflow:hidden!important;
+  }
+  .muksu-mode .series-view-body .card img{
+    padding:0!important;
+    background:transparent!important;
+    display:block!important;
+  }
+  .muksu-mode .series-view-body .card .meta{
+    background:rgba(48,63,70,.84)!important;
+    backdrop-filter:blur(3px)!important;
+    min-height:34px!important;
+    padding:6px 9px!important;
+  }
+  .muksu-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:12px!important;
+    color:#f5f5f1!important;
+  }
+  .muksu-mode .series-view-body .card .meta small{
+    color:#c7d1d5!important;
+  }
+  .muksu-mode .series-view-body:before{
+    color:#536970!important;
+    border-bottom-color:rgba(66,82,90,.18)!important;
+  }
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
