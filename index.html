@@ -331,6 +331,8 @@ transition:transform .25s ease,box-shadow .25s ease,background-size .35s ease}
 }
 .crest-mode .crest-archive .art-card{cursor:pointer;}
 .crest-mode .crest-archive .art-card:hover{transform:translateY(-2px);transition:transform .18s ease;}
+/* Crest v20 — wider gutter; archive clicks drive feature instead of lightbox */
+@media(min-width:1100px){.crest-mode .crest-archive{margin-left:6.4vw!important;}}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
@@ -371,7 +373,21 @@ const latestWorks=[...cats.slice(1)].map(s=>{for(let i=works.length-1;i>=0;i--){
 const latestGrid=document.querySelector("#latestGrid");latestGrid.innerHTML=latestWorks.map(([n,s,id])=>`<article class="latest-card" data-id="${id}"><span class="latest-badge">LATEST</span><img src="${img(id)}" alt="${n}" loading="lazy"><div class="latest-meta"><b>${n}</b><small>${s}</small></div></article>`).join("");
 
 const lightbox=document.querySelector("#lightbox"),lightboxImg=document.querySelector("#lightboxImg"),lightboxCaption=document.querySelector("#lightboxCaption");
-document.addEventListener("click",e=>{const im=e.target.closest(".card img, .latest-card img");if(im){lightboxImg.src=im.src.replace("sz=w1200","sz=w2400");lightboxImg.alt=im.alt;lightboxCaption.textContent=im.alt;lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";}});
+document.addEventListener("click",e=>{
+ const im=e.target.closest(".card img, .latest-card img");
+ if(!im)return;
+ const crestOpen=document.body.classList.contains("crest-mode")||document.querySelector(".series-view.crest-mode, .crest-mode .crest-feature-art");
+ const inCrestGallery=!!im.closest("#seriesGallery");
+ if(crestOpen&&inCrestGallery){
+   e.preventDefault();e.stopImmediatePropagation();
+   const feature=document.querySelector(".crest-feature-art img");
+   if(feature){feature.src=im.src.replace(/sz=w\d+/,"sz=w1600");feature.alt=im.alt;}
+   const title=document.querySelector(".crest-feature-copy h3");
+   if(title)title.textContent=im.alt||"";
+   return;
+ }
+ lightboxImg.src=im.src.replace("sz=w1200","sz=w2400");lightboxImg.alt=im.alt;lightboxCaption.textContent=im.alt;lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
+});
 function closeLightbox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");lightboxImg.src="";document.body.style.overflow="";}
 lightbox.addEventListener("click",e=>{if(e.target===lightbox||e.target.closest(".close"))closeLightbox()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
 
@@ -393,16 +409,4 @@ adminCancel.addEventListener("click",closeAdmin);adminModal.addEventListener("cl
 adminForm.addEventListener("submit",async e=>{e.preventDefault();const [u,p]=await Promise.all([sha256(adminId.value),sha256(adminPw.value)]);if(u===ADMIN_ID_HASH&&p===ADMIN_PW_HASH){closeAdmin();unlockAdmin()}else{loginError.textContent="아이디 또는 비밀번호가 올바르지 않습니다.";adminPw.value="";adminPw.focus()}});
 if(sessionStorage.getItem("artAdmin")==="1")unlockAdmin();
 
-</script><script>
-document.addEventListener('click',function(e){
-  const card=e.target.closest('.crest-mode .crest-archive .art-card');
-  if(!card) return;
-  const img=card.querySelector('img');
-  if(!img) return;
-  const feature=document.querySelector('.crest-mode .crest-feature-art img');
-  if(feature) feature.src=img.src.replace(/sz=w\d+/,'sz=w1600');
-  const name=card.querySelector('.art-name, h3, strong');
-  const latest=document.querySelector('.crest-mode .crest-latest-title');
-  if(latest && name) latest.textContent=name.textContent.trim();
-});
 </script></body></html>
