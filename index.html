@@ -9,7 +9,8 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["파도와_마주한_순간_","여운","1_EPGPHOlVuHR99zRNYymjckTp7JpFnzu"],
 ["빛을_쫓는_저녁_","여운","1L-e5gf2zFmyDGmH7CkUrheZon1aCXwgW"],
 ["비가_머문_플랫폼_","여운","16bcWKceC1QkWoPvX-oaujCIMs9hByhiU"],
-["황혼의_성벽과_백호_","여운","13ZI8EVbkbTDtOXHsfTPT6fRARe9oSkyy"]];
+["황혼의_성벽과_백호_","여운","13ZI8EVbkbTDtOXHsfTPT6fRARe9oSkyy"],
+["구름길_너머의_아침_","여운","1TGqcMTg7Q_8kTQKLGEeBZwRSzcoHEQyc"]];
 const cats=["전체",...new Set(works.map(work=>work[1]).filter(Boolean))];let active="전체";document.querySelector("#seriesCount").textContent=(cats.length-1)+" SERIES";
 const img=id=>"https://drive.google.com/thumbnail?id="+id+"&sz=w1200";
 function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
