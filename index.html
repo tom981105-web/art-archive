@@ -1583,7 +1583,13 @@ document.addEventListener("click",e=>{
  if(showcaseOpen&&inShowcaseGallery){
    e.preventDefault();e.stopImmediatePropagation();
    const feature=document.querySelector(".crest-feature-art img");
-   if(feature){feature.src=im.src.replace(/sz=w\d+/,"sz=w1600");feature.alt=im.alt;}
+   if(feature){
+     // Use the already-loaded archive thumbnail immediately.
+     // The same 1200px Drive image is more than enough for the on-screen feature size,
+     // and avoids a second network request that made switching feel slow.
+     feature.src=im.currentSrc||im.src;
+     feature.alt=im.alt;
+   }
    const title=document.querySelector(".crest-feature-copy h3");
    if(title)title.textContent=im.alt||"";
    return;
