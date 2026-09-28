@@ -461,6 +461,60 @@ body.crest-mode{overflow:hidden!important;}
  padding:5px 0 5px 18px!important;border-left:2px solid #b78c50!important;
 }
 .crest-mode .crest-feature-copy h3{font-size:30px!important;margin:3px 0 12px!important;}
+
+/* Crest v24 — preserve original header; refine only page typography */
+.crest-mode header,.crest-mode .site-header{
+ position:fixed!important;top:0!important;left:0!important;right:0!important;
+ height:52px!important;min-height:52px!important;width:100%!important;
+ padding:0 4vw!important;margin:0!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ box-sizing:border-box!important;z-index:999!important;
+}
+.crest-mode header .brand,.crest-mode .site-header .brand,
+.crest-mode header .back-link,.crest-mode .site-header .back-link{
+ position:static!important;transform:none!important;
+}
+.crest-mode .series-view-head{
+ left:6.35vw!important;top:7.4%!important;width:24vw!important;max-width:330px!important;
+}
+.crest-mode .series-view-head .eyebrow{
+ font-family:Arial,sans-serif!important;font-size:9px!important;font-weight:600!important;
+ letter-spacing:.32em!important;color:#8f6d3c!important;
+}
+.crest-mode .series-view-head h2{
+ font-family:"Noto Serif KR","Batang",serif!important;font-size:clamp(48px,3.8vw,66px)!important;
+ font-weight:700!important;line-height:.95!important;letter-spacing:-.055em!important;
+ color:#071b31!important;margin:10px 0 10px!important;
+}
+.crest-mode .series-view-head .series-en{
+ font-size:8px!important;letter-spacing:.42em!important;color:#b18a51!important;
+}
+.crest-mode .series-view-head .series-desc{
+ font-size:11px!important;line-height:1.7!important;color:#68727b!important;
+ max-width:285px!important;margin-top:20px!important;
+}
+.crest-mode .series-view-head .series-count{
+ font-size:9px!important;letter-spacing:.3em!important;color:#ad8750!important;margin-top:13px!important;
+}
+.crest-mode .crest-feature-copy{
+ left:6.35vw!important;top:43.5%!important;width:24vw!important;max-width:300px!important;
+ padding:3px 0 3px 17px!important;border-left:2px solid #b88b4c!important;
+}
+.crest-mode .crest-feature-copy .eyebrow{
+ font-family:Arial,sans-serif!important;font-size:9px!important;font-weight:600!important;
+ letter-spacing:.30em!important;color:#a17b46!important;
+}
+.crest-mode .crest-feature-copy .latest-label{
+ font-family:Arial,sans-serif!important;font-size:11px!important;font-weight:600!important;
+ letter-spacing:.25em!important;color:#18304a!important;
+}
+.crest-mode .crest-feature-copy h3{
+ font-family:"Noto Serif KR","Batang",serif!important;font-size:31px!important;font-weight:700!important;
+ letter-spacing:-.04em!important;line-height:1!important;color:#071b31!important;margin:8px 0 13px!important;
+}
+.crest-mode .crest-feature-copy p{
+ font-size:10px!important;line-height:1.65!important;color:#8a8e91!important;max-width:280px!important;
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
