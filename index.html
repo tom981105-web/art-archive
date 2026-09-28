@@ -755,6 +755,109 @@ body.crest-mode{overflow:hidden!important;}
   width:24vw!important;
   max-width:360px!important;
 }
+
+/* Crest v39 — clean final left-column typography using actual DOM */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    position:absolute!important;
+    left:8.9vw!important;
+    top:12.8vh!important;
+    width:21.5vw!important;
+    max-width:340px!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0!important;
+    background:transparent!important;
+    text-align:left!important;
+    z-index:3!important;
+  }
+  .crest-mode .series-view-hero .eyebrow{
+    margin:0 0 10px!important;
+    font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.28em!important;
+    color:#17304b!important;
+  }
+  .crest-mode #seriesTitle{
+    margin:0 0 14px!important;
+    padding:0!important;
+    max-width:none!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:clamp(50px,3.7vw,66px)!important;
+    line-height:.95!important;
+    letter-spacing:-.055em!important;
+    color:#071b31!important;
+    text-transform:none!important;
+  }
+  .crest-mode #seriesTitle:after{
+    content:"CREST"!important;
+    display:block!important;
+    margin-top:13px!important;
+    font:700 8px/1 Arial,sans-serif!important;
+    letter-spacing:.42em!important;
+    color:#a77e46!important;
+  }
+  .crest-mode #seriesDesc{
+    margin:18px 0 0!important;
+    padding:0!important;
+    max-width:315px!important;
+    background:transparent!important;
+    font:10px/1.72 Arial,sans-serif!important;
+    color:#6d747b!important;
+    opacity:1!important;
+  }
+  .crest-mode #seriesWorkCount{
+    margin:13px 0 0!important;
+    max-width:none!important;
+    font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;
+    color:#a77e46!important;
+  }
+
+  .crest-mode .crest-feature-copy{
+    position:absolute!important;
+    left:10.9vw!important;
+    top:43.8vh!important;
+    width:19.5vw!important;
+    max-width:310px!important;
+    margin:0!important;
+    padding:4px 0 4px 16px!important;
+    border-left:2px solid #b88a4d!important;
+    background:transparent!important;
+    backdrop-filter:none!important;
+    z-index:4!important;
+  }
+  .crest-mode .crest-feature-copy:before{
+    content:"SERIES 01"!important;
+    display:block!important;
+    margin:0 0 7px!important;
+    font:700 8px/1 Arial,sans-serif!important;
+    letter-spacing:.32em!important;
+    color:#aa8149!important;
+  }
+  .crest-mode .crest-feature-copy .eyebrow{
+    margin:0 0 8px!important;
+    font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;
+    color:#17304b!important;
+  }
+  .crest-mode .crest-feature-copy h3{
+    margin:0 0 11px!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:30px!important;
+    font-weight:700!important;
+    line-height:1!important;
+    letter-spacing:-.04em!important;
+    color:#071b31!important;
+  }
+  .crest-mode .crest-feature-copy p{
+    margin:0!important;
+    max-width:285px!important;
+    font:9px/1.65 Arial,sans-serif!important;
+    color:#858b90!important;
+    opacity:1!important;
+  }
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
