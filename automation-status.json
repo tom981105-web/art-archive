@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-09-28T10:05:24.423Z",
+  "updatedAt": "2026-09-28T10:06:23.087Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00",
     "17:00"
   ],
   "dailyPlanned": 14,
-  "todayTotal": 110,
+  "todayTotal": 119,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "유영",
-      "todayCount": 1,
-      "totalCount": 1,
-      "lastSavedAt": "2026-09-28T10:05:05.141Z",
-      "lastFile": "초록 물감 미끄럼 고슴도치 유영.png",
+      "todayCount": 10,
+      "totalCount": 10,
+      "lastSavedAt": "2026-09-28T10:06:18.896Z",
+      "lastFile": "산호 물결 고양이 유영.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
