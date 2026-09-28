@@ -1918,6 +1918,71 @@ body.crest-mode{overflow:hidden!important;}
   }
   .pulpus-mode .crest-pager button:hover:not(:disabled){background:#a96f68!important;color:#fff!important}
 }
+
+/* Pulpus v2 — polish left copy, feature spacing, archive captions and pager */
+@media(min-width:1100px){
+  .pulpus-mode #seriesDesc{
+    color:#735f56!important;
+    font-weight:600!important;
+  }
+  .pulpus-mode #seriesWorkCount{
+    color:#b97858!important;
+    font-weight:900!important;
+  }
+
+  .pulpus-mode .crest-feature-art{
+    padding:14px!important;
+    background:rgba(255,249,237,.78)!important;
+  }
+  .pulpus-mode .crest-feature-art img{
+    width:96.5%!important;
+    height:96.5%!important;
+  }
+  .pulpus-mode .crest-feature-copy{
+    top:calc(28.7vw + 12px)!important;
+  }
+
+  .pulpus-mode .series-view-body .card .meta{
+    min-height:28px!important;
+    padding:5px 8px!important;
+    background:rgba(166,121,111,.76)!important;
+  }
+  .pulpus-mode .series-view-body .card .meta b{
+    color:#fff8ef!important;
+    font-size:10.5px!important;
+  }
+  .pulpus-mode .series-view-body .card .meta small{
+    color:#f8dfc8!important;
+    font-size:6.5px!important;
+    opacity:.78!important;
+  }
+
+  .pulpus-mode .crest-pager{
+    margin-top:7px!important;
+    padding:0!important;
+    justify-content:flex-end!important;
+    gap:7px!important;
+  }
+  .pulpus-mode .crest-page-indicator{
+    min-width:40px!important;
+    height:28px!important;
+    line-height:28px!important;
+    text-align:center!important;
+    background:rgba(255,250,238,.78)!important;
+    border:1px solid rgba(202,156,87,.28)!important;
+    color:#8a6158!important;
+    font-weight:800!important;
+  }
+  .pulpus-mode .crest-pager button{
+    width:28px!important;
+    height:28px!important;
+    flex:0 0 28px!important;
+    background:rgba(255,250,238,.86)!important;
+    border:1px solid rgba(202,156,87,.34)!important;
+    color:#8a6158!important;
+    font-weight:800!important;
+  }
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
