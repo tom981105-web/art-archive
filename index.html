@@ -986,6 +986,22 @@ body.crest-mode{overflow:hidden!important;}
     left:14.6vw!important;
   }
 }
+
+/* Crest v46 — 6-per-page archive pagination */
+.crest-mode .series-view-body{overflow:visible!important;}
+.crest-mode .crest-pager{
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  margin-top:12px;padding-top:9px;border-top:1px solid rgba(181,139,76,.35);
+  font:700 9px/1 Arial,sans-serif;letter-spacing:.16em;color:#8f6b39;
+}
+.crest-mode .crest-pager button{
+  width:28px;height:28px;border:1px solid rgba(181,139,76,.6);
+  background:rgba(248,244,235,.82);color:#0b1c31;cursor:pointer;
+  display:grid;place-items:center;font-size:13px;transition:.18s ease;
+}
+.crest-mode .crest-pager button:hover:not(:disabled){background:#0b1c31;color:#f7f2e7;border-color:#0b1c31}
+.crest-mode .crest-pager button:disabled{opacity:.3;cursor:default}
+.crest-mode .crest-page-indicator{min-width:54px;text-align:center}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
@@ -1019,7 +1035,28 @@ filters.innerHTML=cats.map(c=>'<button data-c="'+c+'" onclick="active=\''+c+'\';
 function sync(){document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("active",b.dataset.c===active));render()}q.addEventListener("input",render);sync();
 const seriesDescriptions={크레스트:"동물과 생물의 인상을 날카롭고 대칭적인 문장과 엠블럼으로 압축한 시리즈.",묵수:"먹과 수채의 번짐 속에서 거대한 생명과 작은 인간의 만남을 담는 서정적 판타지 시리즈.",신수:"압도적인 크기의 생명체와 풍경이 하나의 세계처럼 융합되는 회화적 판타지 시리즈.",수채화:"여백과 번짐, 색의 흐름으로 대상과 풍경을 한 장면 안에 녹여내는 수채 일러스트레이션 시리즈.",펄퍼스:"과일과 음식의 특징을 개성 있는 캐릭터 디자인으로 풀어내는 밝고 유쾌한 캐릭터 시리즈.",잉크:"검은 액체와 빛의 대비로 생명체의 형태와 움직임을 재구성한 강렬한 잉크 시리즈.",성수:"거대한 동물과 작은 인간의 스케일 대비로 신화적인 순간을 그리는 시네마틱 판타지 시리즈.",융화:"인간과 동물·생물의 특징이 하나의 존재로 융합되어 새로운 형태로 진화한 캐릭터 시리즈.",여운:"인물과 풍경이 남기는 감정과 순간의 잔상을 한 장면에 담아내는 서정적 일러스트레이션 시리즈.",포근:"작은 생명과 따뜻한 순간을 부드러운 분위기와 이야기로 담아내는 감성 일러스트레이션 시리즈."};
 const seriesView=document.querySelector("#seriesView"),seriesTitle=document.querySelector("#seriesTitle"),seriesDesc=document.querySelector("#seriesDesc"),seriesGallery=document.querySelector("#seriesGallery"),seriesWorkCount=document.querySelector("#seriesWorkCount");
-function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";seriesGallery.innerHTML=a.map(([n,ss,id])=>`<article class="card"><img src="${img(id)}" alt="${n}" loading="lazy"><div class="meta"><b>${n}</b><small>${ss}</small></div></article>`).join("");seriesView.classList.toggle("crest-mode",s==="크레스트");const cf=document.querySelector("#crestFeature");if(s==="크레스트"&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
+let crestPage=0;
+function renderSeriesGallery(items,isCrest){
+  const body=seriesGallery.closest(".series-view-body");
+  body.querySelector(".crest-pager")?.remove();
+  if(!isCrest){
+    seriesGallery.innerHTML=items.map(([n,ss,id])=>`<article class="card"><img src="${img(id)}" alt="${n}" loading="lazy"><div class="meta"><b>${n}</b><small>${ss}</small></div></article>`).join("");
+    return;
+  }
+  const perPage=6,totalPages=Math.max(1,Math.ceil(items.length/perPage));
+  crestPage=Math.max(0,Math.min(crestPage,totalPages-1));
+  const pageItems=items.slice(crestPage*perPage,crestPage*perPage+perPage);
+  seriesGallery.innerHTML=pageItems.map(([n,ss,id])=>`<article class="card"><img src="${img(id)}" alt="${n}" loading="lazy"><div class="meta"><b>${n}</b><small>${ss}</small></div></article>`).join("");
+  const pager=document.createElement("div");
+  pager.className="crest-pager";
+  pager.innerHTML=`<button type="button" class="crest-prev" aria-label="이전 페이지">‹</button><span class="crest-page-indicator">${crestPage+1} / ${totalPages}</span><button type="button" class="crest-next" aria-label="다음 페이지">›</button>`;
+  const prev=pager.querySelector(".crest-prev"),next=pager.querySelector(".crest-next");
+  prev.disabled=crestPage===0; next.disabled=crestPage>=totalPages-1;
+  prev.addEventListener("click",()=>{if(crestPage>0){crestPage--;renderSeriesGallery(items,true)}});
+  next.addEventListener("click",()=>{if(crestPage<totalPages-1){crestPage++;renderSeriesGallery(items,true)}});
+  body.appendChild(pager);
+}
+function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";seriesView.classList.toggle("crest-mode",s==="크레스트");crestPage=0;renderSeriesGallery(a,s==="크레스트");const cf=document.querySelector("#crestFeature");if(s==="크레스트"&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
 function closeSeries(){seriesView.classList.remove("open");document.body.style.overflow="";}document.querySelector("#seriesClose").addEventListener("click",closeSeries);document.querySelector("#seriesHome").addEventListener("click",()=>{closeSeries();history.replaceState(null,"",location.pathname);window.scrollTo({top:0,behavior:"smooth"});});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&seriesView.classList.contains("open"))closeSeries()});
 document.querySelector("#series").addEventListener("click",e=>{const b=e.target.closest("button");if(b&&b.dataset.series)openSeries(b.dataset.series)});
 const latestWorks=[...cats.slice(1)].map(s=>{for(let i=works.length-1;i>=0;i--){if(works[i][1]===s)return works[i]}return null}).filter(Boolean);
