@@ -1541,6 +1541,134 @@ body.crest-mode{overflow:hidden!important;}
   filter:saturate(1.03) contrast(1.04)!important;
   transform:translateY(-1px)!important;
 }
+
+/* Watercolor v1 — airy watercolor archive */
+@media(min-width:1100px){
+  .series-view.watercolor-mode{
+    background:#fbfaf6!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1kTVo8Mt4Tw6KsyNlnev3fVbfyUSduqAC&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .watercolor-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(255,253,249,.76)!important;
+    border-bottom:1px solid rgba(112,142,155,.16)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .watercolor-mode .series-view-hero{
+    position:absolute!important;left:7.4vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;min-height:0!important;height:auto!important;
+    margin:0!important;padding:0!important;background:transparent!important;z-index:4!important;
+  }
+  .watercolor-mode .series-view-hero:before,
+  .watercolor-mode .series-view-hero:after{display:none!important}
+  .watercolor-mode .series-view-hero .eyebrow{
+    margin:0 0 10px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.3em!important;color:#6f8f9a!important;
+  }
+  .watercolor-mode #seriesTitle{
+    margin:0 0 14px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.85vw,69px)!important;font-weight:700!important;
+    line-height:.95!important;letter-spacing:-.06em!important;color:#355867!important;
+    text-transform:none!important;
+  }
+  .watercolor-mode #seriesTitle:after{
+    content:"WATERCOLOR"!important;display:block!important;margin-top:13px!important;
+    font:700 8px/1 Arial,sans-serif!important;letter-spacing:.42em!important;color:#9c8eb8!important;
+  }
+  .watercolor-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.75 Arial,sans-serif!important;color:#71858c!important;background:transparent!important;
+  }
+  .watercolor-mode #seriesWorkCount{
+    margin-top:14px!important;font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c08f76!important;
+  }
+
+  .watercolor-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.7vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .watercolor-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:10px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,255,255,.50)!important;border:1px solid rgba(112,142,155,.18)!important;
+    box-shadow:0 16px 36px rgba(91,124,138,.10)!important;
+  }
+  .watercolor-mode .crest-feature-art:before,
+  .watercolor-mode .crest-feature-art:after{display:none!important}
+  .watercolor-mode .crest-feature-art img{
+    width:99%!important;height:99%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.20)!important;
+  }
+  .watercolor-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 12px)!important;
+    width:100%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .watercolor-mode .crest-feature-copy:before,
+  .watercolor-mode .crest-feature-copy .eyebrow,
+  .watercolor-mode .crest-feature-copy p{display:none!important}
+  .watercolor-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:700!important;color:#426675!important;letter-spacing:-.03em!important;
+  }
+
+  .watercolor-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(255,255,255,.08)!important;border:0!important;overflow:visible!important;z-index:5!important;
+  }
+  .watercolor-mode .series-view-body:before{
+    content:"WATERCOLOR ARCHIVE"!important;display:block!important;
+    margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(112,142,155,.20)!important;
+    font:700 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#678792!important;
+  }
+  .watercolor-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .watercolor-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(112,142,155,.18)!important;background:rgba(255,255,255,.38)!important;
+    box-shadow:0 6px 18px rgba(91,124,138,.08)!important;
+  }
+  .watercolor-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;padding:0!important;
+    background:rgba(255,255,255,.20)!important;display:block!important;
+  }
+  .watercolor-mode .series-view-body .card .meta{
+    min-height:30px!important;padding:5px 8px!important;
+    background:rgba(74,103,114,.76)!important;color:#fff!important;
+  }
+  .watercolor-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:11px!important;color:#fff!important;
+  }
+  .watercolor-mode .series-view-body .card .meta small{
+    font-size:7px!important;color:#dbe5e8!important;opacity:.9!important;
+  }
+  .watercolor-mode .crest-pager{
+    margin-top:6px!important;padding-top:6px!important;gap:8px!important;
+    border-top:1px solid rgba(112,142,155,.18)!important;color:#68858e!important;
+  }
+  .watercolor-mode .crest-pager button{
+    border:1px solid rgba(112,142,155,.28)!important;background:rgba(255,255,255,.45)!important;color:#456a78!important;
+  }
+  .watercolor-mode .crest-pager button:hover:not(:disabled){background:#6f909b!important;color:#fff!important}
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
@@ -1595,7 +1723,7 @@ function renderSeriesGallery(items,isPaged){
   next.addEventListener("click",()=>{if(crestPage<totalPages-1){crestPage++;renderSeriesGallery(items,true)}});
   body.appendChild(pager);
 }
-function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";const isCrest=s==="크레스트",isMuksu=s==="묵수",isShinsu=s==="신수",isShowcase=isCrest||isMuksu||isShinsu;seriesView.classList.toggle("crest-mode",isCrest);seriesView.classList.toggle("muksu-mode",isMuksu);seriesView.classList.toggle("shinsu-mode",isShinsu);crestPage=0;renderSeriesGallery(a,isShowcase);const cf=document.querySelector("#crestFeature");if(isShowcase&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
+function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";const isCrest=s==="크레스트",isMuksu=s==="묵수",isShinsu=s==="신수",isWatercolor=s==="수채화",isShowcase=isCrest||isMuksu||isShinsu||isWatercolor;seriesView.classList.toggle("crest-mode",isCrest);seriesView.classList.toggle("muksu-mode",isMuksu);seriesView.classList.toggle("shinsu-mode",isShinsu);seriesView.classList.toggle("watercolor-mode",isWatercolor);crestPage=0;renderSeriesGallery(a,isShowcase);const cf=document.querySelector("#crestFeature");if(isShowcase&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
 function closeSeries(){seriesView.classList.remove("open");document.body.style.overflow="";}document.querySelector("#seriesClose").addEventListener("click",closeSeries);document.querySelector("#seriesHome").addEventListener("click",()=>{closeSeries();history.replaceState(null,"",location.pathname);window.scrollTo({top:0,behavior:"smooth"});});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&seriesView.classList.contains("open"))closeSeries()});
 document.querySelector("#series").addEventListener("click",e=>{const b=e.target.closest("button");if(b&&b.dataset.series)openSeries(b.dataset.series)});
 const latestWorks=[...cats.slice(1)].map(s=>{for(let i=works.length-1;i>=0;i--){if(works[i][1]===s)return works[i]}return null}).filter(Boolean);
@@ -1605,7 +1733,7 @@ const lightbox=document.querySelector("#lightbox"),lightboxImg=document.querySel
 document.addEventListener("click",e=>{
  const im=e.target.closest(".card img, .latest-card img");
  if(!im)return;
- const showcaseOpen=!!document.querySelector(".series-view.crest-mode, .series-view.muksu-mode, .series-view.shinsu-mode");
+ const showcaseOpen=!!document.querySelector(".series-view.crest-mode, .series-view.muksu-mode, .series-view.shinsu-mode, .series-view.watercolor-mode");
  const inShowcaseGallery=!!im.closest("#seriesGallery");
  if(showcaseOpen&&inShowcaseGallery){
    e.preventDefault();e.stopImmediatePropagation();
