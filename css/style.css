@@ -1,0 +1,3383 @@
+
+:root{--ink:#0c1a2b;--paper:#f4efe4;--line:#cfc6b6}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Noto Serif KR",serif}header{position:sticky;top:0;z-index:5;background:#f4efe4ee;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;padding:18px 5vw}.logo{font-weight:800;letter-spacing:.12em}.nav{display:flex;gap:22px;font:13px Arial,sans-serif}.nav a{color:inherit;text-decoration:none}.hero{min-height:76vh;display:grid;place-items:center;text-align:center;padding:8vw 5vw;border-bottom:1px solid var(--line);position:relative;isolation:isolate;overflow:hidden;background-image:linear-gradient(90deg,rgba(244,239,228,.12),rgba(244,239,228,.46) 50%,rgba(244,239,228,.12)),url("https://drive.google.com/thumbnail?id=1-f5az80yCj2HXUm1eLx2PX10RYWPFJaO&sz=w2400");background-size:cover;background-position:center}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(244,239,228,.02),rgba(244,239,228,.16))}.hero>div{padding:30px 42px;background:rgba(244,239,228,.58);backdrop-filter:blur(2px);box-shadow:0 18px 70px rgba(12,26,43,.08)}.hero h1{font-size:clamp(60px,11vw,150px);line-height:.8;margin:0;text-shadow:0 2px 18px rgba(244,239,228,.85)}.hero p{max-width:680px;font:15px/1.8 Arial,sans-serif}.eyebrow{font:11px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase}.section{padding:70px 5vw}.section h2{font-size:clamp(32px,5vw,64px);margin:8px 0 30px}.series{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}.series button,.filters button{border:1px solid var(--ink);background:transparent;padding:13px 8px;cursor:pointer;color:var(--ink)}.series button:hover,.filters button.active{background:var(--ink);color:white}.dark{background:var(--ink);color:#f6f0e5}.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 28px}.toolbar input{flex:1;min-width:220px;padding:14px;border:1px solid #647080;background:transparent;color:white}.filters{display:flex;gap:8px;flex-wrap:wrap}.filters button{border-color:#788392;color:white}.gallery{columns:4 260px;column-gap:16px}.card{break-inside:avoid;margin:0 0 16px;background:#13263c;border:1px solid #29415c;overflow:hidden}.card img{width:100%;display:block;min-height:180px;background:#182d46;object-fit:cover}.meta{padding:14px}.meta b{font-size:18px}.meta small{display:block;margin-top:6px;opacity:.6;font:11px Arial,sans-serif;letter-spacing:.12em}.count{opacity:.65;font:12px Arial,sans-serif}.control{background:#081421;color:#f6f0e5}.control-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.metric{border:1px solid #29415c;background:#0d2034;padding:20px;min-height:118px}.metric .label{font:11px Arial,sans-serif;letter-spacing:.12em;opacity:.6}.metric .value{font:700 clamp(24px,3vw,42px) Arial,sans-serif;margin-top:14px}.metric .sub{font:11px/1.5 Arial,sans-serif;opacity:.55;margin-top:8px}.usage-bars{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.usage-card{border:1px solid #29415c;padding:20px;background:#0d2034}.bar{height:8px;background:#20354b;margin-top:12px;overflow:hidden}.bar>i{display:block;height:100%;background:#f6f0e5;width:0}.series-status{margin-top:14px;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.series-stat{border:1px solid #29415c;padding:14px;font:12px Arial,sans-serif}.series-stat b{display:block;font:700 15px Arial,sans-serif;margin-bottom:10px}.status-note{font:12px/1.7 Arial,sans-serif;opacity:.6;margin-top:18px}footer{position:relative;padding:35px 5vw;text-align:center;font:11px Arial,sans-serif;letter-spacing:.16em}.admin-btn{position:fixed;right:14px;bottom:12px;z-index:40;border:1px solid #8f897e;background:#f4efe4dd;color:#0c1a2b;padding:7px 10px;font:10px Arial,sans-serif;letter-spacing:.08em;cursor:pointer}.admin-modal{position:fixed;inset:0;z-index:120;background:#07111dcc;display:none;align-items:center;justify-content:center;padding:20px}.admin-modal.open{display:flex}.admin-box{width:min(360px,100%);background:#f4efe4;color:#0c1a2b;border:1px solid #cfc6b6;padding:28px}.admin-box h3{margin:0 0 20px;font-size:28px}.admin-box input{width:100%;padding:12px;margin:0 0 10px;border:1px solid #bcb3a4;background:white}.admin-actions{display:flex;gap:8px;margin-top:8px}.admin-actions button{flex:1;padding:11px;border:1px solid #0c1a2b;background:transparent;cursor:pointer}.admin-actions .primary{background:#0c1a2b;color:white}.login-error{min-height:18px;margin:10px 0 0;color:#9c2d2d;font:12px Arial,sans-serif}.notice{font:12px/1.6 Arial,sans-serif;opacity:.65}.empty{padding:80px 0;text-align:center;opacity:.7}@media(max-width:900px){.series{grid-template-columns:repeat(2,1fr)}.nav{display:none}.control-grid{grid-template-columns:repeat(2,1fr)}.usage-bars{grid-template-columns:1fr}.series-status{grid-template-columns:repeat(2,1fr)}}.card img{cursor:zoom-in}.lightbox{position:fixed;inset:0;z-index:100;background:rgba(3,10,18,.94);display:none;align-items:center;justify-content:center;padding:28px}.lightbox.open{display:flex}.lightbox img{max-width:95vw;max-height:90vh;object-fit:contain;box-shadow:0 20px 70px #000}.lightbox .close{position:absolute;right:22px;top:18px;border:0;background:transparent;color:white;font-size:42px;cursor:pointer}.lightbox .caption{position:absolute;bottom:16px;color:white;font:13px Arial,sans-serif;letter-spacing:.08em}.latest-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.latest-card{position:relative;overflow:hidden;background:#e8e0d2;border:1px solid var(--line);cursor:zoom-in}.latest-card img{width:100%;aspect-ratio:4/5;display:block;object-fit:cover;transition:transform .35s}.latest-card:hover img{transform:scale(1.025)}.latest-meta{padding:12px 13px 14px}.latest-meta b{display:block;font-size:17px}.latest-meta small{font:10px Arial,sans-serif;letter-spacing:.16em;opacity:.58}.latest-badge{position:absolute;top:10px;left:10px;background:var(--ink);color:#fff;padding:6px 8px;font:9px Arial,sans-serif;letter-spacing:.15em}.latest-head{display:flex;align-items:end;justify-content:space-between;gap:20px}.latest-head p{font:12px Arial,sans-serif;opacity:.6;margin-bottom:34px}@media(max-width:1000px){.latest-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.latest-grid{grid-template-columns:1fr}}.series-view{position:fixed;inset:0;z-index:90;background:var(--paper);display:none;overflow:auto}.series-view.open{display:block}.series-view-head{position:sticky;top:0;z-index:2;background:#f4efe4ee;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:18px 5vw;display:flex;align-items:center;justify-content:space-between}.series-view-head button{border:1px solid var(--ink);background:transparent;padding:9px 14px;cursor:pointer}.series-view-hero{padding:70px 5vw 42px;border-bottom:1px solid var(--line)}.series-view-hero h2{font-size:clamp(52px,9vw,120px);line-height:.85;margin:8px 0 22px}.series-view-hero p{max-width:760px;font:14px/1.8 Arial,sans-serif;opacity:.72}.series-view-body{padding:42px 5vw 80px}.series-view-body .gallery{columns:4 260px}.series button{position:relative}.series-view-body .card .meta{background:#13263c;color:#f6f0e5}.series-view-body .card .meta b{color:#fff}.series-view-body .card .meta small{color:#d9e1e8;opacity:.78}.latest-meta{color:var(--ink)}.series-home{border:0!important;background:transparent!important;padding:0!important;font:800 16px Georgia,"Noto Serif KR",serif;letter-spacing:.12em;color:var(--ink);cursor:pointer}.series-home:hover{opacity:.6}.series-view-hero{padding-top:82px;padding-bottom:54px}.series-view-hero .eyebrow{margin-bottom:24px}.series-view-hero h2{line-height:1.05!important;margin:0 0 34px!important;padding:4px 0 8px}.series-view-hero p{margin:0 0 24px;line-height:2!important}.series-view-hero .count{margin-top:8px}/* Global typography rhythm */
+.hero .eyebrow,.section>.eyebrow,.latest-head .eyebrow,.series-view-hero .eyebrow{line-height:1.6;letter-spacing:.32em}
+.hero h1{line-height:.9!important;margin:18px 0 28px!important}
+.hero p{line-height:2!important;margin:0 auto}
+.section h2,.latest-head h2{line-height:1.05;margin-top:14px;margin-bottom:38px}
+#collection{padding-top:82px;padding-bottom:82px}
+#collection .series{margin-top:10px}
+.series button{line-height:1.5;padding-top:16px;padding-bottom:16px}
+.series button small{display:inline-block;margin-top:5px;line-height:1.5}
+.latest-head{margin-bottom:28px}
+.latest-head h2{margin-bottom:12px}
+.latest-head p{line-height:1.8;margin-bottom:14px}
+.latest-meta{padding-top:15px;padding-bottom:17px}
+.latest-meta b{line-height:1.45;margin-bottom:5px}
+.latest-meta small{line-height:1.5}
+#works h2{margin-bottom:38px}
+.meta{padding-top:16px;padding-bottom:17px}
+.meta b{display:block;line-height:1.45;margin-bottom:7px}
+.meta small{line-height:1.5;margin-top:0}
+.count{line-height:1.7}
+footer{line-height:1.8}.home-logo{border:0;background:transparent;padding:0;color:inherit;cursor:pointer;font:inherit}.home-logo:hover{opacity:.6}.series-view.crest-mode{background:#f7f3e9}.crest-mode .series-view-hero{position:relative;border-bottom:0;padding-bottom:30px}.crest-mode .series-view-hero:after{content:"";position:absolute;left:5vw;right:5vw;bottom:0;height:1px;background:#c9bda8}.crest-mode #seriesTitle{font-family:Georgia,serif;letter-spacing:.02em}.crest-mode #seriesDesc{max-width:560px}.crest-feature{padding:18px 5vw 54px;display:grid;grid-template-columns:minmax(260px,.8fr) minmax(360px,1.2fr);gap:5vw;align-items:center;border-bottom:1px solid var(--line)}.crest-feature[hidden]{display:none}.crest-feature-copy .eyebrow{margin-bottom:18px}.crest-feature-copy h3{font-size:clamp(30px,4vw,58px);margin:0 0 18px;line-height:1}.crest-feature-copy p{font:13px/2 Arial,sans-serif;opacity:.65}.crest-feature-art{position:relative;padding:30px}.crest-feature-art:before{content:"";position:absolute;inset:4%;border:1px solid #c8b99e;transform:rotate(45deg);opacity:.45}.crest-feature-art img{position:relative;width:100%;aspect-ratio:1/1;object-fit:contain;display:block}.crest-mode .series-view-body{padding-top:54px}.crest-mode .series-view-body:before{content:"CREST ARCHIVE";display:block;margin-bottom:26px;font:11px Arial,sans-serif;letter-spacing:.3em}@media(max-width:760px){.crest-feature{grid-template-columns:1fr}.crest-feature-art{order:-1;padding:12px 28px}}.series button[data-series="크레스트"]{overflow:hidden;background:#0c1a2b;color:#f7f3e9;border-color:#0c1a2b;position:relative}.series button[data-series="크레스트"]:before,.series button[data-series="크레스트"]:after{content:"";position:absolute;width:42px;height:42px;border:1px solid #c89b55;transform:rotate(45deg);opacity:.65}.series button[data-series="크레스트"]:before{left:-27px;top:17px}.series button[data-series="크레스트"]:after{right:-27px;top:17px}.series button[data-series="크레스트"] small{color:#d7b06c}.crest-mode .series-view-head{border-bottom-color:#c8b99e}.crest-mode .series-view-hero{min-height:390px;background:radial-gradient(circle at 72% 46%,rgba(200,155,85,.12),transparent 28%),linear-gradient(135deg,transparent 48%,rgba(12,26,43,.025) 49%,rgba(12,26,43,.025) 51%,transparent 52%)}.crest-mode .series-view-hero:before{content:"✦";position:absolute;right:9vw;top:84px;font-size:84px;color:#b88945;opacity:.75}.crest-mode #seriesTitle{font-size:clamp(76px,11vw,150px);text-transform:uppercase}.crest-mode #seriesTitle:after{content:"CREST";display:block;margin-top:18px;font:10px Arial,sans-serif;letter-spacing:.52em;color:#a17b45}.crest-mode #seriesDesc{font-size:14px;line-height:2.05}.crest-mode #seriesWorkCount{margin-top:28px;letter-spacing:.24em;color:#9a7440}.crest-feature-copy{position:relative}.crest-feature-copy:before{content:"SERIES 01";display:block;margin-bottom:28px;font:10px Arial,sans-serif;letter-spacing:.34em;color:#a17b45}.crest-feature-art{background:radial-gradient(circle,#fff 0,#f7f3e9 68%)}.crest-feature-art:after{content:"";position:absolute;inset:13%;border:1px solid rgba(12,26,43,.12);border-radius:50%}.crest-feature-art img{z-index:1}.crest-mode .card{background:#f7f3e9;border-color:#c8b99e}.crest-mode .card .meta{background:#0c1a2b;color:#fff}.crest-mode .card .meta small{color:#d7b06c}/* Crest visual skin */
+.crest-mode{background:#f7f2e7!important;background-image:url("https://drive.google.com/thumbnail?id=1RxUahVTis8FA5v8V6onXy1O6YoqGblCf&sz=w2400")!important;background-repeat:no-repeat!important;background-position:top center!important;background-size:100% auto!important}
+.crest-mode .series-view-head{background:rgba(248,244,235,.78);backdrop-filter:blur(8px)}
+.crest-mode .series-view-hero{background:transparent!important;min-height:520px;padding-top:110px;padding-left:8vw}
+.crest-mode .series-view-hero:before,.crest-mode .series-view-hero:after{display:none!important}
+.crest-mode #seriesTitle{max-width:42%;font-size:clamp(72px,10vw,145px)}
+.crest-mode #seriesDesc{max-width:36%;background:rgba(248,244,235,.62);padding:12px 16px 12px 0}
+.crest-mode #seriesWorkCount{max-width:36%}
+.crest-mode .crest-feature{background:transparent;border-bottom:0;min-height:620px;padding:0 8vw 70px;grid-template-columns:.72fr 1.28fr}
+.crest-mode .crest-feature-copy{align-self:start;padding-top:55px}
+.crest-mode .crest-feature-art{background:rgba(248,244,235,.34);padding:48px}
+.crest-mode .crest-feature-art:before{border-color:#b58b4c}.crest-mode .crest-feature-art:after{border-color:rgba(181,139,76,.28)}
+.crest-mode .series-view-body{background:rgba(248,244,235,.93);border-top:1px solid rgba(181,139,76,.35)}
+@media(max-width:760px){.crest-mode{background-size:auto 1250px}.crest-mode .series-view-hero{min-height:auto;padding:72px 7vw 38px}.crest-mode #seriesTitle,.crest-mode #seriesDesc,.crest-mode #seriesWorkCount{max-width:100%}.crest-mode .crest-feature{min-height:auto;padding:20px 7vw 55px}.crest-mode .crest-feature-art{padding:24px}}/* Crest single-screen showcase */
+@media(min-width:761px){
+.crest-mode{background-size:auto 100vh!important;background-position:center top!important;background-attachment:fixed!important}
+.crest-mode .series-view-head{height:58px;padding:10px 4vw}
+.crest-mode .series-view-hero{height:31vh!important;min-height:0!important;padding:7vh 7vw 1.5vh!important;box-sizing:border-box}
+.crest-mode .series-view-hero .eyebrow{margin-bottom:8px;font-size:9px}
+.crest-mode #seriesTitle{font-size:clamp(50px,6.2vw,88px)!important;line-height:.82!important;margin:0 0 12px!important}
+.crest-mode #seriesTitle:after{margin-top:9px;font-size:8px}
+.crest-mode #seriesDesc{font-size:11px!important;line-height:1.65!important;max-width:31%!important;padding:5px 10px 5px 0!important;margin-bottom:5px!important}
+.crest-mode #seriesWorkCount{font-size:10px;line-height:1.2!important;margin-top:8px!important}
+.crest-mode .crest-feature{height:44vh!important;min-height:0!important;padding:0 7vw 1vh!important;grid-template-columns:.72fr 1.28fr!important;gap:4vw!important;box-sizing:border-box}
+.crest-mode .crest-feature-copy{padding-top:2vh!important}
+.crest-mode .crest-feature-copy:before{margin-bottom:9px!important;font-size:8px}
+.crest-mode .crest-feature-copy h3{font-size:clamp(24px,3vw,42px)!important;margin-bottom:8px!important}
+.crest-mode .crest-feature-copy p{font-size:10px!important;line-height:1.6!important}
+.crest-mode .crest-feature-art{height:40vh;padding:10px!important;display:grid;place-items:center;background:rgba(248,244,235,.24)}
+.crest-mode .crest-feature-art img{height:100%!important;width:100%!important;object-fit:contain!important}
+.crest-mode .series-view-body{padding:28px 5vw 70px!important}
+}/* Crest desktop composition fix: background skin stays decorative, UI fits one viewport */
+@media(min-width:1100px){
+.crest-mode{background-image:none!important;background:#f7f2e7!important}
+.crest-mode:before{content:"";position:fixed;z-index:-1;inset:58px 0 0;background:url("https://drive.google.com/thumbnail?id=1RxUahVTis8FA5v8V6onXy1O6YoqGblCf&sz=w2400") center/contain no-repeat;opacity:1;pointer-events:none}
+.crest-mode .series-view-hero,.crest-mode .crest-feature{position:absolute!important;z-index:1}
+.crest-mode .series-view-hero{left:6.5vw;top:10vh;width:31vw;height:auto!important;padding:0!important}
+.crest-mode #seriesTitle{font-size:clamp(58px,6vw,96px)!important;max-width:none!important;line-height:.88!important}
+.crest-mode #seriesDesc{max-width:430px!important;background:transparent!important;font-size:12px!important}
+.crest-mode .crest-feature{right:7vw;top:15vh;width:50vw;height:70vh!important;display:block!important;padding:0!important}
+.crest-mode .crest-feature-copy{position:absolute;left:-31vw;top:27vh;width:25vw;padding:0!important}
+.crest-mode .crest-feature-art{height:58vh!important;width:100%!important;padding:0!important;background:transparent!important}
+.crest-mode .crest-feature-art:before,.crest-mode .crest-feature-art:after{display:none!important}
+.crest-mode .crest-feature-art img{max-height:58vh!important;max-width:100%!important;object-fit:contain!important}
+.crest-mode .series-view-body{position:absolute!important;top:100vh;left:0;right:0;z-index:3;background:#f7f2e7!important;padding:55px 5vw 80px!important}
+}/* Crest collection card artwork */
+.series button[data-series="크레스트"]{
+background-image:linear-gradient(rgba(247,242,231,.08),rgba(247,242,231,.08)),url("https://drive.google.com/thumbnail?id=19A1qlQTH_OKnSMrFLIQbeP1y9buBBl-O&sz=w1600")!important;
+background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important;
+color:#0b1c31!important;text-shadow:0 1px 8px rgba(247,242,231,.95);min-height:78px;
+border:1px solid #b58b4c!important;box-shadow:inset 0 0 0 1px rgba(247,242,231,.55);
+transition:transform .25s ease,box-shadow .25s ease,background-size .35s ease}
+.series button[data-series="크레스트"] small{color:#8b642d!important;font-weight:700}
+.series button[data-series="크레스트"]:before,.series button[data-series="크레스트"]:after{display:none!important}
+.series button[data-series="크레스트"]:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(12,26,43,.14),inset 0 0 0 1px rgba(247,242,231,.7)}/* Crest v3: full-viewport stage, no poster-strip effect */
+@media(min-width:1100px){
+.crest-mode:before{position:absolute!important;inset:58px 0 auto 0!important;width:100%!important;height:calc(100vh - 58px)!important;background-size:cover!important;background-position:center center!important;opacity:1!important}
+.crest-mode .series-view-hero{left:5.5vw!important;top:12vh!important;width:31vw!important}
+.crest-mode #seriesTitle{font-size:clamp(54px,5.5vw,88px)!important}
+.crest-mode .crest-feature{right:5vw!important;top:13vh!important;width:48vw!important;height:73vh!important}
+.crest-mode .crest-feature-copy{left:-36vw!important;top:30vh!important;width:27vw!important}
+.crest-mode .crest-feature-art{height:55vh!important;width:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important}
+.crest-mode .crest-feature-art img{width:auto!important;height:auto!important;max-width:78%!important;max-height:55vh!important;object-fit:contain!important;display:block!important}
+.crest-mode .series-view-body{top:100vh!important}
+}/* Crest v4 — native 16:9 background */
+@media(min-width:1100px){
+.crest-mode:before{inset:58px 0 auto!important;width:100%!important;height:calc(100vh - 58px)!important;background-image:url("https://drive.google.com/thumbnail?id=1WWJA4z3EPtDY1dtHFDIBRAqLsMuk-vl2&sz=w2400")!important;background-size:100% 100%!important;background-position:center!important;background-repeat:no-repeat!important}
+.crest-mode .series-view-hero{left:7vw!important;top:13vh!important;width:31vw!important}
+.crest-mode .crest-feature{right:7vw!important;top:14vh!important;width:43vw!important;height:68vh!important}
+.crest-mode .crest-feature-copy{left:-38vw!important;top:31vh!important;width:27vw!important}
+.crest-mode .crest-feature-art{height:54vh!important}
+.crest-mode .crest-feature-art img{max-width:72%!important;max-height:54vh!important}
+.crest-mode .series-view-body{top:100vh!important}
+}/* Crest v5 — stronger editorial hierarchy */
+@media(min-width:1100px){
+.crest-mode .series-view-hero{left:7vw!important;top:12.5vh!important;width:36vw!important}
+.crest-mode .series-view-hero .eyebrow{font-size:10px!important;letter-spacing:.28em!important;margin-bottom:10px!important}
+.crest-mode #seriesTitle{font-size:clamp(68px,6.6vw,108px)!important;line-height:.84!important;letter-spacing:-.055em!important;margin-bottom:18px!important}
+.crest-mode #seriesTitle:after{font-size:9px!important;letter-spacing:.42em!important;margin-top:13px!important}
+.crest-mode #seriesDesc{max-width:470px!important;font-size:13px!important;line-height:1.75!important;color:#33404b!important;margin-top:16px!important}
+.crest-mode #seriesWorkCount{font-size:11px!important;letter-spacing:.28em!important;margin-top:14px!important;color:#9b743e!important}
+.crest-mode .crest-feature{right:5.5vw!important;top:14vh!important;width:48vw!important;height:70vh!important}
+.crest-mode .crest-feature-copy{left:-36.5vw!important;top:32vh!important;width:30vw!important;padding:18px 22px!important;background:rgba(248,244,235,.62)!important;border-left:2px solid rgba(181,139,76,.65)!important;backdrop-filter:blur(2px)}
+.crest-mode .crest-feature-copy:before{font-size:9px!important;letter-spacing:.32em!important;margin-bottom:8px!important}
+.crest-mode .crest-feature-copy h3{font-size:clamp(38px,3.2vw,55px)!important;line-height:1!important;margin:0 0 12px!important}
+.crest-mode .crest-feature-copy p{font-size:11px!important;line-height:1.7!important;color:#58616a!important}
+.crest-mode .crest-feature-art{height:61vh!important;width:100%!important;overflow:visible!important}
+.crest-mode .crest-feature-art img{max-width:82%!important;max-height:61vh!important;filter:drop-shadow(0 18px 30px rgba(12,28,48,.10))!important}
+.crest-mode .series-view-body{border-top:1px solid rgba(181,139,76,.35)!important}
+.crest-mode .series-view-body>h2,.crest-mode .series-view-body .section-title{letter-spacing:.32em!important}
+}/* Crest v6 — complete desktop experience in one viewport */
+@media(min-width:1100px){
+.crest-mode.open{overflow:hidden!important}
+.crest-mode .series-view-head{height:54px!important;padding:8px 4vw!important}
+.crest-mode:before{inset:54px 0 0!important;height:calc(100vh - 54px)!important}
+.crest-mode .series-view-hero{left:5.5vw!important;top:10.5vh!important;width:27vw!important}
+.crest-mode .series-view-hero .eyebrow{font-size:8px!important}
+.crest-mode #seriesTitle{font-size:clamp(56px,5vw,82px)!important;margin-bottom:12px!important}
+.crest-mode #seriesTitle:after{font-size:7px!important;margin-top:8px!important}
+.crest-mode #seriesDesc{font-size:10px!important;line-height:1.55!important;margin-top:10px!important;max-width:360px!important}
+.crest-mode #seriesWorkCount{font-size:9px!important;margin-top:8px!important}
+.crest-mode .crest-feature{left:5.5vw!important;right:auto!important;top:42vh!important;width:27vw!important;height:auto!important}
+.crest-mode .crest-feature-copy{position:static!important;width:100%!important;padding:11px 15px!important;background:rgba(248,244,235,.55)!important}
+.crest-mode .crest-feature-copy:before{font-size:7px!important;margin-bottom:5px!important}
+.crest-mode .crest-feature-copy h3{font-size:30px!important;margin-bottom:6px!important}
+.crest-mode .crest-feature-copy p{font-size:9px!important;line-height:1.45!important;margin:0!important}
+.crest-mode .crest-feature-art{position:absolute!important;left:30vw!important;top:-30vh!important;width:25vw!important;height:48vh!important;overflow:hidden!important}
+.crest-mode .crest-feature-art img{max-width:100%!important;max-height:48vh!important;box-shadow:0 12px 32px rgba(12,28,48,.10)!important}
+.crest-mode .series-view-body{position:absolute!important;top:10vh!important;left:61vw!important;right:3.8vw!important;width:auto!important;height:82vh!important;padding:38px 0 0!important;background:transparent!important;border:0!important;overflow:hidden!important}
+.crest-mode .series-view-body:before{margin:0 0 12px!important;font-size:9px!important;letter-spacing:.28em!important}
+.crest-mode .series-view-body .gallery{columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:9px!important;max-height:72vh!important;overflow-y:auto!important;padding-right:5px!important;scrollbar-width:thin}
+.crest-mode .series-view-body .card{margin:0!important;min-width:0!important;border-color:rgba(181,139,76,.48)!important}
+.crest-mode .series-view-body .card img{width:100%!important;aspect-ratio:1/1!important;min-height:0!important;object-fit:contain!important;background:#fff!important}
+.crest-mode .series-view-body .card .meta{padding:7px 9px!important}
+.crest-mode .series-view-body .card .meta b{font-size:12px!important;margin-bottom:2px!important}
+.crest-mode .series-view-body .card .meta small{font-size:8px!important;margin:0!important}
+}/* Crest v7 — balanced three-zone exhibition */
+@media(min-width:1100px){
+.crest-mode .series-view-hero{left:5.6vw!important;top:10.2vh!important;width:25.5vw!important}
+.crest-mode #seriesTitle{font-size:clamp(58px,5.15vw,86px)!important;line-height:.86!important}
+.crest-mode #seriesDesc{max-width:355px!important;font-size:10.5px!important;line-height:1.65!important}
+.crest-mode .crest-feature{left:5.6vw!important;top:41.5vh!important;width:25.5vw!important}
+.crest-mode .crest-feature-copy{padding:13px 17px!important;border-left:1px solid rgba(181,139,76,.78)!important;background:rgba(250,247,240,.52)!important}
+.crest-mode .crest-feature-copy h3{font-size:32px!important}
+.crest-mode .crest-feature-art{left:29vw!important;top:-30.5vh!important;width:25.5vw!important;height:50vh!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:12px!important;background:rgba(255,255,255,.34)!important;border:1px solid rgba(181,139,76,.26)!important;box-shadow:0 16px 42px rgba(14,29,48,.08)!important}
+.crest-mode .crest-feature-art:before,.crest-mode .crest-feature-art:after{content:"";position:absolute;width:28px;height:28px;border-color:rgba(181,139,76,.68);pointer-events:none}
+.crest-mode .crest-feature-art:before{left:7px;top:7px;border-left:1px solid;border-top:1px solid}
+.crest-mode .crest-feature-art:after{right:7px;bottom:7px;border-right:1px solid;border-bottom:1px solid}
+.crest-mode .crest-feature-art img{width:auto!important;height:auto!important;max-width:91%!important;max-height:45vh!important;box-shadow:none!important;filter:drop-shadow(0 10px 18px rgba(12,28,48,.07))!important}
+.crest-mode .series-view-body{left:61.5vw!important;right:3.8vw!important;top:9.6vh!important;height:83vh!important;padding-top:30px!important}
+.crest-mode .series-view-body:before{margin-bottom:14px!important;padding-bottom:9px!important;border-bottom:1px solid rgba(181,139,76,.4)!important}
+.crest-mode .series-view-body .gallery{gap:10px!important;max-height:74vh!important}
+.crest-mode .series-view-body .card{background:rgba(255,255,255,.58)!important;transition:transform .2s ease,box-shadow .2s ease!important}
+.crest-mode .series-view-body .card:hover{transform:translateY(-2px)!important;box-shadow:0 8px 20px rgba(12,28,48,.09)!important}
+.crest-mode .series-view-body .card img{aspect-ratio:1/1!important;padding:5px!important;box-sizing:border-box!important}
+.crest-mode .series-view-body .card .meta{padding:8px 10px!important}
+}/* Crest v8 — optical alignment pass */
+@media(min-width:1100px){
+.crest-mode .series-view-hero{left:6.4vw!important;top:11.5vh!important;width:24vw!important}
+.crest-mode #seriesTitle{font-size:clamp(54px,4.75vw,78px)!important;line-height:.92!important;margin:6px 0 12px!important;letter-spacing:-.055em!important}
+.crest-mode #seriesDesc{max-width:330px!important;font-size:10.5px!important;line-height:1.7!important;margin-top:14px!important}
+.crest-mode .crest-feature{left:6.4vw!important;top:40.8vh!important;width:24vw!important}
+.crest-mode .crest-feature-copy{width:100%!important;padding:12px 0 12px 15px!important;background:transparent!important}
+.crest-mode .crest-feature-copy h3{font-size:30px!important;line-height:1!important;margin:8px 0 10px!important}
+.crest-mode .crest-feature-copy p{max-width:300px!important;line-height:1.55!important}
+.crest-mode .crest-feature-art{left:29.2vw!important;top:-29.8vh!important;width:24.5vw!important;height:48.5vh!important;padding:16px!important}
+.crest-mode .crest-feature-art img{max-width:88%!important;max-height:43vh!important}
+.crest-mode .series-view-body{left:61.7vw!important;right:3.4vw!important;top:11.2vh!important;height:77vh!important;padding-top:18px!important}
+.crest-mode .series-view-body:before{margin-bottom:12px!important;padding-bottom:8px!important;letter-spacing:.2em!important}
+.crest-mode .series-view-body .gallery{gap:10px!important;max-height:69vh!important}
+.crest-mode .series-view-body .card .meta{padding:7px 9px!important;min-height:38px!important}
+.crest-mode .series-view-body .card .meta h3{font-size:12px!important;line-height:1.1!important;margin:0 0 4px!important}
+.crest-mode .series-view-body .card .meta p{font-size:8px!important}
+}/* Crest v9 — clean aligned exhibition grid */
+@media(min-width:1100px){
+.crest-mode .series-view-hero{left:7vw!important;top:13.5vh!important;width:23vw!important}
+.crest-mode #seriesTitle{font-size:clamp(52px,4.35vw,72px)!important;line-height:.94!important;margin:7px 0 15px!important;letter-spacing:-.05em!important}
+.crest-mode #seriesDesc{max-width:320px!important;font-size:10px!important;line-height:1.65!important;margin-top:16px!important}
+.crest-mode .crest-feature{left:7vw!important;top:42.5vh!important;width:23vw!important}
+.crest-mode .crest-feature-copy{padding:14px 0 14px 17px!important;border-left:2px solid rgba(181,139,76,.72)!important}
+.crest-mode .crest-feature-copy h3{font-size:29px!important;line-height:1!important;margin:9px 0 11px!important}
+.crest-mode .crest-feature-copy p{max-width:285px!important;font-size:9px!important;line-height:1.6!important}
+.crest-mode .crest-feature-art{left:29.7vw!important;top:-30.3vh!important;width:23.5vw!important;height:47vh!important;padding:14px!important}
+.crest-mode .crest-feature-art img{max-width:89%!important;max-height:42vh!important}
+.crest-mode .series-view-body{left:61.8vw!important;right:3.5vw!important;top:13.5vh!important;height:72vh!important;padding-top:0!important}
+.crest-mode .series-view-body:before{margin:0 0 13px!important;padding:0 0 9px!important}
+.crest-mode .series-view-body .gallery{gap:11px!important;max-height:66vh!important;align-content:start!important}
+.crest-mode .series-view-body .card{margin:0!important}
+.crest-mode .series-view-body .card img{display:block!important}
+}
+@media(min-width:1500px){
+.crest-mode .series-view-hero{left:6.5vw!important}
+.crest-mode .crest-feature{left:6.5vw!important}
+}/* Crest v10 — align content to ornamental safe-area */
+@media(min-width:1100px){
+.crest-mode .series-view-hero{left:6.45vw!important;top:13.1vh!important;width:23.2vw!important}
+.crest-mode #seriesTitle{font-size:clamp(50px,4.15vw,70px)!important;margin:6px 0 14px!important}
+.crest-mode #seriesDesc{max-width:315px!important}
+.crest-mode .crest-feature{left:6.45vw!important;top:43.8vh!important;width:23.2vw!important}
+.crest-mode .crest-feature-copy{padding-left:17px!important}
+.crest-mode .crest-feature-art{left:30.0vw!important;top:-30.8vh!important;width:23.4vw!important;height:46.5vh!important;padding:13px!important}
+.crest-mode .crest-feature-art img{max-width:88%!important;max-height:41vh!important}
+.crest-mode .series-view-body{left:61.85vw!important;right:3.65vw!important;top:13.1vh!important;height:69vh!important}
+.crest-mode .series-view-body:before{margin-bottom:12px!important}
+.crest-mode .series-view-body .gallery{gap:10px!important;max-height:64vh!important}
+}
+@media(min-width:1500px){
+.crest-mode .series-view-hero,.crest-mode .crest-feature{left:6.35vw!important}
+.crest-mode .series-view-body{right:3.55vw!important}
+}/* Crest v11 — vertically center archive grid inside ornament frame */
+@media(min-width:1100px){
+.crest-mode .series-view-body{
+  top:19.2vh!important;
+  height:62vh!important;
+}
+.crest-mode .series-view-body .gallery{
+  max-height:57vh!important;
+}
+}/* Crest v12 — enlarge and vertically center featured artwork */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  left:28.7vw!important;
+  top:-28.0vh!important;
+  width:27.0vw!important;
+  height:51.5vh!important;
+  padding:14px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.crest-mode .crest-feature-art img{
+  width:auto!important;
+  height:auto!important;
+  max-width:93%!important;
+  max-height:46.5vh!important;
+  object-fit:contain!important;
+}
+}/* Crest v13 — larger featured artwork, preserve archive gutter */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  left:27.1vw!important;
+  top:-29.0vh!important;
+  width:29.2vw!important;
+  height:54.0vh!important;
+  padding:14px!important;
+}
+.crest-mode .crest-feature-art img{
+  max-width:94%!important;
+  max-height:49.0vh!important;
+}
+.crest-mode .crest-archive{
+  margin-left:1.15vw!important;
+}
+}/* Crest v14 — fixed three-column geometry, protected gutters */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  left:28.2vw!important;
+  top:-27.0vh!important;
+  width:27.4vw!important;
+  height:51.5vh!important;
+  padding:14px!important;
+}
+.crest-mode .crest-feature-art img{
+  max-width:94%!important;
+  max-height:46.5vh!important;
+}
+.crest-mode .crest-archive{
+  margin-left:2.6vw!important;
+  transform:translateY(1.2vh)!important;
+}
+}/* Crest v15 — optical vertical centering + wider archive gutter */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  left:26.8vw!important;
+  top:-21.5vh!important;
+  width:27.8vw!important;
+  height:52vh!important;
+  padding:14px!important;
+}
+.crest-mode .crest-feature-art img{
+  max-width:94%!important;
+  max-height:47vh!important;
+}
+.crest-mode .crest-archive{
+  margin-left:5.2vw!important;
+  transform:translateY(5.8vh)!important;
+}
+}/* Crest v16 — square feature frame aligned to archive grid rows */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  left:26.0vw!important;
+  top:-21.5vh!important;
+  width:29.2vw!important;
+  height:29.2vw!important;
+  max-height:58vh!important;
+  aspect-ratio:1/1!important;
+  padding:18px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.crest-mode .crest-feature-art img{
+  width:91%!important;
+  height:91%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+}/* Crest v17 — exact archive-row vertical alignment, enlarge artwork only */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  top:-21.1vh!important;
+  /* keep v16 square ivory frame size */
+}
+.crest-mode .crest-feature-art img{
+  width:96%!important;
+  height:96%!important;
+  max-width:none!important;
+  max-height:none!important;
+  object-fit:contain!important;
+}
+}/* Crest v18 — 2px optical bottom-line correction */
+@media(min-width:1100px){
+.crest-mode .crest-feature-art{
+  transform:translateY(-2px)!important;
+}
+}/* Crest v19 — slightly wider feature/archive gutter + selectable feature */
+@media(min-width:1100px){
+.crest-mode .crest-archive{margin-left:5.8vw!important;}
+}
+.crest-mode .crest-archive .art-card{cursor:pointer;}
+.crest-mode .crest-archive .art-card:hover{transform:translateY(-2px);transition:transform .18s ease;}
+/* Crest v20 — wider gutter; archive clicks drive feature instead of lightbox */
+@media(min-width:1100px){.crest-mode .crest-archive{margin-left:6.4vw!important;}}
+
+/* Crest v21 — refined editorial typography/alignment */
+.crest-mode .series-view-head{
+  padding-left:6.35vw!important;
+  padding-top:5.2vh!important;
+  max-width:27vw!important;
+}
+.crest-mode .series-view-head .eyebrow{
+  color:#9b7540!important;
+  letter-spacing:.30em!important;
+  font-size:10px!important;
+  font-weight:600!important;
+}
+.crest-mode .series-view-head h2{
+  color:#071b31!important;
+  line-height:.92!important;
+  letter-spacing:-.045em!important;
+  margin:.45rem 0 .7rem!important;
+}
+.crest-mode .series-view-head .series-en{
+  color:#b08a52!important;
+  letter-spacing:.38em!important;
+  font-weight:600!important;
+}
+.crest-mode .series-view-head .series-desc{
+  color:#65707a!important;
+  line-height:1.75!important;
+  max-width:290px!important;
+  margin-top:1.15rem!important;
+}
+.crest-mode .series-view-head .series-count{
+  color:#b08a52!important;
+  letter-spacing:.28em!important;
+  margin-top:1.05rem!important;
+}
+.crest-mode .crest-feature-copy{
+  left:6.35vw!important;
+  top:44.5%!important;
+  width:25vw!important;
+  padding-left:18px!important;
+  border-left:2px solid #b78c50!important;
+}
+.crest-mode .crest-feature-copy .eyebrow{
+  color:#9b7540!important;
+  letter-spacing:.32em!important;
+  font-size:10px!important;
+  margin-bottom:7px!important;
+}
+.crest-mode .crest-feature-copy h3{
+  color:#071b31!important;
+  font-size:30px!important;
+  line-height:1.05!important;
+  margin:0 0 12px!important;
+  letter-spacing:-.035em!important;
+}
+.crest-mode .crest-feature-copy p{
+  color:#7a8188!important;
+  line-height:1.65!important;
+  font-size:11px!important;
+}
+
+/* Crest v22 — repair header and place text deliberately */
+header, .site-header{
+  position:relative!important;
+  top:auto!important; left:auto!important; right:auto!important;
+  width:100%!important;
+  height:54px!important;
+  min-height:54px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  padding:0 4vw!important;
+  box-sizing:border-box!important;
+  z-index:100!important;
+}
+header .brand, .site-header .brand{margin:0!important;}
+header .back-link, .site-header .back-link{margin-left:auto!important;}
+
+.crest-mode .series-view-head{
+  position:absolute!important;
+  left:6.4vw!important;
+  top:6.4vh!important;
+  width:24vw!important;
+  max-width:330px!important;
+  padding:0!important;
+}
+.crest-mode .series-view-head h2{
+  margin:7px 0 11px!important;
+  font-size:clamp(52px,4.4vw,78px)!important;
+}
+.crest-mode .series-view-head .series-desc{
+  max-width:300px!important;
+  margin-top:18px!important;
+}
+.crest-mode .crest-feature-copy{
+  position:absolute!important;
+  left:6.4vw!important;
+  top:42.5%!important;
+  width:24vw!important;
+  max-width:300px!important;
+  padding:4px 0 4px 18px!important;
+}
+
+/* Crest v23 — final viewport composition reset */
+body.crest-mode{overflow:hidden!important;}
+.crest-mode header,.crest-mode .site-header{
+ position:fixed!important;top:0!important;left:0!important;right:0!important;
+ height:52px!important;min-height:52px!important;width:100%!important;
+ padding:0 4vw!important;margin:0!important;background:#f5f0e6!important;
+ border-top:1px solid #0b1e33!important;border-bottom:1px solid #d7c7aa!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ box-sizing:border-box!important;z-index:999!important;
+}
+.crest-mode header .brand,.crest-mode .site-header .brand{position:static!important;margin:0!important;transform:none!important;}
+.crest-mode header .back-link,.crest-mode .site-header .back-link{position:static!important;margin:0!important;transform:none!important;}
+.crest-mode .series-view{position:relative!important;margin-top:52px!important;height:calc(100vh - 52px)!important;min-height:0!important;}
+.crest-mode .series-view-head{
+ position:absolute!important;left:6.4vw!important;top:6.3%!important;
+ width:25vw!important;max-width:340px!important;margin:0!important;padding:0!important;
+}
+.crest-mode .series-view-head h2{font-size:clamp(48px,4vw,70px)!important;line-height:.94!important;margin:8px 0 12px!important;}
+.crest-mode .series-view-head .series-desc{margin-top:17px!important;max-width:300px!important;}
+.crest-mode .crest-feature-copy{
+ position:absolute!important;left:6.4vw!important;top:43.2%!important;
+ width:25vw!important;max-width:310px!important;margin:0!important;
+ padding:5px 0 5px 18px!important;border-left:2px solid #b78c50!important;
+}
+.crest-mode .crest-feature-copy h3{font-size:30px!important;margin:3px 0 12px!important;}
+
+/* Crest v24 — preserve original header; refine only page typography */
+.crest-mode header,.crest-mode .site-header{
+ position:fixed!important;top:0!important;left:0!important;right:0!important;
+ height:52px!important;min-height:52px!important;width:100%!important;
+ padding:0 4vw!important;margin:0!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ box-sizing:border-box!important;z-index:999!important;
+}
+.crest-mode header .brand,.crest-mode .site-header .brand,
+.crest-mode header .back-link,.crest-mode .site-header .back-link{
+ position:static!important;transform:none!important;
+}
+.crest-mode .series-view-head{
+ left:6.35vw!important;top:7.4%!important;width:24vw!important;max-width:330px!important;
+}
+.crest-mode .series-view-head .eyebrow{
+ font-family:Arial,sans-serif!important;font-size:9px!important;font-weight:600!important;
+ letter-spacing:.32em!important;color:#8f6d3c!important;
+}
+.crest-mode .series-view-head h2{
+ font-family:"Noto Serif KR","Batang",serif!important;font-size:clamp(48px,3.8vw,66px)!important;
+ font-weight:700!important;line-height:.95!important;letter-spacing:-.055em!important;
+ color:#071b31!important;margin:10px 0 10px!important;
+}
+.crest-mode .series-view-head .series-en{
+ font-size:8px!important;letter-spacing:.42em!important;color:#b18a51!important;
+}
+.crest-mode .series-view-head .series-desc{
+ font-size:11px!important;line-height:1.7!important;color:#68727b!important;
+ max-width:285px!important;margin-top:20px!important;
+}
+.crest-mode .series-view-head .series-count{
+ font-size:9px!important;letter-spacing:.3em!important;color:#ad8750!important;margin-top:13px!important;
+}
+.crest-mode .crest-feature-copy{
+ left:6.35vw!important;top:43.5%!important;width:24vw!important;max-width:300px!important;
+ padding:3px 0 3px 17px!important;border-left:2px solid #b88b4c!important;
+}
+.crest-mode .crest-feature-copy .eyebrow{
+ font-family:Arial,sans-serif!important;font-size:9px!important;font-weight:600!important;
+ letter-spacing:.30em!important;color:#a17b46!important;
+}
+.crest-mode .crest-feature-copy .latest-label{
+ font-family:Arial,sans-serif!important;font-size:11px!important;font-weight:600!important;
+ letter-spacing:.25em!important;color:#18304a!important;
+}
+.crest-mode .crest-feature-copy h3{
+ font-family:"Noto Serif KR","Batang",serif!important;font-size:31px!important;font-weight:700!important;
+ letter-spacing:-.04em!important;line-height:1!important;color:#071b31!important;margin:8px 0 13px!important;
+}
+.crest-mode .crest-feature-copy p{
+ font-size:10px!important;line-height:1.65!important;color:#8a8e91!important;max-width:280px!important;
+}
+
+/* Crest v25 — restore top controls to original site positions */
+.crest-mode header,.crest-mode .site-header{
+ position:fixed!important;
+ top:0!important;left:0!important;right:0!important;
+ width:100%!important;height:54px!important;min-height:54px!important;
+ padding:0 4vw!important;margin:0!important;
+ box-sizing:border-box!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ background:#f5f0e6!important;
+ border-top:1px solid #0b1e33!important;
+ border-bottom:1px solid #d7c7aa!important;
+ z-index:999!important;
+}
+.crest-mode header .brand,.crest-mode .site-header .brand{
+ position:static!important;left:auto!important;top:auto!important;right:auto!important;
+ margin:0!important;transform:none!important;
+}
+.crest-mode header .back-link,.crest-mode .site-header .back-link{
+ position:static!important;left:auto!important;top:auto!important;right:auto!important;
+ margin:0!important;transform:none!important;
+}
+.crest-mode .series-view{margin-top:54px!important;height:calc(100vh - 54px)!important;}
+
+/* Crest v26 — restore ORIGINAL floating header geometry */
+.crest-mode header,.crest-mode .site-header{
+ position:fixed!important;
+ top:0!important;left:0!important;right:0!important;
+ width:100%!important;height:54px!important;min-height:54px!important;
+ padding:0 4vw!important;margin:0!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ box-sizing:border-box!important;
+ background:#f5f0e6!important;border-top:1px solid #0b1e33!important;border-bottom:1px solid #d7c7aa!important;
+ z-index:9999!important;
+}
+.crest-mode header .brand,.crest-mode .site-header .brand{
+ position:static!important;margin:0!important;padding:0!important;transform:none!important;
+}
+.crest-mode header .back-link,.crest-mode .site-header .back-link{
+ position:static!important;margin:0!important;transform:none!important;
+}
+.crest-mode .series-view{
+ margin-top:54px!important;
+ height:calc(100vh - 54px)!important;
+}
+
+/* Crest v27 — ACTUAL series controls: restore original full-width top bar */
+.crest-mode .series-view-head{
+ position:absolute!important;top:0!important;left:0!important;right:0!important;
+ width:100%!important;max-width:none!important;height:54px!important;
+ margin:0!important;padding:0 4vw!important;box-sizing:border-box!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ background:#f5f0e6!important;border-bottom:1px solid #d7c7aa!important;z-index:1000!important;
+}
+.crest-mode .series-view-head .series-home{
+ position:static!important;inset:auto!important;margin:0!important;transform:none!important;
+}
+.crest-mode .series-view-head #seriesClose{
+ position:static!important;inset:auto!important;margin:0!important;transform:none!important;
+}
+.crest-mode .series-view-hero{padding-top:54px!important;}
+
+/* Crest v28 — refine left typography block */
+.crest-mode .series-view-hero{
+  position:absolute!important;
+  left:6.3vw!important;
+  top:12.2vh!important;
+  width:25.5vw!important;
+  max-width:330px!important;
+  padding:0!important;
+  text-align:left!important;
+}
+.crest-mode .series-view-hero .eyebrow{
+  margin:0 0 10px!important;
+  color:#17304b!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.24em!important;
+  text-transform:uppercase!important;
+}
+.crest-mode .series-view-hero h2{
+  margin:0 0 13px!important;
+  color:#071b31!important;
+  font-size:clamp(56px,4.35vw,76px)!important;
+  line-height:.92!important;
+  letter-spacing:-.065em!important;
+  font-weight:800!important;
+}
+.crest-mode .series-view-hero h2::after{
+  content:"";
+  display:block;
+  width:46px;
+  height:1px;
+  margin-top:18px;
+  background:#b88a43;
+}
+.crest-mode .series-view-hero p{
+  margin:0!important;
+  max-width:310px!important;
+  color:#667078!important;
+  font-size:11px!important;
+  line-height:1.65!important;
+  letter-spacing:-.01em!important;
+}
+.crest-mode .series-view-hero .count{
+  margin-top:14px!important;
+  color:#ad8348!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  letter-spacing:.22em!important;
+}
+
+/* Crest v29 — move title block away from decorative corner artwork */
+.crest-mode .series-view-hero{
+  left:8.8vw!important;
+  top:14.8vh!important;
+  width:23.5vw!important;
+  max-width:350px!important;
+}
+.crest-mode .series-view-hero .eyebrow{
+  margin-bottom:12px!important;
+}
+.crest-mode .series-view-hero h2{
+  font-size:clamp(52px,4.05vw,70px)!important;
+  line-height:.94!important;
+}
+.crest-mode .series-view-hero h2::after{
+  margin-top:16px!important;
+}
+.crest-mode .series-view-hero p{
+  max-width:300px!important;
+  font-size:11px!important;
+  line-height:1.7!important;
+}
+.crest-mode .series-view-hero .count{
+  margin-top:13px!important;
+}
+
+/* Crest v30 — title takes former latest slot; latest moves downward */
+.crest-mode .series-view-hero{
+  left:13.7vw!important;
+  top:40.5vh!important;
+  width:20.5vw!important;
+  max-width:340px!important;
+}
+.crest-mode .series-view-latest{
+  left:13.7vw!important;
+  top:64.5vh!important;
+  width:20.5vw!important;
+  max-width:340px!important;
+}
+
+/* Crest v31 — lower latest artwork text block */
+.crest-mode .series-view-latest{
+  top:72vh!important;
+}
+
+/* Crest v32 — separate intro/latest blocks into clean background zones */
+.crest-mode .series-view-hero{
+  left:7.2vw!important;
+  top:34vh!important;
+  width:22vw!important;
+  max-width:350px!important;
+}
+.crest-mode .series-view-latest{
+  left:7.2vw!important;
+  top:69vh!important;
+  width:22vw!important;
+  max-width:350px!important;
+}
+
+/* Crest v33 — place copy blocks in user-marked clear zones */
+.crest-mode .series-view-hero{
+  left:20.2vw!important;
+  top:18.2vh!important;
+  width:22vw!important;
+  max-width:360px!important;
+}
+.crest-mode .series-view-latest{
+  left:20.2vw!important;
+  top:52.5vh!important;
+  width:22vw!important;
+  max-width:360px!important;
+}
+
+/* Crest v34 — fine tune Crest intro only */
+.crest-mode .series-view-hero{
+  left:17.4vw!important;
+  top:21.5vh!important;
+}
+
+/* Crest v35 — lower both left copy blocks, keep same x-axis */
+.crest-mode .series-view-hero{
+  left:17.4vw!important;
+  top:25.2vh!important;
+}
+.crest-mode .series-view-latest{
+  left:17.4vw!important;
+  top:57.8vh!important;
+}
+
+/* Crest v36 — align latest block with Crest intro leading edge and lower it */
+.crest-mode .series-view-hero,
+.crest-mode .series-view-latest{
+  left:17.4vw!important;
+}
+.crest-mode .series-view-hero{
+  top:27.5vh!important;
+}
+.crest-mode .series-view-latest{
+  top:66.5vh!important;
+}
+
+/* Crest v37 — match user reference: stacked left text blocks */
+.crest-mode .series-view-hero{
+  left:8.8vw!important;
+  top:15.5vh!important;
+  width:25vw!important;
+  max-width:390px!important;
+}
+.crest-mode .series-view-latest{
+  left:10.2vw!important;
+  top:58.5vh!important;
+  width:24vw!important;
+  max-width:360px!important;
+}
+
+/* Crest v38 — exact visual placement from annotated reference */
+.crest-mode .series-view-hero{
+  left:8.75vw!important;
+  top:11.2vh!important;
+  width:25.5vw!important;
+  max-width:390px!important;
+}
+.crest-mode .series-view-latest{
+  left:10.15vw!important;
+  top:61.8vh!important;
+  width:24vw!important;
+  max-width:360px!important;
+}
+
+/* Crest v39 — clean final left-column typography using actual DOM */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    position:absolute!important;
+    left:8.9vw!important;
+    top:12.8vh!important;
+    width:21.5vw!important;
+    max-width:340px!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0!important;
+    background:transparent!important;
+    text-align:left!important;
+    z-index:3!important;
+  }
+  .crest-mode .series-view-hero .eyebrow{
+    margin:0 0 10px!important;
+    font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.28em!important;
+    color:#17304b!important;
+  }
+  .crest-mode #seriesTitle{
+    margin:0 0 14px!important;
+    padding:0!important;
+    max-width:none!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:clamp(50px,3.7vw,66px)!important;
+    line-height:.95!important;
+    letter-spacing:-.055em!important;
+    color:#071b31!important;
+    text-transform:none!important;
+  }
+  .crest-mode #seriesTitle:after{
+    content:"CREST"!important;
+    display:block!important;
+    margin-top:13px!important;
+    font:700 8px/1 Arial,sans-serif!important;
+    letter-spacing:.42em!important;
+    color:#a77e46!important;
+  }
+  .crest-mode #seriesDesc{
+    margin:18px 0 0!important;
+    padding:0!important;
+    max-width:315px!important;
+    background:transparent!important;
+    font:10px/1.72 Arial,sans-serif!important;
+    color:#6d747b!important;
+    opacity:1!important;
+  }
+  .crest-mode #seriesWorkCount{
+    margin:13px 0 0!important;
+    max-width:none!important;
+    font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;
+    color:#a77e46!important;
+  }
+
+  .crest-mode .crest-feature-copy{
+    position:absolute!important;
+    left:10.9vw!important;
+    top:43.8vh!important;
+    width:19.5vw!important;
+    max-width:310px!important;
+    margin:0!important;
+    padding:4px 0 4px 16px!important;
+    border-left:2px solid #b88a4d!important;
+    background:transparent!important;
+    backdrop-filter:none!important;
+    z-index:4!important;
+  }
+  .crest-mode .crest-feature-copy:before{
+    content:"SERIES 01"!important;
+    display:block!important;
+    margin:0 0 7px!important;
+    font:700 8px/1 Arial,sans-serif!important;
+    letter-spacing:.32em!important;
+    color:#aa8149!important;
+  }
+  .crest-mode .crest-feature-copy .eyebrow{
+    margin:0 0 8px!important;
+    font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;
+    color:#17304b!important;
+  }
+  .crest-mode .crest-feature-copy h3{
+    margin:0 0 11px!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:30px!important;
+    font-weight:700!important;
+    line-height:1!important;
+    letter-spacing:-.04em!important;
+    color:#071b31!important;
+  }
+  .crest-mode .crest-feature-copy p{
+    margin:0!important;
+    max-width:285px!important;
+    font:9px/1.65 Arial,sans-serif!important;
+    color:#858b90!important;
+    opacity:1!important;
+  }
+}
+
+/* Crest v40 — clean left-column placement, aligned and vertically balanced */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    left:17.2vw!important;
+    top:17.5vh!important;
+    width:20.5vw!important;
+    max-width:340px!important;
+  }
+  .crest-mode .series-view-latest,
+  .crest-mode .crest-feature-copy{
+    left:17.2vw!important;
+    top:49.5vh!important;
+    width:20.5vw!important;
+    max-width:340px!important;
+  }
+  .crest-mode #seriesTitle{
+    font-size:clamp(48px,3.35vw,62px)!important;
+    margin-bottom:12px!important;
+  }
+  .crest-mode #seriesDesc{
+    max-width:320px!important;
+    line-height:1.65!important;
+  }
+  .crest-mode .crest-feature-copy{
+    padding-left:16px!important;
+  }
+}
+
+/* Crest v41 — definitive left-copy placement */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    position:fixed!important;
+    left:17.2vw!important;
+    top:14.8vh!important;
+    width:20.8vw!important;
+    max-width:350px!important;
+    margin:0!important;
+    padding:0!important;
+    z-index:20!important;
+  }
+
+  .crest-mode .crest-feature-copy{
+    position:fixed!important;
+    left:17.2vw!important;
+    top:44.0vh!important;
+    width:20.8vw!important;
+    max-width:350px!important;
+    margin:0!important;
+    padding:5px 0 5px 17px!important;
+    border-left:2px solid #b88a4d!important;
+    background:transparent!important;
+    z-index:21!important;
+  }
+
+  .crest-mode .crest-feature-copy:before{
+    margin-bottom:7px!important;
+  }
+  .crest-mode .crest-feature-copy .eyebrow{
+    margin-bottom:8px!important;
+  }
+  .crest-mode .crest-feature-copy h3{
+    margin:0 0 10px!important;
+  }
+  .crest-mode .crest-feature-copy p{
+    margin:0!important;
+  }
+}
+
+/* Crest v42 — lower both left text blocks with balanced spacing */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    left:17.2vw!important;
+    top:19.6vh!important;
+  }
+  .crest-mode .crest-feature-copy{
+    left:17.2vw!important;
+    top:50.8vh!important;
+  }
+}
+
+/* Crest v43 — selected artwork name under featured image, left aligned */
+@media(min-width:1100px){
+  .crest-mode .crest-feature-copy{
+    position:fixed!important;
+    left:32.35vw!important;
+    top:81.8vh!important;
+    width:29vw!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    background:transparent!important;
+    z-index:30!important;
+  }
+  .crest-mode .crest-feature-copy:before,
+  .crest-mode .crest-feature-copy .eyebrow,
+  .crest-mode .crest-feature-copy p{
+    display:none!important;
+  }
+  .crest-mode .crest-feature-copy h3{
+    margin:0!important;
+    padding:0!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:18px!important;
+    font-weight:700!important;
+    line-height:1.2!important;
+    letter-spacing:-.03em!important;
+    color:#071b31!important;
+    text-align:left!important;
+  }
+}
+
+/* Crest v44 — vertically center intro block, preserve horizontal position */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    left:17.2vw!important;
+    top:50vh!important;
+    transform:translateY(-50%)!important;
+  }
+}
+
+/* Crest v45 — move centered intro left toward curved ornament */
+@media(min-width:1100px){
+  .crest-mode .series-view-hero{
+    left:14.6vw!important;
+  }
+}
+
+/* Crest v46 — 6-per-page archive pagination */
+.crest-mode .series-view-body{overflow:visible!important;}
+.crest-mode .crest-pager{
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  margin-top:12px;padding-top:9px;border-top:1px solid rgba(181,139,76,.35);
+  font:700 9px/1 Arial,sans-serif;letter-spacing:.16em;color:#8f6b39;
+}
+.crest-mode .crest-pager button{
+  width:28px;height:28px;border:1px solid rgba(181,139,76,.6);
+  background:rgba(248,244,235,.82);color:#0b1c31;cursor:pointer;
+  display:grid;place-items:center;font-size:13px;transition:.18s ease;
+}
+.crest-mode .crest-pager button:hover:not(:disabled){background:#0b1c31;color:#f7f2e7;border-color:#0b1c31}
+.crest-mode .crest-pager button:disabled{opacity:.3;cursor:default}
+.crest-mode .crest-page-indicator{min-width:54px;text-align:center}
+
+/* Muksu v1 — one-screen ink-wash archive */
+@media(min-width:1100px){
+  .series-view.muksu-mode{
+    background:#f7f5ef!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1oUz9JXLqYAtIrRTKGiEVZINQWzu7B6R4&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;
+    min-height:100vh!important;
+    overflow:hidden!important;
+  }
+  .muksu-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(248,247,243,.82)!important;
+    border-bottom:1px solid rgba(66,78,85,.16)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .muksu-mode .series-view-hero{
+    position:absolute!important;
+    left:7.5vw!important;
+    top:50%!important;
+    transform:translateY(-50%)!important;
+    width:22vw!important;
+    max-width:360px!important;
+    min-height:0!important;height:auto!important;
+    margin:0!important;padding:0!important;background:transparent!important;
+    z-index:3!important;
+  }
+  .muksu-mode .series-view-hero:before,
+  .muksu-mode .series-view-hero:after{display:none!important}
+  .muksu-mode .series-view-hero .eyebrow{
+    margin:0 0 11px!important;
+    font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#53656d!important;
+  }
+  .muksu-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;max-width:none!important;
+    font-family:"Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.7vw,67px)!important;
+    font-weight:700!important;line-height:.96!important;letter-spacing:-.055em!important;
+    color:#26353b!important;text-transform:none!important;
+  }
+  .muksu-mode #seriesTitle:after{
+    content:"MUKSU"!important;display:block!important;margin-top:13px!important;
+    font:700 8px/1 Arial,sans-serif!important;letter-spacing:.42em!important;color:#7b9098!important;
+  }
+  .muksu-mode #seriesDesc{
+    margin:19px 0 0!important;padding:0!important;max-width:310px!important;
+    background:transparent!important;font:10px/1.75 Arial,sans-serif!important;color:#718087!important;
+  }
+  .muksu-mode #seriesWorkCount{
+    margin-top:14px!important;font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#718990!important;
+  }
+
+  .muksu-mode .crest-feature{
+    position:absolute!important;left:31.5vw!important;top:17vh!important;
+    width:28.5vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:4!important;
+  }
+  .muksu-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.5vw!important;height:28.5vw!important;max-height:58vh!important;aspect-ratio:1/1!important;
+    padding:15px!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    background:rgba(255,255,255,.62)!important;
+    border:1px solid rgba(72,89,97,.22)!important;
+    box-shadow:0 18px 40px rgba(63,78,87,.08)!important;
+  }
+  .muksu-mode .crest-feature-art:before,
+  .muksu-mode .crest-feature-art:after{display:none!important}
+  .muksu-mode .crest-feature-art img{
+    width:96%!important;height:96%!important;max-width:none!important;max-height:none!important;
+    object-fit:contain!important;filter:none!important;box-shadow:none!important;
+  }
+  .muksu-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.5vw + 13px)!important;
+    width:100%!important;max-width:none!important;margin:0!important;padding:0!important;
+    border:0!important;background:transparent!important;z-index:5!important;
+  }
+  .muksu-mode .crest-feature-copy:before,
+  .muksu-mode .crest-feature-copy .eyebrow,
+  .muksu-mode .crest-feature-copy p{display:none!important}
+  .muksu-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Noto Serif KR","Batang",serif!important;font-size:18px!important;font-weight:700!important;
+    line-height:1.2!important;letter-spacing:-.03em!important;color:#34474f!important;
+  }
+
+  .muksu-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:18vh!important;
+    width:auto!important;height:68vh!important;padding:0!important;margin:0!important;
+    background:transparent!important;border:0!important;overflow:visible!important;z-index:4!important;
+  }
+  .muksu-mode .series-view-body:before{
+    content:"MUKSU ARCHIVE"!important;display:block!important;
+    margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(72,89,97,.24)!important;
+    font:700 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#53666e!important;
+  }
+  .muksu-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;
+    max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .muksu-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;
+    border:1px solid rgba(72,89,97,.22)!important;
+    background:rgba(255,255,255,.64)!important;
+    box-shadow:0 8px 18px rgba(66,80,88,.05)!important;
+    transition:transform .18s ease,box-shadow .18s ease!important;
+  }
+  .muksu-mode .series-view-body .card:hover{
+    transform:translateY(-2px)!important;box-shadow:0 10px 22px rgba(66,80,88,.10)!important;
+  }
+  .muksu-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;
+    padding:4px!important;box-sizing:border-box!important;background:rgba(255,255,255,.72)!important;
+  }
+  .muksu-mode .series-view-body .card .meta{
+    min-height:38px!important;padding:7px 9px!important;
+    background:rgba(48,63,70,.90)!important;color:#f6f5ef!important;
+  }
+  .muksu-mode .series-view-body .card .meta b{font-size:12px!important;margin-bottom:2px!important}
+  .muksu-mode .series-view-body .card .meta small{font-size:8px!important;color:#b9c8ce!important}
+
+  .muksu-mode .crest-pager{
+    display:flex;align-items:center;justify-content:flex-end;gap:10px;
+    margin-top:12px;padding-top:9px;border-top:1px solid rgba(72,89,97,.20);
+    font:700 9px/1 Arial,sans-serif;letter-spacing:.16em;color:#60767f;
+  }
+  .muksu-mode .crest-pager button{
+    width:28px;height:28px;border:1px solid rgba(72,89,97,.38);
+    background:rgba(248,248,245,.80);color:#32474f;cursor:pointer;
+    display:grid;place-items:center;font-size:13px;
+  }
+  .muksu-mode .crest-pager button:hover:not(:disabled){background:#435861;color:#fff}
+  .muksu-mode .crest-pager button:disabled{opacity:.28;cursor:default}
+}
+
+/* Muksu v2 — ink typography + cleaner archive cards */
+@media(min-width:1100px){
+  .muksu-mode #seriesTitle{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(54px,4.1vw,72px)!important;
+    font-weight:700!important;
+    line-height:.94!important;
+    letter-spacing:-.07em!important;
+    color:#2f3d42!important;
+    text-shadow:0 1px 0 rgba(255,255,255,.35)!important;
+    margin-bottom:14px!important;
+  }
+  .muksu-mode #seriesTitle:after{
+    color:#81929a!important;
+    letter-spacing:.46em!important;
+    font-size:8px!important;
+    margin-top:12px!important;
+  }
+  .muksu-mode .series-view-hero .eyebrow{
+    color:#52666e!important;
+  }
+  .muksu-mode #seriesDesc{
+    color:#6f7d83!important;
+  }
+  .muksu-mode #seriesWorkCount{
+    color:#758a93!important;
+  }
+
+  .muksu-mode .series-view-body{
+    background:transparent!important;
+  }
+  .muksu-mode .series-view-body .gallery{
+    gap:10px!important;
+  }
+  .muksu-mode .series-view-body .card{
+    background:transparent!important;
+    border:1px solid rgba(66,82,90,.18)!important;
+    box-shadow:0 6px 14px rgba(52,68,76,.05)!important;
+    overflow:hidden!important;
+  }
+  .muksu-mode .series-view-body .card img{
+    padding:0!important;
+    background:transparent!important;
+    display:block!important;
+  }
+  .muksu-mode .series-view-body .card .meta{
+    background:rgba(48,63,70,.84)!important;
+    backdrop-filter:blur(3px)!important;
+    min-height:34px!important;
+    padding:6px 9px!important;
+  }
+  .muksu-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:12px!important;
+    color:#f5f5f1!important;
+  }
+  .muksu-mode .series-view-body .card .meta small{
+    color:#c7d1d5!important;
+  }
+  .muksu-mode .series-view-body:before{
+    color:#536970!important;
+    border-bottom-color:rgba(66,82,90,.18)!important;
+  }
+}
+
+/* Muksu series button skin */
+.series button[data-series="묵수"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(248,247,243,.28),rgba(248,247,243,.28)),
+    url("https://drive.google.com/thumbnail?id=1dw8OBD8lVhLSfR3FOTsmZXB8a4BRdRZM&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(74,88,95,.28)!important;
+  color:#2f4148!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.65)!important;
+}
+.series button[data-series="묵수"] strong,
+.series button[data-series="묵수"] span{
+  color:#2f4148!important;
+}
+.series button[data-series="묵수"] small{
+  color:#6f858e!important;
+  text-shadow:none!important;
+}
+.series button[data-series="묵수"]:hover{
+  filter:saturate(.95) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Shinsu v1 — monumental painterly archive */
+@media(min-width:1100px){
+  .series-view.shinsu-mode{
+    background:#d8d0bd!important;
+    background-image:
+      linear-gradient(rgba(19,32,38,.06),rgba(19,32,38,.06)),
+      url("https://drive.google.com/thumbnail?id=1fOBCJ_QxRrhWblo03xQpKnFnhf4sg9mV&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .shinsu-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(236,230,216,.74)!important;
+    border-bottom:1px solid rgba(33,50,57,.20)!important;
+    backdrop-filter:blur(9px)!important;z-index:1000!important;
+  }
+
+  .shinsu-mode .series-view-hero{
+    position:absolute!important;
+    left:7.1vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:355px!important;
+    min-height:0!important;height:auto!important;margin:0!important;padding:0!important;
+    background:transparent!important;z-index:4!important;
+  }
+  .shinsu-mode .series-view-hero:before,
+  .shinsu-mode .series-view-hero:after{display:none!important}
+  .shinsu-mode .series-view-hero .eyebrow{
+    margin:0 0 10px!important;
+    font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#5c6e72!important;
+  }
+  .shinsu-mode #seriesTitle{
+    margin:0 0 14px!important;padding:0!important;max-width:none!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:clamp(54px,4.05vw,72px)!important;
+    font-weight:800!important;line-height:.94!important;letter-spacing:-.06em!important;
+    color:#1e3036!important;text-shadow:0 1px 0 rgba(255,255,255,.18)!important;
+    text-transform:none!important;
+  }
+  .shinsu-mode #seriesTitle:after{
+    content:"SHINSU"!important;display:block!important;margin-top:13px!important;
+    font:700 8px/1 Arial,sans-serif!important;letter-spacing:.46em!important;
+    color:#8e785a!important;
+  }
+  .shinsu-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:310px!important;
+    background:rgba(233,226,210,.22)!important;
+    font:10px/1.74 Arial,sans-serif!important;color:#58686b!important;
+    text-shadow:0 1px 0 rgba(255,255,255,.12)!important;
+  }
+  .shinsu-mode #seriesWorkCount{
+    margin-top:14px!important;font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#8d7451!important;
+  }
+
+  .shinsu-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.2vh!important;
+    width:28.8vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .shinsu-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.8vw!important;height:28.8vw!important;max-height:60vh!important;aspect-ratio:1/1!important;
+    padding:13px!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    background:rgba(232,224,207,.62)!important;
+    border:1px solid rgba(46,62,66,.28)!important;
+    box-shadow:0 18px 44px rgba(15,30,35,.20)!important;
+  }
+  .shinsu-mode .crest-feature-art:before,
+  .shinsu-mode .crest-feature-art:after{display:none!important}
+  .shinsu-mode .crest-feature-art img{
+    width:96%!important;height:96%!important;max-width:none!important;max-height:none!important;
+    object-fit:contain!important;filter:none!important;box-shadow:none!important;
+    background:rgba(244,239,227,.40)!important;
+  }
+  .shinsu-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.8vw + 13px)!important;
+    width:100%!important;max-width:none!important;margin:0!important;padding:0!important;
+    border:0!important;background:transparent!important;z-index:6!important;
+  }
+  .shinsu-mode .crest-feature-copy:before,
+  .shinsu-mode .crest-feature-copy .eyebrow,
+  .shinsu-mode .crest-feature-copy p{display:none!important}
+  .shinsu-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:18px!important;font-weight:800!important;line-height:1.2!important;
+    letter-spacing:-.03em!important;color:#22363b!important;
+  }
+
+  .shinsu-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:0!important;margin:0!important;
+    background:transparent!important;border:0!important;overflow:visible!important;z-index:5!important;
+  }
+  .shinsu-mode .series-view-body:before{
+    content:"SHINSU ARCHIVE"!important;display:block!important;
+    margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(44,61,65,.32)!important;
+    font:700 9px/1 Arial,sans-serif!important;letter-spacing:.27em!important;color:#42575c!important;
+  }
+  .shinsu-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .shinsu-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(43,59,63,.30)!important;
+    background:rgba(229,221,204,.58)!important;
+    box-shadow:0 8px 22px rgba(13,29,35,.15)!important;
+    transition:transform .18s ease,box-shadow .18s ease!important;
+  }
+  .shinsu-mode .series-view-body .card:hover{
+    transform:translateY(-2px)!important;
+    box-shadow:0 12px 26px rgba(13,29,35,.22)!important;
+  }
+  .shinsu-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;
+    padding:0!important;box-sizing:border-box!important;
+    background:rgba(230,223,208,.20)!important;display:block!important;
+  }
+  .shinsu-mode .series-view-body .card .meta{
+    min-height:38px!important;padding:7px 9px!important;
+    background:rgba(30,48,54,.90)!important;color:#f1eadc!important;
+  }
+  .shinsu-mode .series-view-body .card .meta b{
+    font-family:"Noto Serif KR","Batang",Georgia,serif!important;
+    font-size:12px!important;color:#f3ecde!important;
+  }
+  .shinsu-mode .series-view-body .card .meta small{
+    font-size:8px!important;color:#c8b89a!important;
+  }
+
+  .shinsu-mode .crest-pager{
+    display:flex;align-items:center;justify-content:flex-end;gap:10px;
+    margin-top:12px;padding-top:9px;border-top:1px solid rgba(44,61,65,.26);
+    font:700 9px/1 Arial,sans-serif;letter-spacing:.16em;color:#50656a;
+  }
+  .shinsu-mode .crest-pager button{
+    width:28px;height:28px;border:1px solid rgba(44,61,65,.40);
+    background:rgba(232,225,211,.72);color:#263b40;cursor:pointer;
+    display:grid;place-items:center;font-size:13px;
+  }
+  .shinsu-mode .crest-pager button:hover:not(:disabled){
+    background:#273e43;color:#f4ecdc;border-color:#273e43;
+  }
+  .shinsu-mode .crest-pager button:disabled{opacity:.28;cursor:default}
+}
+
+/* Shinsu v2 — refine contrast, featured art scale, captions, archive separation */
+@media(min-width:1100px){
+  .shinsu-mode #seriesDesc{
+    color:#44585e!important;
+    font-weight:500!important;
+    text-shadow:0 1px 0 rgba(255,255,255,.18)!important;
+  }
+  .shinsu-mode #seriesWorkCount{
+    color:#9a7446!important;
+    font-weight:800!important;
+  }
+
+  .shinsu-mode .crest-feature-art{
+    padding:10px!important;
+    background:rgba(232,224,207,.56)!important;
+  }
+  .shinsu-mode .crest-feature-art img{
+    width:99%!important;
+    height:99%!important;
+  }
+
+  .shinsu-mode .series-view-body{
+    padding:10px 10px 8px!important;
+    background:rgba(238,231,216,.10)!important;
+    backdrop-filter:blur(1.5px)!important;
+    border-radius:2px!important;
+  }
+  .shinsu-mode .series-view-body .card .meta{
+    min-height:31px!important;
+    padding:5px 9px!important;
+    background:rgba(30,48,54,.84)!important;
+  }
+  .shinsu-mode .series-view-body .card .meta b{
+    font-size:11px!important;
+    line-height:1.15!important;
+  }
+  .shinsu-mode .series-view-body .card .meta small{
+    font-size:7px!important;
+    opacity:.92!important;
+  }
+}
+
+/* Muksu v3 — final polish from visual review */
+@media(min-width:1100px){
+  .muksu-mode #seriesTitle{
+    font-size:clamp(50px,3.65vw,66px)!important;
+    color:#35474d!important;
+    letter-spacing:-.06em!important;
+  }
+
+  .muksu-mode .crest-feature-art{
+    padding:10px!important;
+    background:rgba(255,255,255,.54)!important;
+    border-color:rgba(72,89,97,.18)!important;
+  }
+  .muksu-mode .crest-feature-art img{
+    width:99%!important;
+    height:99%!important;
+  }
+
+  .muksu-mode .series-view-body .card .meta{
+    min-height:30px!important;
+    padding:5px 8px!important;
+    background:rgba(48,63,70,.76)!important;
+  }
+  .muksu-mode .series-view-body .card .meta b{
+    font-size:11px!important;
+    line-height:1.15!important;
+  }
+  .muksu-mode .series-view-body .card .meta small{
+    font-size:7px!important;
+    opacity:.78!important;
+  }
+
+  .muksu-mode .crest-pager{
+    margin-top:6px!important;
+    padding-top:6px!important;
+    gap:8px!important;
+  }
+}
+
+/* Crest v47 — final polish from visual review */
+@media(min-width:1100px){
+  .crest-mode #seriesDesc{
+    color:#59646d!important;
+    font-weight:500!important;
+  }
+  .crest-mode #seriesWorkCount{
+    color:#b18445!important;
+    font-weight:800!important;
+  }
+
+  .crest-mode .crest-feature-art{
+    padding:8px!important;
+  }
+  .crest-mode .crest-feature-art img{
+    width:103%!important;
+    height:103%!important;
+  }
+
+  .crest-mode .series-view-body .card .meta{
+    min-height:31px!important;
+    padding:5px 8px!important;
+  }
+  .crest-mode .series-view-body .card .meta b{
+    font-size:11px!important;
+    line-height:1.15!important;
+  }
+  .crest-mode .series-view-body .card .meta small{
+    font-size:7px!important;
+    opacity:.9!important;
+  }
+
+  .crest-mode .crest-pager{
+    margin-top:6px!important;
+    padding-top:6px!important;
+    gap:8px!important;
+  }
+}
+
+/* Shinsu series button skin */
+.series button[data-series="신수"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(238,232,219,.12),rgba(238,232,219,.12)),
+    url("https://drive.google.com/thumbnail?id=1KOL6YbbZbMT69EMS5qkPIeejecFIqYPb&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(43,60,66,.34)!important;
+  color:#22383f!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.22)!important;
+}
+.series button[data-series="신수"] strong,
+.series button[data-series="신수"] span{
+  color:#22383f!important;
+}
+.series button[data-series="신수"] small{
+  color:#7e694c!important;
+  text-shadow:none!important;
+}
+.series button[data-series="신수"]:hover{
+  filter:saturate(1.03) contrast(1.04)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Watercolor v1 — airy watercolor archive */
+@media(min-width:1100px){
+  .series-view.watercolor-mode{
+    background:#fbfaf6!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1kTVo8Mt4Tw6KsyNlnev3fVbfyUSduqAC&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .watercolor-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(255,253,249,.76)!important;
+    border-bottom:1px solid rgba(112,142,155,.16)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .watercolor-mode .series-view-hero{
+    position:absolute!important;left:7.4vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;min-height:0!important;height:auto!important;
+    margin:0!important;padding:0!important;background:transparent!important;z-index:4!important;
+  }
+  .watercolor-mode .series-view-hero:before,
+  .watercolor-mode .series-view-hero:after{display:none!important}
+  .watercolor-mode .series-view-hero .eyebrow{
+    margin:0 0 10px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.3em!important;color:#6f8f9a!important;
+  }
+  .watercolor-mode #seriesTitle{
+    margin:0 0 14px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.85vw,69px)!important;font-weight:700!important;
+    line-height:.95!important;letter-spacing:-.06em!important;color:#355867!important;
+    text-transform:none!important;
+  }
+  .watercolor-mode #seriesTitle:after{
+    content:"WATERCOLOR"!important;display:block!important;margin-top:13px!important;
+    font:700 8px/1 Arial,sans-serif!important;letter-spacing:.42em!important;color:#9c8eb8!important;
+  }
+  .watercolor-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.75 Arial,sans-serif!important;color:#71858c!important;background:transparent!important;
+  }
+  .watercolor-mode #seriesWorkCount{
+    margin-top:14px!important;font:700 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c08f76!important;
+  }
+
+  .watercolor-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.7vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .watercolor-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:10px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,255,255,.50)!important;border:1px solid rgba(112,142,155,.18)!important;
+    box-shadow:0 16px 36px rgba(91,124,138,.10)!important;
+  }
+  .watercolor-mode .crest-feature-art:before,
+  .watercolor-mode .crest-feature-art:after{display:none!important}
+  .watercolor-mode .crest-feature-art img{
+    width:99%!important;height:99%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.20)!important;
+  }
+  .watercolor-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 12px)!important;
+    width:100%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .watercolor-mode .crest-feature-copy:before,
+  .watercolor-mode .crest-feature-copy .eyebrow,
+  .watercolor-mode .crest-feature-copy p{display:none!important}
+  .watercolor-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:700!important;color:#426675!important;letter-spacing:-.03em!important;
+  }
+
+  .watercolor-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(255,255,255,.08)!important;border:0!important;overflow:visible!important;z-index:5!important;
+  }
+  .watercolor-mode .series-view-body:before{
+    content:"WATERCOLOR ARCHIVE"!important;display:block!important;
+    margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(112,142,155,.20)!important;
+    font:700 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#678792!important;
+  }
+  .watercolor-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .watercolor-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(112,142,155,.18)!important;background:rgba(255,255,255,.38)!important;
+    box-shadow:0 6px 18px rgba(91,124,138,.08)!important;
+  }
+  .watercolor-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;padding:0!important;
+    background:rgba(255,255,255,.20)!important;display:block!important;
+  }
+  .watercolor-mode .series-view-body .card .meta{
+    min-height:30px!important;padding:5px 8px!important;
+    background:rgba(74,103,114,.76)!important;color:#fff!important;
+  }
+  .watercolor-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:11px!important;color:#fff!important;
+  }
+  .watercolor-mode .series-view-body .card .meta small{
+    font-size:7px!important;color:#dbe5e8!important;opacity:.9!important;
+  }
+  .watercolor-mode .crest-pager{
+    margin-top:6px!important;padding-top:6px!important;gap:8px!important;
+    border-top:1px solid rgba(112,142,155,.18)!important;color:#68858e!important;
+  }
+  .watercolor-mode .crest-pager button{
+    border:1px solid rgba(112,142,155,.28)!important;background:rgba(255,255,255,.45)!important;color:#456a78!important;
+  }
+  .watercolor-mode .crest-pager button:hover:not(:disabled){background:#6f909b!important;color:#fff!important}
+}
+
+/* Watercolor v2 — visual polish */
+@media(min-width:1100px){
+  .watercolor-mode #seriesTitle{
+    color:#2f5360!important;
+  }
+  .watercolor-mode #seriesDesc{
+    color:#60767e!important;
+    font-weight:500!important;
+  }
+  .watercolor-mode #seriesWorkCount{
+    color:#c28668!important;
+    font-weight:800!important;
+  }
+
+  .watercolor-mode .crest-feature-art{
+    padding:7px!important;
+    background:rgba(255,255,255,.44)!important;
+  }
+  .watercolor-mode .crest-feature-art img{
+    width:104%!important;
+    height:104%!important;
+  }
+  .watercolor-mode .crest-feature-copy{
+    top:calc(28.7vw + 8px)!important;
+  }
+
+  .watercolor-mode .series-view-body{
+    padding:8px!important;
+    background:rgba(255,255,255,.07)!important;
+    backdrop-filter:blur(1px)!important;
+  }
+  .watercolor-mode .series-view-body .card .meta{
+    min-height:27px!important;
+    padding:4px 8px!important;
+    background:rgba(89,115,124,.62)!important;
+  }
+  .watercolor-mode .series-view-body .card .meta b{
+    font-size:10.5px!important;
+    color:#f9fbfb!important;
+  }
+  .watercolor-mode .series-view-body .card .meta small{
+    font-size:6.5px!important;
+    color:#e7eff1!important;
+    opacity:.72!important;
+  }
+
+  .watercolor-mode .crest-pager{
+    margin-top:4px!important;
+    padding-top:4px!important;
+    justify-content:flex-end!important;
+    gap:7px!important;
+  }
+  .watercolor-mode .crest-pager button{
+    width:26px!important;
+    height:26px!important;
+  }
+}
+
+/* Watercolor v3 — pin pagination neatly to gallery bottom-right */
+@media(min-width:1100px){
+  .watercolor-mode .crest-pager{
+    width:100%!important;
+    box-sizing:border-box!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    margin:8px 0 0!important;
+    padding:0!important;
+    border-top:0!important;
+    gap:6px!important;
+  }
+  .watercolor-mode .crest-page-indicator{
+    min-width:34px!important;
+    text-align:center!important;
+    line-height:26px!important;
+    color:#66828c!important;
+  }
+  .watercolor-mode .crest-pager button{
+    width:26px!important;
+    height:26px!important;
+    flex:0 0 26px!important;
+    padding:0!important;
+    display:grid!important;
+    place-items:center!important;
+  }
+}
+
+/* Watercolor series button skin */
+.series button[data-series="수채화"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.10),rgba(255,255,255,.10)),
+    url("https://drive.google.com/thumbnail?id=1XFpQxp0cVL3tN8Ev20SluiAurXcZPium&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(112,142,155,.24)!important;
+  color:#355867!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.55)!important;
+}
+.series button[data-series="수채화"] strong,
+.series button[data-series="수채화"] span{
+  color:#355867!important;
+}
+.series button[data-series="수채화"] small{
+  color:#b88472!important;
+  text-shadow:none!important;
+}
+.series button[data-series="수채화"]:hover{
+  filter:saturate(1.02) contrast(1.02)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Pulpus v1 — playful fruit character-sheet archive */
+@media(min-width:1100px){
+  .series-view.pulpus-mode{
+    background:#fffaf0!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1JNCjJd4I7vwPMparqJ03qBB4WrNKYL0n&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .pulpus-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(255,250,239,.82)!important;
+    border-bottom:1px solid rgba(204,165,92,.20)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .pulpus-mode .series-view-hero{
+    position:absolute!important;left:7.1vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:0!important;background:transparent!important;z-index:4!important;
+  }
+  .pulpus-mode .series-view-hero:before,
+  .pulpus-mode .series-view-hero:after{display:none!important}
+  .pulpus-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;
+    font:700 9px/1.2 Arial,sans-serif!important;letter-spacing:.30em!important;
+    color:#9b7663!important;
+  }
+  .pulpus-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Noto Sans KR","Malgun Gothic",sans-serif!important;
+    font-size:clamp(48px,3.7vw,67px)!important;font-weight:900!important;
+    line-height:.96!important;letter-spacing:-.07em!important;color:#7a4f4f!important;
+    text-transform:none!important;
+  }
+  .pulpus-mode #seriesTitle:after{
+    content:"PULPUS"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#d4a34f!important;
+  }
+  .pulpus-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#8b7567!important;background:transparent!important;
+  }
+  .pulpus-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c88b65!important;
+  }
+
+  .pulpus-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .pulpus-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:10px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,249,237,.72)!important;
+    border:1px solid rgba(202,156,87,.25)!important;
+    box-shadow:0 15px 34px rgba(144,101,62,.12)!important;
+  }
+  .pulpus-mode .crest-feature-art:before,
+  .pulpus-mode .crest-feature-art:after{display:none!important}
+  .pulpus-mode .crest-feature-art img{
+    width:99%!important;height:99%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.16)!important;
+  }
+  .pulpus-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 10px)!important;
+    width:100%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .pulpus-mode .crest-feature-copy:before,
+  .pulpus-mode .crest-feature-copy .eyebrow,
+  .pulpus-mode .crest-feature-copy p{display:none!important}
+  .pulpus-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Noto Sans KR","Malgun Gothic",sans-serif!important;
+    font-size:18px!important;font-weight:900!important;color:#7a4f4f!important;letter-spacing:-.04em!important;
+  }
+
+  .pulpus-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(255,250,238,.16)!important;border:0!important;overflow:visible!important;z-index:5!important;
+    backdrop-filter:blur(.8px)!important;
+  }
+  .pulpus-mode .series-view-body:before{
+    content:"PULPUS ARCHIVE"!important;display:block!important;
+    margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(202,156,87,.28)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#8b655c!important;
+  }
+  .pulpus-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .pulpus-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(202,156,87,.25)!important;background:rgba(255,250,238,.70)!important;
+    box-shadow:0 6px 16px rgba(144,101,62,.10)!important;
+  }
+  .pulpus-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;padding:0!important;
+    background:#fffaf0!important;display:block!important;
+  }
+  .pulpus-mode .series-view-body .card .meta{
+    min-height:29px!important;padding:5px 8px!important;
+    background:rgba(122,79,79,.82)!important;color:#fff8ef!important;
+  }
+  .pulpus-mode .series-view-body .card .meta b{
+    font-family:"Noto Sans KR","Malgun Gothic",sans-serif!important;
+    font-size:10.5px!important;font-weight:900!important;color:#fff8ef!important;
+  }
+  .pulpus-mode .series-view-body .card .meta small{
+    font-size:6.5px!important;color:#f4d7b7!important;opacity:.92!important;
+  }
+  .pulpus-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:flex-end!important;
+    margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#9a7366!important;
+  }
+  .pulpus-mode .crest-pager button{
+    width:26px!important;height:26px!important;flex:0 0 26px!important;padding:0!important;
+    display:grid!important;place-items:center!important;
+    border:1px solid rgba(202,156,87,.32)!important;background:rgba(255,250,238,.72)!important;color:#8a6158!important;
+  }
+  .pulpus-mode .crest-pager button:hover:not(:disabled){background:#a96f68!important;color:#fff!important}
+}
+
+/* Pulpus v2 — polish left copy, feature spacing, archive captions and pager */
+@media(min-width:1100px){
+  .pulpus-mode #seriesDesc{
+    color:#735f56!important;
+    font-weight:600!important;
+  }
+  .pulpus-mode #seriesWorkCount{
+    color:#b97858!important;
+    font-weight:900!important;
+  }
+
+  .pulpus-mode .crest-feature-art{
+    padding:14px!important;
+    background:rgba(255,249,237,.78)!important;
+  }
+  .pulpus-mode .crest-feature-art img{
+    width:96.5%!important;
+    height:96.5%!important;
+  }
+  .pulpus-mode .crest-feature-copy{
+    top:calc(28.7vw + 12px)!important;
+  }
+
+  .pulpus-mode .series-view-body .card .meta{
+    min-height:28px!important;
+    padding:5px 8px!important;
+    background:rgba(166,121,111,.76)!important;
+  }
+  .pulpus-mode .series-view-body .card .meta b{
+    color:#fff8ef!important;
+    font-size:10.5px!important;
+  }
+  .pulpus-mode .series-view-body .card .meta small{
+    color:#f8dfc8!important;
+    font-size:6.5px!important;
+    opacity:.78!important;
+  }
+
+  .pulpus-mode .crest-pager{
+    margin-top:7px!important;
+    padding:0!important;
+    justify-content:flex-end!important;
+    gap:7px!important;
+  }
+  .pulpus-mode .crest-page-indicator{
+    min-width:40px!important;
+    height:28px!important;
+    line-height:28px!important;
+    text-align:center!important;
+    background:rgba(255,250,238,.78)!important;
+    border:1px solid rgba(202,156,87,.28)!important;
+    color:#8a6158!important;
+    font-weight:800!important;
+  }
+  .pulpus-mode .crest-pager button{
+    width:28px!important;
+    height:28px!important;
+    flex:0 0 28px!important;
+    background:rgba(255,250,238,.86)!important;
+    border:1px solid rgba(202,156,87,.34)!important;
+    color:#8a6158!important;
+    font-weight:800!important;
+  }
+}
+
+/* Pulpus series button skin — existing button only, background image behind HTML text */
+.series button[data-series="펄퍼스"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(255,250,240,.28),rgba(255,250,240,.28)),
+    url("https://drive.google.com/thumbnail?id=1g1wa7pdqKeXg3xz9E53X2eGaZFqQOllc&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(191,145,83,.34)!important;
+  color:#744f4b!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.55)!important;
+}
+.series button[data-series="펄퍼스"] strong,
+.series button[data-series="펄퍼스"] span{
+  color:#744f4b!important;
+}
+.series button[data-series="펄퍼스"] small{
+  color:#b46f56!important;
+  text-shadow:none!important;
+}
+.series button[data-series="펄퍼스"]:hover{
+  filter:saturate(1.03) contrast(1.02)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Ink v1 — monochrome flowing-ink archive */
+@media(min-width:1100px){
+  .series-view.ink-mode{
+    background:#f3efe5!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1OS1jGg8QxW457O7GEMhyXjZoo74xWjx_&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .ink-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(243,239,229,.78)!important;
+    border-bottom:1px solid rgba(42,49,58,.18)!important;
+    backdrop-filter:blur(7px)!important;z-index:1000!important;
+  }
+  .ink-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:0!important;background:transparent!important;z-index:4!important;
+  }
+  .ink-mode .series-view-hero:before,.ink-mode .series-view-hero:after{display:none!important}
+  .ink-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.3em!important;color:#66717a!important;
+  }
+  .ink-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#202832!important;text-transform:none!important;
+  }
+  .ink-mode #seriesTitle:after{
+    content:"INK"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#8794a2!important;
+  }
+  .ink-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#5e6973!important;font-weight:500!important;
+    background:transparent!important;
+  }
+  .ink-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#7d8791!important;
+  }
+
+  .ink-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .ink-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:10px!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;justify-content:center!important;
+    background:rgba(244,241,234,.70)!important;border:1px solid rgba(38,47,58,.20)!important;
+    box-shadow:0 15px 34px rgba(16,22,30,.14)!important;
+  }
+  .ink-mode .crest-feature-art:before,.ink-mode .crest-feature-art:after{display:none!important}
+  .ink-mode .crest-feature-art img{
+    width:99%!important;height:99%!important;object-fit:contain!important;max-width:none!important;max-height:none!important;
+    filter:none!important;box-shadow:none!important;background:rgba(255,255,255,.08)!important;
+  }
+  .ink-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 10px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .ink-mode .crest-feature-copy:before,.ink-mode .crest-feature-copy .eyebrow,.ink-mode .crest-feature-copy p{display:none!important}
+  .ink-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#202832!important;letter-spacing:-.03em!important;
+  }
+
+  .ink-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(244,241,234,.10)!important;border:0!important;overflow:visible!important;z-index:5!important;
+    backdrop-filter:blur(.8px)!important;
+  }
+  .ink-mode .series-view-body:before{
+    content:"INK ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(38,47,58,.24)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#3f4b55!important;
+  }
+  .ink-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .ink-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(38,47,58,.22)!important;background:rgba(244,241,234,.72)!important;
+    box-shadow:0 6px 18px rgba(16,22,30,.12)!important;
+  }
+  .ink-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;padding:0!important;
+    background:rgba(255,255,255,.12)!important;display:block!important;
+  }
+  .ink-mode .series-view-body .card .meta{
+    min-height:29px!important;padding:5px 8px!important;background:rgba(33,42,51,.84)!important;color:#f4f6f8!important;
+  }
+  .ink-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.5px!important;font-weight:800!important;color:#f7f8fa!important;
+  }
+  .ink-mode .series-view-body .card .meta small{
+    font-size:6.5px!important;color:#c9d1d8!important;opacity:.9!important;
+  }
+  .ink-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#4a5660!important;
+  }
+  .ink-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(244,241,234,.72)!important;border:1px solid rgba(38,47,58,.25)!important;
+    color:#37424c!important;font-weight:800!important;
+  }
+  .ink-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(244,241,234,.78)!important;
+    border:1px solid rgba(38,47,58,.28)!important;color:#2f3943!important;font-weight:800!important;
+  }
+  .ink-mode .crest-pager button:hover:not(:disabled){background:#2e3943!important;color:#fff!important}
+}
+
+/* Ink v2 — polish readability and archive panel */
+@media(min-width:1100px){
+  .ink-mode #seriesDesc{
+    color:#4f5962!important;
+    font-weight:600!important;
+  }
+  .ink-mode #seriesWorkCount{
+    color:#626e79!important;
+    font-weight:900!important;
+  }
+
+  .ink-mode .crest-feature-art{
+    padding:7px!important;
+    background:rgba(236,232,223,.72)!important;
+    border-color:rgba(38,47,58,.18)!important;
+  }
+  .ink-mode .crest-feature-art img{
+    width:100%!important;
+    height:100%!important;
+  }
+  .ink-mode .crest-feature-copy{
+    top:calc(28.7vw + 8px)!important;
+  }
+
+  .ink-mode .series-view-body{
+    background:rgba(241,238,230,.20)!important;
+    backdrop-filter:blur(3px)!important;
+    border:1px solid rgba(255,255,255,.14)!important;
+  }
+  .ink-mode .series-view-body .card .meta{
+    min-height:26px!important;
+    padding:4px 8px!important;
+    background:rgba(44,53,62,.68)!important;
+  }
+  .ink-mode .series-view-body .card .meta b{
+    font-size:10.3px!important;
+  }
+  .ink-mode .series-view-body .card .meta small{
+    font-size:6.3px!important;
+    opacity:.74!important;
+  }
+
+  .ink-mode .crest-pager{
+    margin-top:8px!important;
+    justify-content:flex-end!important;
+    gap:6px!important;
+  }
+  .ink-mode .crest-page-indicator{
+    background:rgba(245,242,235,.88)!important;
+    color:#2f3943!important;
+    border-color:rgba(38,47,58,.28)!important;
+  }
+  .ink-mode .crest-pager button{
+    background:rgba(245,242,235,.92)!important;
+    color:#26313b!important;
+    border-color:rgba(38,47,58,.32)!important;
+  }
+}
+
+/* Ink series button skin */
+.series button[data-series="잉크"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(248,244,235,.18),rgba(248,244,235,.18)),
+    url("https://drive.google.com/thumbnail?id=1Nl-udpwZ6qVqPgGkjKDtGThwM2VLom5Y&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(44,52,60,.34)!important;
+  color:#27323c!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.62)!important;
+}
+.series button[data-series="잉크"] strong,
+.series button[data-series="잉크"] span{
+  color:#27323c!important;
+}
+.series button[data-series="잉크"] small{
+  color:#6e7882!important;
+  text-shadow:none!important;
+}
+.series button[data-series="잉크"]:hover{
+  filter:saturate(1.02) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Seongsu v1 — sacred-beast watercolor fantasy archive */
+@media(min-width:1100px){
+  .series-view.seongsu-mode{
+    background:#f6f0e6!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1wmLS65qJpx6hHYR24RVf0zWpZ8GSvDf4&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .seongsu-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(246,240,230,.76)!important;
+    border-bottom:1px solid rgba(36,88,103,.18)!important;
+    backdrop-filter:blur(7px)!important;z-index:1000!important;
+  }
+  .seongsu-mode .series-view-hero{
+    position:absolute!important;left:7.1vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:0!important;background:transparent!important;z-index:4!important;
+  }
+  .seongsu-mode .series-view-hero:before,.seongsu-mode .series-view-hero:after{display:none!important}
+  .seongsu-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#537986!important;
+  }
+  .seongsu-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#203f48!important;text-transform:none!important;
+  }
+  .seongsu-mode #seriesTitle:after{
+    content:"SEONGSU"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#c3a25f!important;
+  }
+  .seongsu-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#51666d!important;font-weight:600!important;
+    background:transparent!important;
+  }
+  .seongsu-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#b7904e!important;
+  }
+  .seongsu-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .seongsu-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:10px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(248,244,235,.72)!important;border:1px solid rgba(36,88,103,.20)!important;
+    box-shadow:0 15px 34px rgba(19,55,66,.12)!important;
+  }
+  .seongsu-mode .crest-feature-art:before,.seongsu-mode .crest-feature-art:after{display:none!important}
+  .seongsu-mode .crest-feature-art img{
+    width:99%!important;height:99%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.08)!important;
+  }
+  .seongsu-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 10px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .seongsu-mode .crest-feature-copy:before,.seongsu-mode .crest-feature-copy .eyebrow,.seongsu-mode .crest-feature-copy p{display:none!important}
+  .seongsu-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#203f48!important;letter-spacing:-.03em!important;
+  }
+  .seongsu-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(246,240,230,.14)!important;border:0!important;overflow:visible!important;z-index:5!important;
+    backdrop-filter:blur(1px)!important;
+  }
+  .seongsu-mode .series-view-body:before{
+    content:"SEONGSU ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(36,88,103,.24)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#325966!important;
+  }
+  .seongsu-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .seongsu-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(36,88,103,.22)!important;background:rgba(248,244,235,.66)!important;
+    box-shadow:0 6px 18px rgba(19,55,66,.10)!important;
+  }
+  .seongsu-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;padding:0!important;
+    background:rgba(255,255,255,.10)!important;display:block!important;
+  }
+  .seongsu-mode .series-view-body .card .meta{
+    min-height:28px!important;padding:5px 8px!important;background:rgba(33,71,80,.78)!important;color:#f8fbfa!important;
+  }
+  .seongsu-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.5px!important;font-weight:800!important;color:#fff!important;
+  }
+  .seongsu-mode .series-view-body .card .meta small{
+    font-size:6.5px!important;color:#d9e7e8!important;opacity:.88!important;
+  }
+  .seongsu-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#355a65!important;
+  }
+  .seongsu-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(248,244,235,.76)!important;border:1px solid rgba(36,88,103,.25)!important;
+    color:#294c56!important;font-weight:800!important;
+  }
+  .seongsu-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(248,244,235,.82)!important;
+    border:1px solid rgba(36,88,103,.30)!important;color:#264b55!important;font-weight:800!important;
+  }
+  .seongsu-mode .crest-pager button:hover:not(:disabled){background:#315c68!important;color:#fff!important}
+}
+
+/* Seongsu v2 — readability and gallery polish */
+@media(min-width:1100px){
+  .seongsu-mode .series-view-hero{
+    background:rgba(248,244,235,.16)!important;
+    backdrop-filter:blur(2px)!important;
+    padding:16px 18px!important;
+    border-radius:4px!important;
+    box-shadow:0 8px 24px rgba(29,70,82,.06)!important;
+  }
+  .seongsu-mode #seriesTitle{
+    color:#173844!important;
+  }
+  .seongsu-mode #seriesDesc{
+    color:#405b63!important;
+    font-weight:700!important;
+  }
+  .seongsu-mode #seriesWorkCount{
+    color:#a98548!important;
+    font-weight:900!important;
+  }
+
+  .seongsu-mode .crest-feature-art{
+    padding:6px!important;
+    background:rgba(248,244,235,.70)!important;
+  }
+  .seongsu-mode .crest-feature-art img{
+    width:105%!important;
+    height:105%!important;
+  }
+  .seongsu-mode .crest-feature-copy{
+    top:calc(28.7vw + 8px)!important;
+  }
+
+  .seongsu-mode .series-view-body{
+    background:rgba(246,240,230,.18)!important;
+    backdrop-filter:blur(3px)!important;
+    border:1px solid rgba(248,244,235,.14)!important;
+  }
+  .seongsu-mode .series-view-body .card{
+    border-color:rgba(36,88,103,.28)!important;
+    box-shadow:0 7px 18px rgba(19,55,66,.12)!important;
+  }
+  .seongsu-mode .series-view-body .card .meta{
+    min-height:25px!important;
+    padding:4px 8px!important;
+    background:rgba(40,80,89,.68)!important;
+  }
+  .seongsu-mode .series-view-body .card .meta b{
+    font-size:10.3px!important;
+  }
+  .seongsu-mode .series-view-body .card .meta small{
+    font-size:6.2px!important;
+    opacity:.75!important;
+  }
+
+  .seongsu-mode .crest-pager{
+    margin-top:8px!important;
+    justify-content:flex-end!important;
+    gap:6px!important;
+  }
+  .seongsu-mode .crest-page-indicator{
+    background:rgba(248,244,235,.88)!important;
+    color:#294c56!important;
+  }
+  .seongsu-mode .crest-pager button{
+    background:rgba(248,244,235,.92)!important;
+    color:#264b55!important;
+  }
+}
+
+/* Seongsu series button skin */
+.series button[data-series="성수"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(247,242,232,.30),rgba(247,242,232,.30)),
+    url("https://drive.google.com/thumbnail?id=1uDxyK0jAhunnHDn0IElbN-xjbzHcRch6&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(53,84,96,.34)!important;
+  color:#274a56!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.58)!important;
+}
+.series button[data-series="성수"] strong,
+.series button[data-series="성수"] span{
+  color:#274a56!important;
+}
+.series button[data-series="성수"] small{
+  color:#9a7746!important;
+  text-shadow:none!important;
+}
+.series button[data-series="성수"]:hover{
+  filter:saturate(1.04) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Fusion v1 — human/beast hybrid archive */
+@media(min-width:1100px){
+  .series-view.fusion-mode{
+    background:#f7f1e7!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1leeirWfESoXW2OWKpz4ACY7_hU8hBbwV&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .fusion-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(247,241,231,.78)!important;
+    border-bottom:1px solid rgba(30,71,83,.18)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .fusion-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:22vw!important;max-width:360px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:15px 18px!important;
+    background:rgba(250,246,238,.18)!important;backdrop-filter:blur(2px)!important;
+    border-radius:4px!important;z-index:4!important;
+  }
+  .fusion-mode .series-view-hero:before,.fusion-mode .series-view-hero:after{display:none!important}
+  .fusion-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.3em!important;color:#557783!important;
+  }
+  .fusion-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#203d46!important;text-transform:none!important;
+  }
+  .fusion-mode #seriesTitle:after{
+    content:"FUSION"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#b88c4c!important;
+  }
+  .fusion-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#50636a!important;font-weight:600!important;
+    background:transparent!important;
+  }
+  .fusion-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#aa8248!important;
+  }
+
+  .fusion-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .fusion-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:8px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(249,244,235,.72)!important;border:1px solid rgba(30,71,83,.20)!important;
+    box-shadow:0 15px 34px rgba(20,52,61,.12)!important;
+  }
+  .fusion-mode .crest-feature-art:before,.fusion-mode .crest-feature-art:after{display:none!important}
+  .fusion-mode .crest-feature-art img{
+    width:101%!important;height:101%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.06)!important;
+  }
+  .fusion-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 9px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .fusion-mode .crest-feature-copy:before,.fusion-mode .crest-feature-copy .eyebrow,.fusion-mode .crest-feature-copy p{display:none!important}
+  .fusion-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#203d46!important;letter-spacing:-.03em!important;
+  }
+
+  .fusion-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(247,241,231,.16)!important;border:1px solid rgba(255,255,255,.12)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(3px)!important;
+  }
+  .fusion-mode .series-view-body:before{
+    content:"FUSION ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(30,71,83,.24)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#355b66!important;
+  }
+  .fusion-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .fusion-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(30,71,83,.24)!important;background:rgba(249,244,235,.68)!important;
+    box-shadow:0 6px 18px rgba(20,52,61,.10)!important;
+  }
+  .fusion-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;padding:0!important;
+    background:rgba(255,255,255,.08)!important;display:block!important;
+  }
+  .fusion-mode .series-view-body .card .meta{
+    min-height:27px!important;padding:4px 8px!important;
+    background:rgba(40,74,82,.72)!important;color:#fff!important;
+  }
+  .fusion-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.4px!important;font-weight:800!important;color:#fff!important;
+  }
+  .fusion-mode .series-view-body .card .meta small{
+    font-size:6.3px!important;color:#dbe8e8!important;opacity:.78!important;
+  }
+  .fusion-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:8px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#365d67!important;
+  }
+  .fusion-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(249,244,235,.86)!important;border:1px solid rgba(30,71,83,.24)!important;
+    color:#2d5059!important;font-weight:800!important;
+  }
+  .fusion-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(249,244,235,.90)!important;
+    border:1px solid rgba(30,71,83,.28)!important;color:#294b54!important;font-weight:800!important;
+  }
+  .fusion-mode .crest-pager button:hover:not(:disabled){background:#315d68!important;color:#fff!important}
+}
+
+/* Fusion v2 — reduce glassiness, tighten copy block, soften frame */
+@media(min-width:1100px){
+  .fusion-mode .series-view-hero{
+    width:19.5vw!important;
+    max-width:320px!important;
+    padding:12px 14px!important;
+    background:rgba(250,246,238,.10)!important;
+    backdrop-filter:blur(1px)!important;
+    box-shadow:none!important;
+  }
+  .fusion-mode #seriesTitle{
+    color:#173842!important;
+  }
+  .fusion-mode #seriesDesc{
+    color:#445b62!important;
+    font-weight:650!important;
+  }
+  .fusion-mode #seriesWorkCount{
+    color:#a5783e!important;
+    font-weight:900!important;
+  }
+
+  .fusion-mode .crest-feature-art{
+    padding:5px!important;
+    background:rgba(244,240,232,.64)!important;
+    border-color:rgba(31,67,78,.16)!important;
+    box-shadow:0 10px 24px rgba(20,52,61,.08)!important;
+  }
+  .fusion-mode .crest-feature-art img{
+    width:103%!important;
+    height:103%!important;
+  }
+  .fusion-mode .crest-feature-copy{
+    top:calc(28.7vw + 6px)!important;
+  }
+
+  .fusion-mode .series-view-body{
+    background:rgba(247,241,231,.08)!important;
+    backdrop-filter:blur(1px)!important;
+    border-color:rgba(255,255,255,.08)!important;
+    box-shadow:none!important;
+  }
+  .fusion-mode .series-view-body .card{
+    border-color:rgba(30,71,83,.22)!important;
+    box-shadow:0 4px 12px rgba(20,52,61,.07)!important;
+  }
+  .fusion-mode .series-view-body .card .meta{
+    min-height:24px!important;
+    padding:4px 8px!important;
+    background:rgba(25,55,64,.82)!important;
+  }
+  .fusion-mode .series-view-body .card .meta b{
+    font-size:10.2px!important;
+    color:#fff!important;
+  }
+  .fusion-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;
+    color:#d7e3e4!important;
+    opacity:.72!important;
+  }
+
+  .fusion-mode .crest-pager{
+    margin-top:7px!important;
+    justify-content:flex-end!important;
+    gap:6px!important;
+  }
+}
+
+/* Fusion v3 — final readability lift for copy and archive */
+@media(min-width:1100px){
+  .fusion-mode .series-view-hero{
+    background:rgba(250,246,238,.22)!important;
+    backdrop-filter:blur(2px)!important;
+  }
+  .fusion-mode .series-view-body{
+    background:rgba(247,241,231,.16)!important;
+    backdrop-filter:blur(2px)!important;
+  }
+}
+
+/* Fusion series button skin */
+.series button[data-series="융화"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(248,244,235,.26),rgba(248,244,235,.26)),
+    url("https://drive.google.com/thumbnail?id=1C1WXO97xFaslVvr1Il0SMFx-778tnFQm&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(58,83,94,.34)!important;
+  color:#274a56!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.58)!important;
+}
+.series button[data-series="융화"] strong,
+.series button[data-series="융화"] span{
+  color:#274a56!important;
+}
+.series button[data-series="융화"] small{
+  color:#9b7447!important;
+  text-shadow:none!important;
+}
+.series button[data-series="융화"]:hover{
+  filter:saturate(1.03) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Brush v1 — worldscapes flowing from painted brushstrokes */
+@media(min-width:1100px){
+  .series-view.brush-mode{
+    background:#f7f1e7!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1EAo76Djvx3NSec8r5r-hKgXxQg-7lnqU&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .brush-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(247,241,231,.80)!important;
+    border-bottom:1px solid rgba(123,73,42,.18)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .brush-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:21.5vw!important;max-width:350px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:14px 16px!important;
+    background:rgba(252,247,238,.22)!important;backdrop-filter:blur(2px)!important;
+    border-radius:4px!important;z-index:4!important;
+  }
+  .brush-mode .series-view-hero:before,.brush-mode .series-view-hero:after{display:none!important}
+  .brush-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.3em!important;color:#8a5f3f!important;
+  }
+  .brush-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#4d2d1f!important;text-transform:none!important;
+  }
+  .brush-mode #seriesTitle:after{
+    content:"BRUSH"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#c77c43!important;
+  }
+  .brush-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#674f41!important;font-weight:600!important;
+    background:transparent!important;
+  }
+  .brush-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c77c43!important;
+  }
+
+  .brush-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .brush-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:7px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(252,247,238,.68)!important;border:1px solid rgba(123,73,42,.20)!important;
+    box-shadow:0 12px 28px rgba(104,63,35,.10)!important;
+  }
+  .brush-mode .crest-feature-art:before,.brush-mode .crest-feature-art:after{display:none!important}
+  .brush-mode .crest-feature-art img{
+    width:102%!important;height:102%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.06)!important;
+  }
+  .brush-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 8px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .brush-mode .crest-feature-copy:before,.brush-mode .crest-feature-copy .eyebrow,.brush-mode .crest-feature-copy p{display:none!important}
+  .brush-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#4d2d1f!important;letter-spacing:-.03em!important;
+  }
+
+  .brush-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:69vh!important;padding:8px!important;margin:0!important;
+    background:rgba(252,247,238,.14)!important;border:1px solid rgba(255,255,255,.10)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(2px)!important;
+  }
+  .brush-mode .series-view-body:before{
+    content:"BRUSH ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(123,73,42,.24)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#7a4f35!important;
+  }
+  .brush-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .brush-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(123,73,42,.22)!important;background:rgba(252,247,238,.68)!important;
+    box-shadow:0 5px 14px rgba(104,63,35,.08)!important;
+  }
+  .brush-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:contain!important;padding:0!important;
+    background:rgba(255,255,255,.08)!important;display:block!important;
+  }
+  .brush-mode .series-view-body .card .meta{
+    min-height:27px!important;padding:4px 8px!important;background:rgba(100,64,42,.76)!important;color:#fff!important;
+  }
+  .brush-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.4px!important;font-weight:800!important;color:#fff!important;
+  }
+  .brush-mode .series-view-body .card .meta small{
+    font-size:6.3px!important;color:#f2dfcf!important;opacity:.82!important;
+  }
+  .brush-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:8px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#765039!important;
+  }
+  .brush-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(252,247,238,.88)!important;border:1px solid rgba(123,73,42,.24)!important;
+    color:#6c4730!important;font-weight:800!important;
+  }
+  .brush-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(252,247,238,.92)!important;
+    border:1px solid rgba(123,73,42,.28)!important;color:#68442e!important;font-weight:800!important;
+  }
+  .brush-mode .crest-pager button:hover:not(:disabled){background:#8c5b3d!important;color:#fff!important}
+}
+
+/* Brush v2 — polish readability, crop glass panel, enlarge hero art */
+@media(min-width:1100px){
+  .brush-mode .series-view-hero{
+    background:rgba(252,247,238,.30)!important;
+    backdrop-filter:blur(2px)!important;
+  }
+  .brush-mode #seriesTitle{
+    color:#3f2318!important;
+  }
+  .brush-mode #seriesDesc{
+    color:#5a463b!important;
+    font-weight:650!important;
+  }
+
+  .brush-mode .crest-feature-art{
+    padding:4px!important;
+    background:rgba(250,245,236,.64)!important;
+  }
+  .brush-mode .crest-feature-art img{
+    width:105%!important;
+    height:105%!important;
+  }
+  .brush-mode .crest-feature-copy{
+    top:calc(28.7vw + 6px)!important;
+  }
+
+  .brush-mode .series-view-body{
+    height:auto!important;
+    min-height:0!important;
+    padding-bottom:8px!important;
+    background:rgba(252,247,238,.11)!important;
+    backdrop-filter:blur(1.5px)!important;
+  }
+  .brush-mode .series-view-body .card .meta{
+    min-height:24px!important;
+    padding:4px 8px!important;
+    background:rgba(88,45,29,.84)!important;
+  }
+  .brush-mode .series-view-body .card .meta b{
+    font-size:10.2px!important;
+  }
+  .brush-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;
+    opacity:.76!important;
+  }
+  .brush-mode .crest-pager{
+    margin-top:7px!important;
+  }
+}
+
+/* Brush series button skin */
+.series button[data-series="붓결"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(250,246,238,.26),rgba(250,246,238,.26)),
+    url("https://drive.google.com/thumbnail?id=1hDZo7QMyjUnZS72g546JufUwdkdS8DRh&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(126,76,42,.34)!important;
+  color:#5a3828!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.58)!important;
+}
+.series button[data-series="붓결"] strong,
+.series button[data-series="붓결"] span{
+  color:#5a3828!important;
+}
+.series button[data-series="붓결"] small{
+  color:#b96f3a!important;
+  text-shadow:none!important;
+}
+.series button[data-series="붓결"]:hover{
+  filter:saturate(1.04) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Pogeun v1 — warm storybook archive */
+@media(min-width:1100px){
+  .series-view.pogeun-mode{
+    background:#f8efe3!important;
+    background-image:url("https://drive.google.com/thumbnail?id=17qecfGXVcyqr01vNwUCED8fuja5jaVLI&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .pogeun-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(248,239,227,.82)!important;
+    border-bottom:1px solid rgba(139,92,54,.16)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .pogeun-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:21vw!important;max-width:345px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:14px 16px!important;
+    background:rgba(255,247,237,.34)!important;backdrop-filter:blur(2px)!important;
+    border-radius:5px!important;z-index:4!important;
+  }
+  .pogeun-mode .series-view-hero:before,.pogeun-mode .series-view-hero:after{display:none!important}
+  .pogeun-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#a77655!important;
+  }
+  .pogeun-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#6e4936!important;text-transform:none!important;
+  }
+  .pogeun-mode #seriesTitle:after{
+    content:"POGEUN"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#d79a67!important;
+  }
+  .pogeun-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#765e4e!important;font-weight:650!important;
+    background:transparent!important;
+  }
+  .pogeun-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c98657!important;
+  }
+
+  .pogeun-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .pogeun-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:7px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,248,238,.72)!important;border:1px solid rgba(139,92,54,.18)!important;
+    box-shadow:0 12px 28px rgba(100,63,42,.09)!important;
+  }
+  .pogeun-mode .crest-feature-art:before,.pogeun-mode .crest-feature-art:after{display:none!important}
+  .pogeun-mode .crest-feature-art img{
+    width:102%!important;height:102%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.08)!important;
+  }
+  .pogeun-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 8px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .pogeun-mode .crest-feature-copy:before,.pogeun-mode .crest-feature-copy .eyebrow,.pogeun-mode .crest-feature-copy p{display:none!important}
+  .pogeun-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#6e4936!important;letter-spacing:-.03em!important;
+  }
+
+  .pogeun-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:auto!important;min-height:0!important;padding:8px!important;margin:0!important;
+    background:rgba(255,247,237,.22)!important;border:1px solid rgba(255,255,255,.12)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(2px)!important;
+  }
+  .pogeun-mode .series-view-body:before{
+    content:"POGEUN ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(139,92,54,.20)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#8f684f!important;
+  }
+  .pogeun-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .pogeun-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(139,92,54,.20)!important;background:rgba(255,248,239,.72)!important;
+    box-shadow:0 5px 14px rgba(94,60,40,.08)!important;
+  }
+  .pogeun-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;padding:0!important;
+    background:rgba(255,255,255,.08)!important;display:block!important;
+  }
+  .pogeun-mode .series-view-body .card .meta{
+    min-height:24px!important;padding:4px 8px!important;
+    background:rgba(132,89,62,.78)!important;color:#fff!important;
+  }
+  .pogeun-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.2px!important;font-weight:800!important;color:#fff!important;
+  }
+  .pogeun-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;color:#f8e9dc!important;opacity:.82!important;
+  }
+  .pogeun-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#8a624b!important;
+  }
+  .pogeun-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(255,248,239,.88)!important;border:1px solid rgba(139,92,54,.22)!important;
+    color:#7d5843!important;font-weight:800!important;
+  }
+  .pogeun-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(255,248,239,.92)!important;
+    border:1px solid rgba(139,92,54,.26)!important;color:#7c5741!important;font-weight:800!important;
+  }
+  .pogeun-mode .crest-pager button:hover:not(:disabled){background:#9a6b4d!important;color:#fff!important}
+}
+
+/* Pogeun series button skin */
+.series button[data-series="포근"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(255,248,239,.24),rgba(255,248,239,.24)),
+    url("https://drive.google.com/thumbnail?id=1vLpPhlk2vcrYAxQKApYKzcq-B8xHBfIG&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(150,102,69,.30)!important;
+  color:#7a523a!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.62)!important;
+}
+.series button[data-series="포근"] strong,
+.series button[data-series="포근"] span{
+  color:#7a523a!important;
+}
+.series button[data-series="포근"] small{
+  color:#c57f52!important;
+  text-shadow:none!important;
+}
+.series button[data-series="포근"]:hover{
+  filter:saturate(1.04) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Yeoun v1 — cinematic afterglow archive */
+@media(min-width:1100px){
+  .series-view.yeoun-mode{
+    background:#f3eadf!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1RDSb19SIR05w9Rb95jnM-STmAfBN718C&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .yeoun-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(245,238,228,.80)!important;
+    border-bottom:1px solid rgba(92,72,55,.16)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .yeoun-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:21vw!important;max-width:345px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:14px 16px!important;
+    background:rgba(248,242,234,.24)!important;
+    backdrop-filter:blur(2px)!important;border-radius:4px!important;z-index:4!important;
+  }
+  .yeoun-mode .series-view-hero:before,.yeoun-mode .series-view-hero:after{display:none!important}
+  .yeoun-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#7f6b59!important;
+  }
+  .yeoun-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#493d34!important;text-transform:none!important;
+  }
+  .yeoun-mode #seriesTitle:after{
+    content:"YEOUN"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#c88f5e!important;
+  }
+  .yeoun-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#62574f!important;font-weight:650!important;
+    background:transparent!important;
+  }
+  .yeoun-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#b9784f!important;
+  }
+
+  .yeoun-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .yeoun-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:7px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(249,244,237,.68)!important;border:1px solid rgba(92,72,55,.18)!important;
+    box-shadow:0 12px 28px rgba(74,56,42,.08)!important;
+  }
+  .yeoun-mode .crest-feature-art:before,.yeoun-mode .crest-feature-art:after{display:none!important}
+  .yeoun-mode .crest-feature-art img{
+    width:102%!important;height:102%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.06)!important;
+  }
+  .yeoun-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 8px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .yeoun-mode .crest-feature-copy:before,.yeoun-mode .crest-feature-copy .eyebrow,.yeoun-mode .crest-feature-copy p{display:none!important}
+  .yeoun-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#493d34!important;letter-spacing:-.03em!important;
+  }
+
+  .yeoun-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:auto!important;min-height:0!important;padding:8px!important;margin:0!important;
+    background:rgba(248,242,234,.18)!important;border:1px solid rgba(255,255,255,.10)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(2px)!important;
+  }
+  .yeoun-mode .series-view-body:before{
+    content:"YEOUN ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(92,72,55,.20)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#6d5b4c!important;
+  }
+  .yeoun-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .yeoun-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(92,72,55,.20)!important;background:rgba(249,244,237,.70)!important;
+    box-shadow:0 5px 14px rgba(74,56,42,.07)!important;
+  }
+  .yeoun-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;padding:0!important;
+    background:rgba(255,255,255,.06)!important;display:block!important;
+  }
+  .yeoun-mode .series-view-body .card .meta{
+    min-height:24px!important;padding:4px 8px!important;
+    background:rgba(80,66,56,.76)!important;color:#fff!important;
+  }
+  .yeoun-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.2px!important;font-weight:800!important;color:#fff!important;
+  }
+  .yeoun-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;color:#eee5dd!important;opacity:.80!important;
+  }
+  .yeoun-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#6f5d4d!important;
+  }
+  .yeoun-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(249,244,237,.88)!important;border:1px solid rgba(92,72,55,.22)!important;
+    color:#615144!important;font-weight:800!important;
+  }
+  .yeoun-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(249,244,237,.92)!important;
+    border:1px solid rgba(92,72,55,.24)!important;color:#5e4e42!important;font-weight:800!important;
+  }
+  .yeoun-mode .crest-pager button:hover:not(:disabled){background:#715d4c!important;color:#fff!important}
+}
+
+/* Yeoun series button skin */
+.series button[data-series="여운"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(248,242,234,.22),rgba(248,242,234,.22)),
+    url("https://drive.google.com/thumbnail?id=1WekysDJPDILw5zYmqigkqDdXoljEHNCq&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(96,75,59,.30)!important;
+  color:#5d4b3f!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.60)!important;
+}
+.series button[data-series="여운"] strong,
+.series button[data-series="여운"] span{
+  color:#5d4b3f!important;
+}
+.series button[data-series="여운"] small{
+  color:#b97d55!important;
+  text-shadow:none!important;
+}
+.series button[data-series="여운"]:hover{
+  filter:saturate(1.03) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Yuyoung v1 — pastel impasto ribbon archive */
+@media(min-width:1100px){
+  .series-view.yuyoung-mode{
+    background:#f7f3eb!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1eiPzY3K_YjKLlBpfGOWMdj1SwJvpBc1R&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .yuyoung-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(249,246,240,.84)!important;
+    border-bottom:1px solid rgba(91,84,77,.14)!important;
+    backdrop-filter:blur(7px)!important;z-index:1000!important;
+  }
+  .yuyoung-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:21vw!important;max-width:345px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:14px 16px!important;
+    background:rgba(252,249,244,.26)!important;
+    backdrop-filter:blur(1.5px)!important;border-radius:4px!important;z-index:4!important;
+  }
+  .yuyoung-mode .series-view-hero:before,.yuyoung-mode .series-view-hero:after{display:none!important}
+  .yuyoung-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#7c6d62!important;
+  }
+  .yuyoung-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#51463f!important;text-transform:none!important;
+  }
+  .yuyoung-mode #seriesTitle:after{
+    content:"YUYOUNG"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#74b9b0!important;
+  }
+  .yuyoung-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#665b54!important;font-weight:650!important;
+    background:transparent!important;
+  }
+  .yuyoung-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#d39b54!important;
+  }
+  .yuyoung-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .yuyoung-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:7px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(252,249,244,.70)!important;border:1px solid rgba(91,84,77,.16)!important;
+    box-shadow:0 12px 28px rgba(74,66,58,.07)!important;
+  }
+  .yuyoung-mode .crest-feature-art:before,.yuyoung-mode .crest-feature-art:after{display:none!important}
+  .yuyoung-mode .crest-feature-art img{
+    width:102%!important;height:102%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.06)!important;
+  }
+  .yuyoung-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 8px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .yuyoung-mode .crest-feature-copy:before,.yuyoung-mode .crest-feature-copy .eyebrow,.yuyoung-mode .crest-feature-copy p{display:none!important}
+  .yuyoung-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#51463f!important;letter-spacing:-.03em!important;
+  }
+  .yuyoung-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:auto!important;min-height:0!important;padding:8px!important;margin:0!important;
+    background:rgba(252,249,244,.18)!important;border:1px solid rgba(255,255,255,.10)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(1.5px)!important;
+  }
+  .yuyoung-mode .series-view-body:before{
+    content:"YUYOUNG ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(91,84,77,.18)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#6a5e56!important;
+  }
+  .yuyoung-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .yuyoung-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(91,84,77,.18)!important;background:rgba(252,249,244,.72)!important;
+    box-shadow:0 5px 14px rgba(74,66,58,.07)!important;
+  }
+  .yuyoung-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;padding:0!important;
+    background:rgba(255,255,255,.06)!important;display:block!important;
+  }
+  .yuyoung-mode .series-view-body .card .meta{
+    min-height:24px!important;padding:4px 8px!important;
+    background:rgba(92,83,76,.76)!important;color:#fff!important;
+  }
+  .yuyoung-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.2px!important;font-weight:800!important;color:#fff!important;
+  }
+  .yuyoung-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;color:#f1ece8!important;opacity:.80!important;
+  }
+  .yuyoung-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#695d55!important;
+  }
+  .yuyoung-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(252,249,244,.90)!important;border:1px solid rgba(91,84,77,.20)!important;
+    color:#5b514a!important;font-weight:800!important;
+  }
+  .yuyoung-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(252,249,244,.94)!important;
+    border:1px solid rgba(91,84,77,.22)!important;color:#5d534c!important;font-weight:800!important;
+  }
+  .yuyoung-mode .crest-pager button:hover:not(:disabled){background:#76b7ad!important;color:#fff!important}
+}
+
+/* Yuyoung series button skin */
+.series button[data-series="유영"]{
+  position:relative!important;
+  overflow:hidden!important;
+  background-image:
+    linear-gradient(rgba(250,247,241,.18),rgba(250,247,241,.18)),
+    url("https://drive.google.com/thumbnail?id=1FdWGLTr5iqfQyaNYO2cGlylDkLThaB7B&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(100,88,78,.28)!important;
+  color:#4f4741!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.65)!important;
+}
+.series button[data-series="유영"] strong,
+.series button[data-series="유영"] span{
+  color:#4f4741!important;
+}
+.series button[data-series="유영"] small{
+  color:#7ab9ae!important;
+  text-shadow:none!important;
+}
+.series button[data-series="유영"]:hover{
+  filter:saturate(1.05) contrast(1.03)!important;
+  transform:translateY(-1px)!important;
+}
