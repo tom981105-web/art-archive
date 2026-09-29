@@ -2823,6 +2823,56 @@ body.crest-mode{overflow:hidden!important;}
   }
   .brush-mode .crest-pager button:hover:not(:disabled){background:#8c5b3d!important;color:#fff!important}
 }
+
+/* Brush v2 — polish readability, crop glass panel, enlarge hero art */
+@media(min-width:1100px){
+  .brush-mode .series-view-hero{
+    background:rgba(252,247,238,.30)!important;
+    backdrop-filter:blur(2px)!important;
+  }
+  .brush-mode #seriesTitle{
+    color:#3f2318!important;
+  }
+  .brush-mode #seriesDesc{
+    color:#5a463b!important;
+    font-weight:650!important;
+  }
+
+  .brush-mode .crest-feature-art{
+    padding:4px!important;
+    background:rgba(250,245,236,.64)!important;
+  }
+  .brush-mode .crest-feature-art img{
+    width:105%!important;
+    height:105%!important;
+  }
+  .brush-mode .crest-feature-copy{
+    top:calc(28.7vw + 6px)!important;
+  }
+
+  .brush-mode .series-view-body{
+    height:auto!important;
+    min-height:0!important;
+    padding-bottom:8px!important;
+    background:rgba(252,247,238,.11)!important;
+    backdrop-filter:blur(1.5px)!important;
+  }
+  .brush-mode .series-view-body .card .meta{
+    min-height:24px!important;
+    padding:4px 8px!important;
+    background:rgba(88,45,29,.84)!important;
+  }
+  .brush-mode .series-view-body .card .meta b{
+    font-size:10.2px!important;
+  }
+  .brush-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;
+    opacity:.76!important;
+  }
+  .brush-mode .crest-pager{
+    margin-top:7px!important;
+  }
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
