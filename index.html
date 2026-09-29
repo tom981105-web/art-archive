@@ -2583,6 +2583,74 @@ body.crest-mode{overflow:hidden!important;}
   }
   .fusion-mode .crest-pager button:hover:not(:disabled){background:#315d68!important;color:#fff!important}
 }
+
+/* Fusion v2 — reduce glassiness, tighten copy block, soften frame */
+@media(min-width:1100px){
+  .fusion-mode .series-view-hero{
+    width:19.5vw!important;
+    max-width:320px!important;
+    padding:12px 14px!important;
+    background:rgba(250,246,238,.10)!important;
+    backdrop-filter:blur(1px)!important;
+    box-shadow:none!important;
+  }
+  .fusion-mode #seriesTitle{
+    color:#173842!important;
+  }
+  .fusion-mode #seriesDesc{
+    color:#445b62!important;
+    font-weight:650!important;
+  }
+  .fusion-mode #seriesWorkCount{
+    color:#a5783e!important;
+    font-weight:900!important;
+  }
+
+  .fusion-mode .crest-feature-art{
+    padding:5px!important;
+    background:rgba(244,240,232,.64)!important;
+    border-color:rgba(31,67,78,.16)!important;
+    box-shadow:0 10px 24px rgba(20,52,61,.08)!important;
+  }
+  .fusion-mode .crest-feature-art img{
+    width:103%!important;
+    height:103%!important;
+  }
+  .fusion-mode .crest-feature-copy{
+    top:calc(28.7vw + 6px)!important;
+  }
+
+  .fusion-mode .series-view-body{
+    background:rgba(247,241,231,.08)!important;
+    backdrop-filter:blur(1px)!important;
+    border-color:rgba(255,255,255,.08)!important;
+    box-shadow:none!important;
+  }
+  .fusion-mode .series-view-body .card{
+    border-color:rgba(30,71,83,.22)!important;
+    box-shadow:0 4px 12px rgba(20,52,61,.07)!important;
+  }
+  .fusion-mode .series-view-body .card .meta{
+    min-height:24px!important;
+    padding:4px 8px!important;
+    background:rgba(25,55,64,.82)!important;
+  }
+  .fusion-mode .series-view-body .card .meta b{
+    font-size:10.2px!important;
+    color:#fff!important;
+  }
+  .fusion-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;
+    color:#d7e3e4!important;
+    opacity:.72!important;
+  }
+
+  .fusion-mode .crest-pager{
+    margin-top:7px!important;
+    justify-content:flex-end!important;
+    gap:6px!important;
+  }
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
