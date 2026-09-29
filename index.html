@@ -2900,6 +2900,140 @@ body.crest-mode{overflow:hidden!important;}
   filter:saturate(1.04) contrast(1.03)!important;
   transform:translateY(-1px)!important;
 }
+
+/* Pogeun v1 — warm storybook archive */
+@media(min-width:1100px){
+  .series-view.pogeun-mode{
+    background:#f8efe3!important;
+    background-image:url("https://drive.google.com/thumbnail?id=17qecfGXVcyqr01vNwUCED8fuja5jaVLI&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .pogeun-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(248,239,227,.82)!important;
+    border-bottom:1px solid rgba(139,92,54,.16)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .pogeun-mode .series-view-hero{
+    position:absolute!important;left:7.2vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:21vw!important;max-width:345px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:14px 16px!important;
+    background:rgba(255,247,237,.34)!important;backdrop-filter:blur(2px)!important;
+    border-radius:5px!important;z-index:4!important;
+  }
+  .pogeun-mode .series-view-hero:before,.pogeun-mode .series-view-hero:after{display:none!important}
+  .pogeun-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#a77655!important;
+  }
+  .pogeun-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#6e4936!important;text-transform:none!important;
+  }
+  .pogeun-mode #seriesTitle:after{
+    content:"POGEUN"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#d79a67!important;
+  }
+  .pogeun-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#765e4e!important;font-weight:650!important;
+    background:transparent!important;
+  }
+  .pogeun-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#c98657!important;
+  }
+
+  .pogeun-mode .crest-feature{
+    position:absolute!important;left:31.4vw!important;top:16.8vh!important;
+    width:28.7vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .pogeun-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:28.7vw!important;height:28.7vw!important;max-height:59vh!important;aspect-ratio:1/1!important;
+    padding:7px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,248,238,.72)!important;border:1px solid rgba(139,92,54,.18)!important;
+    box-shadow:0 12px 28px rgba(100,63,42,.09)!important;
+  }
+  .pogeun-mode .crest-feature-art:before,.pogeun-mode .crest-feature-art:after{display:none!important}
+  .pogeun-mode .crest-feature-art img{
+    width:102%!important;height:102%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.08)!important;
+  }
+  .pogeun-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(28.7vw + 8px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .pogeun-mode .crest-feature-copy:before,.pogeun-mode .crest-feature-copy .eyebrow,.pogeun-mode .crest-feature-copy p{display:none!important}
+  .pogeun-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#6e4936!important;letter-spacing:-.03em!important;
+  }
+
+  .pogeun-mode .series-view-body{
+    position:absolute!important;left:63.2vw!important;right:3.8vw!important;top:17.5vh!important;
+    width:auto!important;height:auto!important;min-height:0!important;padding:8px!important;margin:0!important;
+    background:rgba(255,247,237,.22)!important;border:1px solid rgba(255,255,255,.12)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(2px)!important;
+  }
+  .pogeun-mode .series-view-body:before{
+    content:"POGEUN ARCHIVE"!important;display:block!important;margin:0 0 12px!important;padding:0 0 9px!important;
+    border-bottom:1px solid rgba(139,92,54,.20)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.26em!important;color:#8f684f!important;
+  }
+  .pogeun-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:10px!important;max-height:none!important;overflow:visible!important;padding:0!important;
+  }
+  .pogeun-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;overflow:hidden!important;
+    border:1px solid rgba(139,92,54,.20)!important;background:rgba(255,248,239,.72)!important;
+    box-shadow:0 5px 14px rgba(94,60,40,.08)!important;
+  }
+  .pogeun-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:1/1!important;object-fit:cover!important;padding:0!important;
+    background:rgba(255,255,255,.08)!important;display:block!important;
+  }
+  .pogeun-mode .series-view-body .card .meta{
+    min-height:24px!important;padding:4px 8px!important;
+    background:rgba(132,89,62,.78)!important;color:#fff!important;
+  }
+  .pogeun-mode .series-view-body .card .meta b{
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:10.2px!important;font-weight:800!important;color:#fff!important;
+  }
+  .pogeun-mode .series-view-body .card .meta small{
+    font-size:6.1px!important;color:#f8e9dc!important;opacity:.82!important;
+  }
+  .pogeun-mode .crest-pager{
+    width:100%!important;box-sizing:border-box!important;display:flex!important;align-items:center!important;
+    justify-content:flex-end!important;margin:7px 0 0!important;padding:0!important;border-top:0!important;gap:6px!important;
+    color:#8a624b!important;
+  }
+  .pogeun-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(255,248,239,.88)!important;border:1px solid rgba(139,92,54,.22)!important;
+    color:#7d5843!important;font-weight:800!important;
+  }
+  .pogeun-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(255,248,239,.92)!important;
+    border:1px solid rgba(139,92,54,.26)!important;color:#7c5741!important;font-weight:800!important;
+  }
+  .pogeun-mode .crest-pager button:hover:not(:disabled){background:#9a6b4d!important;color:#fff!important}
+}
 </style></head><body>
 <header><button class="logo home-logo" id="homeLogo" aria-label="맨 위로 이동">◒ ART ARCHIVE</button><nav class="nav"><a href="#">홈</a><a href="#collection">시리즈</a><a href="#works">전체 작품</a></nav></header>
 <section class="hero"><div><div class="eyebrow">A living illustration archive</div><h1>ART<br>ARCHIVE</h1><p>각기 다른 세계를 가진 일러스트레이션 시리즈가 하나의 아카이브로 모이는 개인 디지털 전시관.</p></div></section>
@@ -2970,7 +3104,7 @@ function renderSeriesGallery(items,isPaged){
   next.addEventListener("click",()=>{if(crestPage<totalPages-1){crestPage++;renderSeriesGallery(items,true)}});
   body.appendChild(pager);
 }
-function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";const isCrest=s==="크레스트",isMuksu=s==="묵수",isShinsu=s==="신수",isWatercolor=s==="수채화",isPulpus=s==="펄퍼스",isInk=s==="잉크",isSeongsu=s==="성수",isFusion=s==="융화",isBrush=s==="붓결",isShowcase=isCrest||isMuksu||isShinsu||isWatercolor||isPulpus||isInk||isSeongsu||isFusion||isBrush;seriesView.classList.toggle("crest-mode",isCrest);seriesView.classList.toggle("muksu-mode",isMuksu);seriesView.classList.toggle("shinsu-mode",isShinsu);seriesView.classList.toggle("watercolor-mode",isWatercolor);seriesView.classList.toggle("pulpus-mode",isPulpus);seriesView.classList.toggle("ink-mode",isInk);seriesView.classList.toggle("seongsu-mode",isSeongsu);seriesView.classList.toggle("fusion-mode",isFusion);seriesView.classList.toggle("brush-mode",isBrush);crestPage=0;renderSeriesGallery(a,isShowcase);const cf=document.querySelector("#crestFeature");if(isShowcase&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
+function openSeries(s){const a=works.filter(w=>w[1]===s);seriesTitle.textContent=s;seriesDesc.textContent=seriesDescriptions[s]||"ART ARCHIVE의 "+s+" 시리즈.";seriesWorkCount.textContent=a.length+" WORKS";const isCrest=s==="크레스트",isMuksu=s==="묵수",isShinsu=s==="신수",isWatercolor=s==="수채화",isPulpus=s==="펄퍼스",isInk=s==="잉크",isSeongsu=s==="성수",isFusion=s==="융화",isBrush=s==="붓결",isPogeun=s==="포근",isShowcase=isCrest||isMuksu||isShinsu||isWatercolor||isPulpus||isInk||isSeongsu||isFusion||isBrush||isPogeun;seriesView.classList.toggle("crest-mode",isCrest);seriesView.classList.toggle("muksu-mode",isMuksu);seriesView.classList.toggle("shinsu-mode",isShinsu);seriesView.classList.toggle("watercolor-mode",isWatercolor);seriesView.classList.toggle("pulpus-mode",isPulpus);seriesView.classList.toggle("ink-mode",isInk);seriesView.classList.toggle("seongsu-mode",isSeongsu);seriesView.classList.toggle("fusion-mode",isFusion);seriesView.classList.toggle("brush-mode",isBrush);seriesView.classList.toggle("pogeun-mode",isPogeun);crestPage=0;renderSeriesGallery(a,isShowcase);const cf=document.querySelector("#crestFeature");if(isShowcase&&a.length){const x=a[0];cf.hidden=false;cf.innerHTML=`<div class="crest-feature-copy"><h3>${x[0]}</h3></div><div class="crest-feature-art"><img src="${img(x[2])}" alt="${x[0]}"></div>`}else{cf.hidden=true;cf.innerHTML=""}seriesView.classList.add("open");document.body.style.overflow="hidden";}
 function closeSeries(){seriesView.classList.remove("open");document.body.style.overflow="";}document.querySelector("#seriesClose").addEventListener("click",closeSeries);document.querySelector("#seriesHome").addEventListener("click",()=>{closeSeries();history.replaceState(null,"",location.pathname);window.scrollTo({top:0,behavior:"smooth"});});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&seriesView.classList.contains("open"))closeSeries()});
 document.querySelector("#series").addEventListener("click",e=>{const b=e.target.closest("button");if(b&&b.dataset.series)openSeries(b.dataset.series)});
 const latestWorks=[...cats.slice(1)].map(s=>{for(let i=works.length-1;i>=0;i--){if(works[i][1]===s)return works[i]}return null}).filter(Boolean);
@@ -2980,7 +3114,7 @@ const lightbox=document.querySelector("#lightbox"),lightboxImg=document.querySel
 document.addEventListener("click",e=>{
  const im=e.target.closest(".card img, .latest-card img");
  if(!im)return;
- const showcaseOpen=!!document.querySelector(".series-view.crest-mode, .series-view.muksu-mode, .series-view.shinsu-mode, .series-view.watercolor-mode, .series-view.pulpus-mode, .series-view.ink-mode, .series-view.seongsu-mode, .series-view.fusion-mode, .series-view.brush-mode");
+ const showcaseOpen=!!document.querySelector(".series-view.crest-mode, .series-view.muksu-mode, .series-view.shinsu-mode, .series-view.watercolor-mode, .series-view.pulpus-mode, .series-view.ink-mode, .series-view.seongsu-mode, .series-view.fusion-mode, .series-view.brush-mode, .series-view.pogeun-mode");
  const inShowcaseGallery=!!im.closest("#seriesGallery");
  if(showcaseOpen&&inShowcaseGallery){
    e.preventDefault();e.stopImmediatePropagation();
