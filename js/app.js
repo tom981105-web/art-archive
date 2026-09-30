@@ -137,3 +137,51 @@ window.addEventListener("scroll",()=>{syncMainNav();syncScrollTop()},{passive:tr
 window.addEventListener("resize",syncMainNav);
 scrollTopBtn?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
 syncMainNav();syncScrollTop();
+
+
+/* UI motion v1 */
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function revealElements(elements,{stagger=45,threshold=.12}={}){
+  const els=[...elements].filter(Boolean);
+  if(!els.length)return;
+  if(reduceMotion){
+    els.forEach(el=>el.classList.add("reveal-in"));
+    return;
+  }
+  els.forEach(el=>el.classList.add("reveal-ready"));
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting)return;
+      const idx=els.indexOf(entry.target);
+      setTimeout(()=>{
+        entry.target.classList.add("reveal-in");
+        entry.target.classList.remove("reveal-ready");
+      },Math.max(0,idx)*stagger);
+      io.unobserve(entry.target);
+    });
+  },{threshold,rootMargin:"0px 0px -6% 0px"});
+  els.forEach(el=>io.observe(el));
+}
+
+function applyArchiveReveals(){
+  revealElements(document.querySelectorAll("#collection>.eyebrow,#collection>h2"),{stagger:70,threshold:.2});
+  revealElements(document.querySelectorAll("#series button"),{stagger:50,threshold:.08});
+  revealElements(document.querySelectorAll("#latest .latest-head"),{stagger:0,threshold:.18});
+  revealElements(document.querySelectorAll("#latestGrid .latest-card"),{stagger:55,threshold:.08});
+  revealElements(document.querySelectorAll("#works>.eyebrow,#works>h2,#works>.toolbar,#works>#count"),{stagger:60,threshold:.16});
+  revealElements(document.querySelectorAll("#gallery .card"),{stagger:35,threshold:.05});
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",applyArchiveReveals,{once:true});
+}else{
+  applyArchiveReveals();
+}
+
+const archiveGalleryObserver=new MutationObserver(()=>{
+  if(reduceMotion)return;
+  const fresh=[...document.querySelectorAll("#gallery .card")].filter(el=>!el.classList.contains("reveal-ready")&&!el.classList.contains("reveal-in"));
+  if(fresh.length)revealElements(fresh,{stagger:28,threshold:.04});
+});
+archiveGalleryObserver.observe(document.querySelector("#gallery"),{childList:true});
