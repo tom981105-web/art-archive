@@ -4,4 +4,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["따사로운 봄날의 도자기 공방","포근","1BKaBB_M80qUMM2eCcG-iiepl6-wvLpVa"],
 ["분홍빛 소용돌이 라쿤","유영","1diRIOACNRGkX4doAwPEBqjyOqo7s1KUH"],
 ["민트빛 물결 족제비","유영","1qbW0KW-lu39Kbg1ykedlMe5z2YiLe0UK"],
-["쥐가오리","융화","1BKHdn_CkaBDJCLq8EozmjUsMCoBspQnx"]];
+["쥐가오리","융화","1BKHdn_CkaBDJCLq8EozmjUsMCoBspQnx"],
+["혹등고래","성수","1qm6YfM_aZBg5_sA1viu9QnsyuR6sTsA4"]];
