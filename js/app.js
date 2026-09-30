@@ -37,7 +37,24 @@ document.querySelector("#series").addEventListener("click",e=>{const b=e.target.
 const latestWorks=[...cats.slice(1)].map(s=>{for(let i=works.length-1;i>=0;i--){if(works[i][1]===s)return works[i]}return null}).filter(Boolean);
 const latestGrid=document.querySelector("#latestGrid");latestGrid.innerHTML=latestWorks.map(([n,s,id])=>`<article class="latest-card" data-id="${id}"><span class="latest-badge">LATEST</span><img src="${img(id)}" alt="${n}" loading="lazy"><div class="latest-meta"><b>${n}</b><small>${s}</small></div></article>`).join("");
 
-const lightbox=document.querySelector("#lightbox"),lightboxImg=document.querySelector("#lightboxImg"),lightboxCaption=document.querySelector("#lightboxCaption");
+const lightbox=document.querySelector("#lightbox"),lightboxImg=document.querySelector("#lightboxImg"),lightboxCaption=document.querySelector("#lightboxCaption"),lightboxPrev=document.querySelector("#lightboxPrev"),lightboxNext=document.querySelector("#lightboxNext");
+let lightboxItems=[],lightboxIndex=-1;
+function lightboxMeta(im){
+  const card=im.closest(".card,.latest-card");
+  const title=im.alt||"";
+  const seriesName=card?.querySelector(".meta small,.latest-meta small")?.textContent?.trim()||"";
+  return {im,title,seriesName};
+}
+function showLightboxAt(index){
+  if(!lightboxItems.length)return;
+  lightboxIndex=(index+lightboxItems.length)%lightboxItems.length;
+  const item=lightboxItems[lightboxIndex];
+  lightboxImg.src=(item.im.currentSrc||item.im.src).replace("sz=w1200","sz=w2400");
+  lightboxImg.alt=item.title;
+  lightboxCaption.innerHTML='<b>'+item.title+'</b>'+(item.seriesName?'<small>'+item.seriesName+'</small>':'');
+  lightboxPrev.disabled=lightboxItems.length<2;
+  lightboxNext.disabled=lightboxItems.length<2;
+}
 document.addEventListener("click",e=>{
  const im=e.target.closest(".card img, .latest-card img");
  if(!im)return;
@@ -57,10 +74,22 @@ document.addEventListener("click",e=>{
    if(title)title.textContent=im.alt||"";
    return;
  }
- lightboxImg.src=im.src.replace("sz=w1200","sz=w2400");lightboxImg.alt=im.alt;lightboxCaption.textContent=im.alt;lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
+ const scope=im.closest("#latestGrid")?document.querySelectorAll("#latestGrid .latest-card img"):document.querySelectorAll("#gallery .card img");
+ lightboxItems=[...scope].map(lightboxMeta);
+ lightboxIndex=lightboxItems.findIndex(x=>x.im===im);
+ showLightboxAt(lightboxIndex<0?0:lightboxIndex);
+ lightbox.classList.add("open");lightbox.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";
 });
-function closeLightbox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");lightboxImg.src="";document.body.style.overflow="";}
-lightbox.addEventListener("click",e=>{if(e.target===lightbox||e.target.closest(".close"))closeLightbox()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
+function closeLightbox(){lightbox.classList.remove("open");lightbox.setAttribute("aria-hidden","true");lightboxImg.src="";lightboxItems=[];lightboxIndex=-1;document.body.style.overflow="";}
+lightbox.addEventListener("click",e=>{if(e.target===lightbox||e.target.closest(".close"))closeLightbox()});
+lightboxPrev.addEventListener("click",e=>{e.stopPropagation();if(lightboxItems.length>1)showLightboxAt(lightboxIndex-1)});
+lightboxNext.addEventListener("click",e=>{e.stopPropagation();if(lightboxItems.length>1)showLightboxAt(lightboxIndex+1)});
+document.addEventListener("keydown",e=>{
+  if(!lightbox.classList.contains("open"))return;
+  if(e.key==="Escape")closeLightbox();
+  if(e.key==="ArrowLeft"&&lightboxItems.length>1)showLightboxAt(lightboxIndex-1);
+  if(e.key==="ArrowRight"&&lightboxItems.length>1)showLightboxAt(lightboxIndex+1);
+});
 
 const dashSeries=["펄퍼스","잉크","수채화","크레스트","성수","묵수","신수"];
 const show=v=>v===null||v===undefined?"—":v;
@@ -80,3 +109,31 @@ adminCancel.addEventListener("click",closeAdmin);adminModal.addEventListener("cl
 adminForm.addEventListener("submit",async e=>{e.preventDefault();const [u,p]=await Promise.all([sha256(adminId.value),sha256(adminPw.value)]);if(u===ADMIN_ID_HASH&&p===ADMIN_PW_HASH){closeAdmin();unlockAdmin()}else{loginError.textContent="아이디 또는 비밀번호가 올바르지 않습니다.";adminPw.value="";adminPw.focus()}});
 if(sessionStorage.getItem("artAdmin")==="1")unlockAdmin();
 
+
+
+/* archive UI navigation v2 */
+const mainNavLinks=[...document.querySelectorAll("header .nav a")];
+function setMainNavActive(key){
+  mainNavLinks.forEach(link=>{
+    const href=link.getAttribute("href");
+    const activeNow=(key==="home"&&href==="#")||(key==="collection"&&href==="#collection")||(key==="works"&&href==="#works");
+    link.classList.toggle("active",activeNow);
+    if(activeNow)link.setAttribute("aria-current","page");else link.removeAttribute("aria-current");
+  });
+}
+function syncMainNav(){
+  const y=window.scrollY+window.innerHeight*.32;
+  const collectionTop=document.querySelector("#collection")?.offsetTop??Infinity;
+  const worksTop=document.querySelector("#works")?.offsetTop??Infinity;
+  if(y>=worksTop)setMainNavActive("works");
+  else if(y>=collectionTop)setMainNavActive("collection");
+  else setMainNavActive("home");
+}
+const scrollTopBtn=document.querySelector("#scrollTopBtn");
+function syncScrollTop(){
+  if(scrollTopBtn)scrollTopBtn.classList.toggle("show",window.scrollY>520&&!seriesView.classList.contains("open"));
+}
+window.addEventListener("scroll",()=>{syncMainNav();syncScrollTop()},{passive:true});
+window.addEventListener("resize",syncMainNav);
+scrollTopBtn?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+syncMainNav();syncScrollTop();
