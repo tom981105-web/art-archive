@@ -3517,3 +3517,128 @@ body.crest-mode{overflow:hidden!important;}
     background-size:cover!important;background-position:center top!important;background-attachment:fixed!important;
   }
 }
+
+
+/* Monghwa refinement v2 — readability, balance, archive emphasis */
+@media (min-width:1100px){
+  .monghwa-mode .series-view-hero{
+    left:7vw!important;
+    top:47.5%!important;
+    transform:translateY(-50%)!important;
+    width:21.5vw!important;
+    max-width:360px!important;
+    padding:18px 20px!important;
+    background:rgba(255,248,240,.58)!important;
+    backdrop-filter:blur(6px)!important;
+    -webkit-backdrop-filter:blur(6px)!important;
+    border:1px solid rgba(138,112,90,.12)!important;
+    box-shadow:0 10px 24px rgba(86,67,52,.06)!important;
+  }
+  .monghwa-mode .series-view-hero .eyebrow{
+    margin:0 0 6px!important;
+    letter-spacing:.30em!important;
+    color:#8a7668!important;
+  }
+  .monghwa-mode #seriesTitle{
+    margin:0 0 8px!important;
+    line-height:.94!important;
+    color:#56483f!important;
+  }
+  .monghwa-mode #seriesTitle:after{margin-top:10px!important}
+  .monghwa-mode #seriesDesc{
+    margin-top:14px!important;
+    line-height:1.76!important;
+    color:#6d6058!important;
+  }
+  .monghwa-mode #seriesWorkCount{margin-top:12px!important}
+
+  .monghwa-mode .crest-feature{
+    left:31.2vw!important;
+    top:16.3vh!important;
+    width:24.2vw!important;
+  }
+  .monghwa-mode .crest-feature-art{
+    width:24.2vw!important;
+    height:30.2vw!important;
+    max-height:60vh!important;
+    padding:8px!important;
+    background:rgba(255,251,245,.78)!important;
+    border:1px solid rgba(130,104,83,.14)!important;
+    box-shadow:0 14px 30px rgba(95,78,63,.08)!important;
+  }
+  .monghwa-mode .crest-feature-art img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+  }
+  .monghwa-mode .crest-feature-copy{
+    top:calc(30.2vw + 4px)!important;
+  }
+  .monghwa-mode .crest-feature-copy h3{
+    font-size:17px!important;
+    line-height:1.25!important;
+    color:#5b4d44!important;
+  }
+
+  .monghwa-mode .series-view-body{
+    left:58.6vw!important;
+    right:3.2vw!important;
+    top:16.8vh!important;
+    padding:10px!important;
+    background:rgba(255,249,242,.34)!important;
+    border:1px solid rgba(255,255,255,.18)!important;
+    backdrop-filter:blur(4px)!important;
+    -webkit-backdrop-filter:blur(4px)!important;
+    box-shadow:0 8px 24px rgba(91,73,59,.04)!important;
+  }
+  .monghwa-mode .series-view-body:before{
+    margin:0 0 10px!important;
+    padding:0 0 8px!important;
+    color:#7b6c61!important;
+    border-bottom:1px solid rgba(126,102,79,.18)!important;
+  }
+  .monghwa-mode .series-view-body .gallery{
+    gap:10px!important;
+    max-height:68vh!important;
+  }
+  .monghwa-mode .series-view-body .card{
+    background:rgba(255,250,244,.82)!important;
+    border:1px solid rgba(126,102,79,.12)!important;
+    box-shadow:0 6px 16px rgba(91,73,59,.04)!important;
+  }
+  .monghwa-mode .series-view-body .card img{
+    aspect-ratio:4/5!important;
+    background:rgba(255,255,255,.22)!important;
+  }
+  .monghwa-mode .series-view-body .card .meta{
+    min-height:34px!important;
+    padding:6px 9px!important;
+    background:rgba(132,110,95,.82)!important;
+    color:#fff!important;
+  }
+  .monghwa-mode .series-view-body .card .meta b{
+    font-size:10.5px!important;
+    margin-bottom:2px!important;
+    line-height:1.25!important;
+  }
+  .monghwa-mode .series-view-body .card .meta small{
+    font-size:6.4px!important;
+    color:#f3e6da!important;
+    opacity:.9!important;
+  }
+  .monghwa-mode .crest-pager{margin-top:8px!important}
+  .monghwa-mode .crest-page-indicator{
+    background:rgba(255,249,242,.92)!important;
+    border:1px solid rgba(126,102,79,.16)!important;
+    color:#6f6056!important;
+  }
+  .monghwa-mode .crest-pager button{
+    background:rgba(255,249,242,.94)!important;
+    border:1px solid rgba(126,102,79,.18)!important;
+    color:#6b5b50!important;
+  }
+  .monghwa-mode .crest-pager button:hover:not(:disabled){
+    background:#8e7768!important;
+    color:#fff!important;
+  }
+}
