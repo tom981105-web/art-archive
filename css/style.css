@@ -3704,3 +3704,91 @@ body.crest-mode{overflow:hidden!important;}
 .filters button{
   overflow:hidden!important;
 }
+
+
+/* UI polish v1 — toolbar, selection, hover, archive rhythm */
+.toolbar{
+  padding:12px!important;
+  border:1px solid rgba(120,131,146,.24)!important;
+  border-radius:8px!important;
+  background:rgba(255,255,255,.025)!important;
+  backdrop-filter:blur(3px)!important;
+  -webkit-backdrop-filter:blur(3px)!important;
+  align-items:center!important;
+}
+
+.toolbar input{
+  transition:border-color .2s ease,background .2s ease,box-shadow .2s ease!important;
+}
+.toolbar input:focus{
+  outline:none!important;
+  border-color:#b8c3d0!important;
+  background:rgba(255,255,255,.035)!important;
+  box-shadow:0 0 0 2px rgba(184,195,208,.08)!important;
+}
+
+.filters button{
+  transition:transform .18s ease,background .18s ease,border-color .18s ease,box-shadow .18s ease!important;
+}
+.filters button:hover{
+  transform:translateY(-1px)!important;
+  border-color:#a7b4c2!important;
+  box-shadow:0 4px 12px rgba(0,0,0,.10)!important;
+}
+.filters button.active{
+  box-shadow:0 5px 14px rgba(0,0,0,.14)!important;
+}
+
+.series button{
+  transition:transform .2s ease,box-shadow .2s ease,filter .2s ease!important;
+}
+.series button:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 7px 18px rgba(12,26,43,.10)!important;
+}
+.series button.active-series{
+  transform:translateY(-2px)!important;
+  box-shadow:0 0 0 2px rgba(12,26,43,.20),0 8px 22px rgba(12,26,43,.12)!important;
+  filter:saturate(1.04) contrast(1.02)!important;
+}
+
+.latest-card,
+.card{
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important;
+}
+.latest-card:hover{
+  transform:translateY(-3px)!important;
+  box-shadow:0 12px 28px rgba(12,26,43,.10)!important;
+}
+#gallery .card:hover{
+  transform:translateY(-3px)!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.18)!important;
+  border-color:#3a5676!important;
+}
+
+#gallery .card .meta{
+  min-height:70px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+#gallery .card .meta b{
+  min-height:26px!important;
+  display:flex!important;
+  align-items:center!important;
+}
+#gallery .card .meta small{
+  margin-top:4px!important;
+}
+
+.latest-meta{
+  min-height:70px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+}
+.latest-meta b{
+  min-height:24px!important;
+  display:flex!important;
+  align-items:center!important;
+}
