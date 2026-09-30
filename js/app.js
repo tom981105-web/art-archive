@@ -185,3 +185,58 @@ const archiveGalleryObserver=new MutationObserver(()=>{
   if(fresh.length)revealElements(fresh,{stagger:28,threshold:.04});
 });
 archiveGalleryObserver.observe(document.querySelector("#gallery"),{childList:true});
+
+
+/* PC intro motion v2 */
+(function(){
+  const desktop=window.matchMedia("(min-width:1100px)").matches;
+  const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const body=document.body;
+  const hero=document.querySelector(".hero");
+  const cue=document.querySelector(".hero-scroll");
+
+  function markImageReady(im){
+    if(im.complete) requestAnimationFrame(()=>im.classList.add("img-ready"));
+    else im.addEventListener("load",()=>im.classList.add("img-ready"),{once:true});
+  }
+  function wireHomeImages(root=document){
+    root.querySelectorAll?.("#latestGrid .latest-card img,#gallery .card img").forEach(markImageReady);
+  }
+
+  if(!desktop||reduced){
+    body.classList.remove("intro-pending");
+    wireHomeImages();
+    return;
+  }
+
+  const alreadyShown=sessionStorage.getItem("artArchiveIntroShown")==="1";
+  if(alreadyShown){
+    body.classList.remove("intro-pending");
+  }else{
+    requestAnimationFrame(()=>{
+      body.classList.remove("intro-pending");
+      body.classList.add("intro-run");
+      sessionStorage.setItem("artArchiveIntroShown","1");
+      setTimeout(()=>body.classList.remove("intro-run"),6800);
+    });
+  }
+
+  function syncHeroMotion(){
+    const y=window.scrollY;
+    hero?.classList.toggle("hero-shifted",y>32&&y<420);
+    cue?.classList.toggle("is-hidden",y>72);
+  }
+  window.addEventListener("scroll",syncHeroMotion,{passive:true});
+  syncHeroMotion();
+  wireHomeImages();
+
+  const imageObserver=new MutationObserver(records=>{
+    records.forEach(r=>r.addedNodes.forEach(node=>{
+      if(node.nodeType!==1)return;
+      if(node.matches?.("#gallery .card,#latestGrid .latest-card")) node.querySelectorAll("img").forEach(markImageReady);
+      else wireHomeImages(node);
+    }));
+  });
+  const galleryRoot=document.querySelector("#gallery");
+  if(galleryRoot)imageObserver.observe(galleryRoot,{childList:true});
+})();
