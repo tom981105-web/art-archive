@@ -1,0 +1,46 @@
+/* CREST mobile exhibition — loads after mobile.css */
+@media (max-width:768px){
+  .series-view.crest-mode{
+    color:#0c1a2b!important;
+    background-color:#f7f2e7!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1RxUahVTis8FA5v8V6onXy1O6YoqGblCf&sz=w1600")!important;
+    background-repeat:no-repeat!important;
+    background-position:top center!important;
+    background-size:auto 62vh!important;
+  }
+  .series-view.crest-mode:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:linear-gradient(180deg,rgba(247,242,231,.08) 0,rgba(247,242,231,.42) 42vh,#f7f2e7 68vh)}
+  .series-view.crest-mode>*{position:relative;z-index:1}
+  .series-view.crest-mode .series-view-head{height:44px!important;background:rgba(247,242,231,.78)!important;border-bottom:1px solid rgba(90,67,39,.16)!important;backdrop-filter:blur(12px)!important}
+  .series-view.crest-mode .series-home,.series-view.crest-mode #seriesClose{color:#0c1a2b!important}
+  .series-view.crest-mode .series-view-hero{padding:24px 16px 12px!important;min-height:172px!important;background:transparent!important}
+  .series-view.crest-mode .series-view-hero:before{display:none!important}
+  .series-view.crest-mode .series-view-hero:after{left:16px!important;right:16px!important;background:rgba(128,93,48,.28)!important}
+  .series-view.crest-mode .series-view-hero .eyebrow{color:#8b683c!important;font-size:7px!important;letter-spacing:.24em!important}
+  .series-view.crest-mode .series-view-hero h2{font-size:38px!important;line-height:.9!important;color:#0c1a2b!important;margin:6px 0 9px!important}
+  .series-view.crest-mode #seriesTitle:after{font-size:7px!important;letter-spacing:.38em!important;color:#9a7440!important;margin-top:8px!important}
+  .series-view.crest-mode .series-view-hero p{font-size:9px!important;line-height:1.55!important;color:rgba(12,26,43,.68)!important;max-width:265px!important;margin:0 0 7px!important}
+  .series-view.crest-mode #seriesWorkCount{font-size:7px!important;letter-spacing:.2em!important;color:#9a7440!important;margin-top:8px!important}
+
+  .series-view.crest-mode .crest-feature{display:flex!important;flex-direction:column!important;margin:0!important;padding:10px 14px 13px!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+  .series-view.crest-mode .crest-feature-art{order:1!important;width:100%!important;padding:0!important;background:rgba(250,247,239,.72)!important;border:1px solid rgba(128,93,48,.24)!important;box-shadow:0 16px 42px rgba(38,28,18,.13)!important;backdrop-filter:blur(3px)!important}
+  .series-view.crest-mode .crest-feature-art:before,.series-view.crest-mode .crest-feature-art:after{display:none!important}
+  .series-view.crest-mode .crest-feature-art img{width:100%!important;height:46vh!important;min-height:300px!important;max-height:430px!important;object-fit:contain!important;background:transparent!important;padding:10px!important}
+  .series-view.crest-mode .crest-feature-copy{order:2!important;padding:10px 2px 0!important;background:transparent!important}
+  .series-view.crest-mode .crest-feature-copy:before{content:"NOW VIEWING"!important;display:block!important;margin:0 0 4px!important;font:7px Arial,sans-serif!important;letter-spacing:.26em!important;color:#9a7440!important}
+  .series-view.crest-mode .crest-feature-copy h3{font-size:16px!important;line-height:1.2!important;color:#0c1a2b!important;margin:0!important;font-weight:500!important}
+
+  /* horizontal film strip */
+  .series-view.crest-mode .series-view-body{padding:2px 0 26px!important;overflow:hidden!important}
+  .series-view.crest-mode .series-view-body:before{content:"CREST ARCHIVE  ·  SELECT A WORK"!important;display:block!important;margin:0 14px 9px!important;font:7px Arial,sans-serif!important;letter-spacing:.22em!important;color:#8b683c!important}
+  .series-view.crest-mode #seriesGallery{display:flex!important;grid-template-columns:none!important;gap:7px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;padding:0 14px 8px!important;scrollbar-width:none!important}
+  .series-view.crest-mode #seriesGallery::-webkit-scrollbar{display:none!important}
+  .series-view.crest-mode #seriesGallery .card{flex:0 0 86px!important;width:86px!important;margin:0!important;scroll-snap-align:start!important;border:1px solid rgba(128,93,48,.25)!important;border-radius:3px!important;background:#f7f2e7!important;box-shadow:none!important}
+  .series-view.crest-mode #seriesGallery .card img{width:100%!important;height:92px!important;aspect-ratio:auto!important;object-fit:cover!important;background:#eee5d5!important}
+  .series-view.crest-mode #seriesGallery .meta{padding:5px 5px 6px!important;background:#0c1a2b!important}
+  .series-view.crest-mode #seriesGallery .meta b{display:block!important;color:#f7f2e7!important;font-size:7px!important;line-height:1.2!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .series-view.crest-mode #seriesGallery .meta small{display:none!important}
+  .series-view.crest-mode .crest-pager{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important;padding:4px 14px 0!important}
+  .series-view.crest-mode .crest-pager button{width:26px!important;height:26px!important;border-radius:0!important;border:1px solid rgba(128,93,48,.35)!important;background:rgba(247,242,231,.76)!important;color:#0c1a2b!important;font-size:14px!important}
+  .series-view.crest-mode .crest-page-indicator{font:7px Arial,sans-serif!important;letter-spacing:.16em!important;color:#8b683c!important}
+}
+@media (max-width:390px){.series-view.crest-mode .crest-feature-art img{height:43vh!important;min-height:270px!important}}
