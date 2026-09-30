@@ -3642,3 +3642,32 @@ body.crest-mode{overflow:hidden!important;}
     color:#fff!important;
   }
 }
+
+
+/* Monghwa series button skin */
+.series button[data-series="몽화"]{
+  position:relative!important;
+  overflow:hidden!important;
+  min-height:78px!important;
+  background-image:
+    linear-gradient(rgba(255,249,242,.18),rgba(255,249,242,.18)),
+    url("https://drive.google.com/thumbnail?id=13pRF2brYg-s7zEv2V5dWVnsb10vFW642&sz=w1400")!important;
+  background-size:cover!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  border:1px solid rgba(130,104,83,.28)!important;
+  color:#584a42!important;
+  text-shadow:0 1px 5px rgba(255,255,255,.82)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.34)!important;
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease!important;
+}
+.series button[data-series="몽화"] small{
+  color:#ad7f64!important;
+  font-weight:700!important;
+  text-shadow:0 1px 4px rgba(255,255,255,.72)!important;
+}
+.series button[data-series="몽화"]:hover{
+  transform:translateY(-2px)!important;
+  filter:saturate(1.04) contrast(1.02)!important;
+  box-shadow:0 8px 20px rgba(91,73,59,.10),inset 0 0 0 1px rgba(255,255,255,.46)!important;
+}
