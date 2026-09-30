@@ -8,4 +8,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["혹등고래","성수","1qm6YfM_aZBg5_sA1viu9QnsyuR6sTsA4"],
 ["혹등고래","신수","1mVxiej34-J4fvtzy2tviMb4HBPB3rcxr"],
 ["바다거북","수채화","15Vww0VQj84JKPMWYV_KTKJi_mJR9tMRY"],
-["무화과","펄퍼스","1E7tCQWdNtUah_1b3R_NZuAl0fkmd6C5y"]];
+["무화과","펄퍼스","1E7tCQWdNtUah_1b3R_NZuAl0fkmd6C5y"],
+["늑대","잉크","1UKUKJ1wQ5a3E9oye3wvR4Ml4TPecukRG"]];
