@@ -4243,3 +4243,98 @@ body>header .nav a.active:after{
     animation:none!important;
   }
 }
+
+
+/* PC UI polish v3 — archive grid, sticky tools, typography */
+@media (min-width:1100px){
+  /* consistent section-title hierarchy */
+  #collection>.eyebrow,
+  #latest .eyebrow,
+  #works>.eyebrow{
+    font-size:10px!important;
+    line-height:1.4!important;
+    letter-spacing:.32em!important;
+    margin-bottom:10px!important;
+  }
+  #collection>h2,
+  #latest h2,
+  #works>h2{
+    font-size:clamp(38px,4vw,58px)!important;
+    line-height:1!important;
+    letter-spacing:-.035em!important;
+    margin-top:0!important;
+    margin-bottom:30px!important;
+  }
+
+  /* archive controls stay available while browsing */
+  #works .toolbar{
+    position:sticky!important;
+    top:62px!important;
+    z-index:4!important;
+    margin-bottom:18px!important;
+    padding:10px!important;
+    background:rgba(12,26,43,.92)!important;
+    border-color:rgba(174,189,202,.20)!important;
+    backdrop-filter:blur(10px)!important;
+    -webkit-backdrop-filter:blur(10px)!important;
+    box-shadow:0 8px 22px rgba(0,0,0,.10)!important;
+  }
+
+  /* true multi-column archive grid */
+  #works #gallery{
+    columns:unset!important;
+    column-count:unset!important;
+    column-width:unset!important;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    align-items:start!important;
+    gap:18px!important;
+  }
+  #works #gallery .card{
+    width:100%!important;
+    min-width:0!important;
+    margin:0!important;
+    break-inside:auto!important;
+    contain:layout paint style!important;
+    content-visibility:auto!important;
+    contain-intrinsic-size:360px 460px!important;
+  }
+  #works #gallery .card img{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    display:block!important;
+  }
+  #works #gallery .card .meta{
+    min-height:68px!important;
+    padding:13px 14px 14px!important;
+  }
+  #works #gallery .card .meta b{
+    min-height:0!important;
+    font-size:16px!important;
+    line-height:1.35!important;
+    display:-webkit-box!important;
+    -webkit-box-orient:vertical!important;
+    -webkit-line-clamp:2!important;
+    overflow:hidden!important;
+  }
+  #works #gallery .card .meta small{
+    margin-top:5px!important;
+    font-size:9px!important;
+    letter-spacing:.14em!important;
+  }
+
+  /* keep keyboard focus as polished as hover */
+  #series button:focus-visible,
+  #filters button:focus-visible,
+  #works .toolbar input:focus-visible{
+    outline:2px solid rgba(184,195,208,.85)!important;
+    outline-offset:2px!important;
+  }
+}
+
+@media (min-width:1600px){
+  #works #gallery{
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  }
+}
