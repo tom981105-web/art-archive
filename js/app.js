@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",()=>{const h=document.querySelector
 
 const cats=["전체",...new Set(works.map(work=>work[1]).filter(Boolean))];let active="전체";document.querySelector("#seriesCount").textContent=(cats.length-1)+" SERIES";
 const img=id=>"https://drive.google.com/thumbnail?id="+id+"&sz=w1200";
-function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
+function render(){let q=document.querySelector("#q").value.trim();let a=works.filter(w=>(active==="전체"||w[1]===active)&&(!q||w[0].includes(q)||w[1].includes(q)));count.textContent=a.length+" WORKS";gallery.innerHTML=a.map(w=>'<article class="card"><img loading="lazy" decoding="async" fetchpriority="low" src="'+img(w[2])+'" alt="'+w[0]+'"><div class="meta"><b>'+w[0]+'</b><small>'+w[1]+'</small></div></article>').join("")||'<div class="empty">작품이 없습니다.</div>'}
 series.innerHTML=cats.slice(1).map(c=>'<button data-series="'+c+'">'+c+'<br><small>'+works.filter(w=>w[1]===c).length+' WORKS</small></button>').join("");
 filters.innerHTML=cats.map(c=>'<button data-c="'+c+'" onclick="active=\''+c+'\';sync()">'+c+'</button>').join("");
 function sync(){document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("active",b.dataset.c===active));render()}q.addEventListener("input",render);sync();
@@ -170,7 +170,7 @@ function applyArchiveReveals(){
   revealElements(document.querySelectorAll("#latest .latest-head"),{stagger:0,threshold:.18});
   revealElements(document.querySelectorAll("#latestGrid .latest-card"),{stagger:55,threshold:.08});
   revealElements(document.querySelectorAll("#works>.eyebrow,#works>h2,#works>.toolbar,#works>#count"),{stagger:60,threshold:.16});
-  revealElements(document.querySelectorAll("#gallery .card"),{stagger:35,threshold:.05});
+  revealElements([...document.querySelectorAll("#gallery .card")].slice(0,12),{stagger:22,threshold:.04});
 }
 
 if(document.readyState==="loading"){
@@ -181,8 +181,8 @@ if(document.readyState==="loading"){
 
 const archiveGalleryObserver=new MutationObserver(()=>{
   if(reduceMotion)return;
-  const fresh=[...document.querySelectorAll("#gallery .card")].filter(el=>!el.classList.contains("reveal-ready")&&!el.classList.contains("reveal-in"));
-  if(fresh.length)revealElements(fresh,{stagger:28,threshold:.04});
+  const fresh=[...document.querySelectorAll("#gallery .card")].filter(el=>!el.classList.contains("reveal-ready")&&!el.classList.contains("reveal-in")).slice(0,12);
+  if(fresh.length)revealElements(fresh,{stagger:18,threshold:.03});
 });
 archiveGalleryObserver.observe(document.querySelector("#gallery"),{childList:true});
 
