@@ -12,4 +12,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["늑대","잉크","1UKUKJ1wQ5a3E9oye3wvR4Ml4TPecukRG"],
 ["범고래","크레스트","1qRrZ8-sO7vfubGzQyN8ZufPLAwRM2gur"],
 ["범고래","크레스트","1wueRmDzTU2qgaTKhpwmBmvJUadgH0W5o"],
-["물범","묵수","13bcw8qdA0LcBJlUYhez_1QWB4TFREnLu"]];
+["물범","묵수","13bcw8qdA0LcBJlUYhez_1QWB4TFREnLu"],
+["푸른 물감 파도 천산갑","유영","1uYFZFFqzf6FGrPmbRp5CQZQDNE41m6by"]];
