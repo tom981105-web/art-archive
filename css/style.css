@@ -3381,3 +3381,139 @@ body.crest-mode{overflow:hidden!important;}
   filter:saturate(1.05) contrast(1.03)!important;
   transform:translateY(-1px)!important;
 }
+
+
+/* Monghwa v1 — dreamy watercolor card archive */
+@media(min-width:1100px){
+  .series-view.monghwa-mode{
+    background:#f8efe4!important;
+    background-image:url("https://drive.google.com/thumbnail?id=1pUHH8YaHWnzkeiyH_YIejf0mkob8m38E&sz=w2400")!important;
+    background-size:100% 100%!important;
+    background-position:center!important;
+    background-repeat:no-repeat!important;
+    height:100vh!important;min-height:100vh!important;overflow:hidden!important;
+  }
+  .monghwa-mode .series-view-head{
+    position:absolute!important;top:0!important;left:0!important;right:0!important;
+    width:100%!important;max-width:none!important;height:54px!important;
+    padding:0 4vw!important;box-sizing:border-box!important;
+    display:flex!important;align-items:center!important;justify-content:space-between!important;
+    background:rgba(250,244,235,.78)!important;
+    border-bottom:1px solid rgba(126,102,79,.14)!important;
+    backdrop-filter:blur(8px)!important;z-index:1000!important;
+  }
+  .monghwa-mode .series-view-hero{
+    position:absolute!important;left:7vw!important;top:50%!important;transform:translateY(-50%)!important;
+    width:21vw!important;max-width:345px!important;height:auto!important;min-height:0!important;
+    margin:0!important;padding:16px 18px!important;
+    background:rgba(255,249,241,.28)!important;
+    backdrop-filter:blur(2px)!important;border-radius:5px!important;z-index:4!important;
+  }
+  .monghwa-mode .series-view-hero:before,.monghwa-mode .series-view-hero:after{display:none!important}
+  .monghwa-mode .series-view-hero .eyebrow{
+    margin:0 0 9px!important;font:700 9px/1.2 Arial,sans-serif!important;
+    letter-spacing:.30em!important;color:#8b786a!important;
+  }
+  .monghwa-mode #seriesTitle{
+    margin:0 0 13px!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:clamp(50px,3.8vw,68px)!important;font-weight:800!important;
+    line-height:.96!important;letter-spacing:-.06em!important;color:#5f5148!important;text-transform:none!important;
+  }
+  .monghwa-mode #seriesTitle:after{
+    content:"MONGHWA"!important;display:block!important;margin-top:12px!important;
+    font:800 8px/1 Arial,sans-serif!important;letter-spacing:.44em!important;color:#c99278!important;
+  }
+  .monghwa-mode #seriesDesc{
+    margin:18px 0 0!important;padding:0!important;max-width:315px!important;
+    font:10px/1.72 Arial,sans-serif!important;color:#70635c!important;font-weight:650!important;
+    background:transparent!important;
+  }
+  .monghwa-mode #seriesWorkCount{
+    margin-top:14px!important;font:800 9px/1 Arial,sans-serif!important;
+    letter-spacing:.28em!important;color:#b99661!important;
+  }
+
+  .monghwa-mode .crest-feature{
+    position:absolute!important;left:32.0vw!important;top:16.5vh!important;
+    width:25.2vw!important;height:auto!important;padding:0!important;margin:0!important;
+    display:block!important;background:transparent!important;border:0!important;z-index:5!important;
+  }
+  .monghwa-mode .crest-feature-art{
+    position:relative!important;left:auto!important;top:auto!important;transform:none!important;
+    width:25.2vw!important;height:31.2vw!important;max-height:62vh!important;
+    padding:8px!important;box-sizing:border-box!important;display:flex!important;
+    align-items:center!important;justify-content:center!important;
+    background:rgba(255,250,243,.66)!important;border:1px solid rgba(126,102,79,.16)!important;
+    box-shadow:0 14px 30px rgba(95,78,63,.08)!important;
+  }
+  .monghwa-mode .crest-feature-art:before,.monghwa-mode .crest-feature-art:after{display:none!important}
+  .monghwa-mode .crest-feature-art img{
+    width:100%!important;height:100%!important;object-fit:contain!important;
+    max-width:none!important;max-height:none!important;filter:none!important;box-shadow:none!important;
+    background:rgba(255,255,255,.05)!important;
+  }
+  .monghwa-mode .crest-feature-copy{
+    position:absolute!important;left:0!important;top:calc(31.2vw + 8px)!important;width:100%!important;
+    margin:0!important;padding:0!important;background:transparent!important;border:0!important;
+  }
+  .monghwa-mode .crest-feature-copy:before,.monghwa-mode .crest-feature-copy .eyebrow,.monghwa-mode .crest-feature-copy p{display:none!important}
+  .monghwa-mode .crest-feature-copy h3{
+    margin:0!important;padding:0!important;
+    font-family:"Nanum Myeongjo","Noto Serif KR","Batang",serif!important;
+    font-size:18px!important;font-weight:800!important;color:#5f5148!important;letter-spacing:-.03em!important;
+  }
+
+  .monghwa-mode .series-view-body{
+    position:absolute!important;left:62.0vw!important;right:3.8vw!important;top:17.2vh!important;
+    width:auto!important;height:auto!important;min-height:0!important;padding:8px!important;margin:0!important;
+    background:rgba(255,249,241,.16)!important;border:1px solid rgba(255,255,255,.10)!important;
+    overflow:visible!important;z-index:5!important;backdrop-filter:blur(1.5px)!important;
+  }
+  .monghwa-mode .series-view-body:before{
+    content:"MONGHWA ARCHIVE"!important;display:block!important;
+    margin:0 0 11px!important;padding:0 0 8px!important;
+    border-bottom:1px solid rgba(126,102,79,.22)!important;
+    font:800 9px/1 Arial,sans-serif!important;letter-spacing:.28em!important;color:#7b6b60!important;
+  }
+  .monghwa-mode .series-view-body .gallery{
+    columns:unset!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:9px!important;max-height:67vh!important;overflow-y:auto!important;padding-right:4px!important;
+  }
+  .monghwa-mode .series-view-body .card{
+    margin:0!important;min-width:0!important;background:rgba(255,250,244,.70)!important;
+    border:1px solid rgba(126,102,79,.16)!important;box-shadow:0 6px 16px rgba(91,73,59,.05)!important;
+  }
+  .monghwa-mode .series-view-body .card img{
+    width:100%!important;aspect-ratio:4/5!important;min-height:0!important;object-fit:contain!important;
+    background:rgba(255,255,255,.18)!important;
+  }
+  .monghwa-mode .series-view-body .card .meta{
+    min-height:30px!important;padding:5px 8px!important;background:rgba(91,72,61,.82)!important;color:#fff!important;
+  }
+  .monghwa-mode .series-view-body .card .meta b{font-size:10.5px!important;margin-bottom:2px!important}
+  .monghwa-mode .series-view-body .card .meta small{font-size:6.5px!important;color:#f6e9dc!important;opacity:.88!important}
+  .monghwa-mode .crest-pager{
+    margin-top:7px!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;
+    gap:6px!important;color:#7b6b60!important;
+  }
+  .monghwa-mode .crest-page-indicator{
+    min-width:38px!important;height:28px!important;line-height:28px!important;text-align:center!important;
+    background:rgba(255,249,241,.88)!important;border:1px solid rgba(126,102,79,.20)!important;font-weight:800!important;
+  }
+  .monghwa-mode .crest-pager button{
+    width:28px!important;height:28px!important;flex:0 0 28px!important;padding:0!important;
+    display:grid!important;place-items:center!important;background:rgba(255,249,241,.92)!important;
+    border:1px solid rgba(126,102,79,.22)!important;color:#6a5b51!important;font-weight:800!important;
+  }
+  .monghwa-mode .crest-pager button:hover:not(:disabled){background:#8d7565!important;color:#fff!important}
+}
+
+@media(max-width:1099px){
+  .series-view.monghwa-mode{
+    background:#f8efe4!important;
+    background-image:linear-gradient(rgba(248,239,228,.72),rgba(248,239,228,.90)),
+      url("https://drive.google.com/thumbnail?id=1pUHH8YaHWnzkeiyH_YIejf0mkob8m38E&sz=w1600")!important;
+    background-size:cover!important;background-position:center top!important;background-attachment:fixed!important;
+  }
+}
