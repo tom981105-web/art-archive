@@ -3677,3 +3677,30 @@ body.crest-mode{overflow:hidden!important;}
 .series button{
   border-radius:6px!important;
 }
+
+
+/* Global 6px corner refinement — latest, archive, search, filters */
+.latest-card,
+.card,
+.toolbar input,
+.filters button{
+  border-radius:6px!important;
+}
+
+.latest-card,
+.card{
+  overflow:hidden!important;
+}
+
+.latest-card img,
+.card img{
+  border-radius:6px 6px 0 0!important;
+}
+
+.toolbar input{
+  overflow:hidden!important;
+}
+
+.filters button{
+  overflow:hidden!important;
+}
