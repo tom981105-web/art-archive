@@ -1,0 +1,47 @@
+/* MUKSU mobile V1 — ink scroll exhibition */
+@media (max-width:768px){
+  .series-view.muksu-mode{background:#eeeae1!important;color:#171717!important;overflow-x:hidden!important}
+  .series-view.muksu-mode .series-view-head{height:42px!important;padding:0 13px!important;background:rgba(238,234,225,.78)!important;border:0!important;border-bottom:1px solid rgba(20,20,20,.12)!important;backdrop-filter:blur(10px)!important}
+  .series-view.muksu-mode .series-home{font-size:9px!important;letter-spacing:.10em!important;color:#171717!important}
+  .series-view.muksu-mode #seriesClose{font-size:8px!important;color:rgba(20,20,20,.58)!important;border:0!important}
+
+  /* quiet opening page: lots of breathing room, like an ink painting scroll */
+  .series-view.muksu-mode .series-view-hero{min-height:176px!important;padding:27px 16px 17px!important;background:transparent!important;border:0!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important}
+  .series-view.muksu-mode .series-view-hero:before,.series-view.muksu-mode .series-view-hero:after{display:none!important}
+  .series-view.muksu-mode .series-view-hero .eyebrow{font:6px Arial,sans-serif!important;letter-spacing:.38em!important;color:rgba(20,20,20,.38)!important;margin:0 0 8px!important}
+  .series-view.muksu-mode .series-view-hero h2{font-family:Georgia,"Noto Serif KR",serif!important;font-size:38px!important;line-height:.9!important;font-weight:500!important;letter-spacing:-.055em!important;color:#111!important;margin:0 0 11px!important}
+  .series-view.muksu-mode .series-view-hero p{font-size:8px!important;line-height:1.72!important;max-width:245px!important;color:rgba(20,20,20,.58)!important;margin:0!important}
+  .series-view.muksu-mode #seriesWorkCount{position:absolute!important;right:16px!important;bottom:18px!important;font:6px Arial,sans-serif!important;letter-spacing:.20em!important;color:rgba(20,20,20,.38)!important}
+
+  /* selected painting hangs directly on the paper — no card, no artificial frame */
+  .series-view.muksu-mode .crest-feature{display:flex!important;flex-direction:column!important;margin:0!important;padding:0 0 18px!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+  .series-view.muksu-mode .crest-feature-art{order:1!important;width:calc(100% - 20px)!important;margin:0 auto!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+  .series-view.muksu-mode .crest-feature-art:before,.series-view.muksu-mode .crest-feature-art:after{display:none!important}
+  .series-view.muksu-mode .crest-feature-art img{display:block!important;width:100%!important;height:auto!important;max-height:64vh!important;min-height:0!important;object-fit:contain!important;background:transparent!important;filter:drop-shadow(0 14px 16px rgba(0,0,0,.12)) grayscale(.08)!important}
+  .series-view.muksu-mode .crest-feature-copy{order:2!important;width:calc(100% - 34px)!important;margin:10px auto 0!important;padding:0!important;background:transparent!important;display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:14px!important}
+  .series-view.muksu-mode .crest-feature-copy:before{content:"墨水 · VIEW"!important;font:6px Arial,sans-serif!important;letter-spacing:.24em!important;color:rgba(20,20,20,.38)!important;white-space:nowrap!important}
+  .series-view.muksu-mode .crest-feature-copy h3{font-family:Georgia,"Noto Serif KR",serif!important;font-size:15px!important;font-weight:500!important;line-height:1.15!important;color:#151515!important;text-align:right!important;margin:0!important;padding:0!important;border:0!important}
+
+  /* paintings flow horizontally like leaves of a hand scroll */
+  .series-view.muksu-mode .series-view-body{padding:13px 0 30px!important;background:transparent!important;overflow:hidden!important;border-top:1px solid rgba(20,20,20,.10)!important}
+  .series-view.muksu-mode .series-view-body:before{content:"INK SCROLL · COLLECTION"!important;display:block!important;margin:0 0 11px 17px!important;font:6px Arial,sans-serif!important;letter-spacing:.34em!important;color:rgba(20,20,20,.40)!important}
+  .series-view.muksu-mode #seriesGallery{display:flex!important;grid-template-columns:none!important;gap:0!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;align-items:center!important;padding:0 17px 10px!important;scrollbar-width:none!important}
+  .series-view.muksu-mode #seriesGallery::-webkit-scrollbar{display:none!important}
+  .series-view.muksu-mode #seriesGallery .card{flex:0 0 118px!important;width:118px!important;margin:0 13px 0 0!important;scroll-snap-align:center!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+  .series-view.muksu-mode #seriesGallery .card:nth-child(even){flex-basis:92px!important;width:92px!important}
+  .series-view.muksu-mode #seriesGallery .card:nth-child(3n){flex-basis:104px!important;width:104px!important}
+  .series-view.muksu-mode #seriesGallery .card img{display:block!important;width:100%!important;height:auto!important;max-height:150px!important;aspect-ratio:auto!important;object-fit:contain!important;background:transparent!important;filter:grayscale(.08)!important;box-shadow:0 7px 12px rgba(0,0,0,.10)!important}
+  .series-view.muksu-mode #seriesGallery .meta{padding:6px 0 0!important;background:transparent!important;color:#171717!important}
+  .series-view.muksu-mode #seriesGallery .meta b{display:block!important;font:8px/1.25 Georgia,"Noto Serif KR",serif!important;font-weight:500!important;color:rgba(20,20,20,.72)!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+  .series-view.muksu-mode #seriesGallery .meta small{display:none!important}
+  .series-view.muksu-mode .crest-pager{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:9px!important;padding:4px 17px 0!important}
+  .series-view.muksu-mode .crest-pager button{width:auto!important;height:auto!important;padding:0!important;border:0!important;border-radius:0!important;background:transparent!important;color:rgba(20,20,20,.60)!important;font:18px Georgia,serif!important}
+  .series-view.muksu-mode .crest-page-indicator{font:6px Arial,sans-serif!important;letter-spacing:.20em!important;color:rgba(20,20,20,.36)!important}
+
+  body:has(.series-view.muksu-mode.open) .mobile-nav{opacity:.68!important;transform:translateX(-50%) scale(.91)!important}
+}
+@media (max-width:390px){
+  .series-view.muksu-mode .series-view-hero{min-height:162px!important}
+  .series-view.muksu-mode .series-view-hero h2{font-size:35px!important}
+  .series-view.muksu-mode .crest-feature-art img{max-height:59vh!important}
+}
