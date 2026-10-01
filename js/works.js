@@ -13,4 +13,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["별빛을 품은 작은 희망","몽화","1g49lj1V4V3EWb_CXrtihsoAAjvjo_E28"],
 ["페루","붓결","1CeIalYTiHf99vlPa0b4BzQY-LqI_x7md"],
 ["햇살 가득한 온실의 꽃 화관 만들기","포근","1545_2PZsHQCX_aSoGZGHPaZS_TxuaYHB"],
-["코뿔소","크레스트","1NA9w4mwqmv3WnJMJ-zLMfbmsFxXP7a1O"]];
+["코뿔소","크레스트","1NA9w4mwqmv3WnJMJ-zLMfbmsFxXP7a1O"],
+["사향소","묵수","1nvE6X25o6STsdm7LrEGWueIccn73ql1v"]];
