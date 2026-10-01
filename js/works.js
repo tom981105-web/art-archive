@@ -20,4 +20,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["고릴라","크레스트","1WiefQYv2efNYq0Z0yS3xAzaC6mlAQhz6"],
 ["파파야","펄퍼스","1GOdEDL3lW1NIpypCJG9CdwbTDp_Yvm46"],
 ["카멜레온","융화","1CG0p584UU5YphR_73iTT3k4GbNBUlAyP"],
-["대왕천산갑","묵수","1T3NOU_yvDmMJIooaB0TXw4nMh56oSqTD"]];
+["대왕천산갑","묵수","1T3NOU_yvDmMJIooaB0TXw4nMh56oSqTD"],
+["코코넛","펄퍼스","1EQJwoOQCrS12rGFJxN4IHPDkAw7nj4jz"]];
