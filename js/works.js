@@ -14,4 +14,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["페루","붓결","1CeIalYTiHf99vlPa0b4BzQY-LqI_x7md"],
 ["햇살 가득한 온실의 꽃 화관 만들기","포근","1545_2PZsHQCX_aSoGZGHPaZS_TxuaYHB"],
 ["코뿔소","크레스트","1NA9w4mwqmv3WnJMJ-zLMfbmsFxXP7a1O"],
-["사향소","묵수","1nvE6X25o6STsdm7LrEGWueIccn73ql1v"]];
+["사향소","묵수","1nvE6X25o6STsdm7LrEGWueIccn73ql1v"],
+["코끼리","신수","1-htT-8aeDgpYN2JqU7BVKfAr-UdyvoFj"]];
