@@ -1,6 +1,6 @@
 {
-  "version": "0.3",
-  "updatedAt": "2026-10-02T12:14:42.511Z",
+  "version": "0.4",
+  "updatedAt": "2026-10-02T12:31:36.256Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
@@ -15,5 +15,15 @@
     },
     "consecutiveFailures": 0,
     "triggerInventoryAvailable": false
+  },
+  "notionSync": {
+    "lastResult": "success",
+    "lastSeries": "SYSTEM_TEST",
+    "lastArtwork": "Notion 연결 점검",
+    "startedAt": "2026-10-02T12:31:35.432Z",
+    "finishedAt": "2026-10-02T12:31:35.778Z",
+    "durationMs": 346,
+    "error": null,
+    "consecutiveFailures": 0
   }
 }
