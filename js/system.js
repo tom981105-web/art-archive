@@ -11,11 +11,11 @@ function renderAlertCenter(){
   if(alertState.deploy==='error')issues.push({level:'error',title:'배포 오류',message:'최근 GitHub Pages 배포 결과를 확인해야 합니다.',href:'#deploy'});
   else if(alertState.deploy==='warning')issues.push({level:'warning',title:'배포 진행 중',message:'GitHub Pages 배포가 아직 완료되지 않았습니다.',href:'#deploy'});
   if(alertState.drive==='error')issues.push({level:'error',title:'Drive 상태 오류',message:'자동화 상태 데이터를 정상적으로 불러오지 못했습니다.',href:'#series'});
-  if(!issues.length){box.className='alert-center hidden';return}
+  if(!issues.length){box.hidden=true;box.className='alert-center hidden';return}
   const first=issues.find(x=>x.level==='error')||issues[0];
   const errors=issues.filter(x=>x.level==='error').length;
   const warnings=issues.filter(x=>x.level==='warning').length;
-  box.className='alert-center '+(first.level==='error'?'':'warn-state');
+  box.hidden=false;box.className='alert-center '+(first.level==='error'?'':'warn-state');
   $('#alertTitle').textContent=errors?('SYSTEM ALERT · '+errors+' ERROR'+(errors>1?'S':'')):('SYSTEM NOTICE · '+warnings+' WARNING'+(warnings>1?'S':''));
   $('#alertMessage').textContent=issues.map(x=>x.title).join(' · ');
   $('#alertAction').href=first.href;
