@@ -29,4 +29,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["멧돼지","크레스트","1UN018Mj-seF-h7SIPcdqvfyhJW-pA6nQ"],
 ["코브라","융화","1y-mAqA0Ic3XgY_CQd5-B6R0kmvyU0pFl"],
 ["코브라","잉크","1VBekycMWXNayBNKurjfbXAf9Tl_1R4XX"],
-["순록","성수","17Y4i078MvaPNV05BnKZG1IxVEC0OnRc9"]];
+["순록","성수","17Y4i078MvaPNV05BnKZG1IxVEC0OnRc9"],
+["귤","펄퍼스","1D7eHOaBSWWQrQiUB5QSuocFWd432EJ0y"]];
