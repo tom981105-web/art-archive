@@ -32,4 +32,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["순록","성수","17Y4i078MvaPNV05BnKZG1IxVEC0OnRc9"],
 ["귤","펄퍼스","1D7eHOaBSWWQrQiUB5QSuocFWd432EJ0y"],
 ["연꽃물결의 포근한 쉼","몽화","1acgv7PAegJ8w8MqFUu23ZARbV6XjpXAp"],
-["모로코","붓결","1NjoGC-M_r_guHNQonDS3i5WFNJ24Wtok"]];
+["모로코","붓결","1NjoGC-M_r_guHNQonDS3i5WFNJ24Wtok"],
+["봄날 강변의 작은 돛단배 모험","포근","1MdW8N2DHEz0sTv70tm9Lby9Bi4ccMz0q"]];
