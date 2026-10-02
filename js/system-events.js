@@ -40,16 +40,19 @@ async function loadSystemEvents(){
   const log=document.querySelector('#eventLog'),sync=document.querySelector('#eventSync');
   if(!log||!sync)return;
   try{
-    const er=await fetch('system-events.json?ts='+Date.now(),{cache:'no-store'});
+    const [er,sr]=await Promise.all([
+      fetch('system-events.json?ts='+Date.now(),{cache:'no-store'}),
+      fetch('system-status.json?ts='+Date.now(),{cache:'no-store'})
+    ]);
     const local=er.ok?await er.json():{events:[]};
-    const shared=window.__githubTelemetry||{runs:[]};
-    const deploy=(shared.runs||[]).map(x=>({
+    const status=sr.ok?await sr.json():{};
+    const deploy=((status.githubDeploy&&status.githubDeploy.recentRuns)||[]).map(x=>({
       at:x.updated_at||x.created_at,
       service:'GitHub Pages',
       level:x.conclusion==='success'?'success':x.conclusion==='cancelled'?'warning':x.status==='completed'?'error':'info',
       status:x.conclusion||x.status,
       title:'Deploy '+String(x.conclusion||x.status).toUpperCase(),
-      message:(x.head_commit&&x.head_commit.message)||x.head_sha
+      message:x.message||x.head_sha
     }));
     systemEventsCache=[...(local.events||[]),...deploy].sort((a,b)=>new Date(b.at)-new Date(a.at));
     sync.textContent='EVENT SYNC '+eventFmt(local.updatedAt||new Date());
@@ -71,4 +74,3 @@ document.addEventListener('click',e=>{
 loadSystemEvents();
 setInterval(loadSystemEvents,60000);
 
-window.addEventListener('github-telemetry-updated',loadSystemEvents);
