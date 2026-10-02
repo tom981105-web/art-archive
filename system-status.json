@@ -25,5 +25,60 @@
     "durationMs": 346,
     "error": null,
     "consecutiveFailures": 0
+  },
+  "githubDeploy": {
+    "updatedAt": "2026-10-02T13:25:31Z",
+    "latestRun": {
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "5520b12417b04b1d83e5b2de64dd8e660b141372",
+      "created_at": "2026-10-02T13:23:02Z",
+      "run_started_at": "2026-10-02T13:23:02Z",
+      "updated_at": "2026-10-02T13:25:31Z",
+      "message": "Bust SYSTEM telemetry cache"
+    },
+    "recentRuns": [
+      {
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "5520b12417b04b1d83e5b2de64dd8e660b141372",
+        "created_at": "2026-10-02T13:23:02Z",
+        "updated_at": "2026-10-02T13:25:31Z",
+        "message": "Bust SYSTEM telemetry cache"
+      },
+      {
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "684b1a03801f2c5ac197284858a42ac20dd582c0",
+        "created_at": "2026-10-02T13:22:58Z",
+        "updated_at": "2026-10-02T13:23:05Z",
+        "message": "Reuse shared GitHub deployment telemetry"
+      },
+      {
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "16b779dcc7a8e419fefb957adf43fd47998156f9",
+        "created_at": "2026-10-02T13:22:45Z",
+        "updated_at": "2026-10-02T13:23:09Z",
+        "message": "Reduce GitHub API polling and share telemetry"
+      }
+    ],
+    "recentCommits": [
+      {
+        "sha": "5520b12417b04b1d83e5b2de64dd8e660b141372",
+        "date": "2026-10-02T13:23:00Z",
+        "message": "Bust SYSTEM telemetry cache"
+      },
+      {
+        "sha": "684b1a03801f2c5ac197284858a42ac20dd582c0",
+        "date": "2026-10-02T13:22:55Z",
+        "message": "Reuse shared GitHub deployment telemetry"
+      },
+      {
+        "sha": "16b779dcc7a8e419fefb957adf43fd47998156f9",
+        "date": "2026-10-02T13:22:43Z",
+        "message": "Reduce GitHub API polling and share telemetry"
+      }
+    ]
   }
 }
