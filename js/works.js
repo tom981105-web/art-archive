@@ -40,4 +40,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["큰개미핥기","묵수","1_Io66tfEmZKR_wcD-3XUkQQvZhLnFWWi"],
 ["카멜레온","수채화","1plkMxss989OU0SRFr5cx58J1Te4AcrmG"],
 ["북극곰","신수","16ma7wJVAOP_SLVfFUycIAXZbu19o3RAD"],
-["밤","펄퍼스","1on6BZPYh6yyuV_518HHXpJWNtBf0LQPt"]];
+["밤","펄퍼스","1on6BZPYh6yyuV_518HHXpJWNtBf0LQPt"],
+["홍학","성수","1ss_sdWqzBq_NtvyU-InvmRloRXenqrrJ"]];
