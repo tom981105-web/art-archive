@@ -25,4 +25,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["두꺼비","성수","10ZcY2NdX1WNlif7sUiy0hj3Ea_awTN9s"],
 ["타조","묵수","1owXYR8Ko0pwzXOAW2CB_BlDCP8w2wTUm"],
 ["범선","수채화","1OAUp_X8M2ZsTeJFI335M_DfUjoG9A0B9"],
-["박쥐","크레스트","1wGubaB6yeOy7ptDbjXlyXBNLzrn1x1jh"]];
+["박쥐","크레스트","1wGubaB6yeOy7ptDbjXlyXBNLzrn1x1jh"],
+["멧돼지","크레스트","1UN018Mj-seF-h7SIPcdqvfyhJW-pA6nQ"]];
