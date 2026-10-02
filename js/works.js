@@ -36,4 +36,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["봄날 강변의 작은 돛단배 모험","포근","1MdW8N2DHEz0sTv70tm9Lby9Bi4ccMz0q"],
 ["황금빛 맹그로브 델타의 여정","여운","1u4gJth6eRl35DJmRpn5BOF37ZqD5JzRx"],
 ["파스텔 물감 리본 토끼","유영","1OA8izjT4vZXsEfnKIPVMv7znlZTUSFS2"],
-["카멜레온","크레스트","1kTk3rnQxVlJ5SPvKMf5Y_SyhxR5y47ZR"]];
+["카멜레온","크레스트","1kTk3rnQxVlJ5SPvKMf5Y_SyhxR5y47ZR"],
+["큰개미핥기","묵수","1_Io66tfEmZKR_wcD-3XUkQQvZhLnFWWi"]];
