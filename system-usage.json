@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-10-02T20:49:00+09:00",
+  "source": "그림 자동화 사용량 로그 / 사용량 로그",
+  "schemaVersion": 2,
+  "summary": {"runs":18,"success":17,"failed":1,"successRate":94.4,"driveVerified":17,"regenerations":1},
+  "series": [
+    {"name":"크레스트","runs":3,"success":2,"failed":1,"avgElapsed":165.5,"regenerations":0},
+    {"name":"묵수","runs":2,"success":2,"failed":0,"avgElapsed":181,"regenerations":0},
+    {"name":"신수","runs":2,"success":2,"failed":0,"avgElapsed":152,"regenerations":0},
+    {"name":"수채화","runs":3,"success":3,"failed":0,"avgElapsed":115.5,"regenerations":0},
+    {"name":"펄퍼스","runs":2,"success":2,"failed":0,"avgElapsed":192.5,"regenerations":0},
+    {"name":"잉크","runs":1,"success":1,"failed":0,"avgElapsed":120,"regenerations":0},
+    {"name":"성수","runs":3,"success":3,"failed":0,"avgElapsed":248,"regenerations":1},
+    {"name":"융화","runs":2,"success":2,"failed":0,"avgElapsed":274,"regenerations":0}
+  ],
+  "recentRuns": [
+    {"time":"2026-10-02 17:02:38","series":"펄퍼스","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":226},
+    {"time":"2026-10-02 17:02:05","series":"잉크","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":120},
+    {"time":"2026-10-02 17:01:27","series":"성수","generationAttempts":2,"regenerations":1,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":262},
+    {"time":"2026-10-02 06:00:41","series":"크레스트","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":154},
+    {"time":"2026-10-02 06:00:07","series":"묵수","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":192},
+    {"time":"2026-10-02 05:59:50","series":"수채화","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":110},
+    {"time":"2026-10-02 05:59:40","series":"성수","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":234},
+    {"time":"2026-10-01 22:39:11","series":"융화","generationAttempts":1,"regenerations":0,"uploadAttempts":1,"driveVerified":true,"result":"success","elapsedSeconds":274}
+  ]
+}
