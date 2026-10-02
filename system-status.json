@@ -1,6 +1,6 @@
 {
   "version": "0.4",
-  "updatedAt": "2026-10-02T21:17:30.202Z",
+  "updatedAt": "2026-10-02T21:19:22.487Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
@@ -18,11 +18,11 @@
   },
   "notionSync": {
     "lastResult": "success",
-    "lastSeries": "신수",
-    "lastArtwork": "북극곰",
-    "startedAt": "2026-10-02T21:17:16.056Z",
-    "finishedAt": "2026-10-02T21:17:28.917Z",
-    "durationMs": 12861,
+    "lastSeries": "펄퍼스",
+    "lastArtwork": "밤",
+    "startedAt": "2026-10-02T21:19:18.031Z",
+    "finishedAt": "2026-10-02T21:19:22.045Z",
+    "durationMs": 4014,
     "error": null,
     "consecutiveFailures": 0
   },
