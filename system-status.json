@@ -1,6 +1,6 @@
 {
   "version": "0.4",
-  "updatedAt": "2026-10-02T21:08:09.472Z",
+  "updatedAt": "2026-10-02T21:09:51.191Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
@@ -18,11 +18,11 @@
   },
   "notionSync": {
     "lastResult": "success",
-    "lastSeries": "크레스트",
-    "lastArtwork": "카멜레온",
-    "startedAt": "2026-10-02T21:07:56.962Z",
-    "finishedAt": "2026-10-02T21:08:06.649Z",
-    "durationMs": 9687,
+    "lastSeries": "묵수",
+    "lastArtwork": "큰개미핥기",
+    "startedAt": "2026-10-02T21:09:44.306Z",
+    "finishedAt": "2026-10-02T21:09:50.492Z",
+    "durationMs": 6186,
     "error": null,
     "consecutiveFailures": 0
   },
