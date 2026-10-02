@@ -1,5 +1,41 @@
 const eventClass=level=>level==='error'||level==='failure'?'bad':level==='warning'||level==='cancelled'?'warn':level==='success'?'good':'neutral';
 const eventFmt=v=>v?new Date(v).toLocaleString('ko-KR',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}):'—';
+let systemEventsCache=[];
+let activeEventFilter='all';
+
+function renderEventRows(){
+  const log=document.querySelector('#eventLog');if(!log)return;
+  const filtered=systemEventsCache.filter(e=>{
+    if(activeEventFilter==='all')return true;
+    if(activeEventFilter==='error')return e.level==='error'||e.level==='failure';
+    return e.service===activeEventFilter;
+  });
+  log.innerHTML=filtered.slice(0,30).map(e=>`<div class="event"><time>${eventFmt(e.at)}</time><span class="tag">${e.service||'SYSTEM'}</span><b>${e.title||e.status||'Event'}<small style="display:block;color:#65706d;font-weight:400;margin-top:4px">${e.message||''}</small></b><em class="${eventClass(e.level)}">${String(e.status||e.level||'INFO').toUpperCase()}</em></div>`).join('')||'<p class="muted">조건에 맞는 시스템 이벤트가 없습니다.</p>';
+}
+
+function renderEventStats(events){
+  const now=Date.now(),cutoff=now-24*60*60*1000;
+  const recent=events.filter(e=>new Date(e.at).getTime()>=cutoff);
+  const errors=recent.filter(e=>e.level==='error'||e.level==='failure');
+  const warnings=recent.filter(e=>e.level==='warning'||e.level==='cancelled');
+  const incidents=events.filter(e=>e.level==='error'||e.level==='failure'||e.level==='warning'||e.level==='cancelled');
+  const recoveries=events.filter(e=>e.level==='success');
+  const err=document.querySelector('#eventErrors24h'),warn=document.querySelector('#eventWarnings24h'),lastI=document.querySelector('#eventLastIncident'),lastR=document.querySelector('#eventLastRecovery'),summary=document.querySelector('#eventStateSummary');
+  if(err)err.textContent=errors.length;
+  if(warn)warn.textContent=warnings.length;
+  if(lastI)lastI.textContent=incidents[0]?eventFmt(incidents[0].at):'없음';
+  if(lastR)lastR.textContent=recoveries[0]?eventFmt(recoveries[0].at):'없음';
+
+  const latestByService={};
+  for(const e of events){if(!latestByService[e.service])latestByService[e.service]=e}
+  const activeIssues=Object.values(latestByService).filter(e=>e.level==='error'||e.level==='failure'||e.level==='warning'||e.level==='cancelled');
+  if(summary){
+    if(activeIssues.some(e=>e.level==='error'||e.level==='failure')){summary.textContent='현재 장애 상태 감지';summary.className='muted event-state-bad'}
+    else if(activeIssues.length){summary.textContent='현재 경고 상태 감지';summary.className='muted event-state-warn'}
+    else{summary.textContent='현재 기록 기준 복구 상태';summary.className='muted event-state-ok'}
+  }
+}
+
 async function loadSystemEvents(){
   const log=document.querySelector('#eventLog'),sync=document.querySelector('#eventSync');
   if(!log||!sync)return;
@@ -7,7 +43,7 @@ async function loadSystemEvents(){
     const headers={Accept:'application/vnd.github+json'};
     const [er,ar]=await Promise.all([
       fetch('system-events.json?ts='+Date.now(),{cache:'no-store'}),
-      fetch('https://api.github.com/repos/tom981105-web/art-archive/actions/runs?per_page=12',{headers})
+      fetch('https://api.github.com/repos/tom981105-web/art-archive/actions/runs?per_page=20',{headers})
     ]);
     const local=er.ok?await er.json():{events:[]};
     const actions=ar.ok?await ar.json():{workflow_runs:[]};
@@ -19,13 +55,22 @@ async function loadSystemEvents(){
       title:'Deploy '+String(x.conclusion||x.status).toUpperCase(),
       message:(x.head_commit&&x.head_commit.message)||x.head_sha
     }));
-    const merged=[...(local.events||[]),...deploy].sort((a,b)=>new Date(b.at)-new Date(a.at)).slice(0,30);
+    systemEventsCache=[...(local.events||[]),...deploy].sort((a,b)=>new Date(b.at)-new Date(a.at));
     sync.textContent='EVENT SYNC '+eventFmt(local.updatedAt||new Date());
-    log.innerHTML=merged.map(e=>`<div class="event"><time>${eventFmt(e.at)}</time><span class="tag">${e.service||'SYSTEM'}</span><b>${e.title||e.status||'Event'}<small style="display:block;color:#65706d;font-weight:400;margin-top:4px">${e.message||''}</small></b><em class="${eventClass(e.level)}">${String(e.status||e.level||'INFO').toUpperCase()}</em></div>`).join('')||'<p class="muted">기록된 시스템 이벤트가 없습니다.</p>';
+    renderEventStats(systemEventsCache);
+    renderEventRows();
   }catch(e){
     sync.textContent='EVENT DATA ERROR';
     log.innerHTML='<p class="muted">이벤트 이력을 불러오지 못했습니다.</p>';
   }
 }
+
+document.addEventListener('click',e=>{
+  const btn=e.target.closest('.event-filter');if(!btn)return;
+  activeEventFilter=btn.dataset.filter||'all';
+  document.querySelectorAll('.event-filter').forEach(x=>x.classList.toggle('active',x===btn));
+  renderEventRows();
+});
+
 loadSystemEvents();
 setInterval(loadSystemEvents,60000);
