@@ -40,14 +40,10 @@ async function loadSystemEvents(){
   const log=document.querySelector('#eventLog'),sync=document.querySelector('#eventSync');
   if(!log||!sync)return;
   try{
-    const headers={Accept:'application/vnd.github+json'};
-    const [er,ar]=await Promise.all([
-      fetch('system-events.json?ts='+Date.now(),{cache:'no-store'}),
-      fetch('https://api.github.com/repos/tom981105-web/art-archive/actions/runs?per_page=20',{headers})
-    ]);
+    const er=await fetch('system-events.json?ts='+Date.now(),{cache:'no-store'});
     const local=er.ok?await er.json():{events:[]};
-    const actions=ar.ok?await ar.json():{workflow_runs:[]};
-    const deploy=(actions.workflow_runs||[]).map(x=>({
+    const shared=window.__githubTelemetry||{runs:[]};
+    const deploy=(shared.runs||[]).map(x=>({
       at:x.updated_at||x.created_at,
       service:'GitHub Pages',
       level:x.conclusion==='success'?'success':x.conclusion==='cancelled'?'warning':x.status==='completed'?'error':'info',
@@ -74,3 +70,5 @@ document.addEventListener('click',e=>{
 
 loadSystemEvents();
 setInterval(loadSystemEvents,60000);
+
+window.addEventListener('github-telemetry-updated',loadSystemEvents);
