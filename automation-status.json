@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-02T21:11:03.557Z",
+  "updatedAt": "2026-10-02T21:17:38.019Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00",
     "17:00"
   ],
   "dailyPlanned": 14,
-  "todayTotal": 3,
+  "todayTotal": 4,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 0,
-      "totalCount": 14,
-      "lastSavedAt": "2026-10-01T13:33:29.342Z",
-      "lastFile": "코끼리 신수.png",
+      "todayCount": 1,
+      "totalCount": 15,
+      "lastSavedAt": "2026-10-02T21:15:12.465Z",
+      "lastFile": "북극곰 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
