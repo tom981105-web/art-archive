@@ -476,3 +476,37 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 2px 0;co
 .daily-grid{stroke:#202726;stroke-width:1}
 .daily-zero{stroke:#303a36;stroke-dasharray:4 4}
 @media(max-width:1180px){.long-range-grid{grid-template-columns:1fr}}
+
+
+/* SYSTEM v2.5 · Multi-series long-range comparison */
+.multi-series-card{margin-top:10px}
+.multi-series-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:13px;border-bottom:1px solid #222928}
+.multi-series-head h3{margin:0;font-size:15px;letter-spacing:-.025em}
+.multi-series-head p:not(.eyebrow){margin:6px 0 0;color:#64706c;font-size:9px}
+.metric-switch{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.metric-switch button{
+  padding:7px 9px;border:1px solid #29312f;border-radius:7px;background:#111716;
+  color:#66716d;font:8px var(--mono);cursor:pointer
+}
+.metric-switch button:hover{color:#d0d7d3;border-color:#39433f}
+.metric-switch button.active{color:#e8efeb;background:#1b241f;border-color:#46614e;box-shadow:inset 0 -2px #8fc7a0}
+.multi-series-legend{display:flex;flex-wrap:wrap;gap:6px 12px;padding:11px 0 4px}
+.multi-series-legend button{
+  display:inline-flex;align-items:center;gap:6px;padding:5px 7px;border:1px solid #242d2a;border-radius:999px;
+  background:#0f1413;color:#8d9793;font:7px var(--mono);cursor:pointer
+}
+.multi-series-legend button.off{opacity:.35}
+.multi-series-legend i{width:7px;height:7px;border-radius:50%;display:inline-block;background:var(--series-color)}
+.multi-series-chart{height:320px;margin-top:8px;position:relative;overflow:hidden}
+.multi-series-chart svg{width:100%;height:100%;display:block;overflow:visible}
+.multi-grid{stroke:#202726;stroke-width:1}
+.multi-axis{fill:#53605c;font:7px var(--mono)}
+.multi-line{fill:none;stroke:var(--series-color);stroke-width:2;opacity:.94}
+.multi-point{fill:var(--series-color);stroke:#0f1413;stroke-width:2}
+.multi-point:hover{r:5}
+.multi-empty{color:#69746f;font:9px var(--mono);padding:36px 0}
+@media(max-width:760px){
+  .multi-series-head{flex-direction:column}
+  .metric-switch{justify-content:flex-start}
+  .multi-series-chart{height:270px}
+}
