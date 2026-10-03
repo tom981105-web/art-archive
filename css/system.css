@@ -282,3 +282,4 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 2px 0;co
   .event{grid-template-columns:62px 1fr}.event .tag{display:none}
   .run-row{grid-template-columns:64px 50px 52px 1fr}
 }
+.main{opacity:.001;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease}.system-ready .main{opacity:1;transform:none}
