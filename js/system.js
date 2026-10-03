@@ -621,14 +621,16 @@ function renderGithubSnapshot(d){
   $('#deployDuration').textContent=dur!==null?Math.round(dur)+'s':'—';
   $('#deployMessage').textContent=latest&&latest.message?latest.message:(commits[0]&&commits[0].message)||'저장된 커밋 정보 없음';
   const deployOk=latest&&latest.status==='completed'&&latest.conclusion==='success';
-  $('#deployBadge').textContent=deployOk?'OPERATIONAL':latest&&latest.status!=='completed'?'DEPLOYING':'ATTENTION';
-  $('#deployBadge').className='status '+(deployOk?'good':latest&&latest.status!=='completed'?'warn':'bad');
-  $('#deployHealth').textContent=deployOk?'저장된 최신 GitHub Pages 배포가 정상 완료되었습니다.':latest&&latest.status!=='completed'?'저장된 최신 배포가 진행 상태입니다.':'저장된 최신 배포 결과를 확인해야 합니다.';
-  $('#deployHealth').className=deployOk?'good':latest&&latest.status!=='completed'?'warn':'bad';
-  $('#githubService').textContent=deployOk?'CONNECTED':'CHECK DEPLOY';
-  $('#githubService').className='pill '+(deployOk?'good':'warn');
-  systemHealthState.deploy=deployOk?100:(latest&&latest.status!=='completed'?75:0);
-  alertState.deploy=deployOk?'ok':(latest&&latest.status!=='completed'?'warning':'error');
+  const deploying=latest&&latest.status!=='completed';
+  const deployFailed=latest&&latest.status==='completed'&&latest.conclusion&&!['success','cancelled'].includes(latest.conclusion);
+  $('#deployBadge').textContent=deployOk?'OPERATIONAL':deploying?'DEPLOYING':deployFailed?'ATTENTION':'OPERATIONAL';
+  $('#deployBadge').className='status '+(deployFailed?'bad':deploying?'neutral':'good');
+  $('#deployHealth').textContent=deployOk?'저장된 최신 GitHub Pages 배포가 정상 완료되었습니다.':deploying?'GitHub Pages 배포가 진행 중입니다. 정상적인 전환 상태이며 경고로 처리하지 않습니다.':deployFailed?'최신 배포 결과를 확인해야 합니다.':'최근 배포가 교체되었거나 취소되었으며 오류 상태는 아닙니다.';
+  $('#deployHealth').className=deployFailed?'bad':deploying?'neutral':'good';
+  $('#githubService').textContent=deployFailed?'CHECK DEPLOY':deploying?'DEPLOYING':'CONNECTED';
+  $('#githubService').className='pill '+(deployFailed?'bad':deploying?'neutral':'good');
+  systemHealthState.deploy=deployFailed?0:deploying?95:100;
+  alertState.deploy=deployFailed?'error':'ok';
   updateOverallHealth();renderAlertCenter();
 }
 async function loadStatus(){try{const r=await fetch('automation-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('status');renderStatus(await r.json());$('#driveService').textContent='CONNECTED'}catch(e){$('#healthBadge').textContent='DATA ERROR';$('#healthBadge').className='status bad';$('#healthCopy').textContent='automation-status.json을 불러오지 못했습니다.';$('#driveService').textContent='CHECK DATA';$('#driveService').className='pill bad';systemHealthState.drive=0;alertState.drive='error';updateOverallHealth();renderAlertCenter()}}
