@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-03T09:52:51.403Z",
+  "updatedAt": "2026-10-03T09:53:21.587Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 23,
+  "todayTotal": 24,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -204,10 +204,10 @@
     },
     {
       "name": "포근",
-      "todayCount": 1,
-      "totalCount": 44,
-      "lastSavedAt": "2026-10-03T00:01:55.901Z",
-      "lastFile": "비 오는 날의 아늑한 책 제본 공방 포근.png",
+      "todayCount": 2,
+      "totalCount": 45,
+      "lastSavedAt": "2026-10-03T09:53:15.116Z",
+      "lastFile": "숲속 별빛 인형극 축제 포근.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -243,11 +243,11 @@
     {
       "name": "포근",
       "folderName": "포근",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "비 오는 날의 아늑한 책 제본 공방 포근.png",
-      "lastSavedAt": "2026-10-03T00:01:55.901Z",
-      "totalCount": 44,
+      "lastFile": "숲속 별빛 인형극 축제 포근.png",
+      "lastSavedAt": "2026-10-03T09:53:15.116Z",
+      "totalCount": 45,
       "driveStatus": "ok"
     },
     {
@@ -271,6 +271,6 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 9,
+  "manualTodayTotal": 10,
   "manualUpdatedToday": 5
 }
