@@ -152,9 +152,15 @@ function renderLongRangeAnalysis(){
   const requested=telemetryState.filter.range==='30d'?30:7;
   if($('#longRangeCoverage'))$('#longRangeCoverage').textContent=days.length+' / '+requested+' DAYS AVAILABLE';
   if(!hist||!days.length){
-    if($('#dailyRunsChart'))$('#dailyRunsChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
-    if($('#dailySuccessChart'))$('#dailySuccessChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
-    if($('#dailyRuntimeChart'))$('#dailyRuntimeChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
+    if($('#dailyRunsTotal'))$('#dailyRunsTotal').textContent='—';
+    if($('#dailyRunsAvg'))$('#dailyRunsAvg').textContent='NO DATA';
+    if($('#dailySuccessAvg'))$('#dailySuccessAvg').textContent='—';
+    if($('#dailyFailureTotal'))$('#dailyFailureTotal').textContent='NO DATA';
+    if($('#dailyRuntimeAvg'))$('#dailyRuntimeAvg').textContent='—';
+    if($('#dailyRuntimePeak'))$('#dailyRuntimePeak').textContent='NO DATA';
+    if($('#dailyRunsChart'))$('#dailyRunsChart').innerHTML='<p class="muted">장기 히스토리 파일을 불러오지 못했습니다. 자동 재시도합니다.</p>';
+    if($('#dailySuccessChart'))$('#dailySuccessChart').innerHTML='<p class="muted">장기 히스토리 파일을 불러오지 못했습니다. 자동 재시도합니다.</p>';
+    if($('#dailyRuntimeChart'))$('#dailyRuntimeChart').innerHTML='<p class="muted">장기 히스토리 파일을 불러오지 못했습니다. 자동 재시도합니다.</p>';
     renderMultiSeriesTrend([]);
     return;
   }
@@ -626,7 +632,33 @@ function renderGithubSnapshot(d){
   updateOverallHealth();renderAlertCenter();
 }
 async function loadStatus(){try{const r=await fetch('automation-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('status');renderStatus(await r.json());$('#driveService').textContent='CONNECTED'}catch(e){$('#healthBadge').textContent='DATA ERROR';$('#healthBadge').className='status bad';$('#healthCopy').textContent='automation-status.json을 불러오지 못했습니다.';$('#driveService').textContent='CHECK DATA';$('#driveService').className='pill bad';systemHealthState.drive=0;alertState.drive='error';updateOverallHealth();renderAlertCenter()}}
-async function loadHistory(){try{const r=await fetch('system-history.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('history');telemetryState.history=await r.json();renderTelemetry()}catch(e){telemetryState.history=null;renderTelemetry()}}
+async function loadHistory(){
+  const urls=[
+    'system-history.json?ts='+Date.now(),
+    'https://raw.githubusercontent.com/tom981105-web/art-archive/main/system-history.json?ts='+Date.now()
+  ];
+  let lastError=null;
+  for(const url of urls){
+    try{
+      const r=await fetch(url,{cache:'no-store'});
+      if(!r.ok)throw Error('history '+r.status);
+      const d=await r.json();
+      if(!d||!Array.isArray(d.daily))throw Error('history schema');
+      telemetryState.history=d;
+      renderTelemetry();
+      return true;
+    }catch(e){lastError=e}
+  }
+  console.warn('SYSTEM history fetch failed; preserving previous history',lastError);
+  if(!telemetryState.history){
+    const box=$('#longRangeAnalysis');
+    if(box&&!box.hidden){
+      if($('#longRangeCoverage'))$('#longRangeCoverage').textContent='HISTORY RETRY';
+    }
+  }
+  renderTelemetry();
+  return false;
+}
 async function loadUsage(){try{const r=await fetch('system-usage.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('usage');renderUsage(await r.json())}catch(e){$('#usageSync').textContent='LOG DATA ERROR';$('#runTable').innerHTML='<p class="muted">진단 로그 데이터를 불러오지 못했습니다.</p>'}}
 async function loadScript(){try{const r=await fetch('system-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('script');const d=await r.json();renderScript(d);renderNotion(d);renderGithubSnapshot(d)}catch(e){$('#scriptBadge').textContent='DATA ERROR';$('#scriptBadge').className='status bad';$('#scriptService').textContent='UNAVAILABLE';$('#scriptService').className='pill bad';$('#scriptError').textContent='system-status.json을 불러오지 못했습니다.';systemHealthState.script=0;systemHealthState.notion=0;alertState.script='error';alertState.notion='error';updateOverallHealth();renderAlertCenter()}}
 async function loadOpsEvents(){try{const r=await fetch('system-events.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('events');const d=await r.json();telemetryState.events=d.events||[];renderAdvancedTelemetry()}catch(e){telemetryState.events=[];renderAdvancedTelemetry()}}
