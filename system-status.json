@@ -1,16 +1,16 @@
 {
   "version": "1.8",
-  "updatedAt": "2026-10-03T12:00:24.288Z",
+  "updatedAt": "2026-10-03T12:16:20.630Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T12:00:00.083Z",
-      "finishedAt": "2026-10-03T12:00:23.733Z",
+      "startedAt": "2026-10-03T12:15:59.894Z",
+      "finishedAt": "2026-10-03T12:16:20.174Z",
       "result": "success",
-      "durationMs": 23650,
+      "durationMs": 20280,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -30,24 +30,38 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T12:00:24.717Z",
+    "updatedAt": "2026-10-03T12:16:21.009Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37120628309,
+      "id": 37121466554,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
       "status": "completed",
       "conclusion": "success",
-      "head_sha": "c67816f12f711179d21a6c444180a9ddeafa8036",
-      "created_at": "2026-10-03T11:44:36Z",
-      "run_started_at": "2026-10-03T11:44:36Z",
-      "updated_at": "2026-10-03T11:45:16Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37120628309",
+      "head_sha": "c1e4c52409e7d9318f4fbb1b46e8105c255f0cd5",
+      "created_at": "2026-10-03T12:00:27Z",
+      "run_started_at": "2026-10-03T12:00:27Z",
+      "updated_at": "2026-10-03T12:01:08Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37121466554",
       "message": "Update SYSTEM runtime status"
     },
     "recentRuns": [
+      {
+        "id": 37121466554,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "c1e4c52409e7d9318f4fbb1b46e8105c255f0cd5",
+        "created_at": "2026-10-03T12:00:27Z",
+        "run_started_at": "2026-10-03T12:00:27Z",
+        "updated_at": "2026-10-03T12:01:08Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37121466554",
+        "message": "Update SYSTEM runtime status"
+      },
       {
         "id": 37120628309,
         "name": "pages build and deployment",
@@ -173,23 +187,15 @@
         "updated_at": "2026-10-03T10:43:24Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37117340263",
         "message": "Update SYSTEM runtime status"
-      },
-      {
-        "id": 37116485071,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "50d9f5ed4dd88f56eef01389d56a5eebb5b03805",
-        "created_at": "2026-10-03T10:27:33Z",
-        "run_started_at": "2026-10-03T10:27:33Z",
-        "updated_at": "2026-10-03T10:28:18Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37116485071",
-        "message": "Update SYSTEM runtime status"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "c1e4c52409e7d9318f4fbb1b46e8105c255f0cd5",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T12:00:25Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/c1e4c52409e7d9318f4fbb1b46e8105c255f0cd5"
+      },
       {
         "sha": "c67816f12f711179d21a6c444180a9ddeafa8036",
         "message": "Update SYSTEM runtime status",
@@ -243,12 +249,6 @@
         "message": "Update SYSTEM runtime status",
         "date": "2026-10-03T10:43:18Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/a4865a3752d2fa54dd22259f9a785ed1479962de"
-      },
-      {
-        "sha": "50d9f5ed4dd88f56eef01389d56a5eebb5b03805",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T10:27:32Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/50d9f5ed4dd88f56eef01389d56a5eebb5b03805"
       }
     ]
   }
