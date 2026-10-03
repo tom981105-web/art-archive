@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-03T00:06:12.278Z",
+  "updatedAt": "2026-10-03T04:19:16.406Z",
   "timezone": "Asia/Seoul",
   "schedule": [
-    "06:00",
-    "17:00"
+    "06:00–06:21",
+    "17:00–17:21"
   ],
-  "dailyPlanned": 14,
+  "dailyPlanned": 16,
   "todayTotal": 12,
   "todayAttempts": null,
   "todayRegenerations": null,
@@ -216,5 +216,61 @@
       "avgDurationSeconds": null,
       "lastResult": "success"
     }
-  ]
+  ],
+  "scheduleMode": "staggered",
+  "scheduleSummary": "STAGGERED · 06:00–06:21 / 17:00–17:21",
+  "manualSeries": [
+    {
+      "name": "유영",
+      "folderName": "유영",
+      "todayCount": 1,
+      "updatedToday": true,
+      "lastFile": "복숭아빛 물결 다람쥐 유영.png",
+      "lastSavedAt": "2026-10-03T00:00:51.459Z",
+      "totalCount": 28,
+      "driveStatus": "ok"
+    },
+    {
+      "name": "여운",
+      "folderName": "여운",
+      "todayCount": 0,
+      "updatedToday": false,
+      "lastFile": "황금빛 맹그로브 델타의 여정 여운.png",
+      "lastSavedAt": "2026-10-02T10:30:02.491Z",
+      "totalCount": 32,
+      "driveStatus": "ok"
+    },
+    {
+      "name": "포근",
+      "folderName": "포근",
+      "todayCount": 1,
+      "updatedToday": true,
+      "lastFile": "비 오는 날의 아늑한 책 제본 공방 포근.png",
+      "lastSavedAt": "2026-10-03T00:01:55.901Z",
+      "totalCount": 44,
+      "driveStatus": "ok"
+    },
+    {
+      "name": "붓결",
+      "folderName": "붓결",
+      "todayCount": 1,
+      "updatedToday": true,
+      "lastFile": "스페인 붓결.png",
+      "lastSavedAt": "2026-10-03T00:01:27.590Z",
+      "totalCount": 25,
+      "driveStatus": "ok"
+    },
+    {
+      "name": "뭉화",
+      "folderName": "몽화",
+      "todayCount": 1,
+      "updatedToday": true,
+      "lastFile": "등불 요정의 따스한 안내빛 몽화.png",
+      "lastSavedAt": "2026-10-03T00:01:05.428Z",
+      "totalCount": 28,
+      "driveStatus": "ok"
+    }
+  ],
+  "manualTodayTotal": 4,
+  "manualUpdatedToday": 4
 }
