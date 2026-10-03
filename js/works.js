@@ -50,4 +50,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["비 오는 날의 아늑한 책 제본 공방","포근","1QSkJVaHrcgvbD3FNMqLPjJ4dPtJ-lcrd"],
 ["새벽의 포도밭 부엉이와 여행자","여운","1CUSJOjpg0mA-zDl7r3hoNesc_OhW5rju"],
 ["여우","크레스트","15r9-4WUEUjZy86cj2-hG2ZvgU9hryPz9"],
-["황제펭귄","묵수","1XGtv05P80VpUNJBPNFxaDH04iurcbtYd"]];
+["황제펭귄","묵수","1XGtv05P80VpUNJBPNFxaDH04iurcbtYd"],
+["비버","신수","1GHyB1CXxj0H8v3ArFEceJYOkMnG_IswW"]];
