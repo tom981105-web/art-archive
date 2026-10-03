@@ -1,16 +1,16 @@
 {
   "version": "1.6",
-  "updatedAt": "2026-10-03T07:37:54.973Z",
+  "updatedAt": "2026-10-03T07:53:33.791Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T07:36:01.051Z",
-      "finishedAt": "2026-10-03T07:37:53.680Z",
+      "startedAt": "2026-10-03T07:53:00.050Z",
+      "finishedAt": "2026-10-03T07:53:33.155Z",
       "result": "success",
-      "durationMs": 112629,
+      "durationMs": 33105,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -30,24 +30,52 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T07:37:55.792Z",
+    "updatedAt": "2026-10-03T07:53:34.397Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37106138868,
+      "id": 37106989302,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
       "status": "completed",
       "conclusion": "success",
-      "head_sha": "6cfeed6b0502d3f0cdcb98751a737b3f0eec53ea",
-      "created_at": "2026-10-03T07:22:36Z",
-      "run_started_at": "2026-10-03T07:22:36Z",
-      "updated_at": "2026-10-03T07:23:17Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106138868",
+      "head_sha": "8aa55627f0aa2fdee0c721975a3f97d2d4c421e8",
+      "created_at": "2026-10-03T07:38:01Z",
+      "run_started_at": "2026-10-03T07:38:01Z",
+      "updated_at": "2026-10-03T07:38:40Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106989302",
       "message": "Batch SYSTEM operational events"
     },
     "recentRuns": [
+      {
+        "id": 37106989302,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "8aa55627f0aa2fdee0c721975a3f97d2d4c421e8",
+        "created_at": "2026-10-03T07:38:01Z",
+        "run_started_at": "2026-10-03T07:38:01Z",
+        "updated_at": "2026-10-03T07:38:40Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106989302",
+        "message": "Batch SYSTEM operational events"
+      },
+      {
+        "id": 37106987241,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "c3bf1dc1a519c33d10e209d82ccf2cd98df7a7cb",
+        "created_at": "2026-10-03T07:37:59Z",
+        "run_started_at": "2026-10-03T07:37:59Z",
+        "updated_at": "2026-10-03T07:38:03Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106987241",
+        "message": "Update SYSTEM runtime status"
+      },
       {
         "id": 37106138868,
         "name": "pages build and deployment",
@@ -159,37 +187,21 @@
         "updated_at": "2026-10-03T07:13:31Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105609905",
         "message": "Add automated anomaly detection center"
-      },
-      {
-        "id": 37105505951,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "e15fe5b8f1147afdf5cfe7be91fad96b2ccecf81",
-        "created_at": "2026-10-03T07:11:05Z",
-        "run_started_at": "2026-10-03T07:11:05Z",
-        "updated_at": "2026-10-03T07:11:43Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105505951",
-        "message": "Render interactive multi-series trend chart"
-      },
-      {
-        "id": 37105451815,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "c5cd45f98c17b5a669c46b0b073b42e4f80d7751",
-        "created_at": "2026-10-03T07:10:08Z",
-        "run_started_at": "2026-10-03T07:10:08Z",
-        "updated_at": "2026-10-03T07:10:59Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105451815",
-        "message": "Style multi-series trend comparison"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "8aa55627f0aa2fdee0c721975a3f97d2d4c421e8",
+        "message": "Batch SYSTEM operational events",
+        "date": "2026-10-03T07:37:59Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/8aa55627f0aa2fdee0c721975a3f97d2d4c421e8"
+      },
+      {
+        "sha": "c3bf1dc1a519c33d10e209d82ccf2cd98df7a7cb",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T07:37:57Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/c3bf1dc1a519c33d10e209d82ccf2cd98df7a7cb"
+      },
       {
         "sha": "6cfeed6b0502d3f0cdcb98751a737b3f0eec53ea",
         "message": "Batch SYSTEM operational events",
@@ -237,18 +249,6 @@
         "message": "Add automated anomaly detection center",
         "date": "2026-10-03T07:12:58Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/5693e120638ad6dee478b766d6ec28cc746685ec"
-      },
-      {
-        "sha": "e15fe5b8f1147afdf5cfe7be91fad96b2ccecf81",
-        "message": "Render interactive multi-series trend chart",
-        "date": "2026-10-03T07:11:03Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/e15fe5b8f1147afdf5cfe7be91fad96b2ccecf81"
-      },
-      {
-        "sha": "c5cd45f98c17b5a669c46b0b073b42e4f80d7751",
-        "message": "Style multi-series trend comparison",
-        "date": "2026-10-03T07:10:06Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/c5cd45f98c17b5a669c46b0b073b42e4f80d7751"
       }
     ]
   }
