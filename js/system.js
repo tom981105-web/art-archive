@@ -146,11 +146,14 @@ function outputBarsSvg(autoSeries,manualSeries){
 }
 function renderTelemetry(){renderAdvancedTelemetry();
   const usage=telemetryState.usage;
-  const autoSeries=(telemetryState.autoSeries||[]).filter(x=>telemetryState.filter.series==='all'||x.name===telemetryState.filter.series),manualSeries=telemetryState.filter.series==='all'?(telemetryState.manualSeries||[]):[];
-  if(autoSeries.length||manualSeries.length){
-    const total=[...autoSeries,...manualSeries].reduce((a,x)=>a+(Number(x.todayCount)||0),0);
+  const visibleRuns=filteredTelemetryRuns();
+  const runCounts={};
+  visibleRuns.forEach(x=>{if(x.series)runCounts[x.series]=(runCounts[x.series]||0)+1});
+  const outputSeries=(telemetryState.filter.series==='all'?monitored:[telemetryState.filter.series]).map(name=>({name,todayCount:runCounts[name]||0}));
+  if(outputSeries.length){
+    const total=outputSeries.reduce((a,x)=>a+(Number(x.todayCount)||0),0);
     if($('#outputChartTotal'))$('#outputChartTotal').textContent=total;
-    if($('#seriesOutputChart'))$('#seriesOutputChart').innerHTML=outputBarsSvg(autoSeries,manualSeries);
+    if($('#seriesOutputChart'))$('#seriesOutputChart').innerHTML=outputBarsSvg(outputSeries,[]);
   }
   if(usage){
     const s=usage.summary||{},runs=filteredTelemetryRuns();updateAnalysisContext(runs);
@@ -160,21 +163,21 @@ function renderTelemetry(){renderAdvancedTelemetry();
     const p95=sorted.length?sorted[Math.min(sorted.length-1,Math.ceil(sorted.length*.95)-1)]:null;
     const peak=sorted.length?sorted[sorted.length-1]:null;
     const verified=runs.filter(x=>x.driveVerified===true).length,driveRate=runs.length?pct(verified,runs.length):null;
-    const successRate=Number(s.successRate);
+    const filteredSuccess=runs.filter(x=>x.result==='success').length; const successRate=runs.length?(filteredSuccess/runs.length*100):NaN;
     if($('#telemetryAvgRuntime'))$('#telemetryAvgRuntime').textContent=avg===null?'—':Math.round(avg)+'s';
     if($('#telemetryPeakRuntime'))$('#telemetryPeakRuntime').textContent=p95===null?'—':Math.round(p95)+'s / '+Math.round(peak)+'s';
     if($('#telemetrySuccessRate'))$('#telemetrySuccessRate').textContent=Number.isFinite(successRate)?successRate.toFixed(1)+'%':'—';
     if($('#telemetryDriveRate'))$('#telemetryDriveRate').textContent=driveRate===null?'—':driveRate+'%';
     if($('#runtimeSpark'))$('#runtimeSpark').innerHTML=sparkSvg(durations.slice(0,16).reverse());
     if($('#peakSpark'))$('#peakSpark').innerHTML=sparkSvg(durations.slice(0,8).reverse().map((v,i,a)=>Math.max(...a.slice(0,i+1))));
-    if($('#successGaugeMini'))$('#successGaugeMini').innerHTML=gaugeHtml(Number.isFinite(successRate)?successRate:0,(s.success??0)+' success');
+    if($('#successGaugeMini'))$('#successGaugeMini').innerHTML=gaugeHtml(Number.isFinite(successRate)?successRate:0,filteredSuccess+' / '+runs.length+' success');
     if($('#driveGaugeMini'))$('#driveGaugeMini').innerHTML=gaugeHtml(driveRate||0,verified+' verified');
     if($('#runtimeTrendChart'))$('#runtimeTrendChart').innerHTML=runtimeTrendSvg(runs);
     if($('#runtimeChartAvg'))$('#runtimeChartAvg').textContent=avg===null?'—':Math.round(avg)+'s';
-    if($('#runtimeChartRange'))$('#runtimeChartRange').textContent=runs.length+' RUNS';
+    if($('#runtimeChartRange'))$('#runtimeChartRange').textContent=runs.length+' AVAILABLE RUNS';
     if($('#telemetryWindow'))$('#telemetryWindow').textContent='RECENT '+runs.length+' RUNS';
     const series=filteredSeriesStats();
-    if($('#reliabilityChartRuns'))$('#reliabilityChartRuns').textContent=s.runs??series.reduce((a,x)=>a+(Number(x.runs)||0),0);
+    if($('#reliabilityChartRuns'))$('#reliabilityChartRuns').textContent=series.reduce((a,x)=>a+(Number(x.runs)||0),0);
     const rates=series.map(x=>x.runs?Math.round((x.success||0)/x.runs*100):0);
     const ravg=rates.length?Math.round(rates.reduce((a,b)=>a+b,0)/rates.length):null;
     if($('#reliabilityChartAvg'))$('#reliabilityChartAvg').textContent=ravg===null?'—':'AVG '+ravg+'%';
