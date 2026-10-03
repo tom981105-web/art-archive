@@ -559,3 +559,6 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 2px 0;co
 .health-breakdown span{display:block;color:#59645f;font:7px var(--mono);letter-spacing:.08em}
 .health-breakdown b{display:block;margin-top:5px;font:13px var(--mono);font-weight:400;color:#cbd4d0}
 @media(max-width:760px){.health-breakdown{grid-template-columns:1fr 1fr}}
+
+.quality-trend{height:220px;min-height:220px}
+.quality-bar{display:block}
