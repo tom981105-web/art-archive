@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-03T08:01:18.785Z",
+  "generatedAt": "2026-10-03T08:05:59.614Z",
   "source": "그림 자동화 사용량 로그 / 사용량 로그",
   "schemaVersion": 3,
   "summary": {
-    "runs": 27,
+    "runs": 28,
     "success": 26,
     "failed": 1,
-    "successRate": 96.3,
+    "successRate": 92.9,
     "driveVerified": 26,
     "regenerations": 1,
-    "sourceRows": 27,
+    "sourceRows": 28,
     "normalizedPartialRows": 0
   },
   "series": [
@@ -23,7 +23,7 @@
     },
     {
       "name": "묵수",
-      "runs": 3,
+      "runs": 4,
       "success": 3,
       "failed": 0,
       "avgElapsed": 221,
@@ -79,6 +79,20 @@
     }
   ],
   "recentRuns": [
+    {
+      "time": "2026-10-03 17:05:08",
+      "series": "묵수",
+      "generationAttempts": 0,
+      "regenerations": 0,
+      "uploadAttempts": 0,
+      "driveVerified": false,
+      "result": "running",
+      "elapsedSeconds": 0,
+      "stage": "STARTED",
+      "scheduledTime": "2026-10-04 02:03:00",
+      "startDelaySeconds": 128,
+      "generatedFilename": null
+    },
     {
       "time": "2026-10-03 16:57:04",
       "series": "크레스트",
@@ -228,20 +242,6 @@
       "driveVerified": true,
       "result": "success",
       "elapsedSeconds": 120,
-      "stage": null,
-      "scheduledTime": null,
-      "startDelaySeconds": null,
-      "generatedFilename": null
-    },
-    {
-      "time": "2026-10-02 17:01:27",
-      "series": "성수",
-      "generationAttempts": 2,
-      "regenerations": 1,
-      "uploadAttempts": 1,
-      "driveVerified": true,
-      "result": "success",
-      "elapsedSeconds": 262,
       "stage": null,
       "scheduledTime": null,
       "startDelaySeconds": null,
