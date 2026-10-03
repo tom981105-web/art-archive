@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-10-03T08:10:33.533Z",
+  "generatedAt": "2026-10-03T08:11:44.228Z",
   "source": "그림 자동화 사용량 로그 / 사용량 로그",
   "schemaVersion": 3,
   "summary": {
     "runs": 29,
-    "success": 27,
+    "success": 28,
     "failed": 1,
-    "successRate": 93.1,
-    "driveVerified": 27,
+    "successRate": 96.6,
+    "driveVerified": 28,
     "regenerations": 1,
     "sourceRows": 29,
     "normalizedPartialRows": 0
@@ -32,9 +32,9 @@
     {
       "name": "신수",
       "runs": 4,
-      "success": 3,
+      "success": 4,
       "failed": 0,
-      "avgElapsed": 185.3,
+      "avgElapsed": 225.7,
       "regenerations": 0
     },
     {
@@ -84,11 +84,11 @@
       "series": "신수",
       "generationAttempts": 1,
       "regenerations": 0,
-      "uploadAttempts": 0,
-      "driveVerified": false,
-      "result": "running",
-      "elapsedSeconds": 110,
-      "stage": "GENERATED",
+      "uploadAttempts": 1,
+      "driveVerified": true,
+      "result": "success",
+      "elapsedSeconds": 231,
+      "stage": "COMPLETED",
       "scheduledTime": "2026-10-03 17:06:00",
       "startDelaySeconds": 107,
       "generatedFilename": "비버 신수.png"
