@@ -59,4 +59,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["달빛 아래 같은 하늘 다른 이야기","여운","1vtZcCl2vVXpVSWUgHKNlXsB3vjPfDOD0"],
 ["초록 물감 리본 카피바라","유영","1Rofk5Qi4JqIZOUtp_gr5792sUiTls7y3"],
 ["터키","붓결","1O2yokLoChYF5yEnTF-PZjjRgSnHOBc2h"],
-["숲속 별빛 인형극 축제","포근","1akpnhzmjsTPrYhwUFEKrMKsy4Dd3LSFX"]];
+["숲속 별빛 인형극 축제","포근","1akpnhzmjsTPrYhwUFEKrMKsy4Dd3LSFX"],
+["사슴벌레","크레스트","137-Lp8Sjue7HQn2eJihL3W7gtzD0WnB5"]];
