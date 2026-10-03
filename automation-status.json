@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-03T09:55:50.261Z",
+  "updatedAt": "2026-10-03T21:05:00.412Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 24,
+  "todayTotal": 1,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -22,7 +22,7 @@
   "series": [
     {
       "name": "몽화",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 29,
       "lastSavedAt": "2026-10-03T09:51:30.454Z",
       "lastFile": "단풍 아래 포근한 낮잠 몽화.png",
@@ -36,7 +36,7 @@
     },
     {
       "name": "묵수",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 17,
       "lastSavedAt": "2026-10-03T08:08:02.368Z",
       "lastFile": "황제펭귄 묵수.png",
@@ -50,7 +50,7 @@
     },
     {
       "name": "붓결",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 26,
       "lastSavedAt": "2026-10-03T09:52:24.847Z",
       "lastFile": "터키 붓결.png",
@@ -64,7 +64,7 @@
     },
     {
       "name": "성수",
-      "todayCount": 1,
+      "todayCount": 0,
       "totalCount": 14,
       "lastSavedAt": "2026-10-02T21:22:55.460Z",
       "lastFile": "홍학 성수.png",
@@ -78,7 +78,7 @@
     },
     {
       "name": "수채화",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 22,
       "lastSavedAt": "2026-10-03T08:13:57.695Z",
       "lastFile": "코뿔소 수채화.png",
@@ -92,7 +92,7 @@
     },
     {
       "name": "신수",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 16,
       "lastSavedAt": "2026-10-03T08:10:41.937Z",
       "lastFile": "비버 신수.png",
@@ -106,7 +106,7 @@
     },
     {
       "name": "여운",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 34,
       "lastSavedAt": "2026-10-03T09:51:38.402Z",
       "lastFile": "달빛 아래 같은 하늘 다른 이야기 여운.png",
@@ -120,7 +120,7 @@
     },
     {
       "name": "유영",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 29,
       "lastSavedAt": "2026-10-03T09:51:40.206Z",
       "lastFile": "초록 물감 리본 카피바라 유영.png",
@@ -134,7 +134,7 @@
     },
     {
       "name": "융화",
-      "todayCount": 1,
+      "todayCount": 0,
       "totalCount": 13,
       "lastSavedAt": "2026-10-02T21:25:34.869Z",
       "lastFile": "아홀로틀 융화.png",
@@ -148,7 +148,7 @@
     },
     {
       "name": "잉크",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 14,
       "lastSavedAt": "2026-10-03T08:14:16.190Z",
       "lastFile": "박쥐 잉크.png",
@@ -176,10 +176,10 @@
     },
     {
       "name": "크레스트",
-      "todayCount": 2,
-      "totalCount": 16,
-      "lastSavedAt": "2026-10-03T08:00:02.420Z",
-      "lastFile": "여우 크레스트.png",
+      "todayCount": 1,
+      "totalCount": 17,
+      "lastSavedAt": "2026-10-03T21:04:32.258Z",
+      "lastFile": "사슴벌레 크레스트.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -190,7 +190,7 @@
     },
     {
       "name": "펄퍼스",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 21,
       "lastSavedAt": "2026-10-03T08:15:36.131Z",
       "lastFile": "아보카도 펄퍼스.png",
@@ -204,7 +204,7 @@
     },
     {
       "name": "포근",
-      "todayCount": 2,
+      "todayCount": 0,
       "totalCount": 45,
       "lastSavedAt": "2026-10-03T09:53:15.116Z",
       "lastFile": "숲속 별빛 인형극 축제 포근.png",
@@ -223,8 +223,8 @@
     {
       "name": "유영",
       "folderName": "유영",
-      "todayCount": 2,
-      "updatedToday": true,
+      "todayCount": 0,
+      "updatedToday": false,
       "lastFile": "초록 물감 리본 카피바라 유영.png",
       "lastSavedAt": "2026-10-03T09:51:40.206Z",
       "totalCount": 29,
@@ -233,8 +233,8 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 2,
-      "updatedToday": true,
+      "todayCount": 0,
+      "updatedToday": false,
       "lastFile": "달빛 아래 같은 하늘 다른 이야기 여운.png",
       "lastSavedAt": "2026-10-03T09:51:38.402Z",
       "totalCount": 34,
@@ -243,8 +243,8 @@
     {
       "name": "포근",
       "folderName": "포근",
-      "todayCount": 2,
-      "updatedToday": true,
+      "todayCount": 0,
+      "updatedToday": false,
       "lastFile": "숲속 별빛 인형극 축제 포근.png",
       "lastSavedAt": "2026-10-03T09:53:15.116Z",
       "totalCount": 45,
@@ -253,8 +253,8 @@
     {
       "name": "붓결",
       "folderName": "붓결",
-      "todayCount": 2,
-      "updatedToday": true,
+      "todayCount": 0,
+      "updatedToday": false,
       "lastFile": "터키 붓결.png",
       "lastSavedAt": "2026-10-03T09:52:24.847Z",
       "totalCount": 26,
@@ -263,14 +263,14 @@
     {
       "name": "뭉화",
       "folderName": "몽화",
-      "todayCount": 2,
-      "updatedToday": true,
+      "todayCount": 0,
+      "updatedToday": false,
       "lastFile": "단풍 아래 포근한 낮잠 몽화.png",
       "lastSavedAt": "2026-10-03T09:51:30.454Z",
       "totalCount": 29,
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 10,
-  "manualUpdatedToday": 5
+  "manualTodayTotal": 0,
+  "manualUpdatedToday": 0
 }
