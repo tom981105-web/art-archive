@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-03T04:19:16.406Z",
+  "updatedAt": "2026-10-03T04:22:27.471Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 12,
+  "todayTotal": 13,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 0,
-      "totalCount": 32,
-      "lastSavedAt": "2026-10-02T10:30:02.491Z",
-      "lastFile": "황금빛 맹그로브 델타의 여정 여운.png",
+      "todayCount": 1,
+      "totalCount": 33,
+      "lastSavedAt": "2026-10-03T04:21:40.296Z",
+      "lastFile": "새벽의 포도밭 부엉이와 여행자 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -233,11 +233,11 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "황금빛 맹그로브 델타의 여정 여운.png",
-      "lastSavedAt": "2026-10-02T10:30:02.491Z",
-      "totalCount": 32,
+      "todayCount": 1,
+      "updatedToday": true,
+      "lastFile": "새벽의 포도밭 부엉이와 여행자 여운.png",
+      "lastSavedAt": "2026-10-03T04:21:40.296Z",
+      "totalCount": 33,
       "driveStatus": "ok"
     },
     {
@@ -271,6 +271,6 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 4,
-  "manualUpdatedToday": 4
+  "manualTodayTotal": 5,
+  "manualUpdatedToday": 5
 }
