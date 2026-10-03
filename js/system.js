@@ -3,7 +3,7 @@ function tick(){const d=new Date();$('#clock').textContent=d.toLocaleTimeString(
 const systemHealthState={drive:null,script:null,notion:null,deploy:null,reliability:null,performance:null,delivery:null};
 const alertState={drive:null,script:null,notion:null,deploy:null};
 const todayOpsState={autoCount:null,manualCount:null,manualUpdated:null,manualTotal:null,failed:null,driveVerified:null,autoRuns:null};
-const telemetryState={autoSeries:[],manualSeries:[],usage:null,history:null,github:null,events:[],visibleRuns:[],filter:{range:'24h',series:'all'}};
+const telemetryState={autoSeries:[],manualSeries:[],usage:null,history:null,github:null,events:[],visibleRuns:[],visibleQualityRuns:[],anomalyRuns:[],multiMetric:'avgElapsed',hiddenSeries:new Set(),filter:{range:'24h',series:'all'}};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const parseRunDate=v=>{if(!v)return null;const s=String(v);const d=/[zZ]|[+-]\d\d:?\d\d$/.test(s)?new Date(s):new Date(s.replace(' ','T')+'+09:00');return isNaN(d)?null:d};
 const kstHour=d=>Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'}).format(d));
@@ -38,12 +38,14 @@ function aggregateHistory(){
   days.forEach(day=>{
     if(selected==='all')rows.push({
       date:day.date,runs:day.runs||0,success:day.success||0,failed:day.failed||0,
+      successRate:Number.isFinite(Number(day.successRate))?Number(day.successRate):((day.runs||0)?((day.success||0)/(day.runs||0)*100):null),
       avgElapsed:day.avgElapsed,driveVerified:day.driveVerified||0,regenerations:day.regenerations||0
     });
     else{
       const s=(day.series||[]).find(x=>x.name===selected);
       rows.push({
         date:day.date,runs:s?s.runs||0:0,success:s?s.success||0:0,failed:s?s.failed||0:0,
+        successRate:s&&Number.isFinite(Number(s.successRate))?Number(s.successRate):(s&&s.runs?((s.success||0)/s.runs*100):null),
         avgElapsed:s?s.avgElapsed:null,driveVerified:s?s.driveVerified||0:0,regenerations:s?s.regenerations||0:0
       });
     }
@@ -134,8 +136,10 @@ function renderMultiSeriesTrend(days){
   const chart=$('#multiSeriesTrendChart'),legend=$('#multiSeriesLegend');if(!chart||!legend)return;
   const baseNames=telemetryState.filter.series==='all'?monitored:[telemetryState.filter.series];
   const available=baseNames.filter(name=>(days||[]).some(day=>(day.series||[]).some(s=>s.name===name)));
+  if(!(telemetryState.hiddenSeries instanceof Set))telemetryState.hiddenSeries=new Set();
   const active=available.filter(name=>!telemetryState.hiddenSeries.has(name));
   legend.innerHTML=available.map(name=>'<button class="'+(telemetryState.hiddenSeries.has(name)?'off':'')+'" data-multi-series="'+name+'" style="--series-color:'+(multiSeriesColors[name]||'#aab2af')+'"><i></i>'+name+'</button>').join('')||'<span class="muted">표시 가능한 시리즈가 없습니다.</span>';
+  if(!telemetryState.multiMetric)telemetryState.multiMetric='avgElapsed';
   chart.innerHTML=multiSeriesTrendSvg(days,telemetryState.multiMetric,active);
   const labels={avgElapsed:'AVERAGE RUNTIME · SECONDS',runs:'RUNS PER DAY',successRate:'SUCCESS RATE · %'};
   if($('#multiMetricLabel'))$('#multiMetricLabel').textContent=labels[telemetryState.multiMetric]||labels.avgElapsed;
