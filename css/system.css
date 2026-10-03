@@ -364,3 +364,36 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 2px 0;co
   .chart-wrap{height:190px}
   .deploy-legend{grid-template-columns:1fr 1fr}
 }
+
+
+/* SYSTEM v2.2 · Advanced observability */
+.advanced-observability{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.chart-card-full{grid-column:1/-1}
+.ops-timeline-chart,.hour-heatmap,.horizontal-metrics,.quality-trend,.state-timeline{min-height:220px;margin-top:12px}
+.timeline-track{position:relative;height:178px;border-left:1px solid #242c2a;border-bottom:1px solid #242c2a;margin:8px 8px 0 42px}
+.timeline-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(6,1fr);pointer-events:none}
+.timeline-grid i{border-left:1px solid #1d2422}
+.timeline-event{position:absolute;bottom:18px;transform:translateX(-50%);width:8px;height:8px;border-radius:50%;background:var(--info);box-shadow:0 0 0 4px rgba(147,189,213,.07)}
+.timeline-event.success{background:var(--ok)}.timeline-event.error{background:var(--bad)}.timeline-event.warning{background:var(--warn)}
+.timeline-event:after{content:"";position:absolute;left:3px;bottom:8px;width:1px;height:var(--stem,54px);background:linear-gradient(to top,currentColor,transparent);opacity:.25}
+.timeline-axis{display:flex;justify-content:space-between;margin:8px 8px 0 42px;color:#56615d;font:7px var(--mono)}
+.hour-heatmap{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;align-content:start;padding-top:6px}
+.heat-cell{min-height:64px;padding:8px 6px;border:1px solid #242c2a;border-radius:8px;background:rgba(126,169,139,var(--heat,.06));display:flex;flex-direction:column;justify-content:space-between}
+.heat-cell b{font:15px var(--mono);font-weight:350}.heat-cell span{font:7px var(--mono);color:#5f6a66}
+.horizontal-metrics{padding-top:2px}
+.duration-row{display:grid;grid-template-columns:76px 1fr 52px;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid #1d2322}
+.duration-row span{font:8px var(--mono);color:#8d9793}.duration-row b{text-align:right;font:8px var(--mono);font-weight:400}
+.duration-track{height:7px;border-radius:999px;background:#1d2423;overflow:hidden}.duration-track i{display:block;height:100%;background:linear-gradient(90deg,#6e8b77,#a5cfb0);border-radius:999px}
+.quality-trend{display:flex;align-items:flex-end;gap:5px;padding:18px 4px 24px;border-bottom:1px solid #252c2a;position:relative}
+.quality-bar{flex:1;min-width:5px;border-radius:3px 3px 0 0;background:var(--ok);height:72%;position:relative}
+.quality-bar.fail{background:var(--bad);height:100%}.quality-bar.regen{box-shadow:inset 0 -4px var(--warn)}
+.quality-bar:hover:after{content:attr(data-tip);position:absolute;left:50%;bottom:calc(100% + 7px);transform:translateX(-50%);white-space:nowrap;padding:5px 7px;border:1px solid #303836;border-radius:6px;background:#0b0f0e;color:#cbd4d0;font:7px var(--mono);z-index:3}
+.state-timeline{position:relative;padding:8px 0 4px}
+.state-line{position:absolute;left:11px;top:16px;bottom:12px;width:1px;background:#29312f}
+.state-item{position:relative;display:grid;grid-template-columns:86px 110px 1fr auto;gap:12px;align-items:center;padding:10px 0 10px 28px;border-bottom:1px solid #1d2322;font:8px var(--mono)}
+.state-item:before{content:"";position:absolute;left:7px;width:9px;height:9px;border-radius:50%;background:#7d8985;border:2px solid #101514}
+.state-item.good:before{background:var(--ok)}.state-item.bad:before{background:var(--bad)}.state-item.warn:before{background:var(--warn)}.state-item.info:before{background:var(--info)}
+.state-item time{color:#5b6662}.state-item .service-name{color:#9ba5a1}.state-item b{font-weight:400}.state-item em{font-style:normal}
+@media(max-width:1180px){.advanced-observability{grid-template-columns:1fr}.chart-card-full{grid-column:auto}.hour-heatmap{grid-template-columns:repeat(8,1fr)}}
+@media(max-width:760px){.hour-heatmap{grid-template-columns:repeat(6,1fr)}.state-item{grid-template-columns:72px 1fr auto}.state-item .service-name{display:none}}
+@media(max-width:520px){.hour-heatmap{grid-template-columns:repeat(4,1fr)}.timeline-track{margin-left:30px}.timeline-axis{margin-left:30px}}
