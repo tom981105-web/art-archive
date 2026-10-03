@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090b0b">
   <title>ART ARCHIVE : SYSTEM</title>
-  <link rel="stylesheet" href="css/system.css?v=2.5">
+  <link rel="stylesheet" href="css/system.css?v=2.6">
 </head>
 <body>
 <div class="app-shell">
@@ -126,6 +126,20 @@
         </div>
         <div class="analysis-context" id="analysisContext">24H · ALL SERIES · — RUNS</div>
       </div>
+
+      <section class="anomaly-center" id="anomalyCenter">
+        <div class="anomaly-head">
+          <div><p class="eyebrow">AUTOMATED DETECTION</p><h3>Anomaly Center</h3><p>실행시간 · 성공률 · Drive 검증 · 예약 지연의 비정상 신호를 자동 탐지합니다.</p></div>
+          <div class="anomaly-status"><span id="anomalyStatusDot"></span><b id="anomalyStatus">ANALYZING</b></div>
+        </div>
+        <div class="anomaly-summary">
+          <div><span>DETECTED</span><strong id="anomalyCount">—</strong></div>
+          <div><span>CRITICAL</span><strong id="anomalyCritical">—</strong></div>
+          <div><span>WARNING</span><strong id="anomalyWarning">—</strong></div>
+          <div><span>WATCH</span><strong id="anomalyWatch">—</strong></div>
+        </div>
+        <div class="anomaly-list" id="anomalyList"><p class="muted">이상 신호를 분석하는 중입니다.</p></div>
+      </section>
 
       <div class="telemetry-kpis">
         <article class="telemetry-kpi"><span>AVG RUNTIME</span><strong id="telemetryAvgRuntime">—</strong><small>recent executions</small><div class="sparkline" id="runtimeSpark"></div></article>
@@ -353,7 +367,7 @@
     <footer><span>ART ARCHIVE / SYSTEM · OPERATIONS COMMAND CENTER</span><span id="footerTime"></span></footer>
   </main>
 </div>
-<script src="js/system.js?v=2.5"></script>
+<script src="js/system.js?v=2.6"></script>
 <script src="js/system-events.js?v=2.0"></script>
 </body>
 </html>
