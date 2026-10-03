@@ -1,16 +1,16 @@
 {
   "version": "1.6",
-  "updatedAt": "2026-10-03T07:53:33.791Z",
+  "updatedAt": "2026-10-03T08:08:47.503Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T07:53:00.050Z",
-      "finishedAt": "2026-10-03T07:53:33.155Z",
+      "startedAt": "2026-10-03T08:08:00.229Z",
+      "finishedAt": "2026-10-03T08:08:46.905Z",
       "result": "success",
-      "durationMs": 33105,
+      "durationMs": 46676,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -20,235 +20,235 @@
   },
   "notionSync": {
     "lastResult": "success",
-    "lastSeries": "여운",
-    "lastArtwork": "새벽의 포도밭 부엉이와 여행자",
-    "startedAt": "2026-10-03T04:22:14.031Z",
-    "finishedAt": "2026-10-03T04:22:22.232Z",
-    "durationMs": 8201,
+    "lastSeries": "묵수",
+    "lastArtwork": "황제펭귄",
+    "startedAt": "2026-10-03T08:08:24.084Z",
+    "finishedAt": "2026-10-03T08:08:29.465Z",
+    "durationMs": 5381,
     "error": null,
     "consecutiveFailures": 0
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T07:53:34.397Z",
+    "updatedAt": "2026-10-03T08:08:48.098Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37106989302,
+      "id": 37108707007,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
-      "status": "completed",
-      "conclusion": "success",
-      "head_sha": "8aa55627f0aa2fdee0c721975a3f97d2d4c421e8",
-      "created_at": "2026-10-03T07:38:01Z",
-      "run_started_at": "2026-10-03T07:38:01Z",
-      "updated_at": "2026-10-03T07:38:40Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106989302",
-      "message": "Batch SYSTEM operational events"
+      "status": "queued",
+      "conclusion": null,
+      "head_sha": "374bca9cf5d95d067d97f8bb1dbb137856ba98ee",
+      "created_at": "2026-10-03T08:08:44Z",
+      "run_started_at": "2026-10-03T08:08:44Z",
+      "updated_at": "2026-10-03T08:08:47Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108707007",
+      "message": "Update ART ARCHIVE automation status"
     },
     "recentRuns": [
       {
-        "id": 37106989302,
+        "id": 37108707007,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "8aa55627f0aa2fdee0c721975a3f97d2d4c421e8",
-        "created_at": "2026-10-03T07:38:01Z",
-        "run_started_at": "2026-10-03T07:38:01Z",
-        "updated_at": "2026-10-03T07:38:40Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106989302",
-        "message": "Batch SYSTEM operational events"
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "374bca9cf5d95d067d97f8bb1dbb137856ba98ee",
+        "created_at": "2026-10-03T08:08:44Z",
+        "run_started_at": "2026-10-03T08:08:44Z",
+        "updated_at": "2026-10-03T08:08:47Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108707007",
+        "message": "Update ART ARCHIVE automation status"
       },
       {
-        "id": 37106987241,
+        "id": 37108695315,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "c3bf1dc1a519c33d10e209d82ccf2cd98df7a7cb",
-        "created_at": "2026-10-03T07:37:59Z",
-        "run_started_at": "2026-10-03T07:37:59Z",
-        "updated_at": "2026-10-03T07:38:03Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106987241",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "2c3ae959c70ed71ab35b8f8be4e05997a85cef15",
+        "created_at": "2026-10-03T08:08:31Z",
+        "run_started_at": "2026-10-03T08:08:31Z",
+        "updated_at": "2026-10-03T08:08:47Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108695315",
+        "message": "Update ART ARCHIVE artworks"
       },
       {
-        "id": 37106138868,
+        "id": 37108607505,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "6cfeed6b0502d3f0cdcb98751a737b3f0eec53ea",
-        "created_at": "2026-10-03T07:22:36Z",
-        "run_started_at": "2026-10-03T07:22:36Z",
-        "updated_at": "2026-10-03T07:23:17Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106138868",
-        "message": "Batch SYSTEM operational events"
+        "head_sha": "dedcf41047541a78817ce5eeb93572dc47d88069",
+        "created_at": "2026-10-03T08:07:00Z",
+        "run_started_at": "2026-10-03T08:07:00Z",
+        "updated_at": "2026-10-03T08:07:44Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108607505",
+        "message": "Sync SYSTEM usage analytics from Google Sheet"
       },
       {
-        "id": 37106137518,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "3808c412d24bb811835c88a80d2c1bf239495bb7",
-        "created_at": "2026-10-03T07:22:34Z",
-        "run_started_at": "2026-10-03T07:22:34Z",
-        "updated_at": "2026-10-03T07:22:38Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37106137518",
-        "message": "Update SYSTEM runtime status"
-      },
-      {
-        "id": 37105877668,
+        "id": 37108559255,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "5252e95844a48c1d9f52786d730f2858cf190c5d",
-        "created_at": "2026-10-03T07:17:48Z",
-        "run_started_at": "2026-10-03T07:17:48Z",
-        "updated_at": "2026-10-03T07:18:31Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105877668",
-        "message": "Compute weighted operational health score"
+        "head_sha": "9c1abda6c326bb104f1de12ce6a11546b77083a3",
+        "created_at": "2026-10-03T08:06:05Z",
+        "run_started_at": "2026-10-03T08:06:05Z",
+        "updated_at": "2026-10-03T08:06:43Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108559255",
+        "message": "Sync SYSTEM long-term history"
       },
       {
-        "id": 37105844936,
+        "id": 37108556384,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "080a1f5889eb490c8068ca219648d978e7b51625",
-        "created_at": "2026-10-03T07:17:12Z",
-        "run_started_at": "2026-10-03T07:17:12Z",
-        "updated_at": "2026-10-03T07:17:52Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105844936",
-        "message": "Style health score composition"
+        "head_sha": "0e04a4e1b5908be49749f224b0c844b3a39bb6c6",
+        "created_at": "2026-10-03T08:06:02Z",
+        "run_started_at": "2026-10-03T08:06:02Z",
+        "updated_at": "2026-10-03T08:06:09Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108556384",
+        "message": "Sync SYSTEM usage analytics from Google Sheet"
       },
       {
-        "id": 37105830829,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "df4adfb0d8dbdb22b357f402b8a1703e03a57f21",
-        "created_at": "2026-10-03T07:16:56Z",
-        "run_started_at": "2026-10-03T07:16:56Z",
-        "updated_at": "2026-10-03T07:17:16Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105830829",
-        "message": "Add weighted health score breakdown"
-      },
-      {
-        "id": 37105682636,
+        "id": 37108291655,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "9a6a12616be66e0d92dd354b19ae8e1df0acf39b",
-        "created_at": "2026-10-03T07:14:21Z",
-        "run_started_at": "2026-10-03T07:14:21Z",
-        "updated_at": "2026-10-03T07:15:05Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105682636",
-        "message": "Detect runtime reliability and delay anomalies"
+        "head_sha": "7bad646e8b4537bc95bb404f57b563d491b12acd",
+        "created_at": "2026-10-03T08:01:22Z",
+        "run_started_at": "2026-10-03T08:01:22Z",
+        "updated_at": "2026-10-03T08:02:24Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108291655",
+        "message": "Sync SYSTEM long-term history"
       },
       {
-        "id": 37105634905,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "9664c2fe8d709b7b67b29067c5c85ba1767615bb",
-        "created_at": "2026-10-03T07:13:26Z",
-        "run_started_at": "2026-10-03T07:13:26Z",
-        "updated_at": "2026-10-03T07:14:10Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105634905",
-        "message": "Style anomaly detection center"
-      },
-      {
-        "id": 37105609905,
+        "id": 37108290403,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "5693e120638ad6dee478b766d6ec28cc746685ec",
-        "created_at": "2026-10-03T07:13:00Z",
-        "run_started_at": "2026-10-03T07:13:00Z",
-        "updated_at": "2026-10-03T07:13:31Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37105609905",
-        "message": "Add automated anomaly detection center"
+        "head_sha": "479bb54a4461f0790029b67a5712c0d84883ffac",
+        "created_at": "2026-10-03T08:01:21Z",
+        "run_started_at": "2026-10-03T08:01:21Z",
+        "updated_at": "2026-10-03T08:01:24Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108290403",
+        "message": "Sync SYSTEM usage analytics from Google Sheet"
+      },
+      {
+        "id": 37108243979,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "77bc6d1a67498f6e4df5ef905c6456d25e31cbe8",
+        "created_at": "2026-10-03T08:00:38Z",
+        "run_started_at": "2026-10-03T08:00:38Z",
+        "updated_at": "2026-10-03T08:01:20Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108243979",
+        "message": "Sync SYSTEM long-term history"
+      },
+      {
+        "id": 37108242148,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "b64717b5f1e88f000b3a70836e5b5f5b1d99f156",
+        "created_at": "2026-10-03T08:00:36Z",
+        "run_started_at": "2026-10-03T08:00:36Z",
+        "updated_at": "2026-10-03T08:00:40Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108242148",
+        "message": "Sync SYSTEM usage analytics from Google Sheet"
+      },
+      {
+        "id": 37108238591,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "66de5e80293683724ec0de8379985621ab863f4b",
+        "created_at": "2026-10-03T08:00:33Z",
+        "run_started_at": "2026-10-03T08:00:33Z",
+        "updated_at": "2026-10-03T08:00:38Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37108238591",
+        "message": "Update ART ARCHIVE automation status"
       }
     ],
     "recentCommits": [
       {
-        "sha": "8aa55627f0aa2fdee0c721975a3f97d2d4c421e8",
-        "message": "Batch SYSTEM operational events",
-        "date": "2026-10-03T07:37:59Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/8aa55627f0aa2fdee0c721975a3f97d2d4c421e8"
+        "sha": "b36c240215ceb9a23b7c79533a10b5d297328202",
+        "message": "Sync SYSTEM long-term history",
+        "date": "2026-10-03T08:08:46Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/b36c240215ceb9a23b7c79533a10b5d297328202"
       },
       {
-        "sha": "c3bf1dc1a519c33d10e209d82ccf2cd98df7a7cb",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T07:37:57Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/c3bf1dc1a519c33d10e209d82ccf2cd98df7a7cb"
+        "sha": "65dec55698943ee5abed4276064dfc057e10e710",
+        "message": "Sync SYSTEM usage analytics from Google Sheet",
+        "date": "2026-10-03T08:08:45Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/65dec55698943ee5abed4276064dfc057e10e710"
       },
       {
-        "sha": "6cfeed6b0502d3f0cdcb98751a737b3f0eec53ea",
-        "message": "Batch SYSTEM operational events",
-        "date": "2026-10-03T07:22:34Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/6cfeed6b0502d3f0cdcb98751a737b3f0eec53ea"
+        "sha": "374bca9cf5d95d067d97f8bb1dbb137856ba98ee",
+        "message": "Update ART ARCHIVE automation status",
+        "date": "2026-10-03T08:08:42Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/374bca9cf5d95d067d97f8bb1dbb137856ba98ee"
       },
       {
-        "sha": "3808c412d24bb811835c88a80d2c1bf239495bb7",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T07:22:33Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/3808c412d24bb811835c88a80d2c1bf239495bb7"
+        "sha": "2c3ae959c70ed71ab35b8f8be4e05997a85cef15",
+        "message": "Update ART ARCHIVE artworks",
+        "date": "2026-10-03T08:08:30Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/2c3ae959c70ed71ab35b8f8be4e05997a85cef15"
       },
       {
-        "sha": "5252e95844a48c1d9f52786d730f2858cf190c5d",
-        "message": "Compute weighted operational health score",
-        "date": "2026-10-03T07:17:46Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/5252e95844a48c1d9f52786d730f2858cf190c5d"
+        "sha": "dedcf41047541a78817ce5eeb93572dc47d88069",
+        "message": "Sync SYSTEM usage analytics from Google Sheet",
+        "date": "2026-10-03T08:06:58Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/dedcf41047541a78817ce5eeb93572dc47d88069"
       },
       {
-        "sha": "080a1f5889eb490c8068ca219648d978e7b51625",
-        "message": "Style health score composition",
-        "date": "2026-10-03T07:17:10Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/080a1f5889eb490c8068ca219648d978e7b51625"
+        "sha": "9c1abda6c326bb104f1de12ce6a11546b77083a3",
+        "message": "Sync SYSTEM long-term history",
+        "date": "2026-10-03T08:06:03Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/9c1abda6c326bb104f1de12ce6a11546b77083a3"
       },
       {
-        "sha": "df4adfb0d8dbdb22b357f402b8a1703e03a57f21",
-        "message": "Add weighted health score breakdown",
-        "date": "2026-10-03T07:16:55Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/df4adfb0d8dbdb22b357f402b8a1703e03a57f21"
+        "sha": "0e04a4e1b5908be49749f224b0c844b3a39bb6c6",
+        "message": "Sync SYSTEM usage analytics from Google Sheet",
+        "date": "2026-10-03T08:06:00Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/0e04a4e1b5908be49749f224b0c844b3a39bb6c6"
       },
       {
-        "sha": "9a6a12616be66e0d92dd354b19ae8e1df0acf39b",
-        "message": "Detect runtime reliability and delay anomalies",
-        "date": "2026-10-03T07:14:19Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/9a6a12616be66e0d92dd354b19ae8e1df0acf39b"
+        "sha": "7bad646e8b4537bc95bb404f57b563d491b12acd",
+        "message": "Sync SYSTEM long-term history",
+        "date": "2026-10-03T08:01:20Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/7bad646e8b4537bc95bb404f57b563d491b12acd"
       },
       {
-        "sha": "9664c2fe8d709b7b67b29067c5c85ba1767615bb",
-        "message": "Style anomaly detection center",
-        "date": "2026-10-03T07:13:24Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/9664c2fe8d709b7b67b29067c5c85ba1767615bb"
+        "sha": "479bb54a4461f0790029b67a5712c0d84883ffac",
+        "message": "Sync SYSTEM usage analytics from Google Sheet",
+        "date": "2026-10-03T08:01:19Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/479bb54a4461f0790029b67a5712c0d84883ffac"
       },
       {
-        "sha": "5693e120638ad6dee478b766d6ec28cc746685ec",
-        "message": "Add automated anomaly detection center",
-        "date": "2026-10-03T07:12:58Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/5693e120638ad6dee478b766d6ec28cc746685ec"
+        "sha": "77bc6d1a67498f6e4df5ef905c6456d25e31cbe8",
+        "message": "Sync SYSTEM long-term history",
+        "date": "2026-10-03T08:00:36Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/77bc6d1a67498f6e4df5ef905c6456d25e31cbe8"
       }
     ]
   }
