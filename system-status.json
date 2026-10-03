@@ -1,16 +1,16 @@
 {
   "version": "1.4",
-  "updatedAt": "2026-10-03T05:17:32.487Z",
+  "updatedAt": "2026-10-03T05:33:26.265Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T05:17:00.521Z",
-      "finishedAt": "2026-10-03T05:17:31.817Z",
+      "startedAt": "2026-10-03T05:33:00.551Z",
+      "finishedAt": "2026-10-03T05:33:25.687Z",
       "result": "success",
-      "durationMs": 31296,
+      "durationMs": 25136,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -30,225 +30,225 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T05:17:32.748Z",
+    "updatedAt": "2026-10-03T05:33:26.841Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37098650505,
+      "id": 37100118203,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
       "status": "completed",
       "conclusion": "success",
-      "head_sha": "d726598a35a0d0378f7afc35ad1d0fdbfa5274f8",
-      "created_at": "2026-10-03T05:04:43Z",
-      "run_started_at": "2026-10-03T05:04:43Z",
-      "updated_at": "2026-10-03T05:05:27Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098650505",
-      "message": "Record SYSTEM operational event"
+      "head_sha": "8962cdf04a67961b009ac406858c001af549a410",
+      "created_at": "2026-10-03T05:31:56Z",
+      "run_started_at": "2026-10-03T05:31:56Z",
+      "updated_at": "2026-10-03T05:32:43Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100118203",
+      "message": "Add 24h and performance observability"
     },
     "recentRuns": [
       {
-        "id": 37098650505,
+        "id": 37100118203,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "d726598a35a0d0378f7afc35ad1d0fdbfa5274f8",
-        "created_at": "2026-10-03T05:04:43Z",
-        "run_started_at": "2026-10-03T05:04:43Z",
-        "updated_at": "2026-10-03T05:05:27Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098650505",
-        "message": "Record SYSTEM operational event"
+        "head_sha": "8962cdf04a67961b009ac406858c001af549a410",
+        "created_at": "2026-10-03T05:31:56Z",
+        "run_started_at": "2026-10-03T05:31:56Z",
+        "updated_at": "2026-10-03T05:32:43Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100118203",
+        "message": "Add 24h and performance observability"
       },
       {
-        "id": 37098621801,
+        "id": 37100090010,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "b00cea15533517ab5515d69c18236a406872a941",
-        "created_at": "2026-10-03T05:04:12Z",
-        "run_started_at": "2026-10-03T05:04:12Z",
-        "updated_at": "2026-10-03T05:04:49Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098621801",
-        "message": "Bust incident center cache"
+        "head_sha": "7e21c35f3acc14c269ec91598880a38f88d43916",
+        "created_at": "2026-10-03T05:31:23Z",
+        "run_started_at": "2026-10-03T05:31:23Z",
+        "updated_at": "2026-10-03T05:32:01Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100090010",
+        "message": "Style advanced observability analytics"
       },
       {
-        "id": 37098618034,
+        "id": 37100066117,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "0e70770e1f407e0b89e32ac70398cd51ae8f725d",
-        "created_at": "2026-10-03T05:04:08Z",
-        "run_started_at": "2026-10-03T05:04:08Z",
-        "updated_at": "2026-10-03T05:04:14Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098618034",
-        "message": "Record SYSTEM operational event"
+        "head_sha": "e0e22bf3dac30177925723b35f7526e7c019e2e2",
+        "created_at": "2026-10-03T05:30:56Z",
+        "run_started_at": "2026-10-03T05:30:56Z",
+        "updated_at": "2026-10-03T05:31:27Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100066117",
+        "message": "Add advanced observability panels"
       },
       {
-        "id": 37098601225,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "eaac4718916eb00fba2a9dd1794fe04f66649b74",
-        "created_at": "2026-10-03T05:03:50Z",
-        "run_started_at": "2026-10-03T05:03:50Z",
-        "updated_at": "2026-10-03T05:04:12Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098601225",
-        "message": "Treat skipped runs as informational events"
-      },
-      {
-        "id": 37098576260,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "467a1b4e633e246b0c76608dbac05e7ed705f440",
-        "created_at": "2026-10-03T05:03:23Z",
-        "run_started_at": "2026-10-03T05:03:23Z",
-        "updated_at": "2026-10-03T05:03:52Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098576260",
-        "message": "Add BUSY filter to incident center"
-      },
-      {
-        "id": 37098485578,
+        "id": 37099858711,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "4d99eb629b97222acaf146a7d0ecc69d42baf6bc",
-        "created_at": "2026-10-03T05:01:47Z",
-        "run_started_at": "2026-10-03T05:01:47Z",
-        "updated_at": "2026-10-03T05:02:29Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098485578",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "3f5b4572760337c6471e839589b232c6f2b58723",
+        "created_at": "2026-10-03T05:27:09Z",
+        "run_started_at": "2026-10-03T05:27:09Z",
+        "updated_at": "2026-10-03T05:27:45Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099858711",
+        "message": "Render live observability charts"
       },
       {
-        "id": 37098481372,
+        "id": 37099815004,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "91aa82cd0b3d02f3a78cbb3e39b6e7b308086c3a",
+        "created_at": "2026-10-03T05:26:17Z",
+        "run_started_at": "2026-10-03T05:26:17Z",
+        "updated_at": "2026-10-03T05:27:09Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099815004",
+        "message": "Style professional telemetry charts"
+      },
+      {
+        "id": 37099789466,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "ae1774ae242f869428eeeb2768faab049a3e2652",
-        "created_at": "2026-10-03T05:01:42Z",
-        "run_started_at": "2026-10-03T05:01:42Z",
-        "updated_at": "2026-10-03T05:01:50Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098481372",
-        "message": "Record SYSTEM operational event"
+        "head_sha": "677a41be0819171cb9a7dedc4fb3037fef8c438d",
+        "created_at": "2026-10-03T05:25:50Z",
+        "run_started_at": "2026-10-03T05:25:50Z",
+        "updated_at": "2026-10-03T05:26:20Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099789466",
+        "message": "Add professional telemetry dashboard"
       },
       {
-        "id": 37098333120,
+        "id": 37099487887,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "c75e90c338634248802d285ef5b23260b559d4f6",
-        "created_at": "2026-10-03T04:59:07Z",
-        "run_started_at": "2026-10-03T04:59:07Z",
-        "updated_at": "2026-10-03T04:59:49Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098333120",
-        "message": "Record SYSTEM operational event"
+        "head_sha": "725cd2f65bdfab407363cbca12e1ec8a8b7b346d",
+        "created_at": "2026-10-03T05:20:04Z",
+        "run_started_at": "2026-10-03T05:20:04Z",
+        "updated_at": "2026-10-03T05:21:05Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099487887",
+        "message": "Add SYSTEM command center entry motion"
       },
       {
-        "id": 37098273448,
+        "id": 37099478104,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "3fa40c013816fa7228c5cf0f82b743c68524ebd8",
+        "created_at": "2026-10-03T05:19:53Z",
+        "run_started_at": "2026-10-03T05:19:53Z",
+        "updated_at": "2026-10-03T05:20:08Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099478104",
+        "message": "Polish SYSTEM command center telemetry"
+      },
+      {
+        "id": 37099466207,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "ddf560a07e0ff15f9716a144290ce9acb34d8c81",
+        "created_at": "2026-10-03T05:19:38Z",
+        "run_started_at": "2026-10-03T05:19:38Z",
+        "updated_at": "2026-10-03T05:19:57Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099466207",
+        "message": "Rebuild SYSTEM visual design"
+      },
+      {
+        "id": 37099406524,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "961e11d9ac8d207deca58955956ad344882f4134",
-        "created_at": "2026-10-03T04:57:57Z",
-        "run_started_at": "2026-10-03T04:57:57Z",
-        "updated_at": "2026-10-03T04:58:46Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098273448",
-        "message": "Treat skipped runtime as busy state"
-      },
-      {
-        "id": 37098228300,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "2856d2ee37b999be0832a6d4d5a10fae80b200aa",
-        "created_at": "2026-10-03T04:57:05Z",
-        "run_started_at": "2026-10-03T04:57:05Z",
-        "updated_at": "2026-10-03T04:57:49Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098228300",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "c364167f517bd6424b91a313b8c095fd1d2faac4",
+        "created_at": "2026-10-03T05:18:25Z",
+        "run_started_at": "2026-10-03T05:18:25Z",
+        "updated_at": "2026-10-03T05:19:37Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37099406524",
+        "message": "Redesign SYSTEM operations command center"
       }
     ],
     "recentCommits": [
       {
-        "sha": "d726598a35a0d0378f7afc35ad1d0fdbfa5274f8",
-        "message": "Record SYSTEM operational event",
-        "date": "2026-10-03T05:04:41Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/d726598a35a0d0378f7afc35ad1d0fdbfa5274f8"
+        "sha": "8962cdf04a67961b009ac406858c001af549a410",
+        "message": "Add 24h and performance observability",
+        "date": "2026-10-03T05:31:55Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/8962cdf04a67961b009ac406858c001af549a410"
       },
       {
-        "sha": "b00cea15533517ab5515d69c18236a406872a941",
-        "message": "Bust incident center cache",
-        "date": "2026-10-03T05:04:10Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/b00cea15533517ab5515d69c18236a406872a941"
+        "sha": "7e21c35f3acc14c269ec91598880a38f88d43916",
+        "message": "Style advanced observability analytics",
+        "date": "2026-10-03T05:31:21Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/7e21c35f3acc14c269ec91598880a38f88d43916"
       },
       {
-        "sha": "0e70770e1f407e0b89e32ac70398cd51ae8f725d",
-        "message": "Record SYSTEM operational event",
-        "date": "2026-10-03T05:04:05Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/0e70770e1f407e0b89e32ac70398cd51ae8f725d"
+        "sha": "e0e22bf3dac30177925723b35f7526e7c019e2e2",
+        "message": "Add advanced observability panels",
+        "date": "2026-10-03T05:30:54Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/e0e22bf3dac30177925723b35f7526e7c019e2e2"
       },
       {
-        "sha": "eaac4718916eb00fba2a9dd1794fe04f66649b74",
-        "message": "Treat skipped runs as informational events",
-        "date": "2026-10-03T05:03:48Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/eaac4718916eb00fba2a9dd1794fe04f66649b74"
+        "sha": "3f5b4572760337c6471e839589b232c6f2b58723",
+        "message": "Render live observability charts",
+        "date": "2026-10-03T05:27:07Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/3f5b4572760337c6471e839589b232c6f2b58723"
       },
       {
-        "sha": "467a1b4e633e246b0c76608dbac05e7ed705f440",
-        "message": "Add BUSY filter to incident center",
-        "date": "2026-10-03T05:03:21Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/467a1b4e633e246b0c76608dbac05e7ed705f440"
+        "sha": "91aa82cd0b3d02f3a78cbb3e39b6e7b308086c3a",
+        "message": "Style professional telemetry charts",
+        "date": "2026-10-03T05:26:16Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/91aa82cd0b3d02f3a78cbb3e39b6e7b308086c3a"
       },
       {
-        "sha": "4d99eb629b97222acaf146a7d0ecc69d42baf6bc",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T05:01:45Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/4d99eb629b97222acaf146a7d0ecc69d42baf6bc"
+        "sha": "677a41be0819171cb9a7dedc4fb3037fef8c438d",
+        "message": "Add professional telemetry dashboard",
+        "date": "2026-10-03T05:25:48Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/677a41be0819171cb9a7dedc4fb3037fef8c438d"
       },
       {
-        "sha": "ae1774ae242f869428eeeb2768faab049a3e2652",
-        "message": "Record SYSTEM operational event",
-        "date": "2026-10-03T05:01:40Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/ae1774ae242f869428eeeb2768faab049a3e2652"
+        "sha": "725cd2f65bdfab407363cbca12e1ec8a8b7b346d",
+        "message": "Add SYSTEM command center entry motion",
+        "date": "2026-10-03T05:20:02Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/725cd2f65bdfab407363cbca12e1ec8a8b7b346d"
       },
       {
-        "sha": "c75e90c338634248802d285ef5b23260b559d4f6",
-        "message": "Record SYSTEM operational event",
-        "date": "2026-10-03T04:59:05Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/c75e90c338634248802d285ef5b23260b559d4f6"
+        "sha": "3fa40c013816fa7228c5cf0f82b743c68524ebd8",
+        "message": "Polish SYSTEM command center telemetry",
+        "date": "2026-10-03T05:19:51Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/3fa40c013816fa7228c5cf0f82b743c68524ebd8"
       },
       {
-        "sha": "961e11d9ac8d207deca58955956ad344882f4134",
-        "message": "Treat skipped runtime as busy state",
-        "date": "2026-10-03T04:57:55Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/961e11d9ac8d207deca58955956ad344882f4134"
+        "sha": "ddf560a07e0ff15f9716a144290ce9acb34d8c81",
+        "message": "Rebuild SYSTEM visual design",
+        "date": "2026-10-03T05:19:36Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/ddf560a07e0ff15f9716a144290ce9acb34d8c81"
       },
       {
-        "sha": "2856d2ee37b999be0832a6d4d5a10fae80b200aa",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T04:57:02Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/2856d2ee37b999be0832a6d4d5a10fae80b200aa"
+        "sha": "c364167f517bd6424b91a313b8c095fd1d2faac4",
+        "message": "Redesign SYSTEM operations command center",
+        "date": "2026-10-03T05:18:23Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/c364167f517bd6424b91a313b8c095fd1d2faac4"
       }
     ]
   }
