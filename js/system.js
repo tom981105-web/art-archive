@@ -85,6 +85,64 @@ function dailyLineSvg(days,key,maxOverride,className,suffix){
   const xlabels=rows.map((row,i)=>'<text class="daily-axis" x="'+x(i).toFixed(1)+'" y="'+(h-9)+'" text-anchor="middle">'+String(row.date).slice(5)+'</text>').join('');
   return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+grid+labels+'<path class="daily-line '+(className||'')+'" d="'+line+'"></path>'+dots+xlabels+'</svg>';
 }
+
+const multiSeriesColors={
+  '크레스트':'#9ee6b2','묵수':'#93bdd5','신수':'#d8b48a','수채화':'#b49bd8',
+  '펄퍼스':'#e5a7b8','잉크':'#a7afb6','성수':'#e0c06e','융화':'#82c9c2'
+};
+function multiSeriesTrendSvg(days,metric,seriesNames){
+  const rows=days||[];
+  if(!rows.length||!seriesNames.length)return '<div class="multi-empty">비교할 장기 데이터가 없습니다.</div>';
+  const values=[];
+  rows.forEach(day=>(day.series||[]).forEach(s=>{
+    if(seriesNames.includes(s.name)){
+      const v=metric==='successRate'?Number(s.successRate):Number(s[metric]);
+      if(Number.isFinite(v))values.push(v);
+    }
+  }));
+  if(!values.length)return '<div class="multi-empty">선택한 지표의 데이터가 아직 없습니다.</div>';
+  const w=1040,h=320,l=48,r=20,t=18,b=34;
+  const ymax=metric==='successRate'?100:Math.max(1,Math.ceil(Math.max(...values)/(metric==='avgElapsed'?30:1))*(metric==='avgElapsed'?30:1));
+  const x=i=>rows.length===1?(l+(w-l-r)/2):l+(w-l-r)*(i/(rows.length-1));
+  const y=v=>t+(h-t-b)*(1-clamp(v/ymax,0,1));
+  let grid='',labels='';
+  for(let i=0;i<=4;i++){
+    const val=ymax*(1-i/4),yy=t+(h-t-b)*(i/4);
+    const display=metric==='successRate'?Math.round(val)+'%':metric==='avgElapsed'?Math.round(val)+'s':Math.round(val);
+    grid+='<line class="multi-grid" x1="'+l+'" y1="'+yy+'" x2="'+(w-r)+'" y2="'+yy+'"></line>';
+    labels+='<text class="multi-axis" x="3" y="'+(yy+3)+'">'+display+'</text>';
+  }
+  const xlabels=rows.map((row,i)=>'<text class="multi-axis" x="'+x(i).toFixed(1)+'" y="'+(h-9)+'" text-anchor="middle">'+String(row.date).slice(5)+'</text>').join('');
+  let seriesSvg='';
+  seriesNames.forEach(name=>{
+    const color=multiSeriesColors[name]||'#aab2af';
+    const points=[];
+    rows.forEach((day,i)=>{
+      const s=(day.series||[]).find(x=>x.name===name);
+      if(!s)return;
+      const v=metric==='successRate'?Number(s.successRate):Number(s[metric]);
+      if(Number.isFinite(v))points.push({x:x(i),y:y(v),v,date:day.date});
+    });
+    if(!points.length)return;
+    const path=points.map((p,i)=>(i?'L':'M')+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ');
+    const suffix=metric==='successRate'?'%':metric==='avgElapsed'?'s':'';
+    seriesSvg+='<g style="--series-color:'+color+'"><path class="multi-line" d="'+path+'"></path>'+points.map(p=>'<circle class="multi-point" cx="'+p.x.toFixed(1)+'" cy="'+p.y.toFixed(1)+'" r="3.5"><title>'+name+' · '+p.date+' · '+(metric==='successRate'?p.v.toFixed(1):Math.round(p.v))+suffix+'</title></circle>').join('')+'</g>';
+  });
+  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+grid+labels+seriesSvg+xlabels+'</svg>';
+}
+function renderMultiSeriesTrend(days){
+  const chart=$('#multiSeriesTrendChart'),legend=$('#multiSeriesLegend');if(!chart||!legend)return;
+  const baseNames=telemetryState.filter.series==='all'?monitored:[telemetryState.filter.series];
+  const available=baseNames.filter(name=>(days||[]).some(day=>(day.series||[]).some(s=>s.name===name)));
+  const active=available.filter(name=>!telemetryState.hiddenSeries.has(name));
+  legend.innerHTML=available.map(name=>'<button class="'+(telemetryState.hiddenSeries.has(name)?'off':'')+'" data-multi-series="'+name+'" style="--series-color:'+(multiSeriesColors[name]||'#aab2af')+'"><i></i>'+name+'</button>').join('')||'<span class="muted">표시 가능한 시리즈가 없습니다.</span>';
+  chart.innerHTML=multiSeriesTrendSvg(days,telemetryState.multiMetric,active);
+  const labels={avgElapsed:'AVERAGE RUNTIME · SECONDS',runs:'RUNS PER DAY',successRate:'SUCCESS RATE · %'};
+  if($('#multiMetricLabel'))$('#multiMetricLabel').textContent=labels[telemetryState.multiMetric]||labels.avgElapsed;
+  if($('#multiSeriesCoverage'))$('#multiSeriesCoverage').textContent=active.length+' / '+available.length+' SERIES VISIBLE';
+  document.querySelectorAll('#multiMetricSwitch button').forEach(b=>b.classList.toggle('active',b.dataset.metric===telemetryState.multiMetric));
+}
+
 function renderLongRangeAnalysis(){
   const box=$('#longRangeAnalysis');if(!box)return;
   const longRange=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
@@ -97,6 +155,7 @@ function renderLongRangeAnalysis(){
     if($('#dailyRunsChart'))$('#dailyRunsChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
     if($('#dailySuccessChart'))$('#dailySuccessChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
     if($('#dailyRuntimeChart'))$('#dailyRuntimeChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
+    renderMultiSeriesTrend([]);
     return;
   }
   const totalRuns=days.reduce((a,x)=>a+(x.runs||0),0),avgRuns=days.length?totalRuns/days.length:0;
@@ -114,6 +173,7 @@ function renderLongRangeAnalysis(){
   if($('#dailyRunsChart'))$('#dailyRunsChart').innerHTML=dailyBarSvg(days,'runs');
   if($('#dailySuccessChart'))$('#dailySuccessChart').innerHTML=dailyLineSvg(days,'successRate',100,'success','%');
   if($('#dailyRuntimeChart'))$('#dailyRuntimeChart').innerHTML=dailyLineSvg(days,'avgElapsed',null,'runtime','s');
+  renderMultiSeriesTrend(filteredHistoryDays());
 }
 
 function historyRuntimeSvg(days){
@@ -387,7 +447,14 @@ function setupTelemetryInteractions(){
     document.querySelectorAll('#rangeControls button').forEach(x=>x.classList.toggle('active',x===btn));
     persistTelemetryFilter();renderTelemetry();
   }));
-  if($('#telemetrySeries'))$('#telemetrySeries').addEventListener('change',e=>{telemetryState.filter.series=e.target.value||'all';persistTelemetryFilter();renderTelemetry()});
+  if($('#telemetrySeries'))$('#telemetrySeries').addEventListener('change',e=>{telemetryState.filter.series=e.target.value||'all';telemetryState.hiddenSeries.clear();persistTelemetryFilter();renderTelemetry()});
+  document.querySelectorAll('#multiMetricSwitch button').forEach(btn=>btn.addEventListener('click',()=>{telemetryState.multiMetric=btn.dataset.metric||'avgElapsed';renderLongRangeAnalysis()}));
+  document.addEventListener('click',e=>{
+    const b=e.target.closest('[data-multi-series]');if(!b)return;
+    const name=b.dataset.multiSeries;
+    if(telemetryState.hiddenSeries.has(name))telemetryState.hiddenSeries.delete(name);else telemetryState.hiddenSeries.add(name);
+    renderLongRangeAnalysis();
+  });
   if($('#runDetailClose'))$('#runDetailClose').addEventListener('click',()=>{$('#runDetailDrawer').classList.remove('open');$('#runDetailDrawer').setAttribute('aria-hidden','true')});
   document.addEventListener('click',e=>{
     const p=e.target.closest('[data-run-index]');if(p)openRunDetail((telemetryState.visibleRuns||[])[Number(p.dataset.runIndex)]);
