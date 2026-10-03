@@ -1,6 +1,6 @@
 {
   "version": "0.4",
-  "updatedAt": "2026-10-03T00:02:07.636Z",
+  "updatedAt": "2026-10-03T00:03:00.492Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
@@ -18,11 +18,11 @@
   },
   "notionSync": {
     "lastResult": "success",
-    "lastSeries": "유영",
-    "lastArtwork": "복숭아빛 물결 다람쥐",
-    "startedAt": "2026-10-03T00:01:58.787Z",
-    "finishedAt": "2026-10-03T00:02:06.773Z",
-    "durationMs": 7986,
+    "lastSeries": "몽화",
+    "lastArtwork": "등불 요정의 따스한 안내빛",
+    "startedAt": "2026-10-03T00:02:47.981Z",
+    "finishedAt": "2026-10-03T00:02:57.846Z",
+    "durationMs": 9865,
     "error": null,
     "consecutiveFailures": 0
   },
