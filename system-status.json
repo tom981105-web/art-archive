@@ -1,17 +1,17 @@
 {
   "version": "1.2",
-  "updatedAt": "2026-10-03T04:54:55.476Z",
+  "updatedAt": "2026-10-03T04:55:08.423Z",
   "timezone": "Asia/Seoul",
-  "overallStatus": "ok",
+  "overallStatus": "warning",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T04:53:00.231Z",
-      "finishedAt": "2026-10-03T04:53:18.200Z",
-      "result": "success",
-      "durationMs": 17969,
-      "error": null
+      "startedAt": "2026-10-03T04:55:00.251Z",
+      "finishedAt": "2026-10-03T04:55:05.432Z",
+      "result": "skipped",
+      "durationMs": 5181,
+      "error": "다른 자동화 실행이 진행 중이어서 이번 회차를 건너뜀"
     },
     "consecutiveFailures": 0,
     "triggerInventoryAvailable": false
@@ -28,24 +28,38 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T04:54:55.568Z",
+    "updatedAt": "2026-10-03T04:55:09.296Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37097912163,
+      "id": 37098113696,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
-      "status": "completed",
-      "conclusion": "success",
-      "head_sha": "71e2a93789e56e2f54a3933358b9d1768a19ff8f",
-      "created_at": "2026-10-03T04:51:15Z",
-      "run_started_at": "2026-10-03T04:51:15Z",
-      "updated_at": "2026-10-03T04:51:54Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37097912163",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "401daa8c351a83b96cec4e4f5b3e02bbdf7cd247",
+      "created_at": "2026-10-03T04:54:58Z",
+      "run_started_at": "2026-10-03T04:54:58Z",
+      "updated_at": "2026-10-03T04:55:03Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098113696",
       "message": "Update SYSTEM runtime status"
     },
     "recentRuns": [
+      {
+        "id": 37098113696,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "in_progress",
+        "conclusion": null,
+        "head_sha": "401daa8c351a83b96cec4e4f5b3e02bbdf7cd247",
+        "created_at": "2026-10-03T04:54:58Z",
+        "run_started_at": "2026-10-03T04:54:58Z",
+        "updated_at": "2026-10-03T04:55:03Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098113696",
+        "message": "Update SYSTEM runtime status"
+      },
       {
         "id": 37097912163,
         "name": "pages build and deployment",
@@ -171,23 +185,21 @@
         "updated_at": "2026-10-03T04:25:53Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37096495114",
         "message": "Wire SYSTEM Today Summary metrics"
-      },
-      {
-        "id": 37096460976,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "488675055781ecc4e954e6aa1bfcc04eb79a953b",
-        "created_at": "2026-10-03T04:24:58Z",
-        "run_started_at": "2026-10-03T04:24:58Z",
-        "updated_at": "2026-10-03T04:25:34Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37096460976",
-        "message": "Add SYSTEM Today Summary panel"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "dd667aa6e1f76727bd210810595bd7395d8bd3f6",
+        "message": "Record SYSTEM operational event",
+        "date": "2026-10-03T04:55:07Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/dd667aa6e1f76727bd210810595bd7395d8bd3f6"
+      },
+      {
+        "sha": "401daa8c351a83b96cec4e4f5b3e02bbdf7cd247",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T04:54:56Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/401daa8c351a83b96cec4e4f5b3e02bbdf7cd247"
+      },
       {
         "sha": "71e2a93789e56e2f54a3933358b9d1768a19ff8f",
         "message": "Update SYSTEM runtime status",
@@ -235,18 +247,6 @@
         "message": "Style SYSTEM Today Summary",
         "date": "2026-10-03T04:25:46Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/b3f01dbf62d1bb552b5441a9733bbb3ec61be85c"
-      },
-      {
-        "sha": "f8a7b4698e9e027ed5e5ad376f3cc6e81e668d4f",
-        "message": "Wire SYSTEM Today Summary metrics",
-        "date": "2026-10-03T04:25:30Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/f8a7b4698e9e027ed5e5ad376f3cc6e81e668d4f"
-      },
-      {
-        "sha": "488675055781ecc4e954e6aa1bfcc04eb79a953b",
-        "message": "Add SYSTEM Today Summary panel",
-        "date": "2026-10-03T04:24:56Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/488675055781ecc4e954e6aa1bfcc04eb79a953b"
       }
     ]
   }
