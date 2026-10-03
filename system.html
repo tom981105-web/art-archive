@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090b0b">
   <title>ART ARCHIVE : SYSTEM</title>
-  <link rel="stylesheet" href="css/system.css?v=2.4">
+  <link rel="stylesheet" href="css/system.css?v=2.5">
 </head>
 <body>
 <div class="app-shell">
@@ -200,6 +200,24 @@
             <div class="chart-foot"><span>SECONDS</span><span id="dailyRuntimePeak">—</span></div>
           </article>
         </div>
+
+        <article class="chart-card multi-series-card">
+          <div class="multi-series-head">
+            <div>
+              <p class="eyebrow">CROSS-SERIES COMPARISON</p>
+              <h3>Multi-Series Trend</h3>
+              <p>같은 기간의 시리즈별 추세를 한 그래프에서 비교합니다.</p>
+            </div>
+            <div class="metric-switch" id="multiMetricSwitch">
+              <button class="active" data-metric="avgElapsed">RUNTIME</button>
+              <button data-metric="runs">RUNS</button>
+              <button data-metric="successRate">SUCCESS</button>
+            </div>
+          </div>
+          <div class="multi-series-legend" id="multiSeriesLegend"></div>
+          <div class="multi-series-chart" id="multiSeriesTrendChart"><p class="muted">시리즈 비교 데이터를 불러오는 중입니다.</p></div>
+          <div class="chart-foot"><span id="multiMetricLabel">AVERAGE RUNTIME · SECONDS</span><span id="multiSeriesCoverage">—</span></div>
+        </article>
       </section>
 
       <div class="advanced-observability">
@@ -335,7 +353,7 @@
     <footer><span>ART ARCHIVE / SYSTEM · OPERATIONS COMMAND CENTER</span><span id="footerTime"></span></footer>
   </main>
 </div>
-<script src="js/system.js?v=2.4"></script>
+<script src="js/system.js?v=2.5"></script>
 <script src="js/system-events.js?v=2.0"></script>
 </body>
 </html>
