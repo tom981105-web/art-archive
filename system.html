@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090b0b">
   <title>ART ARCHIVE : SYSTEM</title>
-  <link rel="stylesheet" href="css/system.css?v=2.3">
+  <link rel="stylesheet" href="css/system.css?v=2.4">
 </head>
 <body>
 <div class="app-shell">
@@ -178,6 +178,30 @@
         <div class="run-detail-meta"><span>START TIME</span><b id="detailTime">—</b></div>
       </aside>
 
+      <section class="long-range-analysis" id="longRangeAnalysis" hidden>
+        <div class="long-range-head">
+          <div><p class="eyebrow">LONG-RANGE ANALYTICS</p><h3>Daily Trend Analysis</h3><p>7D / 30D 히스토리를 날짜별로 비교합니다.</p></div>
+          <span id="longRangeCoverage">—</span>
+        </div>
+        <div class="long-range-grid">
+          <article class="chart-card">
+            <div class="chart-head"><div><p class="eyebrow">DAILY THROUGHPUT</p><h3>Runs per Day</h3></div><div class="chart-stat"><span>TOTAL</span><b id="dailyRunsTotal">—</b></div></div>
+            <div class="daily-chart" id="dailyRunsChart"><p class="muted">장기 데이터를 불러오는 중입니다.</p></div>
+            <div class="chart-foot"><span>RUN COUNT</span><span id="dailyRunsAvg">—</span></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-head"><div><p class="eyebrow">DAILY RELIABILITY</p><h3>Success Rate</h3></div><div class="chart-stat"><span>AVG</span><b id="dailySuccessAvg">—</b></div></div>
+            <div class="daily-chart" id="dailySuccessChart"><p class="muted">장기 데이터를 불러오는 중입니다.</p></div>
+            <div class="chart-foot"><span>SUCCESS %</span><span id="dailyFailureTotal">—</span></div>
+          </article>
+          <article class="chart-card">
+            <div class="chart-head"><div><p class="eyebrow">DAILY PERFORMANCE</p><h3>Average Runtime</h3></div><div class="chart-stat"><span>AVG</span><b id="dailyRuntimeAvg">—</b></div></div>
+            <div class="daily-chart" id="dailyRuntimeChart"><p class="muted">장기 데이터를 불러오는 중입니다.</p></div>
+            <div class="chart-foot"><span>SECONDS</span><span id="dailyRuntimePeak">—</span></div>
+          </article>
+        </div>
+      </section>
+
       <div class="advanced-observability">
         <article class="chart-card">
           <div class="chart-head"><div><p class="eyebrow">24H ACTIVITY</p><h3>Operations Timeline</h3></div><div class="chart-stat"><span>EVENTS</span><b id="timelineEventCount">—</b></div></div>
@@ -311,7 +335,7 @@
     <footer><span>ART ARCHIVE / SYSTEM · OPERATIONS COMMAND CENTER</span><span id="footerTime"></span></footer>
   </main>
 </div>
-<script src="js/system.js?v=2.3"></script>
+<script src="js/system.js?v=2.4"></script>
 <script src="js/system-events.js?v=2.0"></script>
 </body>
 </html>
