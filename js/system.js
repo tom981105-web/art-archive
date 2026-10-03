@@ -3,15 +3,69 @@ function tick(){const d=new Date();$('#clock').textContent=d.toLocaleTimeString(
 const systemHealthState={drive:null,script:null,notion:null,deploy:null};
 const alertState={drive:null,script:null,notion:null,deploy:null};
 const todayOpsState={autoCount:null,manualCount:null,manualUpdated:null,manualTotal:null,failed:null,driveVerified:null,autoRuns:null};
-const telemetryState={autoSeries:[],manualSeries:[],usage:null,github:null,events:[]};
+const telemetryState={autoSeries:[],manualSeries:[],usage:null,github:null,events:[],visibleRuns:[],filter:{range:'24h',series:'all'}};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const parseRunDate=v=>{if(!v)return null;const s=String(v);const d=/[zZ]|[+-]\d\d:?\d\d$/.test(s)?new Date(s):new Date(s.replace(' ','T')+'+09:00');return isNaN(d)?null:d};
 const kstHour=d=>Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'}).format(d));
+const rangeMs={ '1h':60*60*1000,'6h':6*60*60*1000,'24h':24*60*60*1000,'7d':7*24*60*60*1000,'30d':30*24*60*60*1000 };
+function filteredTelemetryRuns(){
+  const raw=((telemetryState.usage||{}).recentRuns)||[];
+  const f=telemetryState.filter||{range:'24h',series:'all'};
+  const cutoff=Date.now()-(rangeMs[f.range]||rangeMs['24h']);
+  return raw.filter(x=>{
+    const d=parseRunDate(x.time);
+    const timeOk=!d||d.getTime()>=cutoff;
+    const seriesOk=f.series==='all'||x.series===f.series;
+    return timeOk&&seriesOk;
+  });
+}
+function filteredSeriesStats(){
+  const rows=((telemetryState.usage||{}).series)||[];
+  return telemetryState.filter.series==='all'?rows:rows.filter(x=>x.name===telemetryState.filter.series);
+}
+function syncTelemetryControls(){
+  const p=new URLSearchParams(location.search);
+  const range=p.get('range');
+  const series=p.get('series');
+  if(rangeMs[range])telemetryState.filter.range=range;
+  if(series&&['all',...monitored].includes(series))telemetryState.filter.series=series;
+  document.querySelectorAll('#rangeControls button').forEach(b=>b.classList.toggle('active',b.dataset.range===telemetryState.filter.range));
+  if($('#telemetrySeries'))$('#telemetrySeries').value=telemetryState.filter.series;
+}
+function persistTelemetryFilter(){
+  const p=new URLSearchParams(location.search);
+  p.set('range',telemetryState.filter.range);
+  p.set('series',telemetryState.filter.series);
+  history.replaceState(null,'',location.pathname+'?'+p.toString()+location.hash);
+}
+function updateAnalysisContext(runs){
+  if($('#analysisContext'))$('#analysisContext').textContent=telemetryState.filter.range.toUpperCase()+' · '+(telemetryState.filter.series==='all'?'ALL SERIES':telemetryState.filter.series)+' · '+runs.length+' RUNS';
+  if($('#telemetryWindow'))$('#telemetryWindow').textContent=telemetryState.filter.range.toUpperCase()+' · '+runs.length+' RUNS';
+}
+function openRunDetail(run){
+  if(!run)return;
+  const d=$('#runDetailDrawer');if(!d)return;
+  d.classList.add('open');d.setAttribute('aria-hidden','false');
+  $('#runDetailTitle').textContent=(run.series||'Run')+' · '+String(run.result||'—').toUpperCase();
+  $('#detailSeries').textContent=run.series||'—';
+  $('#detailResult').textContent=String(run.result||'—').toUpperCase();
+  $('#detailResult').className=run.result==='failed'?'bad':run.result==='success'?'good':'neutral';
+  $('#detailRuntime').textContent=run.elapsedSeconds!==null&&run.elapsedSeconds!==undefined?run.elapsedSeconds+'s':'—';
+  $('#detailGeneration').textContent=run.generationAttempts??'—';
+  $('#detailRegeneration').textContent=run.regenerations??'—';
+  $('#detailDrive').textContent=run.driveVerified===true?'YES':run.driveVerified===false?'NO':'—';
+  $('#detailDrive').className=run.driveVerified===true?'good':run.driveVerified===false?'bad':'neutral';
+  $('#detailScheduled').textContent=run.scheduledTime||'—';
+  $('#detailDelay').textContent=run.startDelaySeconds!==null&&run.startDelaySeconds!==undefined?'+'+run.startDelaySeconds+'s':'—';
+  $('#detailTime').textContent=run.time||'—';
+  d.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
 function renderAdvancedTelemetry(){
-  const usage=telemetryState.usage||{},runs=usage.recentRuns||[],series=usage.series||[];
+  const usage=telemetryState.usage||{},runs=filteredTelemetryRuns(),series=filteredSeriesStats();
   const github=telemetryState.github||{},deploy=((github.githubDeploy||{}).recentRuns)||[];
   const events=telemetryState.events||[];
-  const now=Date.now(),cutoff=now-24*60*60*1000;
+  const now=Date.now(),cutoff=now-(rangeMs[telemetryState.filter.range]||rangeMs['24h']);
 
   const timeline=[];
   runs.forEach(x=>{const d=parseRunDate(x.time);if(d&&d.getTime()>=cutoff)timeline.push({at:d,service:'Automation',level:x.result==='failed'?'error':'success',title:(x.series||'Run')+' '+String(x.result||'').toUpperCase()})});
@@ -22,7 +76,7 @@ function renderAdvancedTelemetry(){
   if($('#operationsTimeline')){
     if(!timeline.length)$('#operationsTimeline').innerHTML='<p class="muted">최근 24시간 기록된 운영 이벤트가 없습니다.</p>';
     else{
-      const dots=timeline.slice(-70).map((x,i)=>{const left=clamp((x.at.getTime()-cutoff)/(24*60*60*1000)*100,0,100);const stem=28+(i%5)*18;return '<i class="timeline-event '+(x.level==='error'||x.level==='failure'?'error':x.level==='warning'?'warning':x.level==='success'?'success':'')+'" style="left:'+left.toFixed(2)+'%;--stem:'+stem+'px"><title>'+x.service+' · '+x.title+' · '+x.at.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+'</title></i>'}).join('');
+      const dots=timeline.slice(-70).map((x,i)=>{const left=clamp((x.at.getTime()-cutoff)/(rangeMs[telemetryState.filter.range]||rangeMs['24h'])*100,0,100);const stem=28+(i%5)*18;return '<i class="timeline-event '+(x.level==='error'||x.level==='failure'?'error':x.level==='warning'?'warning':x.level==='success'?'success':'')+'" style="left:'+left.toFixed(2)+'%;--stem:'+stem+'px"><title>'+x.service+' · '+x.title+' · '+x.at.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+'</title></i>'}).join('');
       $('#operationsTimeline').innerHTML='<div class="timeline-track"><div class="timeline-grid">'+Array(6).fill('<i></i>').join('')+'</div>'+dots+'</div><div class="timeline-axis"><span>-24h</span><span>-18h</span><span>-12h</span><span>-6h</span><span>now</span></div>';
     }
   }
@@ -44,7 +98,7 @@ function renderAdvancedTelemetry(){
   const fails=quality.filter(x=>x.result==='failed').length;
   if($('#trendFailureCount'))$('#trendFailureCount').textContent=fails;
   if($('#qualityTrendWindow'))$('#qualityTrendWindow').textContent=quality.length+' RUNS';
-  if($('#qualityTrend'))$('#qualityTrend').innerHTML=quality.length?quality.map(x=>'<i class="quality-bar '+(x.result==='failed'?'fail ':'')+(Number(x.regenerations)>0?'regen':'')+'" data-tip="'+(x.series||'—')+' · '+String(x.result||'—').toUpperCase()+' · '+(x.elapsedSeconds??'—')+'s"></i>').join(''):'<p class="muted">실행 이력이 없습니다.</p>';
+  if($('#qualityTrend')){telemetryState.visibleQualityRuns=quality;$('#qualityTrend').innerHTML=quality.length?quality.map((x,i)=>'<i class="quality-bar chart-clickable '+(x.result==='failed'?'fail ':'')+(Number(x.regenerations)>0?'regen':'')+'" data-quality-index="'+i+'" data-tip="'+(x.series||'—')+' · '+String(x.result||'—').toUpperCase()+' · '+(x.elapsedSeconds??'—')+'s"></i>').join(''):'<p class="muted">실행 이력이 없습니다.</p>';}
 
   const stateEvents=[...events].filter(x=>{const d=parseRunDate(x.at);return d&&d.getTime()>=cutoff}).sort((a,b)=>new Date(b.at)-new Date(a.at)).slice(0,12);
   if($('#stateTimelineSummary'))$('#stateTimelineSummary').textContent=stateEvents.length+' STATE EVENTS';
@@ -78,10 +132,10 @@ function runtimeTrendSvg(runs){
   const pts=rows.map((row,i)=>[x(i),y(Number(row.elapsedSeconds)),row]);
   const line=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
   const area=line+' L '+pts[pts.length-1][0].toFixed(1)+' '+(h-b)+' L '+pts[0][0].toFixed(1)+' '+(h-b)+' Z';
-  const dots=pts.map(p=>'<circle class="chart-point '+(p[2].result==='failed'?'fail':'')+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="3"><title>'+String(p[2].series||'—')+' · '+Number(p[2].elapsedSeconds).toFixed(0)+'s · '+String(p[2].result||'—')+'</title></circle>').join('');
+  telemetryState.visibleRuns=rows; const avg=vals.reduce((a,b)=>a+b,0)/vals.length; const sorted=[...vals].sort((a,b)=>a-b); const p95=sorted[Math.min(sorted.length-1,Math.ceil(sorted.length*.95)-1)]; const threshold='<line class="threshold-line" x1="'+l+'" y1="'+y(p95).toFixed(1)+'" x2="'+(w-r)+'" y2="'+y(p95).toFixed(1)+'"></line><text class="threshold-label" x="'+(w-r-2)+'" y="'+(y(p95)-4).toFixed(1)+'" text-anchor="end">P95 '+Math.round(p95)+'s</text><line class="chart-grid-line" x1="'+l+'" y1="'+y(avg).toFixed(1)+'" x2="'+(w-r)+'" y2="'+y(avg).toFixed(1)+'"></line>'; const dots=pts.map((p,i)=>'<circle class="chart-point chart-clickable '+(p[2].result==='failed'?'fail':'')+'" data-run-index="'+i+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4"><title>'+String(p[2].series||'—')+' · '+Number(p[2].elapsedSeconds).toFixed(0)+'s · '+String(p[2].result||'—')+'</title></circle>').join('');
   const step=Math.max(1,Math.ceil(rows.length/5));
   const xlabels=rows.map((row,i)=>i%step===0?'<text class="chart-axis-label" x="'+x(i).toFixed(1)+'" y="'+(h-7)+'" text-anchor="middle">'+String(row.time||'').slice(5,10)+'</text>':'').join('');
-  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none"><defs><linearGradient id="runtimeArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9ee6b2" stop-opacity=".18"></stop><stop offset="100%" stop-color="#9ee6b2" stop-opacity="0"></stop></linearGradient></defs>'+grid+labels+'<path class="chart-series-area" d="'+area+'"></path><path class="chart-series-line" d="'+line+'"></path>'+dots+xlabels+'</svg>';
+  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none"><defs><linearGradient id="runtimeArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#9ee6b2" stop-opacity=".18"></stop><stop offset="100%" stop-color="#9ee6b2" stop-opacity="0"></stop></linearGradient></defs>'+grid+labels+threshold+'<path class="chart-series-area" d="'+area+'"></path><path class="chart-series-line" d="'+line+'"></path>'+dots+xlabels+'</svg>';
 }
 function outputBarsSvg(autoSeries,manualSeries){
   const rows=[...(autoSeries||[]).map(x=>({name:x.name,value:Number(x.todayCount)||0,type:'auto'})),...(manualSeries||[]).map(x=>({name:x.name,value:Number(x.todayCount)||0,type:'manual'}))];
@@ -92,14 +146,14 @@ function outputBarsSvg(autoSeries,manualSeries){
 }
 function renderTelemetry(){renderAdvancedTelemetry();
   const usage=telemetryState.usage;
-  const autoSeries=telemetryState.autoSeries||[],manualSeries=telemetryState.manualSeries||[];
+  const autoSeries=(telemetryState.autoSeries||[]).filter(x=>telemetryState.filter.series==='all'||x.name===telemetryState.filter.series),manualSeries=telemetryState.filter.series==='all'?(telemetryState.manualSeries||[]):[];
   if(autoSeries.length||manualSeries.length){
     const total=[...autoSeries,...manualSeries].reduce((a,x)=>a+(Number(x.todayCount)||0),0);
     if($('#outputChartTotal'))$('#outputChartTotal').textContent=total;
     if($('#seriesOutputChart'))$('#seriesOutputChart').innerHTML=outputBarsSvg(autoSeries,manualSeries);
   }
   if(usage){
-    const s=usage.summary||{},runs=usage.recentRuns||[];
+    const s=usage.summary||{},runs=filteredTelemetryRuns();updateAnalysisContext(runs);
     const durations=runs.map(x=>Number(x.elapsedSeconds)).filter(Number.isFinite);
     const avg=durations.length?durations.reduce((a,b)=>a+b,0)/durations.length:null;
     const sorted=[...durations].sort((a,b)=>a-b);
@@ -119,7 +173,7 @@ function renderTelemetry(){renderAdvancedTelemetry();
     if($('#runtimeChartAvg'))$('#runtimeChartAvg').textContent=avg===null?'—':Math.round(avg)+'s';
     if($('#runtimeChartRange'))$('#runtimeChartRange').textContent=runs.length+' RUNS';
     if($('#telemetryWindow'))$('#telemetryWindow').textContent='RECENT '+runs.length+' RUNS';
-    const series=usage.series||[];
+    const series=filteredSeriesStats();
     if($('#reliabilityChartRuns'))$('#reliabilityChartRuns').textContent=s.runs??series.reduce((a,x)=>a+(Number(x.runs)||0),0);
     const rates=series.map(x=>x.runs?Math.round((x.success||0)/x.runs*100):0);
     const ravg=rates.length?Math.round(rates.reduce((a,b)=>a+b,0)/rates.length):null;
@@ -212,6 +266,21 @@ async function loadUsage(){try{const r=await fetch('system-usage.json?ts='+Date.
 async function loadScript(){try{const r=await fetch('system-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('script');const d=await r.json();renderScript(d);renderNotion(d);renderGithubSnapshot(d)}catch(e){$('#scriptBadge').textContent='DATA ERROR';$('#scriptBadge').className='status bad';$('#scriptService').textContent='UNAVAILABLE';$('#scriptService').className='pill bad';$('#scriptError').textContent='system-status.json을 불러오지 못했습니다.';systemHealthState.script=0;systemHealthState.notion=0;alertState.script='error';alertState.notion='error';updateOverallHealth();renderAlertCenter()}}
 async function loadOpsEvents(){try{const r=await fetch('system-events.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('events');const d=await r.json();telemetryState.events=d.events||[];renderAdvancedTelemetry()}catch(e){telemetryState.events=[];renderAdvancedTelemetry()}}
 async function loadGithub(){try{const r=await fetch('system-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('status');renderGithubSnapshot(await r.json())}catch(e){$('#githubService').textContent='UNAVAILABLE';$('#githubService').className='pill warn';$('#deployBadge').textContent='DATA ERROR';$('#deployBadge').className='status bad';$('#deployHealth').textContent='로컬 SYSTEM 상태 파일을 불러오지 못했습니다.';systemHealthState.deploy=0;alertState.deploy='error';updateOverallHealth();renderAlertCenter()}}
+function setupTelemetryInteractions(){
+  syncTelemetryControls();
+  document.querySelectorAll('#rangeControls button').forEach(btn=>btn.addEventListener('click',()=>{
+    telemetryState.filter.range=btn.dataset.range||'24h';
+    document.querySelectorAll('#rangeControls button').forEach(x=>x.classList.toggle('active',x===btn));
+    persistTelemetryFilter();renderTelemetry();
+  }));
+  if($('#telemetrySeries'))$('#telemetrySeries').addEventListener('change',e=>{telemetryState.filter.series=e.target.value||'all';persistTelemetryFilter();renderTelemetry()});
+  if($('#runDetailClose'))$('#runDetailClose').addEventListener('click',()=>{$('#runDetailDrawer').classList.remove('open');$('#runDetailDrawer').setAttribute('aria-hidden','true')});
+  document.addEventListener('click',e=>{
+    const p=e.target.closest('[data-run-index]');if(p)openRunDetail((telemetryState.visibleRuns||[])[Number(p.dataset.runIndex)]);
+    const q=e.target.closest('[data-quality-index]');if(q)openRunDetail((telemetryState.visibleQualityRuns||[])[Number(q.dataset.qualityIndex)]);
+  });
+}
+setupTelemetryInteractions();
 async function refresh(){const b=$('#refresh');b.disabled=true;b.textContent='↻ SYNCING';await Promise.all([loadStatus(),loadUsage(),loadScript(),loadGithub(),loadOpsEvents()]);b.disabled=false;b.textContent='↻ REFRESH'}$('#refresh').addEventListener('click',refresh);refresh();setInterval(()=>Promise.all([loadStatus(),loadUsage(),loadScript(),loadOpsEvents()]),60000);const navLinks=[...document.querySelectorAll('nav a')];
 navLinks.forEach(a=>a.addEventListener('click',()=>{navLinks.forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
 const sectionMap=navLinks.map(a=>({a,id:a.getAttribute('href').slice(1),el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
