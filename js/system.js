@@ -61,6 +61,61 @@ function aggregateHistory(){
   const series=Object.values(bySeries).map(s=>({name:s.name,runs:s.runs,success:s.success,failed:s.failed,driveVerified:s.driveVerified,regenerations:s.regenerations,avgElapsed:s.elapsedRuns?s.weightedElapsed/s.elapsedRuns:null}));
   return {days:rows,runs,success,failed,verified,avgElapsed:weightedElapsed,series};
 }
+function dailyBarSvg(days,key){
+  const rows=days||[];
+  if(!rows.length)return '<p class="muted">장기 일별 데이터가 없습니다.</p>';
+  const w=520,h=210,l=34,r=8,t=12,b=30,vals=rows.map(x=>Number(x[key])||0),max=Math.max(1,...vals);
+  const slot=(w-l-r)/rows.length,barW=Math.max(7,slot*.55);
+  let grid='',labels='',bars='';
+  for(let i=0;i<=4;i++){const v=Math.round(max*(1-i/4));const y=t+(h-t-b)*(i/4);grid+='<line class="daily-grid" x1="'+l+'" y1="'+y+'" x2="'+(w-r)+'" y2="'+y+'"></line>';labels+='<text class="daily-axis" x="2" y="'+(y+3)+'">'+v+'</text>'}
+  rows.forEach((row,i)=>{const v=Number(row[key])||0,x=l+slot*i+(slot-barW)/2,y=t+(h-t-b)*(1-v/max),bh=(h-b)-y;bars+='<rect class="daily-bar" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+barW.toFixed(1)+'" height="'+Math.max(1,bh).toFixed(1)+'" rx="3"><title>'+row.date+' · '+v+'</title></rect><text class="daily-axis" x="'+(x+barW/2).toFixed(1)+'" y="'+(h-9)+'" text-anchor="middle">'+String(row.date).slice(5)+'</text>'});
+  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+grid+labels+bars+'</svg>';
+}
+function dailyLineSvg(days,key,maxOverride,className,suffix){
+  const rows=(days||[]).filter(x=>Number.isFinite(Number(x[key])));
+  if(!rows.length)return '<p class="muted">장기 일별 데이터가 없습니다.</p>';
+  const w=520,h=210,l=38,r=10,t=12,b=30,vals=rows.map(x=>Number(x[key]));
+  const max=Math.max(maxOverride||0,...vals,1),min=0,span=Math.max(1,max-min);
+  const x=i=>rows.length===1?(l+(w-l-r)/2):l+(w-l-r)*(i/(rows.length-1));
+  const y=v=>t+(h-t-b)*(1-(v-min)/span);
+  let grid='',labels='';
+  for(let i=0;i<=4;i++){const v=Math.round(max*(1-i/4));const yy=t+(h-t-b)*(i/4);grid+='<line class="daily-grid" x1="'+l+'" y1="'+yy+'" x2="'+(w-r)+'" y2="'+yy+'"></line>';labels+='<text class="daily-axis" x="2" y="'+(yy+3)+'">'+v+(suffix||'')+'</text>'}
+  const pts=rows.map((row,i)=>[x(i),y(Number(row[key])),row]),line=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+  const dots=pts.map(p=>'<circle class="daily-point '+(key==='successRate'&&Number(p[2][key])<100?'bad':'')+'" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4"><title>'+p[2].date+' · '+Number(p[2][key]).toFixed(key==='successRate'?1:0)+(suffix||'')+'</title></circle>').join('');
+  const xlabels=rows.map((row,i)=>'<text class="daily-axis" x="'+x(i).toFixed(1)+'" y="'+(h-9)+'" text-anchor="middle">'+String(row.date).slice(5)+'</text>').join('');
+  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+grid+labels+'<path class="daily-line '+(className||'')+'" d="'+line+'"></path>'+dots+xlabels+'</svg>';
+}
+function renderLongRangeAnalysis(){
+  const box=$('#longRangeAnalysis');if(!box)return;
+  const longRange=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
+  if(!longRange){box.hidden=true;return}
+  box.hidden=false;
+  const hist=aggregateHistory(),days=hist?hist.days:[];
+  const requested=telemetryState.filter.range==='30d'?30:7;
+  if($('#longRangeCoverage'))$('#longRangeCoverage').textContent=days.length+' / '+requested+' DAYS AVAILABLE';
+  if(!hist||!days.length){
+    if($('#dailyRunsChart'))$('#dailyRunsChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
+    if($('#dailySuccessChart'))$('#dailySuccessChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
+    if($('#dailyRuntimeChart'))$('#dailyRuntimeChart').innerHTML='<p class="muted">아직 장기 히스토리가 없습니다.</p>';
+    return;
+  }
+  const totalRuns=days.reduce((a,x)=>a+(x.runs||0),0),avgRuns=days.length?totalRuns/days.length:0;
+  const totalSuccess=days.reduce((a,x)=>a+(x.success||0),0),successRate=totalRuns?totalSuccess/totalRuns*100:0;
+  const totalFailed=days.reduce((a,x)=>a+(x.failed||0),0);
+  const runtimeRows=days.filter(x=>Number.isFinite(Number(x.avgElapsed))&&x.runs>0);
+  const weightedRuntime=runtimeRows.length?runtimeRows.reduce((a,x)=>a+Number(x.avgElapsed)*x.runs,0)/runtimeRows.reduce((a,x)=>a+x.runs,0):null;
+  const peakRuntime=runtimeRows.length?Math.max(...runtimeRows.map(x=>Number(x.avgElapsed))):null;
+  if($('#dailyRunsTotal'))$('#dailyRunsTotal').textContent=totalRuns;
+  if($('#dailyRunsAvg'))$('#dailyRunsAvg').textContent='AVG '+avgRuns.toFixed(1)+' / DAY';
+  if($('#dailySuccessAvg'))$('#dailySuccessAvg').textContent=successRate.toFixed(1)+'%';
+  if($('#dailyFailureTotal'))$('#dailyFailureTotal').textContent=totalFailed+' FAILURES';
+  if($('#dailyRuntimeAvg'))$('#dailyRuntimeAvg').textContent=weightedRuntime===null?'—':Math.round(weightedRuntime)+'s';
+  if($('#dailyRuntimePeak'))$('#dailyRuntimePeak').textContent=peakRuntime===null?'—':'PEAK '+Math.round(peakRuntime)+'s';
+  if($('#dailyRunsChart'))$('#dailyRunsChart').innerHTML=dailyBarSvg(days,'runs');
+  if($('#dailySuccessChart'))$('#dailySuccessChart').innerHTML=dailyLineSvg(days,'successRate',100,'success','%');
+  if($('#dailyRuntimeChart'))$('#dailyRuntimeChart').innerHTML=dailyLineSvg(days,'avgElapsed',null,'runtime','s');
+}
+
 function historyRuntimeSvg(days){
   const rows=(days||[]).filter(x=>Number.isFinite(Number(x.avgElapsed)));
   if(rows.length<2)return '<p class="muted">장기 실행시간 데이터가 더 쌓이면 일별 추세가 표시됩니다.</p>';
@@ -195,7 +250,7 @@ function outputBarsSvg(autoSeries,manualSeries){
   const content=rows.map((row,i)=>{const y=8+i*rowH,bw=(w-labelW-42)*(row.value/max);return '<text class="chart-label" x="0" y="'+(y+10)+'">'+row.name+'</text><rect class="chart-bar-track" x="'+labelW+'" y="'+y+'" width="'+(w-labelW-42)+'" height="10" rx="3"></rect><rect class="chart-bar '+(row.type==='manual'?'manual':'')+'" x="'+labelW+'" y="'+y+'" width="'+Math.max(row.value?3:0,bw).toFixed(1)+'" height="10" rx="3"><title>'+row.name+' · '+row.value+'</title></rect><text class="chart-value" x="'+(w-3)+'" y="'+(y+9)+'" text-anchor="end">'+row.value+'</text>'}).join('');
   return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+content+'</svg>';
 }
-function renderTelemetry(){renderAdvancedTelemetry();
+function renderTelemetry(){renderAdvancedTelemetry();renderLongRangeAnalysis();
   const usage=telemetryState.usage;
   const longRangeOutput=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
   const histOutput=longRangeOutput?aggregateHistory():null;
