@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090b0b">
   <title>ART ARCHIVE : SYSTEM</title>
-  <link rel="stylesheet" href="css/system.css?v=2.0">
+  <link rel="stylesheet" href="css/system.css?v=2.1">
 </head>
 <body>
 <div class="app-shell">
@@ -24,21 +24,21 @@
       <div class="nav-group">
         <span class="nav-label">COMMAND</span>
         <a class="active" href="#overview"><i>01</i><span>Overview</span></a>
-        <a href="#today"><i>02</i><span>Today</span></a>
+        <a href="#today"><i>02</i><span>Today</span></a><a href="#telemetry"><i>03</i><span>Telemetry</span></a>
       </div>
       <div class="nav-group">
         <span class="nav-label">WORKFLOW</span>
-        <a href="#series"><i>03</i><span>Auto Series</span></a>
-        <a href="#manual"><i>04</i><span>Manual Series</span></a>
-        <a href="#delay"><i>05</i><span>Schedule</span></a>
+        <a href="#series"><i>04</i><span>Auto Series</span></a>
+        <a href="#manual"><i>05</i><span>Manual Series</span></a>
+        <a href="#delay"><i>06</i><span>Schedule</span></a>
       </div>
       <div class="nav-group">
         <span class="nav-label">SYSTEM</span>
-        <a href="#runtime"><i>06</i><span>Runtime</span></a>
-        <a href="#services"><i>07</i><span>Services</span></a>
-        <a href="#analytics"><i>08</i><span>Diagnostics</span></a>
-        <a href="#events"><i>09</i><span>Incidents</span></a>
-        <a href="#activity"><i>10</i><span>Activity</span></a>
+        <a href="#runtime"><i>07</i><span>Runtime</span></a>
+        <a href="#services"><i>08</i><span>Services</span></a>
+        <a href="#analytics"><i>09</i><span>Diagnostics</span></a>
+        <a href="#events"><i>10</i><span>Incidents</span></a>
+        <a href="#activity"><i>11</i><span>Activity</span></a>
       </div>
     </nav>
 
@@ -90,6 +90,46 @@
         <div><span>MANUAL UPDATED</span><strong id="todayManualUpdated">—</strong><small>updated today</small></div>
         <div><span>FAILED TODAY</span><strong id="todayFailed">—</strong><small>automation runs</small></div>
         <div><span>DRIVE VERIFIED</span><strong id="todayDriveVerified">—</strong><small>today's auto runs</small></div>
+      </div>
+    </section>
+
+    <section class="telemetry-section" id="telemetry">
+      <div class="section-title-row telemetry-title">
+        <div><p class="eyebrow">LIVE OBSERVABILITY</p><h2>Production Telemetry</h2><p class="telemetry-sub">실제 자동화 로그와 아카이브 데이터를 기반으로 처리량 · 실행시간 · 안정성을 시각화합니다.</p></div>
+        <span id="telemetryWindow">RECENT DATA</span>
+      </div>
+
+      <div class="telemetry-kpis">
+        <article class="telemetry-kpi"><span>AVG RUNTIME</span><strong id="telemetryAvgRuntime">—</strong><small>recent executions</small><div class="sparkline" id="runtimeSpark"></div></article>
+        <article class="telemetry-kpi"><span>P95 / PEAK</span><strong id="telemetryPeakRuntime">—</strong><small>execution duration</small><div class="sparkline" id="peakSpark"></div></article>
+        <article class="telemetry-kpi"><span>SUCCESS RATE</span><strong id="telemetrySuccessRate">—</strong><small>recorded automation runs</small><div class="gauge-mini" id="successGaugeMini"></div></article>
+        <article class="telemetry-kpi"><span>DRIVE VERIFIED</span><strong id="telemetryDriveRate">—</strong><small>verified run ratio</small><div class="gauge-mini" id="driveGaugeMini"></div></article>
+      </div>
+
+      <div class="chart-grid">
+        <article class="chart-card chart-card-wide">
+          <div class="chart-head"><div><p class="eyebrow">EXECUTION PERFORMANCE</p><h3>Runtime Duration Trend</h3></div><div class="chart-stat"><span>AVG</span><b id="runtimeChartAvg">—</b></div></div>
+          <div class="chart-wrap" id="runtimeTrendChart"><p class="muted">실행시간 데이터를 불러오는 중입니다.</p></div>
+          <div class="chart-foot"><span>RECENT EXECUTIONS</span><span id="runtimeChartRange">—</span></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-head"><div><p class="eyebrow">TODAY THROUGHPUT</p><h3>Series Output</h3></div><div class="chart-stat"><span>TOTAL</span><b id="outputChartTotal">—</b></div></div>
+          <div class="chart-wrap" id="seriesOutputChart"><p class="muted">시리즈 데이터를 불러오는 중입니다.</p></div>
+          <div class="chart-foot"><span>AUTO + MANUAL</span><span>TODAY</span></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-head"><div><p class="eyebrow">QUALITY SIGNAL</p><h3>Reliability Matrix</h3></div><div class="chart-stat"><span>RUNS</span><b id="reliabilityChartRuns">—</b></div></div>
+          <div class="chart-wrap" id="reliabilityChart"><p class="muted">신뢰도 데이터를 불러오는 중입니다.</p></div>
+          <div class="chart-foot"><span>SUCCESS RATE BY SERIES</span><span id="reliabilityChartAvg">—</span></div>
+        </article>
+
+        <article class="chart-card chart-card-wide">
+          <div class="chart-head"><div><p class="eyebrow">DELIVERY PIPELINE</p><h3>Deployment Outcomes</h3></div><div class="chart-stat"><span>WINDOW</span><b id="deployChartWindow">—</b></div></div>
+          <div class="chart-wrap compact-chart" id="deployOutcomeChart"><p class="muted">배포 이력을 불러오는 중입니다.</p></div>
+          <div class="chart-foot"><span>GITHUB PAGES RECENT RUNS</span><span id="deployChartSummary">—</span></div>
+        </article>
       </div>
     </section>
 
@@ -193,7 +233,7 @@
     <footer><span>ART ARCHIVE / SYSTEM · OPERATIONS COMMAND CENTER</span><span id="footerTime"></span></footer>
   </main>
 </div>
-<script src="js/system.js?v=2.0"></script>
+<script src="js/system.js?v=2.1"></script>
 <script src="js/system-events.js?v=2.0"></script>
 </body>
 </html>
