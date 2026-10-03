@@ -1,16 +1,16 @@
 {
-  "version": "1.1",
-  "updatedAt": "2026-10-03T04:57:00.179Z",
+  "version": "1.2",
+  "updatedAt": "2026-10-03T05:01:42.883Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T04:54:00.894Z",
-      "finishedAt": "2026-10-03T04:56:55.473Z",
+      "startedAt": "2026-10-03T04:58:01.713Z",
+      "finishedAt": "2026-10-03T05:01:38.701Z",
       "result": "success",
-      "durationMs": 174579,
+      "durationMs": 216988,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -28,35 +28,133 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T04:55:09.296Z",
+    "updatedAt": "2026-10-03T05:01:43.814Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37098113696,
+      "id": 37098481372,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
-      "status": "in_progress",
+      "status": "queued",
       "conclusion": null,
-      "head_sha": "401daa8c351a83b96cec4e4f5b3e02bbdf7cd247",
-      "created_at": "2026-10-03T04:54:58Z",
-      "run_started_at": "2026-10-03T04:54:58Z",
-      "updated_at": "2026-10-03T04:55:03Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098113696",
-      "message": "Update SYSTEM runtime status"
+      "head_sha": "ae1774ae242f869428eeeb2768faab049a3e2652",
+      "created_at": "2026-10-03T05:01:42Z",
+      "run_started_at": "2026-10-03T05:01:42Z",
+      "updated_at": "2026-10-03T05:01:42Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098481372",
+      "message": "Record SYSTEM operational event"
     },
     "recentRuns": [
+      {
+        "id": 37098481372,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "queued",
+        "conclusion": null,
+        "head_sha": "ae1774ae242f869428eeeb2768faab049a3e2652",
+        "created_at": "2026-10-03T05:01:42Z",
+        "run_started_at": "2026-10-03T05:01:42Z",
+        "updated_at": "2026-10-03T05:01:42Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098481372",
+        "message": "Record SYSTEM operational event"
+      },
+      {
+        "id": 37098333120,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "c75e90c338634248802d285ef5b23260b559d4f6",
+        "created_at": "2026-10-03T04:59:07Z",
+        "run_started_at": "2026-10-03T04:59:07Z",
+        "updated_at": "2026-10-03T04:59:49Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098333120",
+        "message": "Record SYSTEM operational event"
+      },
+      {
+        "id": 37098273448,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "961e11d9ac8d207deca58955956ad344882f4134",
+        "created_at": "2026-10-03T04:57:57Z",
+        "run_started_at": "2026-10-03T04:57:57Z",
+        "updated_at": "2026-10-03T04:58:46Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098273448",
+        "message": "Treat skipped runtime as busy state"
+      },
+      {
+        "id": 37098228300,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "2856d2ee37b999be0832a6d4d5a10fae80b200aa",
+        "created_at": "2026-10-03T04:57:05Z",
+        "run_started_at": "2026-10-03T04:57:05Z",
+        "updated_at": "2026-10-03T04:57:49Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098228300",
+        "message": "Update SYSTEM runtime status"
+      },
+      {
+        "id": 37098222987,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "1c547b1493e4f77505cf8e183138be44eb3d236b",
+        "created_at": "2026-10-03T04:56:59Z",
+        "run_started_at": "2026-10-03T04:56:59Z",
+        "updated_at": "2026-10-03T04:57:09Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098222987",
+        "message": "Record SYSTEM operational event"
+      },
+      {
+        "id": 37098128279,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "9910f1aa51dd7656ca5e3f7968792e60babb3509",
+        "created_at": "2026-10-03T04:55:12Z",
+        "run_started_at": "2026-10-03T04:55:12Z",
+        "updated_at": "2026-10-03T04:55:54Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098128279",
+        "message": "Update SYSTEM runtime status"
+      },
+      {
+        "id": 37098125092,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "dd667aa6e1f76727bd210810595bd7395d8bd3f6",
+        "created_at": "2026-10-03T04:55:09Z",
+        "run_started_at": "2026-10-03T04:55:09Z",
+        "updated_at": "2026-10-03T04:55:15Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098125092",
+        "message": "Record SYSTEM operational event"
+      },
       {
         "id": 37098113696,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "cancelled",
         "head_sha": "401daa8c351a83b96cec4e4f5b3e02bbdf7cd247",
         "created_at": "2026-10-03T04:54:58Z",
         "run_started_at": "2026-10-03T04:54:58Z",
-        "updated_at": "2026-10-03T04:55:03Z",
+        "updated_at": "2026-10-03T04:55:12Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37098113696",
         "message": "Update SYSTEM runtime status"
       },
@@ -87,107 +185,45 @@
         "updated_at": "2026-10-03T04:51:18Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37097909757",
         "message": "Record SYSTEM operational event"
-      },
-      {
-        "id": 37097797126,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "4de0ccdc85b1296a8af50a7ba59909c336fde025",
-        "created_at": "2026-10-03T04:49:10Z",
-        "run_started_at": "2026-10-03T04:49:10Z",
-        "updated_at": "2026-10-03T04:49:49Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37097797126",
-        "message": "Update SYSTEM runtime status"
-      },
-      {
-        "id": 37097795596,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "d409a1f52c846c4d7ad73f48f52624549aff540f",
-        "created_at": "2026-10-03T04:49:08Z",
-        "run_started_at": "2026-10-03T04:49:08Z",
-        "updated_at": "2026-10-03T04:49:12Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37097795596",
-        "message": "Record SYSTEM operational event"
-      },
-      {
-        "id": 37097572217,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "be4959ad20b4dde54c568fe6e2c469a82f0f7281",
-        "created_at": "2026-10-03T04:45:03Z",
-        "run_started_at": "2026-10-03T04:45:03Z",
-        "updated_at": "2026-10-03T04:45:38Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37097572217",
-        "message": "Update SYSTEM runtime status"
-      },
-      {
-        "id": 37096822521,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "72be5b06bb12c1465be51e5a2b7cbc092535f251",
-        "created_at": "2026-10-03T04:31:24Z",
-        "run_started_at": "2026-10-03T04:31:24Z",
-        "updated_at": "2026-10-03T04:32:03Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37096822521",
-        "message": "Connect schedule delay metrics"
-      },
-      {
-        "id": 37096694284,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "22523e1f2081bb97296c869835ffda793fe08062",
-        "created_at": "2026-10-03T04:29:10Z",
-        "run_started_at": "2026-10-03T04:29:10Z",
-        "updated_at": "2026-10-03T04:29:58Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37096694284",
-        "message": "Add schedule delay monitor"
-      },
-      {
-        "id": 37096509946,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "b3f01dbf62d1bb552b5441a9733bbb3ec61be85c",
-        "created_at": "2026-10-03T04:25:49Z",
-        "run_started_at": "2026-10-03T04:25:49Z",
-        "updated_at": "2026-10-03T04:26:30Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37096509946",
-        "message": "Style SYSTEM Today Summary"
-      },
-      {
-        "id": 37096495114,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "f8a7b4698e9e027ed5e5ad376f3cc6e81e668d4f",
-        "created_at": "2026-10-03T04:25:31Z",
-        "run_started_at": "2026-10-03T04:25:31Z",
-        "updated_at": "2026-10-03T04:25:53Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37096495114",
-        "message": "Wire SYSTEM Today Summary metrics"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "ae1774ae242f869428eeeb2768faab049a3e2652",
+        "message": "Record SYSTEM operational event",
+        "date": "2026-10-03T05:01:40Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/ae1774ae242f869428eeeb2768faab049a3e2652"
+      },
+      {
+        "sha": "c75e90c338634248802d285ef5b23260b559d4f6",
+        "message": "Record SYSTEM operational event",
+        "date": "2026-10-03T04:59:05Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/c75e90c338634248802d285ef5b23260b559d4f6"
+      },
+      {
+        "sha": "961e11d9ac8d207deca58955956ad344882f4134",
+        "message": "Treat skipped runtime as busy state",
+        "date": "2026-10-03T04:57:55Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/961e11d9ac8d207deca58955956ad344882f4134"
+      },
+      {
+        "sha": "2856d2ee37b999be0832a6d4d5a10fae80b200aa",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T04:57:02Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/2856d2ee37b999be0832a6d4d5a10fae80b200aa"
+      },
+      {
+        "sha": "1c547b1493e4f77505cf8e183138be44eb3d236b",
+        "message": "Record SYSTEM operational event",
+        "date": "2026-10-03T04:56:58Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/1c547b1493e4f77505cf8e183138be44eb3d236b"
+      },
+      {
+        "sha": "9910f1aa51dd7656ca5e3f7968792e60babb3509",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T04:55:10Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/9910f1aa51dd7656ca5e3f7968792e60babb3509"
+      },
       {
         "sha": "dd667aa6e1f76727bd210810595bd7395d8bd3f6",
         "message": "Record SYSTEM operational event",
@@ -211,42 +247,6 @@
         "message": "Record SYSTEM operational event",
         "date": "2026-10-03T04:51:11Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/18407b200f9661942d94ea25e38712dbb7eb8bc2"
-      },
-      {
-        "sha": "4de0ccdc85b1296a8af50a7ba59909c336fde025",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T04:49:08Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/4de0ccdc85b1296a8af50a7ba59909c336fde025"
-      },
-      {
-        "sha": "d409a1f52c846c4d7ad73f48f52624549aff540f",
-        "message": "Record SYSTEM operational event",
-        "date": "2026-10-03T04:49:06Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/d409a1f52c846c4d7ad73f48f52624549aff540f"
-      },
-      {
-        "sha": "be4959ad20b4dde54c568fe6e2c469a82f0f7281",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T04:45:01Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/be4959ad20b4dde54c568fe6e2c469a82f0f7281"
-      },
-      {
-        "sha": "72be5b06bb12c1465be51e5a2b7cbc092535f251",
-        "message": "Connect schedule delay metrics",
-        "date": "2026-10-03T04:31:22Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/72be5b06bb12c1465be51e5a2b7cbc092535f251"
-      },
-      {
-        "sha": "22523e1f2081bb97296c869835ffda793fe08062",
-        "message": "Add schedule delay monitor",
-        "date": "2026-10-03T04:29:07Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/22523e1f2081bb97296c869835ffda793fe08062"
-      },
-      {
-        "sha": "b3f01dbf62d1bb552b5441a9733bbb3ec61be85c",
-        "message": "Style SYSTEM Today Summary",
-        "date": "2026-10-03T04:25:46Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/b3f01dbf62d1bb552b5441a9733bbb3ec61be85c"
       }
     ]
   }
