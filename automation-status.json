@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-03T08:19:18.056Z",
+  "updatedAt": "2026-10-03T09:52:25.010Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 19,
+  "todayTotal": 23,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -22,10 +22,10 @@
   "series": [
     {
       "name": "몽화",
-      "todayCount": 1,
-      "totalCount": 28,
-      "lastSavedAt": "2026-10-03T00:01:05.428Z",
-      "lastFile": "등불 요정의 따스한 안내빛 몽화.png",
+      "todayCount": 2,
+      "totalCount": 29,
+      "lastSavedAt": "2026-10-03T09:51:30.454Z",
+      "lastFile": "단풍 아래 포근한 낮잠 몽화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -50,10 +50,10 @@
     },
     {
       "name": "붓결",
-      "todayCount": 1,
-      "totalCount": 25,
-      "lastSavedAt": "2026-10-03T00:01:27.590Z",
-      "lastFile": "스페인 붓결.png",
+      "todayCount": 2,
+      "totalCount": 26,
+      "lastSavedAt": "2026-10-03T09:52:24.847Z",
+      "lastFile": "터키 붓결.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 1,
-      "totalCount": 33,
-      "lastSavedAt": "2026-10-03T04:21:40.296Z",
-      "lastFile": "새벽의 포도밭 부엉이와 여행자 여운.png",
+      "todayCount": 2,
+      "totalCount": 34,
+      "lastSavedAt": "2026-10-03T09:51:38.402Z",
+      "lastFile": "달빛 아래 같은 하늘 다른 이야기 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -120,10 +120,10 @@
     },
     {
       "name": "유영",
-      "todayCount": 1,
-      "totalCount": 28,
-      "lastSavedAt": "2026-10-03T00:00:51.459Z",
-      "lastFile": "복숭아빛 물결 다람쥐 유영.png",
+      "todayCount": 2,
+      "totalCount": 29,
+      "lastSavedAt": "2026-10-03T09:51:40.206Z",
+      "lastFile": "초록 물감 리본 카피바라 유영.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -223,21 +223,21 @@
     {
       "name": "유영",
       "folderName": "유영",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "복숭아빛 물결 다람쥐 유영.png",
-      "lastSavedAt": "2026-10-03T00:00:51.459Z",
-      "totalCount": 28,
+      "lastFile": "초록 물감 리본 카피바라 유영.png",
+      "lastSavedAt": "2026-10-03T09:51:40.206Z",
+      "totalCount": 29,
       "driveStatus": "ok"
     },
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "새벽의 포도밭 부엉이와 여행자 여운.png",
-      "lastSavedAt": "2026-10-03T04:21:40.296Z",
-      "totalCount": 33,
+      "lastFile": "달빛 아래 같은 하늘 다른 이야기 여운.png",
+      "lastSavedAt": "2026-10-03T09:51:38.402Z",
+      "totalCount": 34,
       "driveStatus": "ok"
     },
     {
@@ -263,14 +263,14 @@
     {
       "name": "뭉화",
       "folderName": "몽화",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "등불 요정의 따스한 안내빛 몽화.png",
-      "lastSavedAt": "2026-10-03T00:01:05.428Z",
-      "totalCount": 28,
+      "lastFile": "단풍 아래 포근한 낮잠 몽화.png",
+      "lastSavedAt": "2026-10-03T09:51:30.454Z",
+      "totalCount": 29,
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 5,
+  "manualTodayTotal": 8,
   "manualUpdatedToday": 5
 }
