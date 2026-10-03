@@ -53,4 +53,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["황제펭귄","묵수","1XGtv05P80VpUNJBPNFxaDH04iurcbtYd"],
 ["비버","신수","1GHyB1CXxj0H8v3ArFEceJYOkMnG_IswW"],
 ["코뿔소","수채화","1CLHn6QdC98gCmJaN3dXuiNBzAiS5NOIp"],
-["박쥐","잉크","11ErRq5w9bBozRmEf6kdgFCOkeDWzVXW7"]];
+["박쥐","잉크","11ErRq5w9bBozRmEf6kdgFCOkeDWzVXW7"],
+["아보카도","펄퍼스","1ntQ41t6MdAl7t_KJbpRm62SRXh8Buluc"]];
