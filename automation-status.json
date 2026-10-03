@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T09:52:25.010Z",
+  "updatedAt": "2026-10-03T09:52:38.671Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -253,11 +253,11 @@
     {
       "name": "붓결",
       "folderName": "붓결",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "스페인 붓결.png",
-      "lastSavedAt": "2026-10-03T00:01:27.590Z",
-      "totalCount": 25,
+      "lastFile": "터키 붓결.png",
+      "lastSavedAt": "2026-10-03T09:52:24.847Z",
+      "totalCount": 26,
       "driveStatus": "ok"
     },
     {
@@ -271,6 +271,6 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 8,
+  "manualTodayTotal": 9,
   "manualUpdatedToday": 5
 }
