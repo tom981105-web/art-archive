@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-03T21:11:27.406Z",
+  "updatedAt": "2026-10-03T21:13:38.480Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 2,
+  "todayTotal": 3,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -36,10 +36,10 @@
     },
     {
       "name": "묵수",
-      "todayCount": 0,
-      "totalCount": 17,
-      "lastSavedAt": "2026-10-03T08:08:02.368Z",
-      "lastFile": "황제펭귄 묵수.png",
+      "todayCount": 1,
+      "totalCount": 18,
+      "lastSavedAt": "2026-10-03T21:12:12.453Z",
+      "lastFile": "오랑우탄 묵수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
