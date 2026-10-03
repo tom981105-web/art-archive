@@ -63,4 +63,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["사슴벌레","크레스트","137-Lp8Sjue7HQn2eJihL3W7gtzD0WnB5"],
 ["갈라파고스땅거북","신수","1GlZmbMqN3MQgHbKw_l-no8pF15QHlMmZ"],
 ["오랑우탄","묵수","16ik7gMYg04z6UMSaG_Lz5V-9uEwpSoAl"],
-["공작","수채화","1pCID9M_mt3xdnL2BH629ENGudzuxkRZx"]];
+["공작","수채화","1pCID9M_mt3xdnL2BH629ENGudzuxkRZx"],
+["해파리","잉크","1_REQt5mD2w4_9FvaQfMbp4NIxoRQoKE1"]];
