@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090b0b">
   <title>ART ARCHIVE : SYSTEM</title>
-  <link rel="stylesheet" href="css/system.css?v=2.6">
+  <link rel="stylesheet" href="css/system.css?v=2.7">
 </head>
 <body>
 <div class="app-shell">
@@ -73,6 +73,12 @@
         <p id="healthCopy">상태 데이터를 불러오는 중입니다.</p>
         <div class="health-track"><i id="healthLine"></i></div>
         <div class="health-foot"><span>DRIVE</span><span>APPS SCRIPT</span><span>NOTION</span><span>DEPLOY</span></div>
+        <div class="health-breakdown">
+          <div><span>CORE</span><b id="healthCore">—</b></div>
+          <div><span>RELIABILITY</span><b id="healthReliability">—</b></div>
+          <div><span>PERFORMANCE</span><b id="healthPerformance">—</b></div>
+          <div><span>DELIVERY</span><b id="healthDelivery">—</b></div>
+        </div>
       </article>
       <article class="hero-metric panel"><span>TODAY OUTPUT</span><strong id="todayTotal">—</strong><small>ALL ARTWORKS TODAY</small></article>
       <article class="hero-metric panel"><span>TOTAL ARCHIVE</span><strong id="archiveTotal">—</strong><small>WORKS INDEXED</small></article>
@@ -367,7 +373,7 @@
     <footer><span>ART ARCHIVE / SYSTEM · OPERATIONS COMMAND CENTER</span><span id="footerTime"></span></footer>
   </main>
 </div>
-<script src="js/system.js?v=2.6"></script>
+<script src="js/system.js?v=2.7"></script>
 <script src="js/system-events.js?v=2.0"></script>
 </body>
 </html>
