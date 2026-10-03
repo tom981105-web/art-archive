@@ -1,16 +1,16 @@
 {
   "version": "1.6",
-  "updatedAt": "2026-10-03T09:41:18.553Z",
+  "updatedAt": "2026-10-03T09:56:48.847Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T09:40:59.984Z",
-      "finishedAt": "2026-10-03T09:41:18.015Z",
+      "startedAt": "2026-10-03T09:54:00.607Z",
+      "finishedAt": "2026-10-03T09:56:47.679Z",
       "result": "success",
-      "durationMs": 18031,
+      "durationMs": 167072,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -20,235 +20,235 @@
   },
   "notionSync": {
     "lastResult": "success",
-    "lastSeries": "펄퍼스",
-    "lastArtwork": "아보카도",
-    "startedAt": "2026-10-03T08:19:11.680Z",
-    "finishedAt": "2026-10-03T08:19:16.111Z",
-    "durationMs": 4431,
+    "lastSeries": "포근",
+    "lastArtwork": "숲속 별빛 인형극 축제",
+    "startedAt": "2026-10-03T09:55:39.912Z",
+    "finishedAt": "2026-10-03T09:55:46.840Z",
+    "durationMs": 6928,
     "error": null,
     "consecutiveFailures": 0
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T09:41:19.006Z",
+    "updatedAt": "2026-10-03T09:56:49.822Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37113045705,
+      "id": 37114739818,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
-      "status": "completed",
-      "conclusion": "success",
-      "head_sha": "5be011ecde98cf00108722c136c734017d867a0c",
-      "created_at": "2026-10-03T09:26:18Z",
-      "run_started_at": "2026-10-03T09:26:18Z",
-      "updated_at": "2026-10-03T09:26:55Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37113045705",
-      "message": "Update SYSTEM runtime status"
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "2887c0af50914dae2fe0d83ba6e9034dae33c327",
+      "created_at": "2026-10-03T09:56:43Z",
+      "run_started_at": "2026-10-03T09:56:43Z",
+      "updated_at": "2026-10-03T09:56:48Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114739818",
+      "message": "Update ART ARCHIVE automation status"
     },
     "recentRuns": [
       {
-        "id": 37113045705,
+        "id": 37114739818,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "in_progress",
+        "conclusion": null,
+        "head_sha": "2887c0af50914dae2fe0d83ba6e9034dae33c327",
+        "created_at": "2026-10-03T09:56:43Z",
+        "run_started_at": "2026-10-03T09:56:43Z",
+        "updated_at": "2026-10-03T09:56:48Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114739818",
+        "message": "Update ART ARCHIVE automation status"
+      },
+      {
+        "id": 37114692321,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "5be011ecde98cf00108722c136c734017d867a0c",
-        "created_at": "2026-10-03T09:26:18Z",
-        "run_started_at": "2026-10-03T09:26:18Z",
-        "updated_at": "2026-10-03T09:26:55Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37113045705",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "896c8a368d19a963c3b911756c2fd8769578e813",
+        "created_at": "2026-10-03T09:55:50Z",
+        "run_started_at": "2026-10-03T09:55:50Z",
+        "updated_at": "2026-10-03T09:56:35Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114692321",
+        "message": "Update ART ARCHIVE artworks"
       },
       {
-        "id": 37112191639,
+        "id": 37114563668,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "success",
-        "head_sha": "18468999f2847f50e9f8eee7bb7b2321f27fceee",
-        "created_at": "2026-10-03T09:11:11Z",
-        "run_started_at": "2026-10-03T09:11:11Z",
-        "updated_at": "2026-10-03T09:11:55Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37112191639",
-        "message": "Batch SYSTEM operational events"
+        "head_sha": "53bc02b69864854a1be2f8d751f765bc5789601c",
+        "created_at": "2026-10-03T09:53:29Z",
+        "run_started_at": "2026-10-03T09:53:29Z",
+        "updated_at": "2026-10-03T09:54:09Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114563668",
+        "message": "Update ART ARCHIVE automation status"
       },
       {
-        "id": 37112190361,
+        "id": 37114556137,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "5602ed4219d385de566b8c58d080283f7d802cc2",
-        "created_at": "2026-10-03T09:11:10Z",
-        "run_started_at": "2026-10-03T09:11:10Z",
-        "updated_at": "2026-10-03T09:11:13Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37112190361",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "ccc29c040dcc31ce8ac5c36df9356c3ffe176107",
+        "created_at": "2026-10-03T09:53:22Z",
+        "run_started_at": "2026-10-03T09:53:22Z",
+        "updated_at": "2026-10-03T09:53:32Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114556137",
+        "message": "Update ART ARCHIVE artworks"
       },
       {
-        "id": 37111328098,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "a471507d98c451f3a9810f62e94d9e5aefa59e45",
-        "created_at": "2026-10-03T08:55:47Z",
-        "run_started_at": "2026-10-03T08:55:47Z",
-        "updated_at": "2026-10-03T08:56:31Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37111328098",
-        "message": "Update SYSTEM runtime status"
-      },
-      {
-        "id": 37110476422,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "9df18589c0ea34e39aa90ea99ebdead8b4ad3843",
-        "created_at": "2026-10-03T08:40:09Z",
-        "run_started_at": "2026-10-03T08:40:09Z",
-        "updated_at": "2026-10-03T08:40:52Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37110476422",
-        "message": "Batch SYSTEM operational events"
-      },
-      {
-        "id": 37110475068,
+        "id": 37114537682,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "08faceffa37c8b1e85e3f0c294cdeb80aafe207a",
-        "created_at": "2026-10-03T08:40:08Z",
-        "run_started_at": "2026-10-03T08:40:08Z",
-        "updated_at": "2026-10-03T08:40:12Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37110475068",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "81e68df1f75013876a3a75e784afd678d6c18aab",
+        "created_at": "2026-10-03T09:52:59Z",
+        "run_started_at": "2026-10-03T09:52:59Z",
+        "updated_at": "2026-10-03T09:53:27Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114537682",
+        "message": "Update ART ARCHIVE automation status"
       },
       {
-        "id": 37109575172,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "60ed88a84a5a1737581a99ffd3d13a2201657b94",
-        "created_at": "2026-10-03T08:24:09Z",
-        "run_started_at": "2026-10-03T08:24:09Z",
-        "updated_at": "2026-10-03T08:24:49Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37109575172",
-        "message": "Batch SYSTEM operational events"
-      },
-      {
-        "id": 37109573908,
+        "id": 37114531725,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "5c33b8d369c36f63b1d4af1f1bb514b2bb5576bd",
-        "created_at": "2026-10-03T08:24:08Z",
-        "run_started_at": "2026-10-03T08:24:08Z",
-        "updated_at": "2026-10-03T08:24:12Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37109573908",
-        "message": "Update SYSTEM runtime status"
+        "head_sha": "124589d985458f259b432dc74cb0513c9e3bb245",
+        "created_at": "2026-10-03T09:52:52Z",
+        "run_started_at": "2026-10-03T09:52:52Z",
+        "updated_at": "2026-10-03T09:53:04Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114531725",
+        "message": "Update ART ARCHIVE artworks"
       },
       {
-        "id": 37109322014,
+        "id": 37114527063,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "1329851638a1db83f10c3f0a05420c785dfabc99",
-        "created_at": "2026-10-03T08:19:39Z",
-        "run_started_at": "2026-10-03T08:19:39Z",
-        "updated_at": "2026-10-03T08:24:10Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37109322014",
-        "message": "Sync SYSTEM long-term history"
+        "head_sha": "752a1ae43fadb4f6e8a8297c31ad785e590756ad",
+        "created_at": "2026-10-03T09:52:46Z",
+        "run_started_at": "2026-10-03T09:52:46Z",
+        "updated_at": "2026-10-03T09:52:54Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114527063",
+        "message": "Update ART ARCHIVE automation status"
       },
       {
-        "id": 37109319110,
+        "id": 37114520632,
         "name": "pages build and deployment",
         "display_title": "pages build and deployment",
         "event": "dynamic",
         "status": "completed",
         "conclusion": "cancelled",
-        "head_sha": "1329851638a1db83f10c3f0a05420c785dfabc99",
-        "created_at": "2026-10-03T08:19:36Z",
-        "run_started_at": "2026-10-03T08:19:36Z",
-        "updated_at": "2026-10-03T08:19:41Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37109319110",
-        "message": "Sync SYSTEM long-term history"
+        "head_sha": "71153e6a3319c1ac8c1604f61833538168d5f24e",
+        "created_at": "2026-10-03T09:52:39Z",
+        "run_started_at": "2026-10-03T09:52:39Z",
+        "updated_at": "2026-10-03T09:52:52Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114520632",
+        "message": "Update ART ARCHIVE artworks"
+      },
+      {
+        "id": 37114515181,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "a97d26aadb0501750a50468853604d35378be847",
+        "created_at": "2026-10-03T09:52:34Z",
+        "run_started_at": "2026-10-03T09:52:34Z",
+        "updated_at": "2026-10-03T09:52:42Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114515181",
+        "message": "Update ART ARCHIVE automation status"
+      },
+      {
+        "id": 37114506722,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "d1bb6610b185c4354dc573e1380e1c20940c68c9",
+        "created_at": "2026-10-03T09:52:25Z",
+        "run_started_at": "2026-10-03T09:52:25Z",
+        "updated_at": "2026-10-03T09:52:38Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37114506722",
+        "message": "Update ART ARCHIVE artworks"
       }
     ],
     "recentCommits": [
       {
-        "sha": "5be011ecde98cf00108722c136c734017d867a0c",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T09:26:16Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/5be011ecde98cf00108722c136c734017d867a0c"
+        "sha": "2887c0af50914dae2fe0d83ba6e9034dae33c327",
+        "message": "Update ART ARCHIVE automation status",
+        "date": "2026-10-03T09:56:42Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/2887c0af50914dae2fe0d83ba6e9034dae33c327"
       },
       {
-        "sha": "18468999f2847f50e9f8eee7bb7b2321f27fceee",
-        "message": "Batch SYSTEM operational events",
-        "date": "2026-10-03T09:11:09Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/18468999f2847f50e9f8eee7bb7b2321f27fceee"
+        "sha": "896c8a368d19a963c3b911756c2fd8769578e813",
+        "message": "Update ART ARCHIVE artworks",
+        "date": "2026-10-03T09:55:48Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/896c8a368d19a963c3b911756c2fd8769578e813"
       },
       {
-        "sha": "5602ed4219d385de566b8c58d080283f7d802cc2",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T09:11:08Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/5602ed4219d385de566b8c58d080283f7d802cc2"
+        "sha": "53bc02b69864854a1be2f8d751f765bc5789601c",
+        "message": "Update ART ARCHIVE automation status",
+        "date": "2026-10-03T09:53:27Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/53bc02b69864854a1be2f8d751f765bc5789601c"
       },
       {
-        "sha": "a471507d98c451f3a9810f62e94d9e5aefa59e45",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T08:55:45Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/a471507d98c451f3a9810f62e94d9e5aefa59e45"
+        "sha": "ccc29c040dcc31ce8ac5c36df9356c3ffe176107",
+        "message": "Update ART ARCHIVE artworks",
+        "date": "2026-10-03T09:53:20Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/ccc29c040dcc31ce8ac5c36df9356c3ffe176107"
       },
       {
-        "sha": "9df18589c0ea34e39aa90ea99ebdead8b4ad3843",
-        "message": "Batch SYSTEM operational events",
-        "date": "2026-10-03T08:40:08Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/9df18589c0ea34e39aa90ea99ebdead8b4ad3843"
+        "sha": "81e68df1f75013876a3a75e784afd678d6c18aab",
+        "message": "Update ART ARCHIVE automation status",
+        "date": "2026-10-03T09:52:57Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/81e68df1f75013876a3a75e784afd678d6c18aab"
       },
       {
-        "sha": "08faceffa37c8b1e85e3f0c294cdeb80aafe207a",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T08:40:06Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/08faceffa37c8b1e85e3f0c294cdeb80aafe207a"
+        "sha": "124589d985458f259b432dc74cb0513c9e3bb245",
+        "message": "Update ART ARCHIVE artworks",
+        "date": "2026-10-03T09:52:50Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/124589d985458f259b432dc74cb0513c9e3bb245"
       },
       {
-        "sha": "60ed88a84a5a1737581a99ffd3d13a2201657b94",
-        "message": "Batch SYSTEM operational events",
-        "date": "2026-10-03T08:24:07Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/60ed88a84a5a1737581a99ffd3d13a2201657b94"
+        "sha": "752a1ae43fadb4f6e8a8297c31ad785e590756ad",
+        "message": "Update ART ARCHIVE automation status",
+        "date": "2026-10-03T09:52:44Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/752a1ae43fadb4f6e8a8297c31ad785e590756ad"
       },
       {
-        "sha": "5c33b8d369c36f63b1d4af1f1bb514b2bb5576bd",
-        "message": "Update SYSTEM runtime status",
-        "date": "2026-10-03T08:24:06Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/5c33b8d369c36f63b1d4af1f1bb514b2bb5576bd"
+        "sha": "71153e6a3319c1ac8c1604f61833538168d5f24e",
+        "message": "Update ART ARCHIVE artworks",
+        "date": "2026-10-03T09:52:37Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/71153e6a3319c1ac8c1604f61833538168d5f24e"
       },
       {
-        "sha": "1329851638a1db83f10c3f0a05420c785dfabc99",
-        "message": "Sync SYSTEM long-term history",
-        "date": "2026-10-03T08:19:34Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/1329851638a1db83f10c3f0a05420c785dfabc99"
+        "sha": "a97d26aadb0501750a50468853604d35378be847",
+        "message": "Update ART ARCHIVE automation status",
+        "date": "2026-10-03T09:52:31Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/a97d26aadb0501750a50468853604d35378be847"
       },
       {
-        "sha": "5aa1bfc0ac47cc53f7032be5997e8b00e45244a7",
-        "message": "Sync SYSTEM usage analytics from Google Sheet",
-        "date": "2026-10-03T08:19:33Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/5aa1bfc0ac47cc53f7032be5997e8b00e45244a7"
+        "sha": "d1bb6610b185c4354dc573e1380e1c20940c68c9",
+        "message": "Update ART ARCHIVE artworks",
+        "date": "2026-10-03T09:52:24Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/d1bb6610b185c4354dc573e1380e1c20940c68c9"
       }
     ]
   }
