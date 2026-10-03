@@ -1,21 +1,21 @@
 {
   "version": "1.4",
-  "updatedAt": "2026-10-03T06:36:05.749Z",
+  "updatedAt": "2026-10-03T06:51:13.715Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T06:35:59.904Z",
-      "finishedAt": "2026-10-03T06:36:04.964Z",
-      "result": "skipped",
-      "durationMs": 5060,
-      "error": "다른 자동화 실행이 진행 중이어서 이번 회차를 건너뜀"
+      "startedAt": "2026-10-03T06:51:00.164Z",
+      "finishedAt": "2026-10-03T06:51:13.275Z",
+      "result": "success",
+      "durationMs": 13111,
+      "error": null
     },
     "consecutiveFailures": 0,
-    "busyOrSkipped": true,
-    "busyReason": "다른 자동화 실행이 진행 중이어서 이번 회차를 건너뜀",
+    "busyOrSkipped": false,
+    "busyReason": null,
     "triggerInventoryAvailable": false
   },
   "notionSync": {
@@ -30,24 +30,52 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T06:36:06.152Z",
+    "updatedAt": "2026-10-03T06:51:13.928Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37102722229,
+      "id": 37103606093,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
       "status": "completed",
       "conclusion": "success",
-      "head_sha": "279c7d540d4643e786866609853c18af9716d9cb",
-      "created_at": "2026-10-03T06:20:23Z",
-      "run_started_at": "2026-10-03T06:20:23Z",
-      "updated_at": "2026-10-03T06:23:10Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37102722229",
+      "head_sha": "fcbce381b7c7ae2a42f0153d032192d643995e77",
+      "created_at": "2026-10-03T06:36:10Z",
+      "run_started_at": "2026-10-03T06:36:10Z",
+      "updated_at": "2026-10-03T06:36:51Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37103606093",
       "message": "Batch SYSTEM operational events"
     },
     "recentRuns": [
+      {
+        "id": 37103606093,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "fcbce381b7c7ae2a42f0153d032192d643995e77",
+        "created_at": "2026-10-03T06:36:10Z",
+        "run_started_at": "2026-10-03T06:36:10Z",
+        "updated_at": "2026-10-03T06:36:51Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37103606093",
+        "message": "Batch SYSTEM operational events"
+      },
+      {
+        "id": 37103605072,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "ff2595ce5ccc4298d5ab7dee089ada90f2553f23",
+        "created_at": "2026-10-03T06:36:09Z",
+        "run_started_at": "2026-10-03T06:36:09Z",
+        "updated_at": "2026-10-03T06:36:12Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37103605072",
+        "message": "Update SYSTEM runtime status"
+      },
       {
         "id": 37102722229,
         "name": "pages build and deployment",
@@ -159,37 +187,21 @@
         "updated_at": "2026-10-03T05:38:12Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100424503",
         "message": "Add interactive telemetry filtering and drilldown"
-      },
-      {
-        "id": 37100377357,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "a963cf0e43ab2a1ccc7cee06fb0102d8f219318c",
-        "created_at": "2026-10-03T05:36:40Z",
-        "run_started_at": "2026-10-03T05:36:40Z",
-        "updated_at": "2026-10-03T05:37:26Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100377357",
-        "message": "Style telemetry filters and drilldown"
-      },
-      {
-        "id": 37100356803,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "cancelled",
-        "head_sha": "ed66d5ac34ecee7c200e5a2e41bfc65aa44258a7",
-        "created_at": "2026-10-03T05:36:17Z",
-        "run_started_at": "2026-10-03T05:36:17Z",
-        "updated_at": "2026-10-03T05:36:45Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100356803",
-        "message": "Add telemetry controls and run drilldown"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "fcbce381b7c7ae2a42f0153d032192d643995e77",
+        "message": "Batch SYSTEM operational events",
+        "date": "2026-10-03T06:36:08Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/fcbce381b7c7ae2a42f0153d032192d643995e77"
+      },
+      {
+        "sha": "ff2595ce5ccc4298d5ab7dee089ada90f2553f23",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T06:36:07Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/ff2595ce5ccc4298d5ab7dee089ada90f2553f23"
+      },
       {
         "sha": "279c7d540d4643e786866609853c18af9716d9cb",
         "message": "Batch SYSTEM operational events",
@@ -237,18 +249,6 @@
         "message": "Add interactive telemetry filtering and drilldown",
         "date": "2026-10-03T05:37:33Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/c46ba07eb231a24f7800ebe4eb890f068b8bc966"
-      },
-      {
-        "sha": "a963cf0e43ab2a1ccc7cee06fb0102d8f219318c",
-        "message": "Style telemetry filters and drilldown",
-        "date": "2026-10-03T05:36:38Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/a963cf0e43ab2a1ccc7cee06fb0102d8f219318c"
-      },
-      {
-        "sha": "ed66d5ac34ecee7c200e5a2e41bfc65aa44258a7",
-        "message": "Add telemetry controls and run drilldown",
-        "date": "2026-10-03T05:36:16Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/ed66d5ac34ecee7c200e5a2e41bfc65aa44258a7"
       }
     ]
   }
