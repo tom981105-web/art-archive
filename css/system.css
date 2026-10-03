@@ -78,3 +78,14 @@ nav a{padding:9px 11px}
 .manual-card .manual-state.good{color:var(--green);border-color:rgba(94,211,158,.25);background:rgba(94,211,158,.06)}
 .manual-card .manual-state.neutral{color:var(--muted);background:rgba(255,255,255,.025)}
 @media(max-width:720px){.manual-kpis{grid-template-columns:1fr}.manual-series-grid{grid-template-columns:1fr}}
+
+
+/* SYSTEM v1.2 · Today Summary */
+.today-summary{margin-top:0}
+.today-summary-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:14px}
+.today-summary-grid>div{background:var(--panel);padding:15px 16px;min-height:94px}
+.today-summary-grid span{display:block;font:9px var(--mono);letter-spacing:.1em;color:#69726f}
+.today-summary-grid strong{display:block;margin-top:14px;font:28px var(--mono);font-weight:400}
+.today-summary-grid small{display:block;margin-top:6px;color:#65706d;font:9px var(--mono)}
+@media(max-width:1100px){.today-summary-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.today-summary-grid{grid-template-columns:1fr 1fr}.today-summary-grid>div:last-child{grid-column:span 2}}
