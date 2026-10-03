@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-03T08:00:34.059Z",
+  "generatedAt": "2026-10-03T08:01:18.785Z",
   "source": "그림 자동화 사용량 로그 / 사용량 로그",
   "schemaVersion": 3,
   "summary": {
     "runs": 27,
-    "success": 25,
+    "success": 26,
     "failed": 1,
-    "successRate": 92.6,
+    "successRate": 96.3,
     "driveVerified": 26,
     "regenerations": 1,
     "sourceRows": 27,
@@ -16,9 +16,9 @@
     {
       "name": "크레스트",
       "runs": 5,
-      "success": 3,
+      "success": 4,
       "failed": 1,
-      "avgElapsed": 208.5,
+      "avgElapsed": 213.5,
       "regenerations": 0
     },
     {
@@ -86,9 +86,9 @@
       "regenerations": 0,
       "uploadAttempts": 1,
       "driveVerified": true,
-      "result": "running",
-      "elapsedSeconds": 196,
-      "stage": "DRIVE_VERIFIED",
+      "result": "success",
+      "elapsedSeconds": 216,
+      "stage": "COMPLETED",
       "scheduledTime": "2026-10-04 02:00:00",
       "startDelaySeconds": 0,
       "generatedFilename": "여우 크레스트.png"
