@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-03T21:05:00.412Z",
+  "updatedAt": "2026-10-03T21:11:27.406Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 1,
+  "todayTotal": 2,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 0,
-      "totalCount": 16,
-      "lastSavedAt": "2026-10-03T08:10:41.937Z",
-      "lastFile": "비버 신수.png",
+      "todayCount": 1,
+      "totalCount": 17,
+      "lastSavedAt": "2026-10-03T21:10:24.443Z",
+      "lastFile": "갈라파고스땅거북 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
