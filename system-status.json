@@ -1,6 +1,6 @@
 {
   "version": "0.4",
-  "updatedAt": "2026-10-03T00:05:45.091Z",
+  "updatedAt": "2026-10-03T00:06:09.106Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
@@ -18,11 +18,11 @@
   },
   "notionSync": {
     "lastResult": "success",
-    "lastSeries": "붓결",
-    "lastArtwork": "스페인",
-    "startedAt": "2026-10-03T00:05:35.628Z",
-    "finishedAt": "2026-10-03T00:05:44.561Z",
-    "durationMs": 8933,
+    "lastSeries": "포근",
+    "lastArtwork": "비 오는 날의 아늑한 책 제본 공방",
+    "startedAt": "2026-10-03T00:06:01.945Z",
+    "finishedAt": "2026-10-03T00:06:08.654Z",
+    "durationMs": 6709,
     "error": null,
     "consecutiveFailures": 0
   },
