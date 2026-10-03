@@ -68,3 +68,13 @@ nav a{padding:9px 11px}
 @media(max-width:1100px){
   .runtime-title>span{display:none}
 }
+
+/* SYSTEM v1.1 · Manual Series Monitor */
+.manual-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:14px}
+.manual-kpis>div{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:rgba(255,255,255,.02)}
+.manual-kpis span{display:block;font-size:10px;letter-spacing:.09em;color:var(--muted);margin-bottom:6px}
+.manual-kpis strong{font-size:24px;line-height:1}
+.manual-card .manual-state{font-size:9px;letter-spacing:.08em;border:1px solid var(--line);border-radius:999px;padding:4px 7px}
+.manual-card .manual-state.good{color:var(--green);border-color:rgba(94,211,158,.25);background:rgba(94,211,158,.06)}
+.manual-card .manual-state.neutral{color:var(--muted);background:rgba(255,255,255,.025)}
+@media(max-width:720px){.manual-kpis{grid-template-columns:1fr}.manual-series-grid{grid-template-columns:1fr}}
