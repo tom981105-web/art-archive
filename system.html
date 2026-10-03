@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#090b0b">
   <title>ART ARCHIVE : SYSTEM</title>
-  <link rel="stylesheet" href="css/system.css?v=2.2">
+  <link rel="stylesheet" href="css/system.css?v=2.3">
 </head>
 <body>
 <div class="app-shell">
@@ -99,6 +99,34 @@
         <span id="telemetryWindow">RECENT DATA</span>
       </div>
 
+      <div class="telemetry-controlbar">
+        <div class="control-group">
+          <span class="control-label">RANGE</span>
+          <div class="segmented" id="rangeControls">
+            <button data-range="1h">1H</button>
+            <button data-range="6h">6H</button>
+            <button class="active" data-range="24h">24H</button>
+            <button data-range="7d">7D</button>
+            <button data-range="30d">30D</button>
+          </div>
+        </div>
+        <div class="control-group series-control">
+          <span class="control-label">SERIES</span>
+          <select id="telemetrySeries">
+            <option value="all">ALL SERIES</option>
+            <option value="크레스트">크레스트</option>
+            <option value="묵수">묵수</option>
+            <option value="신수">신수</option>
+            <option value="수채화">수채화</option>
+            <option value="펄퍼스">펄퍼스</option>
+            <option value="잉크">잉크</option>
+            <option value="성수">성수</option>
+            <option value="융화">융화</option>
+          </select>
+        </div>
+        <div class="analysis-context" id="analysisContext">24H · ALL SERIES · — RUNS</div>
+      </div>
+
       <div class="telemetry-kpis">
         <article class="telemetry-kpi"><span>AVG RUNTIME</span><strong id="telemetryAvgRuntime">—</strong><small>recent executions</small><div class="sparkline" id="runtimeSpark"></div></article>
         <article class="telemetry-kpi"><span>P95 / PEAK</span><strong id="telemetryPeakRuntime">—</strong><small>execution duration</small><div class="sparkline" id="peakSpark"></div></article>
@@ -131,6 +159,24 @@
           <div class="chart-foot"><span>GITHUB PAGES RECENT RUNS</span><span id="deployChartSummary">—</span></div>
         </article>
       </div>
+
+      <aside class="run-detail-drawer" id="runDetailDrawer" aria-hidden="true">
+        <div class="run-detail-head">
+          <div><p class="eyebrow">EXECUTION DRILL-DOWN</p><h3 id="runDetailTitle">Run Details</h3></div>
+          <button id="runDetailClose" aria-label="Close">×</button>
+        </div>
+        <div class="run-detail-grid">
+          <div><span>SERIES</span><strong id="detailSeries">—</strong></div>
+          <div><span>RESULT</span><strong id="detailResult">—</strong></div>
+          <div><span>RUNTIME</span><strong id="detailRuntime">—</strong></div>
+          <div><span>GENERATIONS</span><strong id="detailGeneration">—</strong></div>
+          <div><span>REGENERATIONS</span><strong id="detailRegeneration">—</strong></div>
+          <div><span>DRIVE VERIFIED</span><strong id="detailDrive">—</strong></div>
+          <div><span>SCHEDULED</span><strong id="detailScheduled">—</strong></div>
+          <div><span>START DELAY</span><strong id="detailDelay">—</strong></div>
+        </div>
+        <div class="run-detail-meta"><span>START TIME</span><b id="detailTime">—</b></div>
+      </aside>
 
       <div class="advanced-observability">
         <article class="chart-card">
@@ -265,7 +311,7 @@
     <footer><span>ART ARCHIVE / SYSTEM · OPERATIONS COMMAND CENTER</span><span id="footerTime"></span></footer>
   </main>
 </div>
-<script src="js/system.js?v=2.2"></script>
+<script src="js/system.js?v=2.3"></script>
 <script src="js/system-events.js?v=2.0"></script>
 </body>
 </html>
