@@ -3,7 +3,7 @@ function tick(){const d=new Date();$('#clock').textContent=d.toLocaleTimeString(
 const systemHealthState={drive:null,script:null,notion:null,deploy:null};
 const alertState={drive:null,script:null,notion:null,deploy:null};
 const todayOpsState={autoCount:null,manualCount:null,manualUpdated:null,manualTotal:null,failed:null,driveVerified:null,autoRuns:null};
-const telemetryState={autoSeries:[],manualSeries:[],usage:null,github:null,events:[],visibleRuns:[],filter:{range:'24h',series:'all'}};
+const telemetryState={autoSeries:[],manualSeries:[],usage:null,history:null,github:null,events:[],visibleRuns:[],filter:{range:'24h',series:'all'}};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const parseRunDate=v=>{if(!v)return null;const s=String(v);const d=/[zZ]|[+-]\d\d:?\d\d$/.test(s)?new Date(s):new Date(s.replace(' ','T')+'+09:00');return isNaN(d)?null:d};
 const kstHour=d=>Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'}).format(d));
@@ -23,6 +23,56 @@ function filteredSeriesStats(){
   const rows=((telemetryState.usage||{}).series)||[];
   return telemetryState.filter.series==='all'?rows:rows.filter(x=>x.name===telemetryState.filter.series);
 }
+function filteredHistoryDays(){
+  const h=telemetryState.history||{},days=h.daily||[];
+  if(!days.length)return [];
+  const count=telemetryState.filter.range==='30d'?30:telemetryState.filter.range==='7d'?7:0;
+  if(!count)return [];
+  return days.slice(-count);
+}
+function aggregateHistory(){
+  const days=filteredHistoryDays();
+  if(!days.length)return null;
+  const selected=telemetryState.filter.series;
+  const rows=[];
+  days.forEach(day=>{
+    if(selected==='all')rows.push({
+      date:day.date,runs:day.runs||0,success:day.success||0,failed:day.failed||0,
+      avgElapsed:day.avgElapsed,driveVerified:day.driveVerified||0,regenerations:day.regenerations||0
+    });
+    else{
+      const s=(day.series||[]).find(x=>x.name===selected);
+      rows.push({
+        date:day.date,runs:s?s.runs||0:0,success:s?s.success||0:0,failed:s?s.failed||0:0,
+        avgElapsed:s?s.avgElapsed:null,driveVerified:s?s.driveVerified||0:0,regenerations:s?s.regenerations||0:0
+      });
+    }
+  });
+  const runs=rows.reduce((a,x)=>a+x.runs,0),success=rows.reduce((a,x)=>a+x.success,0),failed=rows.reduce((a,x)=>a+x.failed,0),verified=rows.reduce((a,x)=>a+x.driveVerified,0);
+  const elapsedRows=rows.filter(x=>Number.isFinite(Number(x.avgElapsed))&&x.runs>0);
+  const weightedElapsed=elapsedRows.length?elapsedRows.reduce((a,x)=>a+Number(x.avgElapsed)*x.runs,0)/elapsedRows.reduce((a,x)=>a+x.runs,0):null;
+  const bySeries={};
+  days.forEach(day=>(day.series||[]).forEach(s=>{
+    if(selected!=='all'&&s.name!==selected)return;
+    if(!bySeries[s.name])bySeries[s.name]={name:s.name,runs:0,success:0,failed:0,driveVerified:0,weightedElapsed:0,elapsedRuns:0,regenerations:0};
+    const a=bySeries[s.name];a.runs+=s.runs||0;a.success+=s.success||0;a.failed+=s.failed||0;a.driveVerified+=s.driveVerified||0;a.regenerations+=s.regenerations||0;
+    if(Number.isFinite(Number(s.avgElapsed))&&(s.runs||0)>0){a.weightedElapsed+=Number(s.avgElapsed)*(s.runs||0);a.elapsedRuns+=s.runs||0}
+  }));
+  const series=Object.values(bySeries).map(s=>({name:s.name,runs:s.runs,success:s.success,failed:s.failed,driveVerified:s.driveVerified,regenerations:s.regenerations,avgElapsed:s.elapsedRuns?s.weightedElapsed/s.elapsedRuns:null}));
+  return {days:rows,runs,success,failed,verified,avgElapsed:weightedElapsed,series};
+}
+function historyRuntimeSvg(days){
+  const rows=(days||[]).filter(x=>Number.isFinite(Number(x.avgElapsed)));
+  if(rows.length<2)return '<p class="muted">장기 실행시간 데이터가 더 쌓이면 일별 추세가 표시됩니다.</p>';
+  const w=720,h=220,l=48,r=15,t=14,b=28,vals=rows.map(x=>Number(x.avgElapsed));
+  const ymax=Math.max(10,Math.ceil(Math.max(...vals)/30)*30),x=i=>l+(w-l-r)*(i/(rows.length-1)),y=v=>t+(h-t-b)*(1-v/ymax);
+  let grid='',labels='';for(let i=0;i<=4;i++){const val=Math.round(ymax*(1-i/4));const yy=t+(h-t-b)*(i/4);grid+='<line class="chart-grid-line" x1="'+l+'" y1="'+yy+'" x2="'+(w-r)+'" y2="'+yy+'"></line>';labels+='<text class="chart-axis-label" x="4" y="'+(yy+3)+'">'+val+'s</text>'}
+  const pts=rows.map((row,i)=>[x(i),y(Number(row.avgElapsed)),row]),line=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' '),area=line+' L '+pts[pts.length-1][0].toFixed(1)+' '+(h-b)+' L '+pts[0][0].toFixed(1)+' '+(h-b)+' Z';
+  const dots=pts.map(p=>'<circle class="chart-point" cx="'+p[0].toFixed(1)+'" cy="'+p[1].toFixed(1)+'" r="4"><title>'+p[2].date+' · '+Math.round(Number(p[2].avgElapsed))+'s</title></circle>').join('');
+  const step=Math.max(1,Math.ceil(rows.length/6)),xlabels=rows.map((row,i)=>i%step===0?'<text class="chart-axis-label" x="'+x(i).toFixed(1)+'" y="'+(h-7)+'" text-anchor="middle">'+String(row.date).slice(5)+'</text>':'').join('');
+  return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+grid+labels+'<path class="chart-series-area" d="'+area+'"></path><path class="chart-series-line" d="'+line+'"></path>'+dots+xlabels+'</svg>';
+}
+
 function syncTelemetryControls(){
   const p=new URLSearchParams(location.search);
   const range=p.get('range');
@@ -38,9 +88,10 @@ function persistTelemetryFilter(){
   p.set('series',telemetryState.filter.series);
   history.replaceState(null,'',location.pathname+'?'+p.toString()+location.hash);
 }
-function updateAnalysisContext(runs){
-  if($('#analysisContext'))$('#analysisContext').textContent=telemetryState.filter.range.toUpperCase()+' · '+(telemetryState.filter.series==='all'?'ALL SERIES':telemetryState.filter.series)+' · '+runs.length+' RUNS';
-  if($('#telemetryWindow'))$('#telemetryWindow').textContent=telemetryState.filter.range.toUpperCase()+' · '+runs.length+' RUNS';
+function updateAnalysisContext(runsOrCount){
+  const count=typeof runsOrCount==='number'?runsOrCount:(runsOrCount||[]).length;
+  if($('#analysisContext'))$('#analysisContext').textContent=telemetryState.filter.range.toUpperCase()+' · '+(telemetryState.filter.series==='all'?'ALL SERIES':telemetryState.filter.series)+' · '+count+' RUNS';
+  if($('#telemetryWindow'))$('#telemetryWindow').textContent=telemetryState.filter.range.toUpperCase()+' · '+count+' RUNS';
 }
 function openRunDetail(run){
   if(!run)return;
@@ -146,24 +197,28 @@ function outputBarsSvg(autoSeries,manualSeries){
 }
 function renderTelemetry(){renderAdvancedTelemetry();
   const usage=telemetryState.usage;
-  const visibleRuns=filteredTelemetryRuns();
-  const runCounts={};
+  const longRangeOutput=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
+  const histOutput=longRangeOutput?aggregateHistory():null;
+  const visibleRuns=filteredTelemetryRuns(),runCounts={};
   visibleRuns.forEach(x=>{if(x.series)runCounts[x.series]=(runCounts[x.series]||0)+1});
-  const outputSeries=(telemetryState.filter.series==='all'?monitored:[telemetryState.filter.series]).map(name=>({name,todayCount:runCounts[name]||0}));
+  const histCounts={};if(histOutput)(histOutput.series||[]).forEach(x=>histCounts[x.name]=x.runs||0);
+  const outputSeries=(telemetryState.filter.series==='all'?monitored:[telemetryState.filter.series]).map(name=>({name,todayCount:longRangeOutput?(histCounts[name]||0):(runCounts[name]||0)}));
   if(outputSeries.length){
     const total=outputSeries.reduce((a,x)=>a+(Number(x.todayCount)||0),0);
     if($('#outputChartTotal'))$('#outputChartTotal').textContent=total;
     if($('#seriesOutputChart'))$('#seriesOutputChart').innerHTML=outputBarsSvg(outputSeries,[]);
   }
   if(usage){
-    const s=usage.summary||{},runs=filteredTelemetryRuns();updateAnalysisContext(runs);
-    const durations=runs.map(x=>Number(x.elapsedSeconds)).filter(Number.isFinite);
+    const longRange=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
+    const hist=longRange?aggregateHistory():null;
+    const s=usage.summary||{},runs=filteredTelemetryRuns();updateAnalysisContext(longRange&&hist?hist.runs:runs);
+    const durations=longRange&&hist?hist.days.map(x=>Number(x.avgElapsed)).filter(Number.isFinite):runs.map(x=>Number(x.elapsedSeconds)).filter(Number.isFinite);
     const avg=durations.length?durations.reduce((a,b)=>a+b,0)/durations.length:null;
     const sorted=[...durations].sort((a,b)=>a-b);
     const p95=sorted.length?sorted[Math.min(sorted.length-1,Math.ceil(sorted.length*.95)-1)]:null;
     const peak=sorted.length?sorted[sorted.length-1]:null;
-    const verified=runs.filter(x=>x.driveVerified===true).length,driveRate=runs.length?pct(verified,runs.length):null;
-    const filteredSuccess=runs.filter(x=>x.result==='success').length; const successRate=runs.length?(filteredSuccess/runs.length*100):NaN;
+    const verified=longRange&&hist?hist.verified:runs.filter(x=>x.driveVerified===true).length,baseRuns=longRange&&hist?hist.runs:runs.length,driveRate=baseRuns?pct(verified,baseRuns):null;
+    const filteredSuccess=longRange&&hist?hist.success:runs.filter(x=>x.result==='success').length; const successRate=baseRuns?(filteredSuccess/baseRuns*100):NaN;
     if($('#telemetryAvgRuntime'))$('#telemetryAvgRuntime').textContent=avg===null?'—':Math.round(avg)+'s';
     if($('#telemetryPeakRuntime'))$('#telemetryPeakRuntime').textContent=p95===null?'—':Math.round(p95)+'s / '+Math.round(peak)+'s';
     if($('#telemetrySuccessRate'))$('#telemetrySuccessRate').textContent=Number.isFinite(successRate)?successRate.toFixed(1)+'%':'—';
@@ -172,11 +227,11 @@ function renderTelemetry(){renderAdvancedTelemetry();
     if($('#peakSpark'))$('#peakSpark').innerHTML=sparkSvg(durations.slice(0,8).reverse().map((v,i,a)=>Math.max(...a.slice(0,i+1))));
     if($('#successGaugeMini'))$('#successGaugeMini').innerHTML=gaugeHtml(Number.isFinite(successRate)?successRate:0,filteredSuccess+' / '+runs.length+' success');
     if($('#driveGaugeMini'))$('#driveGaugeMini').innerHTML=gaugeHtml(driveRate||0,verified+' verified');
-    if($('#runtimeTrendChart'))$('#runtimeTrendChart').innerHTML=runtimeTrendSvg(runs);
+    if($('#runtimeTrendChart'))$('#runtimeTrendChart').innerHTML=longRange&&hist?historyRuntimeSvg(hist.days):runtimeTrendSvg(runs);
     if($('#runtimeChartAvg'))$('#runtimeChartAvg').textContent=avg===null?'—':Math.round(avg)+'s';
-    if($('#runtimeChartRange'))$('#runtimeChartRange').textContent=runs.length+' AVAILABLE RUNS';
+    if($('#runtimeChartRange'))$('#runtimeChartRange').textContent=longRange&&hist?(hist.days.length+' DAYS · '+hist.runs+' RUNS'):(runs.length+' AVAILABLE RUNS');
     if($('#telemetryWindow'))$('#telemetryWindow').textContent='RECENT '+runs.length+' RUNS';
-    const series=filteredSeriesStats();
+    const series=longRange&&hist?hist.series:filteredSeriesStats();
     if($('#reliabilityChartRuns'))$('#reliabilityChartRuns').textContent=series.reduce((a,x)=>a+(Number(x.runs)||0),0);
     const rates=series.map(x=>x.runs?Math.round((x.success||0)/x.runs*100):0);
     const ravg=rates.length?Math.round(rates.reduce((a,b)=>a+b,0)/rates.length):null;
@@ -265,6 +320,7 @@ function renderGithubSnapshot(d){
   updateOverallHealth();renderAlertCenter();
 }
 async function loadStatus(){try{const r=await fetch('automation-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('status');renderStatus(await r.json());$('#driveService').textContent='CONNECTED'}catch(e){$('#healthBadge').textContent='DATA ERROR';$('#healthBadge').className='status bad';$('#healthCopy').textContent='automation-status.json을 불러오지 못했습니다.';$('#driveService').textContent='CHECK DATA';$('#driveService').className='pill bad';systemHealthState.drive=0;alertState.drive='error';updateOverallHealth();renderAlertCenter()}}
+async function loadHistory(){try{const r=await fetch('system-history.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('history');telemetryState.history=await r.json();renderTelemetry()}catch(e){telemetryState.history=null;renderTelemetry()}}
 async function loadUsage(){try{const r=await fetch('system-usage.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('usage');renderUsage(await r.json())}catch(e){$('#usageSync').textContent='LOG DATA ERROR';$('#runTable').innerHTML='<p class="muted">진단 로그 데이터를 불러오지 못했습니다.</p>'}}
 async function loadScript(){try{const r=await fetch('system-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('script');const d=await r.json();renderScript(d);renderNotion(d);renderGithubSnapshot(d)}catch(e){$('#scriptBadge').textContent='DATA ERROR';$('#scriptBadge').className='status bad';$('#scriptService').textContent='UNAVAILABLE';$('#scriptService').className='pill bad';$('#scriptError').textContent='system-status.json을 불러오지 못했습니다.';systemHealthState.script=0;systemHealthState.notion=0;alertState.script='error';alertState.notion='error';updateOverallHealth();renderAlertCenter()}}
 async function loadOpsEvents(){try{const r=await fetch('system-events.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('events');const d=await r.json();telemetryState.events=d.events||[];renderAdvancedTelemetry()}catch(e){telemetryState.events=[];renderAdvancedTelemetry()}}
@@ -284,7 +340,7 @@ function setupTelemetryInteractions(){
   });
 }
 setupTelemetryInteractions();
-async function refresh(){const b=$('#refresh');b.disabled=true;b.textContent='↻ SYNCING';await Promise.all([loadStatus(),loadUsage(),loadScript(),loadGithub(),loadOpsEvents()]);b.disabled=false;b.textContent='↻ REFRESH'}$('#refresh').addEventListener('click',refresh);refresh();setInterval(()=>Promise.all([loadStatus(),loadUsage(),loadScript(),loadOpsEvents()]),60000);const navLinks=[...document.querySelectorAll('nav a')];
+async function refresh(){const b=$('#refresh');b.disabled=true;b.textContent='↻ SYNCING';await Promise.all([loadStatus(),loadUsage(),loadHistory(),loadScript(),loadGithub(),loadOpsEvents()]);b.disabled=false;b.textContent='↻ REFRESH'}$('#refresh').addEventListener('click',refresh);refresh();setInterval(()=>Promise.all([loadStatus(),loadUsage(),loadHistory(),loadScript(),loadOpsEvents()]),60000);const navLinks=[...document.querySelectorAll('nav a')];
 navLinks.forEach(a=>a.addEventListener('click',()=>{navLinks.forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
 const sectionMap=navLinks.map(a=>({a,id:a.getAttribute('href').slice(1),el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
 const scrollSpy=new IntersectionObserver(entries=>{
