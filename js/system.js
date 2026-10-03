@@ -310,7 +310,138 @@ function outputBarsSvg(autoSeries,manualSeries){
   const content=rows.map((row,i)=>{const y=8+i*rowH,bw=(w-labelW-42)*(row.value/max);return '<text class="chart-label" x="0" y="'+(y+10)+'">'+row.name+'</text><rect class="chart-bar-track" x="'+labelW+'" y="'+y+'" width="'+(w-labelW-42)+'" height="10" rx="3"></rect><rect class="chart-bar '+(row.type==='manual'?'manual':'')+'" x="'+labelW+'" y="'+y+'" width="'+Math.max(row.value?3:0,bw).toFixed(1)+'" height="10" rx="3"><title>'+row.name+' · '+row.value+'</title></rect><text class="chart-value" x="'+(w-3)+'" y="'+(y+9)+'" text-anchor="end">'+row.value+'</text>'}).join('');
   return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+content+'</svg>';
 }
-function renderTelemetry(){renderAdvancedTelemetry();renderLongRangeAnalysis();
+
+function anomalyLevelRank(level){return level==='critical'?3:level==='warning'?2:1}
+function detectTelemetryAnomalies(){
+  const anomalies=[];
+  const longRange=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
+
+  if(longRange){
+    const hist=aggregateHistory();
+    const days=hist?hist.days:[];
+    const validRuntime=days.filter(x=>Number.isFinite(Number(x.avgElapsed))&&x.runs>0);
+    const baseline=validRuntime.length?validRuntime.reduce((a,x)=>a+Number(x.avgElapsed),0)/validRuntime.length:null;
+
+    days.forEach(day=>{
+      if((day.failed||0)>0)anomalies.push({
+        level:'critical',time:day.date,title:'Daily failures detected',
+        detail:day.failed+' failure(s) in '+day.runs+' runs',value:day.failed+' FAIL'
+      });
+      const sr=day.runs?day.success/day.runs*100:100;
+      if(day.runs&&sr<90)anomalies.push({
+        level:'critical',time:day.date,title:'Success rate dropped',
+        detail:'Daily success rate fell below 90%',value:sr.toFixed(1)+'%'
+      });
+      else if(day.runs&&sr<98)anomalies.push({
+        level:'warning',time:day.date,title:'Success rate degraded',
+        detail:'Daily success rate is below 98%',value:sr.toFixed(1)+'%'
+      });
+      if(day.runs&&(day.driveVerified||0)<day.runs)anomalies.push({
+        level:'critical',time:day.date,title:'Drive verification gap',
+        detail:(day.runs-(day.driveVerified||0))+' run(s) not verified in Drive',value:(day.driveVerified||0)+' / '+day.runs
+      });
+      if(baseline&&Number.isFinite(Number(day.avgElapsed))&&day.avgElapsed>baseline*1.35&&day.avgElapsed-baseline>60)anomalies.push({
+        level:'warning',time:day.date,title:'Runtime spike',
+        detail:'Daily average runtime is '+Math.round((day.avgElapsed/baseline-1)*100)+'% above baseline',value:Math.round(day.avgElapsed)+'s'
+      });
+      if((day.regenerations||0)>0)anomalies.push({
+        level:'watch',time:day.date,title:'Regeneration activity',
+        detail:day.regenerations+' regeneration(s) recorded',value:day.regenerations+' REGEN'
+      });
+    });
+
+    const historyDays=filteredHistoryDays();
+    const selected=telemetryState.filter.series==='all'?monitored:[telemetryState.filter.series];
+    selected.forEach(name=>{
+      const samples=[];
+      historyDays.forEach(day=>{
+        const s=(day.series||[]).find(x=>x.name===name);
+        if(s&&Number.isFinite(Number(s.avgElapsed))&&s.runs)samples.push({date:day.date,value:Number(s.avgElapsed),row:s});
+      });
+      if(samples.length>=3){
+        const avg=samples.reduce((a,x)=>a+x.value,0)/samples.length;
+        const latest=samples[samples.length-1];
+        if(latest.value>avg*1.45&&latest.value-avg>75)anomalies.push({
+          level:'warning',time:latest.date,title:name+' runtime anomaly',
+          detail:'Latest average is '+Math.round((latest.value/avg-1)*100)+'% above series baseline',value:Math.round(latest.value)+'s'
+        });
+      }
+    });
+  }else{
+    const runs=filteredTelemetryRuns();
+    const durations=runs.map(x=>Number(x.elapsedSeconds)).filter(Number.isFinite);
+    const sorted=[...durations].sort((a,b)=>a-b);
+    const p95=sorted.length?sorted[Math.min(sorted.length-1,Math.ceil(sorted.length*.95)-1)]:null;
+    const seriesStats=((telemetryState.usage||{}).series)||[];
+    telemetryState.anomalyRuns=[];
+
+    runs.forEach(run=>{
+      const idx=telemetryState.anomalyRuns.length;
+      const when=run.time||'—';
+      const elapsed=Number(run.elapsedSeconds);
+      const ss=seriesStats.find(x=>x.name===run.series);
+      const seriesAvg=ss&&Number.isFinite(Number(ss.avgElapsed))?Number(ss.avgElapsed):null;
+      let pushedRun=false;
+      const add=(obj)=>{if(!pushedRun){telemetryState.anomalyRuns.push(run);pushedRun=true}obj.runIndex=idx;anomalies.push(obj)};
+
+      if(run.result==='failed')add({
+        level:'critical',time:when,title:(run.series||'Run')+' execution failed',
+        detail:'Automation run reported FAILED',value:'FAILED'
+      });
+      if(run.driveVerified===false)add({
+        level:'critical',time:when,title:(run.series||'Run')+' Drive verification failed',
+        detail:'Generated file was not verified in the target Drive folder',value:'DRIVE NO'
+      });
+      const delay=Number(run.startDelaySeconds);
+      if(Number.isFinite(delay)&&delay>600)add({
+        level:'critical',time:when,title:(run.series||'Run')+' severe schedule delay',
+        detail:'Start delay exceeded 10 minutes',value:'+'+Math.round(delay)+'s'
+      });
+      else if(Number.isFinite(delay)&&delay>300)add({
+        level:'warning',time:when,title:(run.series||'Run')+' schedule delay',
+        detail:'Start delay exceeded 5 minutes',value:'+'+Math.round(delay)+'s'
+      });
+      const threshold=Math.max(seriesAvg?seriesAvg*1.5:0,p95||0);
+      if(Number.isFinite(elapsed)&&threshold>0&&elapsed>threshold&&(seriesAvg===null||elapsed-seriesAvg>60))add({
+        level:'warning',time:when,title:(run.series||'Run')+' runtime spike',
+        detail:'Runtime exceeded the adaptive baseline',value:Math.round(elapsed)+'s'
+      });
+      if(Number(run.regenerations)>0)add({
+        level:'watch',time:when,title:(run.series||'Run')+' regeneration used',
+        detail:run.regenerations+' regeneration attempt(s) recorded',value:run.regenerations+' REGEN'
+      });
+    });
+  }
+
+  return anomalies
+    .sort((a,b)=>anomalyLevelRank(b.level)-anomalyLevelRank(a.level))
+    .slice(0,12);
+}
+function renderAnomalyCenter(){
+  const list=$('#anomalyList');if(!list)return;
+  const anomalies=detectTelemetryAnomalies();
+  const critical=anomalies.filter(x=>x.level==='critical').length;
+  const warning=anomalies.filter(x=>x.level==='warning').length;
+  const watch=anomalies.filter(x=>x.level==='watch').length;
+  if($('#anomalyCount'))$('#anomalyCount').textContent=anomalies.length;
+  if($('#anomalyCritical'))$('#anomalyCritical').textContent=critical;
+  if($('#anomalyWarning'))$('#anomalyWarning').textContent=warning;
+  if($('#anomalyWatch'))$('#anomalyWatch').textContent=watch;
+  const status=$('#anomalyStatus')&&$('#anomalyStatus').parentElement;
+  if($('#anomalyStatus'))$('#anomalyStatus').textContent=critical?'ATTENTION':warning?'DEGRADED':watch?'WATCH':'NORMAL';
+  if(status)status.className='anomaly-status '+(critical?'bad':warning?'warn':'good');
+  if(!anomalies.length){
+    list.innerHTML='<div class="anomaly-empty">현재 선택한 분석 범위에서 이상 신호가 감지되지 않았습니다.</div>';
+    return;
+  }
+  list.innerHTML=anomalies.map(a=>{
+    const click=a.runIndex!==undefined?' data-anomaly-run-index="'+a.runIndex+'" class="anomaly-item chart-clickable"':' class="anomaly-item"';
+    const time=String(a.time||'—').replace('T',' ').slice(0,16);
+    return '<div'+click+'><span class="anomaly-level '+a.level+'">'+a.level.toUpperCase()+'</span><time>'+time+'</time><div class="anomaly-copy"><b>'+a.title+'</b><small>'+a.detail+'</small></div><span class="anomaly-value '+(a.level==='critical'?'bad':a.level==='warning'?'warn':'info')+'">'+a.value+'</span></div>';
+  }).join('');
+}
+
+function renderTelemetry(){renderAdvancedTelemetry();renderLongRangeAnalysis();renderAnomalyCenter();
   const usage=telemetryState.usage;
   const longRangeOutput=telemetryState.filter.range==='7d'||telemetryState.filter.range==='30d';
   const histOutput=longRangeOutput?aggregateHistory():null;
@@ -459,6 +590,7 @@ function setupTelemetryInteractions(){
   document.addEventListener('click',e=>{
     const p=e.target.closest('[data-run-index]');if(p)openRunDetail((telemetryState.visibleRuns||[])[Number(p.dataset.runIndex)]);
     const q=e.target.closest('[data-quality-index]');if(q)openRunDetail((telemetryState.visibleQualityRuns||[])[Number(q.dataset.qualityIndex)]);
+    const a=e.target.closest('[data-anomaly-run-index]');if(a)openRunDetail((telemetryState.anomalyRuns||[])[Number(a.dataset.anomalyRunIndex)]);
   });
 }
 setupTelemetryInteractions();
