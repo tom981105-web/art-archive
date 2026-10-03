@@ -1,16 +1,16 @@
 {
   "version": "1.4",
-  "updatedAt": "2026-10-03T06:04:26.793Z",
+  "updatedAt": "2026-10-03T06:20:18.634Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T06:04:00.286Z",
-      "finishedAt": "2026-10-03T06:04:26.044Z",
+      "startedAt": "2026-10-03T06:20:00.114Z",
+      "finishedAt": "2026-10-03T06:20:18.131Z",
       "result": "success",
-      "durationMs": 25758,
+      "durationMs": 18017,
       "error": null
     },
     "consecutiveFailures": 0,
@@ -30,24 +30,38 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T06:04:27.288Z",
+    "updatedAt": "2026-10-03T06:20:19.129Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37101060152,
+      "id": 37101854456,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
       "status": "completed",
       "conclusion": "success",
-      "head_sha": "834d052ba93694c6feefe1af6af74024e0b453b1",
-      "created_at": "2026-10-03T05:49:23Z",
-      "run_started_at": "2026-10-03T05:49:23Z",
-      "updated_at": "2026-10-03T05:50:09Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37101060152",
-      "message": "Batch SYSTEM operational events"
+      "head_sha": "bfd4836c611ebcf20adce363271f669354ea0b9f",
+      "created_at": "2026-10-03T06:04:30Z",
+      "run_started_at": "2026-10-03T06:04:30Z",
+      "updated_at": "2026-10-03T06:05:13Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37101854456",
+      "message": "Update SYSTEM runtime status"
     },
     "recentRuns": [
+      {
+        "id": 37101854456,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "bfd4836c611ebcf20adce363271f669354ea0b9f",
+        "created_at": "2026-10-03T06:04:30Z",
+        "run_started_at": "2026-10-03T06:04:30Z",
+        "updated_at": "2026-10-03T06:05:13Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37101854456",
+        "message": "Update SYSTEM runtime status"
+      },
       {
         "id": 37101060152,
         "name": "pages build and deployment",
@@ -173,23 +187,15 @@
         "updated_at": "2026-10-03T05:33:33Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100203777",
         "message": "Update SYSTEM runtime status"
-      },
-      {
-        "id": 37100118203,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "8962cdf04a67961b009ac406858c001af549a410",
-        "created_at": "2026-10-03T05:31:56Z",
-        "run_started_at": "2026-10-03T05:31:56Z",
-        "updated_at": "2026-10-03T05:32:43Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37100118203",
-        "message": "Add 24h and performance observability"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "bfd4836c611ebcf20adce363271f669354ea0b9f",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T06:04:28Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/bfd4836c611ebcf20adce363271f669354ea0b9f"
+      },
       {
         "sha": "834d052ba93694c6feefe1af6af74024e0b453b1",
         "message": "Batch SYSTEM operational events",
@@ -243,12 +249,6 @@
         "message": "Update SYSTEM runtime status",
         "date": "2026-10-03T05:33:27Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/5d92a870ba1c8293e655fc778e2af65d73ca59d8"
-      },
-      {
-        "sha": "8962cdf04a67961b009ac406858c001af549a410",
-        "message": "Add 24h and performance observability",
-        "date": "2026-10-03T05:31:55Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/8962cdf04a67961b009ac406858c001af549a410"
       }
     ]
   }
