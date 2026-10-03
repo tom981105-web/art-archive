@@ -547,3 +547,15 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:28px 2px 0;co
   .anomaly-item{grid-template-columns:80px 1fr auto}
   .anomaly-item time{display:none}
 }
+
+
+/* SYSTEM v2.7 · Weighted operational health score */
+.health-card{min-height:250px}
+.health-breakdown{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:14px;
+  border:1px solid #232a28;background:#232a28;border-radius:9px;overflow:hidden
+}
+.health-breakdown>div{padding:9px 10px;background:#101414}
+.health-breakdown span{display:block;color:#59645f;font:7px var(--mono);letter-spacing:.08em}
+.health-breakdown b{display:block;margin-top:5px;font:13px var(--mono);font-weight:400;color:#cbd4d0}
+@media(max-width:760px){.health-breakdown{grid-template-columns:1fr 1fr}}
