@@ -3,8 +3,54 @@ function tick(){const d=new Date();$('#clock').textContent=d.toLocaleTimeString(
 const systemHealthState={drive:null,script:null,notion:null,deploy:null};
 const alertState={drive:null,script:null,notion:null,deploy:null};
 const todayOpsState={autoCount:null,manualCount:null,manualUpdated:null,manualTotal:null,failed:null,driveVerified:null,autoRuns:null};
-const telemetryState={autoSeries:[],manualSeries:[],usage:null,github:null};
+const telemetryState={autoSeries:[],manualSeries:[],usage:null,github:null,events:[]};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const parseRunDate=v=>{if(!v)return null;const s=String(v);const d=/[zZ]|[+-]\d\d:?\d\d$/.test(s)?new Date(s):new Date(s.replace(' ','T')+'+09:00');return isNaN(d)?null:d};
+const kstHour=d=>Number(new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Seoul',hour:'2-digit',hourCycle:'h23'}).format(d));
+function renderAdvancedTelemetry(){
+  const usage=telemetryState.usage||{},runs=usage.recentRuns||[],series=usage.series||[];
+  const github=telemetryState.github||{},deploy=((github.githubDeploy||{}).recentRuns)||[];
+  const events=telemetryState.events||[];
+  const now=Date.now(),cutoff=now-24*60*60*1000;
+
+  const timeline=[];
+  runs.forEach(x=>{const d=parseRunDate(x.time);if(d&&d.getTime()>=cutoff)timeline.push({at:d,service:'Automation',level:x.result==='failed'?'error':'success',title:(x.series||'Run')+' '+String(x.result||'').toUpperCase()})});
+  deploy.forEach(x=>{const d=parseRunDate(x.updated_at||x.created_at);if(d&&d.getTime()>=cutoff)timeline.push({at:d,service:'Deploy',level:x.conclusion==='success'?'success':x.conclusion==='cancelled'?'info':x.status==='completed'?'error':'warning',title:'Deploy '+String(x.conclusion||x.status||'').toUpperCase()})});
+  events.forEach(x=>{const d=parseRunDate(x.at);if(d&&d.getTime()>=cutoff)timeline.push({at:d,service:x.service||'SYSTEM',level:x.level||'info',title:x.title||x.status||'Event'})});
+  timeline.sort((a,b)=>a.at-b.at);
+  if($('#timelineEventCount'))$('#timelineEventCount').textContent=timeline.length;
+  if($('#operationsTimeline')){
+    if(!timeline.length)$('#operationsTimeline').innerHTML='<p class="muted">최근 24시간 기록된 운영 이벤트가 없습니다.</p>';
+    else{
+      const dots=timeline.slice(-70).map((x,i)=>{const left=clamp((x.at.getTime()-cutoff)/(24*60*60*1000)*100,0,100);const stem=28+(i%5)*18;return '<i class="timeline-event '+(x.level==='error'||x.level==='failure'?'error':x.level==='warning'?'warning':x.level==='success'?'success':'')+'" style="left:'+left.toFixed(2)+'%;--stem:'+stem+'px"><title>'+x.service+' · '+x.title+' · '+x.at.toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit'})+'</title></i>'}).join('');
+      $('#operationsTimeline').innerHTML='<div class="timeline-track"><div class="timeline-grid">'+Array(6).fill('<i></i>').join('')+'</div>'+dots+'</div><div class="timeline-axis"><span>-24h</span><span>-18h</span><span>-12h</span><span>-6h</span><span>now</span></div>';
+    }
+  }
+
+  const hours=Array.from({length:24},(_,h)=>({h,count:0}));
+  runs.forEach(x=>{const d=parseRunDate(x.time);if(d&&d.getTime()>=cutoff)hours[kstHour(d)].count++});
+  const hmax=Math.max(1,...hours.map(x=>x.count)),peak=hours.reduce((a,b)=>b.count>a.count?b:a,hours[0]);
+  if($('#heatmapPeak'))$('#heatmapPeak').textContent=String(peak.h).padStart(2,'0')+':00 · '+peak.count;
+  if($('#heatmapTotal'))$('#heatmapTotal').textContent=hours.reduce((a,x)=>a+x.count,0)+' RUNS';
+  if($('#generationHeatmap'))$('#generationHeatmap').innerHTML=hours.map(x=>'<div class="heat-cell" style="--heat:'+(0.04+0.32*(x.count/hmax)).toFixed(2)+'"><span>'+String(x.h).padStart(2,'0')+':00</span><b>'+x.count+'</b></div>').join('');
+
+  const durationSeries=series.filter(x=>Number(x.avgElapsed)>0).sort((a,b)=>Number(b.avgElapsed)-Number(a.avgElapsed));
+  const dmax=Math.max(1,...durationSeries.map(x=>Number(x.avgElapsed)));
+  if($('#slowestSeries'))$('#slowestSeries').textContent=durationSeries[0]?durationSeries[0].name:'—';
+  if($('#durationSeriesCount'))$('#durationSeriesCount').textContent=durationSeries.length+' SERIES';
+  if($('#seriesDurationChart'))$('#seriesDurationChart').innerHTML=durationSeries.length?durationSeries.map(x=>'<div class="duration-row"><span>'+x.name+'</span><div class="duration-track"><i style="width:'+clamp(Number(x.avgElapsed)/dmax*100,0,100).toFixed(1)+'%"></i></div><b>'+Math.round(Number(x.avgElapsed))+'s</b></div>').join(''):'<p class="muted">평균 처리시간 데이터가 없습니다.</p>';
+
+  const quality=runs.slice(0,32).reverse();
+  const fails=quality.filter(x=>x.result==='failed').length;
+  if($('#trendFailureCount'))$('#trendFailureCount').textContent=fails;
+  if($('#qualityTrendWindow'))$('#qualityTrendWindow').textContent=quality.length+' RUNS';
+  if($('#qualityTrend'))$('#qualityTrend').innerHTML=quality.length?quality.map(x=>'<i class="quality-bar '+(x.result==='failed'?'fail ':'')+(Number(x.regenerations)>0?'regen':'')+'" data-tip="'+(x.series||'—')+' · '+String(x.result||'—').toUpperCase()+' · '+(x.elapsedSeconds??'—')+'s"></i>').join(''):'<p class="muted">실행 이력이 없습니다.</p>';
+
+  const stateEvents=[...events].filter(x=>{const d=parseRunDate(x.at);return d&&d.getTime()>=cutoff}).sort((a,b)=>new Date(b.at)-new Date(a.at)).slice(0,12);
+  if($('#stateTimelineSummary'))$('#stateTimelineSummary').textContent=stateEvents.length+' STATE EVENTS';
+  if($('#systemStateTimeline'))$('#systemStateTimeline').innerHTML=stateEvents.length?'<div class="state-line"></div>'+stateEvents.map(x=>{const cl=x.level==='error'||x.level==='failure'?'bad':x.level==='warning'?'warn':x.level==='success'?'good':'info';return '<div class="state-item '+cl+'"><time>'+new Date(x.at).toLocaleTimeString('ko-KR',{hour:'2-digit',minute:'2-digit',hour12:false})+'</time><span class="service-name">'+(x.service||'SYSTEM')+'</span><b>'+(x.title||x.status||'Event')+'</b><em class="'+cl+'">'+String(x.status||x.level||'INFO').toUpperCase()+'</em></div>'}).join(''):'<p class="muted">최근 24시간 상태 변경 이벤트가 없습니다.</p>';
+}
+
 const pct=(n,d)=>d?Math.round(n/d*100):0;
 function sparkSvg(values){
   const nums=(values||[]).map(Number).filter(Number.isFinite);
@@ -44,7 +90,7 @@ function outputBarsSvg(autoSeries,manualSeries){
   const content=rows.map((row,i)=>{const y=8+i*rowH,bw=(w-labelW-42)*(row.value/max);return '<text class="chart-label" x="0" y="'+(y+10)+'">'+row.name+'</text><rect class="chart-bar-track" x="'+labelW+'" y="'+y+'" width="'+(w-labelW-42)+'" height="10" rx="3"></rect><rect class="chart-bar '+(row.type==='manual'?'manual':'')+'" x="'+labelW+'" y="'+y+'" width="'+Math.max(row.value?3:0,bw).toFixed(1)+'" height="10" rx="3"><title>'+row.name+' · '+row.value+'</title></rect><text class="chart-value" x="'+(w-3)+'" y="'+(y+9)+'" text-anchor="end">'+row.value+'</text>'}).join('');
   return '<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none">'+content+'</svg>';
 }
-function renderTelemetry(){
+function renderTelemetry(){renderAdvancedTelemetry();
   const usage=telemetryState.usage;
   const autoSeries=telemetryState.autoSeries||[],manualSeries=telemetryState.manualSeries||[];
   if(autoSeries.length||manualSeries.length){
@@ -164,8 +210,9 @@ function renderGithubSnapshot(d){
 async function loadStatus(){try{const r=await fetch('automation-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('status');renderStatus(await r.json());$('#driveService').textContent='CONNECTED'}catch(e){$('#healthBadge').textContent='DATA ERROR';$('#healthBadge').className='status bad';$('#healthCopy').textContent='automation-status.json을 불러오지 못했습니다.';$('#driveService').textContent='CHECK DATA';$('#driveService').className='pill bad';systemHealthState.drive=0;alertState.drive='error';updateOverallHealth();renderAlertCenter()}}
 async function loadUsage(){try{const r=await fetch('system-usage.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('usage');renderUsage(await r.json())}catch(e){$('#usageSync').textContent='LOG DATA ERROR';$('#runTable').innerHTML='<p class="muted">진단 로그 데이터를 불러오지 못했습니다.</p>'}}
 async function loadScript(){try{const r=await fetch('system-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('script');const d=await r.json();renderScript(d);renderNotion(d);renderGithubSnapshot(d)}catch(e){$('#scriptBadge').textContent='DATA ERROR';$('#scriptBadge').className='status bad';$('#scriptService').textContent='UNAVAILABLE';$('#scriptService').className='pill bad';$('#scriptError').textContent='system-status.json을 불러오지 못했습니다.';systemHealthState.script=0;systemHealthState.notion=0;alertState.script='error';alertState.notion='error';updateOverallHealth();renderAlertCenter()}}
+async function loadOpsEvents(){try{const r=await fetch('system-events.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('events');const d=await r.json();telemetryState.events=d.events||[];renderAdvancedTelemetry()}catch(e){telemetryState.events=[];renderAdvancedTelemetry()}}
 async function loadGithub(){try{const r=await fetch('system-status.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('status');renderGithubSnapshot(await r.json())}catch(e){$('#githubService').textContent='UNAVAILABLE';$('#githubService').className='pill warn';$('#deployBadge').textContent='DATA ERROR';$('#deployBadge').className='status bad';$('#deployHealth').textContent='로컬 SYSTEM 상태 파일을 불러오지 못했습니다.';systemHealthState.deploy=0;alertState.deploy='error';updateOverallHealth();renderAlertCenter()}}
-async function refresh(){const b=$('#refresh');b.disabled=true;b.textContent='↻ SYNCING';await Promise.all([loadStatus(),loadUsage(),loadScript(),loadGithub()]);b.disabled=false;b.textContent='↻ REFRESH'}$('#refresh').addEventListener('click',refresh);refresh();setInterval(()=>Promise.all([loadStatus(),loadUsage(),loadScript()]),60000);const navLinks=[...document.querySelectorAll('nav a')];
+async function refresh(){const b=$('#refresh');b.disabled=true;b.textContent='↻ SYNCING';await Promise.all([loadStatus(),loadUsage(),loadScript(),loadGithub(),loadOpsEvents()]);b.disabled=false;b.textContent='↻ REFRESH'}$('#refresh').addEventListener('click',refresh);refresh();setInterval(()=>Promise.all([loadStatus(),loadUsage(),loadScript(),loadOpsEvents()]),60000);const navLinks=[...document.querySelectorAll('nav a')];
 navLinks.forEach(a=>a.addEventListener('click',()=>{navLinks.forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
 const sectionMap=navLinks.map(a=>({a,id:a.getAttribute('href').slice(1),el:document.querySelector(a.getAttribute('href'))})).filter(x=>x.el);
 const scrollSpy=new IntersectionObserver(entries=>{
