@@ -1,21 +1,21 @@
 {
   "version": "1.8",
-  "updatedAt": "2026-10-03T11:13:30.501Z",
+  "updatedAt": "2026-10-03T11:29:05.852Z",
   "timezone": "Asia/Seoul",
   "overallStatus": "ok",
   "appsScript": {
     "project": "그림 자동화 관리자",
     "lastRun": {
       "functionName": "checkArtworkCompletion",
-      "startedAt": "2026-10-03T11:12:59.989Z",
-      "finishedAt": "2026-10-03T11:13:29.648Z",
-      "result": "success",
-      "durationMs": 29659,
-      "error": null
+      "startedAt": "2026-10-03T11:29:00.081Z",
+      "finishedAt": "2026-10-03T11:29:05.200Z",
+      "result": "skipped",
+      "durationMs": 5119,
+      "error": "다른 자동화 실행이 진행 중이어서 이번 회차를 건너뜀"
     },
     "consecutiveFailures": 0,
-    "busyOrSkipped": false,
-    "busyReason": null,
+    "busyOrSkipped": true,
+    "busyReason": "다른 자동화 실행이 진행 중이어서 이번 회차를 건너뜀",
     "triggerInventoryAvailable": false
   },
   "notionSync": {
@@ -30,24 +30,52 @@
   },
   "githubDeploy": {
     "source": "github_api_server_side",
-    "updatedAt": "2026-10-03T11:13:31.124Z",
+    "updatedAt": "2026-10-03T11:29:06.070Z",
     "fetchResult": "success",
     "error": null,
     "latestRun": {
-      "id": 37118131457,
+      "id": 37118973465,
       "name": "pages build and deployment",
       "display_title": "pages build and deployment",
       "event": "dynamic",
       "status": "completed",
       "conclusion": "success",
-      "head_sha": "c1cea26eaa5360b35237b1ba1d9b74aa5f2b7885",
-      "created_at": "2026-10-03T10:58:24Z",
-      "run_started_at": "2026-10-03T10:58:24Z",
-      "updated_at": "2026-10-03T10:59:11Z",
-      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37118131457",
+      "head_sha": "557108d5272e4f58dd82171f091f0e8d51c7a195",
+      "created_at": "2026-10-03T11:13:35Z",
+      "run_started_at": "2026-10-03T11:13:35Z",
+      "updated_at": "2026-10-03T11:14:15Z",
+      "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37118973465",
       "message": "Batch SYSTEM operational events"
     },
     "recentRuns": [
+      {
+        "id": 37118973465,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "success",
+        "head_sha": "557108d5272e4f58dd82171f091f0e8d51c7a195",
+        "created_at": "2026-10-03T11:13:35Z",
+        "run_started_at": "2026-10-03T11:13:35Z",
+        "updated_at": "2026-10-03T11:14:15Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37118973465",
+        "message": "Batch SYSTEM operational events"
+      },
+      {
+        "id": 37118972083,
+        "name": "pages build and deployment",
+        "display_title": "pages build and deployment",
+        "event": "dynamic",
+        "status": "completed",
+        "conclusion": "cancelled",
+        "head_sha": "adeeab05d2640924162a486c44376c8eecd09e7d",
+        "created_at": "2026-10-03T11:13:34Z",
+        "run_started_at": "2026-10-03T11:13:34Z",
+        "updated_at": "2026-10-03T11:13:37Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37118972083",
+        "message": "Update SYSTEM runtime status"
+      },
       {
         "id": 37118131457,
         "name": "pages build and deployment",
@@ -159,37 +187,21 @@
         "updated_at": "2026-10-03T10:16:00Z",
         "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37115803186",
         "message": "Sync SYSTEM long-term history"
-      },
-      {
-        "id": 37115690726,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "e3a5f5c1fb242949ed6a9af4af54c8cc060644e3",
-        "created_at": "2026-10-03T10:13:24Z",
-        "run_started_at": "2026-10-03T10:13:24Z",
-        "updated_at": "2026-10-03T10:14:04Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37115690726",
-        "message": "Sync SYSTEM usage analytics from Google Sheet"
-      },
-      {
-        "id": 37115618797,
-        "name": "pages build and deployment",
-        "display_title": "pages build and deployment",
-        "event": "dynamic",
-        "status": "completed",
-        "conclusion": "success",
-        "head_sha": "360c77ad8caec5effcec31134a228b9902e87938",
-        "created_at": "2026-10-03T10:12:10Z",
-        "run_started_at": "2026-10-03T10:12:10Z",
-        "updated_at": "2026-10-03T10:12:51Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/actions/runs/37115618797",
-        "message": "Batch SYSTEM operational events"
       }
     ],
     "recentCommits": [
+      {
+        "sha": "557108d5272e4f58dd82171f091f0e8d51c7a195",
+        "message": "Batch SYSTEM operational events",
+        "date": "2026-10-03T11:13:33Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/557108d5272e4f58dd82171f091f0e8d51c7a195"
+      },
+      {
+        "sha": "adeeab05d2640924162a486c44376c8eecd09e7d",
+        "message": "Update SYSTEM runtime status",
+        "date": "2026-10-03T11:13:32Z",
+        "html_url": "https://github.com/tom981105-web/art-archive/commit/adeeab05d2640924162a486c44376c8eecd09e7d"
+      },
       {
         "sha": "c1cea26eaa5360b35237b1ba1d9b74aa5f2b7885",
         "message": "Batch SYSTEM operational events",
@@ -237,18 +249,6 @@
         "message": "Sync SYSTEM long-term history",
         "date": "2026-10-03T10:15:19Z",
         "html_url": "https://github.com/tom981105-web/art-archive/commit/21103afef21676b4aae4697fe711a13d026c87ff"
-      },
-      {
-        "sha": "e3a5f5c1fb242949ed6a9af4af54c8cc060644e3",
-        "message": "Sync SYSTEM usage analytics from Google Sheet",
-        "date": "2026-10-03T10:13:23Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/e3a5f5c1fb242949ed6a9af4af54c8cc060644e3"
-      },
-      {
-        "sha": "360c77ad8caec5effcec31134a228b9902e87938",
-        "message": "Batch SYSTEM operational events",
-        "date": "2026-10-03T10:12:08Z",
-        "html_url": "https://github.com/tom981105-web/art-archive/commit/360c77ad8caec5effcec31134a228b9902e87938"
       }
     ]
   }
