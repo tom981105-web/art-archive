@@ -62,4 +62,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["숲속 별빛 인형극 축제","포근","1akpnhzmjsTPrYhwUFEKrMKsy4Dd3LSFX"],
 ["사슴벌레","크레스트","137-Lp8Sjue7HQn2eJihL3W7gtzD0WnB5"],
 ["갈라파고스땅거북","신수","1GlZmbMqN3MQgHbKw_l-no8pF15QHlMmZ"],
-["오랑우탄","묵수","16ik7gMYg04z6UMSaG_Lz5V-9uEwpSoAl"]];
+["오랑우탄","묵수","16ik7gMYg04z6UMSaG_Lz5V-9uEwpSoAl"],
+["공작","수채화","1pCID9M_mt3xdnL2BH629ENGudzuxkRZx"]];
