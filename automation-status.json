@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-04T08:15:25.344Z",
+  "updatedAt": "2026-10-04T08:16:29.482Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 10,
+  "todayTotal": 11,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -148,10 +148,10 @@
     },
     {
       "name": "잉크",
-      "todayCount": 1,
-      "totalCount": 15,
-      "lastSavedAt": "2026-10-03T21:16:55.223Z",
-      "lastFile": "해파리 잉크.png",
+      "todayCount": 2,
+      "totalCount": 16,
+      "lastSavedAt": "2026-10-04T08:15:34.507Z",
+      "lastFile": "카멜레온 잉크.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
