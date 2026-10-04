@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-04T23:20:11.688Z",
+  "updatedAt": "2026-10-04T23:28:22.946Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 11,
+  "todayTotal": 12,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 0,
-      "totalCount": 36,
-      "lastSavedAt": "2026-10-04T11:49:50.449Z",
-      "lastFile": "청록빛 호수의 오후 여운.png",
+      "todayCount": 1,
+      "totalCount": 37,
+      "lastSavedAt": "2026-10-04T23:27:22.416Z",
+      "lastFile": "달빛 바다로 향하는 아기 거북이들 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -233,11 +233,11 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "청록빛 호수의 오후 여운.png",
-      "lastSavedAt": "2026-10-04T11:49:50.449Z",
-      "totalCount": 36,
+      "todayCount": 1,
+      "updatedToday": true,
+      "lastFile": "달빛 바다로 향하는 아기 거북이들 여운.png",
+      "lastSavedAt": "2026-10-04T23:27:22.416Z",
+      "totalCount": 37,
       "driveStatus": "ok"
     },
     {
@@ -271,8 +271,8 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 4,
-  "manualUpdatedToday": 4,
+  "manualTodayTotal": 5,
+  "manualUpdatedToday": 5,
   "todayRunHealth": {
     "date": "2026-10-05",
     "planned": 16,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-04T23:20:31.786Z"
+    "checkedAt": "2026-10-04T23:28:37.374Z"
   },
   "todayRunSlots": [
     {
