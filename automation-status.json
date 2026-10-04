@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-04T11:48:58.885Z",
+  "updatedAt": "2026-10-04T11:50:53.415Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 15,
+  "todayTotal": 19,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -22,10 +22,10 @@
   "series": [
     {
       "name": "몽화",
-      "todayCount": 0,
-      "totalCount": 29,
-      "lastSavedAt": "2026-10-03T09:51:30.454Z",
-      "lastFile": "단풍 아래 포근한 낮잠 몽화.png",
+      "todayCount": 2,
+      "totalCount": 31,
+      "lastSavedAt": "2026-10-04T11:49:39.153Z",
+      "lastFile": "숲그늘의 조용한 독서 몽화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 0,
-      "totalCount": 34,
-      "lastSavedAt": "2026-10-03T09:51:38.402Z",
-      "lastFile": "달빛 아래 같은 하늘 다른 이야기 여운.png",
+      "todayCount": 2,
+      "totalCount": 36,
+      "lastSavedAt": "2026-10-04T11:49:50.449Z",
+      "lastFile": "청록빛 호수의 오후 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -233,21 +233,21 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "달빛 아래 같은 하늘 다른 이야기 여운.png",
-      "lastSavedAt": "2026-10-03T09:51:38.402Z",
-      "totalCount": 34,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "청록빛 호수의 오후 여운.png",
+      "lastSavedAt": "2026-10-04T11:49:50.449Z",
+      "totalCount": 36,
       "driveStatus": "ok"
     },
     {
       "name": "포근",
       "folderName": "포근",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "비 오는 날의 포근한 캔들 공방 포근.png",
-      "lastSavedAt": "2026-10-04T11:49:02.537Z",
-      "totalCount": 46,
+      "lastFile": "동물 친구들의 아침 열기구 여행 포근.png",
+      "lastSavedAt": "2026-10-04T11:49:06.882Z",
+      "totalCount": 47,
       "driveStatus": "ok"
     },
     {
@@ -263,16 +263,16 @@
     {
       "name": "뭉화",
       "folderName": "몽화",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "단풍 아래 포근한 낮잠 몽화.png",
-      "lastSavedAt": "2026-10-03T09:51:30.454Z",
-      "totalCount": 29,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "숲그늘의 조용한 독서 몽화.png",
+      "lastSavedAt": "2026-10-04T11:49:39.153Z",
+      "totalCount": 31,
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 3,
-  "manualUpdatedToday": 2,
+  "manualTodayTotal": 8,
+  "manualUpdatedToday": 4,
   "todayRunHealth": {
     "date": "2026-10-04",
     "planned": 16,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-04T11:49:36.737Z"
+    "checkedAt": "2026-10-04T11:51:06.209Z"
   },
   "todayRunSlots": [
     {
@@ -363,8 +363,8 @@
       "subject": "",
       "filename": "",
       "startDelaySeconds": 268,
-      "elapsedMinutes": 873.1,
-      "diagnosis": "미완료 상태에서 333분간 새 로그가 없어 중단 의심"
+      "elapsedMinutes": 874.6,
+      "diagnosis": "미완료 상태에서 334분간 새 로그가 없어 중단 의심"
     },
     {
       "date": "2026-10-04",
@@ -380,7 +380,7 @@
       "filename": "",
       "startDelaySeconds": 331,
       "elapsedMinutes": 0,
-      "diagnosis": "미완료 상태에서 872분간 새 로그가 없어 중단 의심"
+      "diagnosis": "미완료 상태에서 874분간 새 로그가 없어 중단 의심"
     },
     {
       "date": "2026-10-04",
