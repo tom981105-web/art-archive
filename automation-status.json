@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T21:32:10.565Z",
+  "updatedAt": "2026-10-04T21:33:32.161Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 11,
     "status": "pending",
-    "checkedAt": "2026-10-04T21:32:33.054Z"
+    "checkedAt": "2026-10-04T21:33:43.406Z"
   },
   "todayRunSlots": [
     {
@@ -358,7 +358,7 @@
       "status": "SUCCESS",
       "logRow": 48,
       "runId": "펄퍼스-20261005-062901",
-      "stage": "DRIVE_VERIFIED",
+      "stage": "COMPLETED",
       "result": "success",
       "subject": "배",
       "filename": "배 펄퍼스.png",
