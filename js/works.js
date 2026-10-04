@@ -82,4 +82,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["오늘의 랜덤 붓결 01","붓결","1KNgnzRjYAlBCunDOpdF-o6p8sCpwtP0l"],
 ["오늘의 랜덤 붓결 02","붓결","1pyAg-6eAQEKtgdz-PnKDuFSvB0ANfRcP"],
 ["사자","크레스트","1d6kMiry27EjVumsHL1QMdk8MTFRvmzQL"],
-["과일박쥐","묵수","1JFLWmL5kMvzs8yCzmz1Vvf0_Gn1f0OKb"]];
+["과일박쥐","묵수","1JFLWmL5kMvzs8yCzmz1Vvf0_Gn1f0OKb"],
+["코모도왕도마뱀","신수","1Stny11q8k2jv3DbNUmT9qeQuVqwr1kNO"]];
