@@ -85,4 +85,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["과일박쥐","묵수","1JFLWmL5kMvzs8yCzmz1Vvf0_Gn1f0OKb"],
 ["코모도왕도마뱀","신수","1Stny11q8k2jv3DbNUmT9qeQuVqwr1kNO"],
 ["레서판다","수채화","11IIddhDMax24SCaxvEPijnq2_SbV0lvF"],
-["배","펄퍼스","1BILBScd2eKJwvh3_N3nEQxQ26gQ8CJ5m"]];
+["배","펄퍼스","1BILBScd2eKJwvh3_N3nEQxQ26gQ8CJ5m"],
+["코끼리","잉크","1Wn6DYe_tb-Z-yLIoy7MzS6TNznGyLTv7"]];
