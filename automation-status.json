@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-04T21:33:32.161Z",
+  "updatedAt": "2026-10-04T21:41:57.692Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 5,
+  "todayTotal": 6,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -148,10 +148,10 @@
     },
     {
       "name": "잉크",
-      "todayCount": 0,
-      "totalCount": 16,
-      "lastSavedAt": "2026-10-04T08:15:34.507Z",
-      "lastFile": "카멜레온 잉크.png",
+      "todayCount": 1,
+      "totalCount": 17,
+      "lastSavedAt": "2026-10-04T21:39:43.476Z",
+      "lastFile": "코끼리 잉크.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-05",
     "planned": 16,
-    "success": 5,
+    "success": 6,
     "failed": 0,
     "stalled": 0,
     "missed": 0,
     "running": 0,
-    "pending": 11,
+    "pending": 10,
     "status": "pending",
-    "checkedAt": "2026-10-04T21:33:43.406Z"
+    "checkedAt": "2026-10-04T21:42:55.333Z"
   },
   "todayRunSlots": [
     {
@@ -371,16 +371,16 @@
       "series": "잉크",
       "scheduledTime": "06:15",
       "scheduledAt": "2026-10-04T21:15:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "status": "SUCCESS",
+      "logRow": 50,
+      "runId": "잉크-20261005-063724",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "코끼리",
+      "filename": "코끼리 잉크.png",
+      "startDelaySeconds": 1344,
+      "elapsedMinutes": 3.1,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-05",
