@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T11:55:28.820Z",
+  "updatedAt": "2026-10-04T11:55:50.808Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-04T11:55:39.650Z"
+    "checkedAt": "2026-10-04T11:55:59.651Z"
   },
   "todayRunSlots": [
     {
@@ -363,7 +363,7 @@
       "subject": "",
       "filename": "",
       "startDelaySeconds": 268,
-      "elapsedMinutes": 879.2,
+      "elapsedMinutes": 879.5,
       "diagnosis": "미완료 상태에서 339분간 새 로그가 없어 중단 의심"
     },
     {
