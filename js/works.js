@@ -68,4 +68,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["늑대","크레스트","1xSfojOlBOYwMb4LAwsz5PLVk7qS-wThP"],
 ["두더지","묵수","1sAz035idDxd6erVQkrAI_DGJhIUrfQMg"],
 ["아메리카들소","신수","1rRXm9fhsOWK_S77R8m3AIAI4QDfGjMr_"],
-["자두","펄퍼스","1RmiFnxDG4uCOurOwT1w9rb-vnoq-i3fP"]];
+["자두","펄퍼스","1RmiFnxDG4uCOurOwT1w9rb-vnoq-i3fP"],
+["늑대","수채화","1QooSw_QHA9ZgN8yWYDAYb6SJeixjZpZg"]];
