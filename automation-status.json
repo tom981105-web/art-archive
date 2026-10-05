@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-05T12:29:25.931Z",
+  "updatedAt": "2026-10-05T12:37:25.816Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 18,
+  "todayTotal": 22,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -22,10 +22,10 @@
   "series": [
     {
       "name": "몽화",
-      "todayCount": 1,
-      "totalCount": 32,
-      "lastSavedAt": "2026-10-04T23:16:30.103Z",
-      "lastFile": "빵향 가득한 행복한 오후 몽화.png",
+      "todayCount": 2,
+      "totalCount": 33,
+      "lastSavedAt": "2026-10-05T12:31:09.045Z",
+      "lastFile": "벨플라워의 꿈빛 등불 몽화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -50,10 +50,10 @@
     },
     {
       "name": "붓결",
-      "todayCount": 1,
-      "totalCount": 29,
-      "lastSavedAt": "2026-10-04T23:16:49.168Z",
-      "lastFile": "포르투갈 붓결.png",
+      "todayCount": 2,
+      "totalCount": 30,
+      "lastSavedAt": "2026-10-05T12:31:27.699Z",
+      "lastFile": "몰타 붓결.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 1,
-      "totalCount": 37,
-      "lastSavedAt": "2026-10-04T23:27:22.416Z",
-      "lastFile": "달빛 바다로 향하는 아기 거북이들 여운.png",
+      "todayCount": 2,
+      "totalCount": 38,
+      "lastSavedAt": "2026-10-05T12:31:03.922Z",
+      "lastFile": "황금빛 계단식 논을 걷는 여행자 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -204,10 +204,10 @@
     },
     {
       "name": "포근",
-      "todayCount": 1,
-      "totalCount": 48,
-      "lastSavedAt": "2026-10-04T23:16:19.275Z",
-      "lastFile": "노을빛 바닷마을의 포근한 티타임 포근.png",
+      "todayCount": 2,
+      "totalCount": 49,
+      "lastSavedAt": "2026-10-05T12:30:53.496Z",
+      "lastFile": "노을빛 하늘을 나는 친구들 포근.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -233,45 +233,45 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "달빛 바다로 향하는 아기 거북이들 여운.png",
-      "lastSavedAt": "2026-10-04T23:27:22.416Z",
-      "totalCount": 37,
+      "lastFile": "황금빛 계단식 논을 걷는 여행자 여운.png",
+      "lastSavedAt": "2026-10-05T12:31:03.922Z",
+      "totalCount": 38,
       "driveStatus": "ok"
     },
     {
       "name": "포근",
       "folderName": "포근",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "노을빛 바닷마을의 포근한 티타임 포근.png",
-      "lastSavedAt": "2026-10-04T23:16:19.275Z",
-      "totalCount": 48,
+      "lastFile": "노을빛 하늘을 나는 친구들 포근.png",
+      "lastSavedAt": "2026-10-05T12:30:53.496Z",
+      "totalCount": 49,
       "driveStatus": "ok"
     },
     {
       "name": "붓결",
       "folderName": "붓결",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "포르투갈 붓결.png",
-      "lastSavedAt": "2026-10-04T23:16:49.168Z",
-      "totalCount": 29,
+      "lastFile": "몰타 붓결.png",
+      "lastSavedAt": "2026-10-05T12:31:27.699Z",
+      "totalCount": 30,
       "driveStatus": "ok"
     },
     {
       "name": "뭉화",
       "folderName": "몽화",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "빵향 가득한 행복한 오후 몽화.png",
-      "lastSavedAt": "2026-10-04T23:16:30.103Z",
-      "totalCount": 32,
+      "lastFile": "벨플라워의 꿈빛 등불 몽화.png",
+      "lastSavedAt": "2026-10-05T12:31:09.045Z",
+      "totalCount": 33,
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 6,
+  "manualTodayTotal": 10,
   "manualUpdatedToday": 5,
   "todayRunHealth": {
     "date": "2026-10-05",
@@ -283,7 +283,7 @@
     "running": 1,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-05T12:30:34.241Z"
+    "checkedAt": "2026-10-05T12:37:48.242Z"
   },
   "todayRunSlots": [
     {
