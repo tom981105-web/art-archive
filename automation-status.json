@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T08:32:24.049Z",
+  "updatedAt": "2026-10-05T08:32:46.048Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-05",
     "planned": 16,
-    "success": 10,
+    "success": 11,
     "failed": 0,
     "stalled": 0,
     "missed": 1,
-    "running": 1,
+    "running": 0,
     "pending": 4,
     "status": "error",
-    "checkedAt": "2026-10-05T08:32:34.049Z"
+    "checkedAt": "2026-10-05T08:32:54.937Z"
   },
   "todayRunSlots": [
     {
@@ -451,16 +451,16 @@
       "series": "신수",
       "scheduledTime": "17:06",
       "scheduledAt": "2026-10-05T08:06:00.000Z",
-      "status": "RUNNING",
+      "status": "SUCCESS",
       "logRow": 54,
       "runId": "신수-20261005172722",
-      "stage": "UPLOADING",
-      "result": "running",
+      "stage": "COMPLETED",
+      "result": "success",
       "subject": "해달",
       "filename": "해달 신수.png",
       "startDelaySeconds": 683,
-      "elapsedMinutes": 0,
-      "diagnosis": "UPLOADING 단계 진행 중"
+      "elapsedMinutes": 6.5,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-05",
@@ -473,7 +473,7 @@
       "stage": "COMPLETED",
       "result": "success",
       "subject": "해마",
-      "filename": "",
+      "filename": "해마 수채화.png",
       "startDelaySeconds": 1029,
       "elapsedMinutes": 4.8,
       "diagnosis": "실행 완료"
