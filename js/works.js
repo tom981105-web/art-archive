@@ -6,4 +6,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["달빛 바다로 향하는 아기 거북이들","여운","1ELmkHtN_03QwBTII0ycJL669KFrBoi8x"],
 ["황소","크레스트","1C3PjwucDtr5nskLy_yrPu7Qawk64gjzR"],
 ["비버","묵수","1DY3Q9-tKs0cbyf7uqCK-hVlnGg_faRAm"],
-["해마","수채화","1K4jjxzSir6HojGQDNgPt1JlsFBSAtYhh"]];
+["해마","수채화","1K4jjxzSir6HojGQDNgPt1JlsFBSAtYhh"],
+["해달","신수","1mDT9f5_KXjGVzoh2eKbdZzFVj3bs8ks0"]];
