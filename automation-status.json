@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-05T08:17:23.820Z",
+  "updatedAt": "2026-10-05T08:22:37.461Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 13,
+  "todayTotal": 14,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -36,10 +36,10 @@
     },
     {
       "name": "묵수",
-      "todayCount": 1,
-      "totalCount": 20,
-      "lastSavedAt": "2026-10-04T21:08:20.002Z",
-      "lastFile": "과일박쥐 묵수.png",
+      "todayCount": 2,
+      "totalCount": 21,
+      "lastSavedAt": "2026-10-05T08:19:06.985Z",
+      "lastFile": "비버 묵수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-05",
     "planned": 16,
-    "success": 7,
+    "success": 9,
     "failed": 0,
     "stalled": 0,
     "missed": 1,
-    "running": 2,
+    "running": 0,
     "pending": 6,
     "status": "error",
-    "checkedAt": "2026-10-05T08:17:34.683Z"
+    "checkedAt": "2026-10-05T08:23:41.900Z"
   },
   "todayRunSlots": [
     {
@@ -419,32 +419,32 @@
       "series": "크레스트",
       "scheduledTime": "17:00",
       "scheduledAt": "2026-10-05T08:00:00.000Z",
-      "status": "RUNNING",
+      "status": "SUCCESS",
       "logRow": 52,
       "runId": "크레스트-20261005-170821",
-      "stage": "DRIVE_VERIFIED",
-      "result": "running",
+      "stage": "COMPLETED",
+      "result": "success",
       "subject": "황소",
       "filename": "황소 크레스트.png",
       "startDelaySeconds": 0,
-      "elapsedMinutes": 0,
-      "diagnosis": "DRIVE_VERIFIED 단계 진행 중"
+      "elapsedMinutes": 9.7,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-05",
       "series": "묵수",
       "scheduledTime": "17:03",
       "scheduledAt": "2026-10-05T08:03:00.000Z",
-      "status": "RUNNING",
+      "status": "SUCCESS",
       "logRow": 53,
       "runId": "묵수-20261005-171200",
-      "stage": "GENERATING",
-      "result": "running",
+      "stage": "COMPLETED",
+      "result": "success",
       "subject": "비버",
-      "filename": "",
+      "filename": "비버 묵수.png",
       "startDelaySeconds": 540,
-      "elapsedMinutes": 0,
-      "diagnosis": "GENERATING 단계 진행 중"
+      "elapsedMinutes": 8.4,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-05",
@@ -524,7 +524,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-05",
@@ -540,7 +540,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     }
   ]
 }
