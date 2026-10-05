@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-05T08:39:53.812Z",
+  "updatedAt": "2026-10-05T12:29:25.931Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 17,
+  "todayTotal": 18,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -120,10 +120,10 @@
     },
     {
       "name": "유영",
-      "todayCount": 1,
-      "totalCount": 32,
-      "lastSavedAt": "2026-10-04T23:16:47.520Z",
-      "lastFile": "크리미한 물감 리본 비버 유영.png",
+      "todayCount": 2,
+      "totalCount": 33,
+      "lastSavedAt": "2026-10-05T12:28:23.512Z",
+      "lastFile": "가을빛 물감 파도 코기 유영.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -223,11 +223,11 @@
     {
       "name": "유영",
       "folderName": "유영",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "크리미한 물감 리본 비버 유영.png",
-      "lastSavedAt": "2026-10-04T23:16:47.520Z",
-      "totalCount": 32,
+      "lastFile": "가을빛 물감 파도 코기 유영.png",
+      "lastSavedAt": "2026-10-05T12:28:23.512Z",
+      "totalCount": 33,
       "driveStatus": "ok"
     },
     {
@@ -271,7 +271,7 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 5,
+  "manualTodayTotal": 6,
   "manualUpdatedToday": 5,
   "todayRunHealth": {
     "date": "2026-10-05",
@@ -279,11 +279,11 @@
     "success": 12,
     "failed": 0,
     "stalled": 0,
-    "missed": 1,
-    "running": 0,
-    "pending": 3,
+    "missed": 3,
+    "running": 1,
+    "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-05T08:40:25.285Z"
+    "checkedAt": "2026-10-05T12:30:34.241Z"
   },
   "todayRunSlots": [
     {
@@ -499,23 +499,23 @@
       "series": "잉크",
       "scheduledTime": "17:15",
       "scheduledAt": "2026-10-05T08:15:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
+      "status": "RUNNING",
+      "logRow": 57,
+      "runId": "잉크-20261005-174219",
+      "stage": "GENERATED",
       "result": "",
-      "subject": "",
+      "subject": "말",
       "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "startDelaySeconds": 1639,
+      "elapsedMinutes": 3,
+      "diagnosis": "GENERATED 단계 진행 중"
     },
     {
       "date": "2026-10-05",
       "series": "성수",
       "scheduledTime": "17:18",
       "scheduledAt": "2026-10-05T08:18:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -524,14 +524,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-05",
       "series": "융화",
       "scheduledTime": "17:21",
       "scheduledAt": "2026-10-05T08:21:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -540,7 +540,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     }
   ]
 }
