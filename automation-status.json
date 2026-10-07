@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-07T10:14:40.571Z",
+  "updatedAt": "2026-10-07T10:15:30.924Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 15,
+  "todayTotal": 14,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -50,8 +50,8 @@
     },
     {
       "name": "붓결",
-      "todayCount": 2,
-      "totalCount": 32,
+      "todayCount": 1,
+      "totalCount": 31,
       "lastSavedAt": "2026-10-07T10:12:11.739Z",
       "lastFile": "브라질 붓결.png",
       "driveStatus": "ok",
@@ -253,11 +253,11 @@
     {
       "name": "붓결",
       "folderName": "붓결",
-      "todayCount": 2,
+      "todayCount": 1,
       "updatedToday": true,
       "lastFile": "브라질 붓결.png",
       "lastSavedAt": "2026-10-07T10:12:11.739Z",
-      "totalCount": 32,
+      "totalCount": 31,
       "driveStatus": "ok"
     },
     {
@@ -271,7 +271,7 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 10,
+  "manualTodayTotal": 9,
   "manualUpdatedToday": 5,
   "todayRunHealth": {
     "date": "2026-10-07",
@@ -283,7 +283,7 @@
     "running": 1,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-07T10:15:10.096Z"
+    "checkedAt": "2026-10-07T10:16:14.691Z"
   },
   "todayRunSlots": [
     {
@@ -507,7 +507,7 @@
       "subject": "토끼",
       "filename": "",
       "startDelaySeconds": 5476,
-      "elapsedMinutes": 28.9,
+      "elapsedMinutes": 30,
       "diagnosis": "STARTED 단계 진행 중"
     },
     {
