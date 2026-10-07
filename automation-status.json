@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-07T09:07:54.123Z",
+  "updatedAt": "2026-10-07T09:23:23.066Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 4,
+  "todayTotal": 5,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -190,10 +190,10 @@
     },
     {
       "name": "펄퍼스",
-      "todayCount": 0,
-      "totalCount": 24,
-      "lastSavedAt": "2026-10-05T08:38:46.324Z",
-      "lastFile": "감 펄퍼스.png",
+      "todayCount": 1,
+      "totalCount": 25,
+      "lastSavedAt": "2026-10-07T09:20:14.289Z",
+      "lastFile": "참외 펄퍼스.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-07",
     "planned": 16,
-    "success": 4,
+    "success": 5,
     "failed": 0,
     "stalled": 0,
-    "missed": 12,
+    "missed": 11,
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-07T09:08:28.218Z"
+    "checkedAt": "2026-10-07T09:23:37.258Z"
   },
   "todayRunSlots": [
     {
@@ -483,16 +483,16 @@
       "series": "펄퍼스",
       "scheduledTime": "17:12",
       "scheduledAt": "2026-10-07T08:12:00.000Z",
-      "status": "MISSED",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
+      "status": "SUCCESS",
+      "logRow": 64,
+      "runId": "펄퍼스-20261007-181720",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "참외",
+      "filename": "참외 펄퍼스.png",
+      "startDelaySeconds": 3920,
+      "elapsedMinutes": 3.1,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-07",
