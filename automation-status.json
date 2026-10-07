@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T10:12:39.324Z",
+  "updatedAt": "2026-10-07T10:13:25.963Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 1,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-07T10:13:06.329Z"
+    "checkedAt": "2026-10-07T10:13:40.364Z"
   },
   "todayRunSlots": [
     {
@@ -507,7 +507,7 @@
       "subject": "토끼",
       "filename": "",
       "startDelaySeconds": 5476,
-      "elapsedMinutes": 26.8,
+      "elapsedMinutes": 27.4,
       "diagnosis": "STARTED 단계 진행 중"
     },
     {
