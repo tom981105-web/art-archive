@@ -25,4 +25,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["달빛 호숫가의 밤","여운","1oMc4TvzKvUJyKNtnIBWSu7cDPk5vrOxc"],
 ["가을빛이 머무는 저녁","여운","1kE9TPw80MPd_McqXW717wBtYZjUKRS88"],
 ["하늘섬을 향한 작은 여행","몽화","14Ybm77Ig5Uqz-f6bK51Ukm6RacMAbsKB"],
-["딸기정원의 달콤한 쉼","몽화","1g8iMQ2LiDfRRYzzzaMMcpgSgzokx6fJc"]];
+["딸기정원의 달콤한 쉼","몽화","1g8iMQ2LiDfRRYzzzaMMcpgSgzokx6fJc"],
+["그리스 붓결 02","붓결","1ofCmBWrBQSw6FgkFtIqzetiY5RLlwAcs"]];
