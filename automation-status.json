@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-07T08:12:22.169Z",
+  "updatedAt": "2026-10-07T08:34:28.441Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 1,
+  "todayTotal": 2,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -36,10 +36,10 @@
     },
     {
       "name": "묵수",
-      "todayCount": 0,
-      "totalCount": 21,
-      "lastSavedAt": "2026-10-05T08:19:06.985Z",
-      "lastFile": "비버 묵수.png",
+      "todayCount": 1,
+      "totalCount": 22,
+      "lastSavedAt": "2026-10-07T08:28:15.945Z",
+      "lastFile": "제왕나비 묵수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-07",
     "planned": 16,
-    "success": 1,
+    "success": 2,
     "failed": 0,
     "stalled": 0,
     "missed": 8,
     "running": 0,
-    "pending": 7,
+    "pending": 6,
     "status": "error",
-    "checkedAt": "2026-10-07T08:12:39.783Z"
+    "checkedAt": "2026-10-07T08:34:40.561Z"
   },
   "todayRunSlots": [
     {
@@ -435,16 +435,16 @@
       "series": "묵수",
       "scheduledTime": "17:03",
       "scheduledAt": "2026-10-07T08:03:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "status": "SUCCESS",
+      "logRow": 61,
+      "runId": "묵수-20261007-172440",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "제왕나비",
+      "filename": "제왕나비 묵수.png",
+      "startDelaySeconds": 1300,
+      "elapsedMinutes": 4.4,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-07",
@@ -508,7 +508,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-07",
@@ -524,7 +524,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-07",
@@ -540,7 +540,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     }
   ]
 }
