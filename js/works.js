@@ -15,4 +15,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["벨플라워의 꿈빛 등불","몽화","1Jwrmhm_WJyKPh58xE_DyOuSN4IVB_r8w"],
 ["몰타","붓결","1pMj_pka3wersqfGQO9Xd9BCF98zuQh0i"],
 ["불곰","크레스트","1fsC1p1bwev24DPJYe9tJcFbkwhSnuTQI"],
-["말","크레스트","1yGvi6nc4z2kTqt2uGFHL3TV2Xz5HdANo"]];
+["말","크레스트","1yGvi6nc4z2kTqt2uGFHL3TV2Xz5HdANo"],
+["제왕나비","묵수","1wzOaz7z12uTgpiK9qycgU1_XehF5ME5a"]];
