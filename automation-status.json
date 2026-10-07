@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-07T08:34:28.441Z",
+  "updatedAt": "2026-10-07T08:48:33.982Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 2,
+  "todayTotal": 3,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 0,
-      "totalCount": 20,
-      "lastSavedAt": "2026-10-05T08:31:53.675Z",
-      "lastFile": "해달 신수.png",
+      "todayCount": 1,
+      "totalCount": 21,
+      "lastSavedAt": "2026-10-07T08:47:35.644Z",
+      "lastFile": "큰날여우박쥐 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -280,10 +280,10 @@
     "failed": 0,
     "stalled": 0,
     "missed": 8,
-    "running": 0,
-    "pending": 6,
+    "running": 1,
+    "pending": 5,
     "status": "error",
-    "checkedAt": "2026-10-07T08:34:40.561Z"
+    "checkedAt": "2026-10-07T08:48:48.165Z"
   },
   "todayRunSlots": [
     {
@@ -451,16 +451,16 @@
       "series": "신수",
       "scheduledTime": "17:06",
       "scheduledAt": "2026-10-07T08:06:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "status": "RUNNING",
+      "logRow": 62,
+      "runId": "신수-20261007174438",
+      "stage": "UPLOADING",
+      "result": "running",
+      "subject": "큰날여우박쥐",
+      "filename": "큰날여우박쥐 신수.png",
+      "startDelaySeconds": 278,
+      "elapsedMinutes": 0,
+      "diagnosis": "UPLOADING 단계 진행 중"
     },
     {
       "date": "2026-10-07",
