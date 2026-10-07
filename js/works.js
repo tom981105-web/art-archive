@@ -17,4 +17,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["불곰","크레스트","1fsC1p1bwev24DPJYe9tJcFbkwhSnuTQI"],
 ["말","크레스트","1yGvi6nc4z2kTqt2uGFHL3TV2Xz5HdANo"],
 ["제왕나비","묵수","1wzOaz7z12uTgpiK9qycgU1_XehF5ME5a"],
-["큰날여우박쥐","신수","1VpOcwCQ0Z7N2xARbA5xlFvlaO8gYfsja"]];
+["큰날여우박쥐","신수","1VpOcwCQ0Z7N2xARbA5xlFvlaO8gYfsja"],
+["문어","수채화","1KxZhEqNx1To_ZtSJD9BLOQnxlNtcxnKQ"]];
