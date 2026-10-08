@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-08T21:04:27.365Z",
+  "updatedAt": "2026-10-08T21:44:18.924Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 1,
+  "todayTotal": 3,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -36,10 +36,10 @@
     },
     {
       "name": "묵수",
-      "todayCount": 0,
-      "totalCount": 22,
-      "lastSavedAt": "2026-10-07T08:28:15.945Z",
-      "lastFile": "제왕나비 묵수.png",
+      "todayCount": 1,
+      "totalCount": 23,
+      "lastSavedAt": "2026-10-08T21:43:03.381Z",
+      "lastFile": "큰뿔양 묵수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -148,10 +148,10 @@
     },
     {
       "name": "잉크",
-      "todayCount": 0,
-      "totalCount": 18,
-      "lastSavedAt": "2026-10-08T10:26:41.236Z",
-      "lastFile": "용 잉크.png",
+      "todayCount": 1,
+      "totalCount": 19,
+      "lastSavedAt": "2026-10-08T21:43:28.859Z",
+      "lastFile": "오징어 잉크.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-09",
     "planned": 16,
-    "success": 0,
-    "failed": 0,
+    "success": 3,
+    "failed": 1,
     "stalled": 0,
     "missed": 0,
     "running": 0,
-    "pending": 16,
-    "status": "pending",
-    "checkedAt": "2026-10-08T21:05:44.937Z"
+    "pending": 12,
+    "status": "error",
+    "checkedAt": "2026-10-08T21:44:59.728Z"
   },
   "todayRunSlots": [
     {
@@ -291,32 +291,32 @@
       "series": "크레스트",
       "scheduledTime": "06:00",
       "scheduledAt": "2026-10-08T21:00:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "status": "SUCCESS",
+      "logRow": 78,
+      "runId": "크레스트-20261009-055739",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "하마",
+      "filename": "하마 크레스트.png",
+      "startDelaySeconds": 0,
+      "elapsedMinutes": 4.5,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-09",
       "series": "묵수",
       "scheduledTime": "06:03",
       "scheduledAt": "2026-10-08T21:03:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "status": "SUCCESS",
+      "logRow": 80,
+      "runId": "묵수-20261009-063623",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "큰뿔양",
+      "filename": "큰뿔양 묵수.png",
+      "startDelaySeconds": 2003,
+      "elapsedMinutes": 8.6,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-09",
@@ -332,7 +332,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
@@ -348,39 +348,39 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
       "series": "펄퍼스",
       "scheduledTime": "06:12",
       "scheduledAt": "2026-10-08T21:12:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "status": "FAILED",
+      "logRow": 79,
+      "runId": "펄퍼스-20261009-060210",
+      "stage": "FAILED",
+      "result": "failed",
+      "subject": "리치",
+      "filename": "리치 펄퍼스.png",
+      "startDelaySeconds": 0,
+      "elapsedMinutes": 3,
+      "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
       "date": "2026-10-09",
       "series": "잉크",
       "scheduledTime": "06:15",
       "scheduledAt": "2026-10-08T21:15:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "status": "SUCCESS",
+      "logRow": 81,
+      "runId": "잉크-20261009-063623",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "오징어",
+      "filename": "오징어 잉크.png",
+      "startDelaySeconds": 1283,
+      "elapsedMinutes": 8.6,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-09",
@@ -396,7 +396,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
@@ -412,7 +412,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
