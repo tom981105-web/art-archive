@@ -21,4 +21,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["하마","크레스트","1NyY19wQG_kD0UDpZ9FBeMPUNLqHUqjnK"],
 ["큰뿔양","묵수","1-6Dja2gQFEM0geGgZQIqppWcHPyzjfip"],
 ["오징어","잉크","1s-l6XoiJgjuiIqxIQ1YBXXKMUpRZ97Pp"],
-["사향소","신수","156F1UkQ-srx23oz5jQQvSzfXpeQ1deo3"]];
+["사향소","신수","156F1UkQ-srx23oz5jQQvSzfXpeQ1deo3"],
+["백학","성수","1TcstWbJFRA0bQ0EjyQ70v8FdLbaHZ_WJ"]];
