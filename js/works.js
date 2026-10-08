@@ -4,4 +4,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["별빛 호숫가의 가을 캠핑","포근","1uXM5pj9LUgHGToRXkrBspumxs-F1j97K"],
 ["리스본","붓결","16pRKymzYxyn6uCtGrsj0cY0pEbR5Lb0V"],
 ["코뿔소","성수","1ZBPeqpxOpqAO1ZBgJR6IhUGXIzwOxuZa"],
-["라쿤","크레스트","1H_Zmgb5eGecbdC9T-VTGXa1mXh9wv3fT"]];
+["라쿤","크레스트","1H_Zmgb5eGecbdC9T-VTGXa1mXh9wv3fT"],
+["용","잉크","1-vU7Is5dErfTZFcE0yn73lLEin-_CKBd"]];
