@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T11:02:12.007Z",
+  "updatedAt": "2026-10-08T11:02:48.490Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-08T11:02:30.133Z"
+    "checkedAt": "2026-10-08T11:03:02.933Z"
   },
   "todayRunSlots": [
     {
@@ -523,7 +523,7 @@
       "subject": "악어",
       "filename": "악어 성수.png",
       "startDelaySeconds": 8633,
-      "elapsedMinutes": 20.6,
+      "elapsedMinutes": 21.2,
       "diagnosis": "실행 완료"
     },
     {
