@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-08T11:05:46.001Z",
+  "updatedAt": "2026-10-08T11:07:27.143Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 14,
+  "todayTotal": 15,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -134,10 +134,10 @@
     },
     {
       "name": "융화",
-      "todayCount": 0,
-      "totalCount": 13,
-      "lastSavedAt": "2026-10-02T21:25:34.869Z",
-      "lastFile": "아홀로틀 융화.png",
+      "todayCount": 1,
+      "totalCount": 14,
+      "lastSavedAt": "2026-10-08T11:06:23.409Z",
+      "lastFile": "바다거북 융화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-08T11:06:08.898Z"
+    "checkedAt": "2026-10-08T11:07:44.628Z"
   },
   "todayRunSlots": [
     {
@@ -523,7 +523,7 @@
       "subject": "악어",
       "filename": "악어 성수.png",
       "startDelaySeconds": 8633,
-      "elapsedMinutes": 24.3,
+      "elapsedMinutes": 25.9,
       "diagnosis": "실행 완료"
     },
     {
