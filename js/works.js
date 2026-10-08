@@ -6,4 +6,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["코뿔소","성수","1ZBPeqpxOpqAO1ZBgJR6IhUGXIzwOxuZa"],
 ["라쿤","크레스트","1H_Zmgb5eGecbdC9T-VTGXa1mXh9wv3fT"],
 ["용","잉크","1-vU7Is5dErfTZFcE0yn73lLEin-_CKBd"],
-["악어","성수","1NDxe9sjr3MoSxSqToMh6AOh_b4bytxRK"]];
+["악어","성수","1NDxe9sjr3MoSxSqToMh6AOh_b4bytxRK"],
+["가을 노을 아래 호숫가의 쉼","포근","1Ux_o0jIdUYmpugpgdamWkdbNvFwPgVK4"]];
