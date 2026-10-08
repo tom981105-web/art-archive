@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T22:24:24.291Z",
+  "updatedAt": "2026-10-08T22:24:48.135Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-08T22:24:34.324Z"
+    "checkedAt": "2026-10-08T22:24:58.744Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "큰뿔양",
       "filename": "큰뿔양 묵수.png",
       "startDelaySeconds": 2003,
-      "elapsedMinutes": 48.2,
+      "elapsedMinutes": 48.6,
       "diagnosis": "실행 완료"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "오징어",
       "filename": "오징어 잉크.png",
       "startDelaySeconds": 1283,
-      "elapsedMinutes": 48.2,
+      "elapsedMinutes": 48.6,
       "diagnosis": "실행 완료"
     },
     {
