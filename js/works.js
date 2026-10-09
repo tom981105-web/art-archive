@@ -28,4 +28,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["복숭아빛 무한고리 페럿","유영","14UN7W45poCCntBQkxTXTyysPW-nvDdRp"],
 ["베트남","붓결","1KrZ3H4bdVz2ilcNfZXELFrMtksY_H9_v"],
 ["체코","붓결","18tj6UC9-QVLhU8JUtbOefnt3MIx8oltO"],
-["달빛 아래 조용한 소원","몽화","1R9tfWaIiMIylYbg-SEMRctyehIl3Yhrw"]];
+["달빛 아래 조용한 소원","몽화","1R9tfWaIiMIylYbg-SEMRctyehIl3Yhrw"],
+["가을빛 속 포근한 독서","몽화","1FnuY5gruAA7mBzb49yDx8L6yM_hoj0Yl"]];
