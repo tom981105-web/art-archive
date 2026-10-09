@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-09T02:35:45.443Z",
+  "updatedAt": "2026-10-09T02:36:34.402Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 12,
+  "todayTotal": 16,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 0,
-      "totalCount": 42,
-      "lastSavedAt": "2026-10-08T11:01:14.781Z",
-      "lastFile": "벨로라 구름바다를 달리는 길 여운.png",
+      "todayCount": 2,
+      "totalCount": 44,
+      "lastSavedAt": "2026-10-09T02:36:25.155Z",
+      "lastFile": "비 내린 새벽 바유나 호수 여행 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -204,10 +204,10 @@
     },
     {
       "name": "포근",
-      "todayCount": 0,
-      "totalCount": 53,
-      "lastSavedAt": "2026-10-08T11:00:52.558Z",
-      "lastFile": "다시 처음처럼 그리는 오후 포근.png",
+      "todayCount": 2,
+      "totalCount": 55,
+      "lastSavedAt": "2026-10-09T02:36:21.077Z",
+      "lastFile": "숲속 우체국에 도착한 작은 편지들 포근.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -233,21 +233,21 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "벨로라 구름바다를 달리는 길 여운.png",
-      "lastSavedAt": "2026-10-08T11:01:14.781Z",
-      "totalCount": 42,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "비 내린 새벽 바유나 호수 여행 여운.png",
+      "lastSavedAt": "2026-10-09T02:36:25.155Z",
+      "totalCount": 44,
       "driveStatus": "ok"
     },
     {
       "name": "포근",
       "folderName": "포근",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "다시 처음처럼 그리는 오후 포근.png",
-      "lastSavedAt": "2026-10-08T11:00:52.558Z",
-      "totalCount": 53,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "숲속 우체국에 도착한 작은 편지들 포근.png",
+      "lastSavedAt": "2026-10-09T02:36:21.077Z",
+      "totalCount": 55,
       "driveStatus": "ok"
     },
     {
@@ -271,8 +271,8 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 6,
-  "manualUpdatedToday": 3,
+  "manualTodayTotal": 10,
+  "manualUpdatedToday": 5,
   "todayRunHealth": {
     "date": "2026-10-09",
     "planned": 16,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-09T02:36:15.517Z"
+    "checkedAt": "2026-10-09T02:36:57.808Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "큰뿔양",
       "filename": "큰뿔양 묵수.png",
       "startDelaySeconds": 2003,
-      "elapsedMinutes": 299.9,
+      "elapsedMinutes": 300.6,
       "diagnosis": "실행 완료"
     },
     {
@@ -347,7 +347,7 @@
       "subject": "큰부리새",
       "filename": "",
       "startDelaySeconds": 15803,
-      "elapsedMinutes": 63.9,
+      "elapsedMinutes": 64.6,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "오징어",
       "filename": "오징어 잉크.png",
       "startDelaySeconds": 1283,
-      "elapsedMinutes": 299.9,
+      "elapsedMinutes": 300.6,
       "diagnosis": "실행 완료"
     },
     {
@@ -411,7 +411,7 @@
       "subject": "반딧불이",
       "filename": "",
       "startDelaySeconds": 5760,
-      "elapsedMinutes": 219.3,
+      "elapsedMinutes": 220,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
