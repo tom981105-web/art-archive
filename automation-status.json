@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T09:31:01.521Z",
+  "updatedAt": "2026-10-09T09:32:31.956Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 2,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-09T09:32:06.244Z"
+    "checkedAt": "2026-10-09T09:32:57.475Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "큰뿔양",
       "filename": "큰뿔양 묵수.png",
       "startDelaySeconds": 2003,
-      "elapsedMinutes": 715.7,
+      "elapsedMinutes": 716.6,
       "diagnosis": "실행 완료"
     },
     {
@@ -347,7 +347,7 @@
       "subject": "큰부리새",
       "filename": "",
       "startDelaySeconds": 15803,
-      "elapsedMinutes": 479.7,
+      "elapsedMinutes": 480.6,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "오징어",
       "filename": "오징어 잉크.png",
       "startDelaySeconds": 1283,
-      "elapsedMinutes": 715.7,
+      "elapsedMinutes": 716.6,
       "diagnosis": "실행 완료"
     },
     {
@@ -411,7 +411,7 @@
       "subject": "반딧불이",
       "filename": "",
       "startDelaySeconds": 5760,
-      "elapsedMinutes": 635.1,
+      "elapsedMinutes": 636,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -427,7 +427,7 @@
       "subject": "사마귀",
       "filename": "사마귀 크레스트.png",
       "startDelaySeconds": 301,
-      "elapsedMinutes": 87.1,
+      "elapsedMinutes": 87.9,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -459,7 +459,7 @@
       "subject": "바다코끼리",
       "filename": "바다코끼리 신수.png",
       "startDelaySeconds": 4410,
-      "elapsedMinutes": 12.6,
+      "elapsedMinutes": 13.5,
       "diagnosis": "COMPLETED_WITH_FORMAT_DEVIATION 단계 진행 중"
     },
     {
@@ -523,7 +523,7 @@
       "subject": "백룡",
       "filename": "백룡 성수.png",
       "startDelaySeconds": 3690,
-      "elapsedMinutes": 12.6,
+      "elapsedMinutes": 13.5,
       "diagnosis": "COMPLETED_WITH_FORMAT_DEVIATION 단계 진행 중"
     },
     {
