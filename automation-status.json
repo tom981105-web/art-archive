@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-09T22:41:53.233Z",
+  "updatedAt": "2026-10-09T22:43:47.203Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 4,
+  "todayTotal": 8,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -50,10 +50,10 @@
     },
     {
       "name": "붓결",
-      "todayCount": 0,
-      "totalCount": 36,
-      "lastSavedAt": "2026-10-09T02:35:29.450Z",
-      "lastFile": "체코 붓결.png",
+      "todayCount": 2,
+      "totalCount": 38,
+      "lastSavedAt": "2026-10-09T22:43:47.421Z",
+      "lastFile": "태국 붓결.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -204,10 +204,10 @@
     },
     {
       "name": "포근",
-      "todayCount": 0,
-      "totalCount": 55,
-      "lastSavedAt": "2026-10-09T02:36:21.077Z",
-      "lastFile": "숲속 우체국에 도착한 작은 편지들 포근.png",
+      "todayCount": 2,
+      "totalCount": 57,
+      "lastSavedAt": "2026-10-09T22:42:11.162Z",
+      "lastFile": "햇살 가득한 창가의 낮잠 친구들 포근.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -243,21 +243,21 @@
     {
       "name": "포근",
       "folderName": "포근",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "숲속 우체국에 도착한 작은 편지들 포근.png",
-      "lastSavedAt": "2026-10-09T02:36:21.077Z",
-      "totalCount": 55,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "햇살 가득한 창가의 낮잠 친구들 포근.png",
+      "lastSavedAt": "2026-10-09T22:42:11.162Z",
+      "totalCount": 57,
       "driveStatus": "ok"
     },
     {
       "name": "붓결",
       "folderName": "붓결",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "체코 붓결.png",
-      "lastSavedAt": "2026-10-09T02:35:29.450Z",
-      "totalCount": 36,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "태국 붓결.png",
+      "lastSavedAt": "2026-10-09T22:43:47.421Z",
+      "totalCount": 38,
       "driveStatus": "ok"
     },
     {
@@ -271,8 +271,8 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 4,
-  "manualUpdatedToday": 2,
+  "manualTodayTotal": 8,
+  "manualUpdatedToday": 4,
   "todayRunHealth": {
     "date": "2026-10-10",
     "planned": 16,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-09T22:42:09.036Z"
+    "checkedAt": "2026-10-09T22:44:04.568Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "오카피",
       "filename": "",
       "startDelaySeconds": 1954,
-      "elapsedMinutes": 66.6,
+      "elapsedMinutes": 68.5,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "매너티",
       "filename": "",
       "startDelaySeconds": 4188,
-      "elapsedMinutes": 26.4,
+      "elapsedMinutes": 28.3,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "바다거북",
       "filename": "",
       "startDelaySeconds": 1234,
-      "elapsedMinutes": 66.6,
+      "elapsedMinutes": 68.5,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "만타가오리",
       "filename": "",
       "startDelaySeconds": 3468,
-      "elapsedMinutes": 26.4,
+      "elapsedMinutes": 28.3,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
