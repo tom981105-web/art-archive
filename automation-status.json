@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T02:40:57.504Z",
+  "updatedAt": "2026-10-09T02:41:58.922Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-09T02:41:34.990Z"
+    "checkedAt": "2026-10-09T02:42:27.676Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "큰뿔양",
       "filename": "큰뿔양 묵수.png",
       "startDelaySeconds": 2003,
-      "elapsedMinutes": 305.2,
+      "elapsedMinutes": 306.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -347,7 +347,7 @@
       "subject": "큰부리새",
       "filename": "",
       "startDelaySeconds": 15803,
-      "elapsedMinutes": 69.2,
+      "elapsedMinutes": 70.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "오징어",
       "filename": "오징어 잉크.png",
       "startDelaySeconds": 1283,
-      "elapsedMinutes": 305.2,
+      "elapsedMinutes": 306.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -411,7 +411,7 @@
       "subject": "반딧불이",
       "filename": "",
       "startDelaySeconds": 5760,
-      "elapsedMinutes": 224.6,
+      "elapsedMinutes": 225.5,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
