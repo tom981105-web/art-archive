@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T22:44:55.578Z",
+  "updatedAt": "2026-10-09T22:45:40.116Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-09T22:45:15.261Z"
+    "checkedAt": "2026-10-09T22:45:59.759Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "오카피",
       "filename": "",
       "startDelaySeconds": 1954,
-      "elapsedMinutes": 69.7,
+      "elapsedMinutes": 70.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "매너티",
       "filename": "",
       "startDelaySeconds": 4188,
-      "elapsedMinutes": 29.5,
+      "elapsedMinutes": 30.2,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "바다거북",
       "filename": "",
       "startDelaySeconds": 1234,
-      "elapsedMinutes": 69.7,
+      "elapsedMinutes": 70.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "만타가오리",
       "filename": "",
       "startDelaySeconds": 3468,
-      "elapsedMinutes": 29.5,
+      "elapsedMinutes": 30.2,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
