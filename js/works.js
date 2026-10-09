@@ -42,4 +42,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["이슬빛 작은 소망","몽화","1wM4IFxsDR_HmbA4P4oixb63iKilBar82"],
 ["아침이슬의 작은 기도","몽화","1QyuqDaTPYImULSM76uOuXWEHSSKG62Dw"],
 ["햇살 가득한 토끼의 빨래방","포근","1l2nTScbMF2QKJNI5MxjSV4c1HNpyoh3X"],
-["햇살 가득한 창가의 낮잠 친구들","포근","15j_J4-LsINAdWLBP8uC_mu4NG6XZ575J"]];
+["햇살 가득한 창가의 낮잠 친구들","포근","15j_J4-LsINAdWLBP8uC_mu4NG6XZ575J"],
+["태국","붓결","1ngZrObLiiCxI2ZOu1bRj1mdaSus_lf_I"]];
