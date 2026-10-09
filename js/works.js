@@ -23,4 +23,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["오징어","잉크","1s-l6XoiJgjuiIqxIQ1YBXXKMUpRZ97Pp"],
 ["사향소","신수","156F1UkQ-srx23oz5jQQvSzfXpeQ1deo3"],
 ["백학","성수","1TcstWbJFRA0bQ0EjyQ70v8FdLbaHZ_WJ"],
-["스타프루트","펄퍼스","1sH7X2jStJDDWpUNUELf2eDmtJLy1cMfw"]];
+["스타프루트","펄퍼스","1sH7X2jStJDDWpUNUELf2eDmtJLy1cMfw"],
+["푸른 파스텔 물감 펭귄","유영","1A2IGNSMZd587CWSBB8Y_4g7KoMhD1O_P"]];
