@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-09T22:45:40.116Z",
+  "updatedAt": "2026-10-09T22:48:00.458Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 7,
+  "todayTotal": 10,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -50,10 +50,10 @@
     },
     {
       "name": "붓결",
-      "todayCount": 1,
-      "totalCount": 37,
-      "lastSavedAt": "2026-10-09T22:43:47.421Z",
-      "lastFile": "태국 붓결.png",
+      "todayCount": 2,
+      "totalCount": 38,
+      "lastSavedAt": "2026-10-09T22:46:15.356Z",
+      "lastFile": "노르웨이 붓결.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -106,10 +106,10 @@
     },
     {
       "name": "여운",
-      "todayCount": 0,
-      "totalCount": 44,
-      "lastSavedAt": "2026-10-09T02:36:25.155Z",
-      "lastFile": "비 내린 새벽 바유나 호수 여행 여운.png",
+      "todayCount": 2,
+      "totalCount": 46,
+      "lastSavedAt": "2026-10-09T22:46:37.998Z",
+      "lastFile": "사막의 여정 나야라 여운.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -233,11 +233,11 @@
     {
       "name": "여운",
       "folderName": "여운",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "비 내린 새벽 바유나 호수 여행 여운.png",
-      "lastSavedAt": "2026-10-09T02:36:25.155Z",
-      "totalCount": 44,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "사막의 여정 나야라 여운.png",
+      "lastSavedAt": "2026-10-09T22:46:37.998Z",
+      "totalCount": 46,
       "driveStatus": "ok"
     },
     {
@@ -253,11 +253,11 @@
     {
       "name": "붓결",
       "folderName": "붓결",
-      "todayCount": 1,
+      "todayCount": 2,
       "updatedToday": true,
-      "lastFile": "태국 붓결.png",
-      "lastSavedAt": "2026-10-09T22:43:47.421Z",
-      "totalCount": 37,
+      "lastFile": "노르웨이 붓결.png",
+      "lastSavedAt": "2026-10-09T22:46:15.356Z",
+      "totalCount": 38,
       "driveStatus": "ok"
     },
     {
@@ -271,8 +271,8 @@
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 7,
-  "manualUpdatedToday": 4,
+  "manualTodayTotal": 10,
+  "manualUpdatedToday": 5,
   "todayRunHealth": {
     "date": "2026-10-10",
     "planned": 16,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-09T22:45:59.759Z"
+    "checkedAt": "2026-10-09T22:48:15.713Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "오카피",
       "filename": "",
       "startDelaySeconds": 1954,
-      "elapsedMinutes": 70.4,
+      "elapsedMinutes": 72.7,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "매너티",
       "filename": "",
       "startDelaySeconds": 4188,
-      "elapsedMinutes": 30.2,
+      "elapsedMinutes": 32.5,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "바다거북",
       "filename": "",
       "startDelaySeconds": 1234,
-      "elapsedMinutes": 70.4,
+      "elapsedMinutes": 72.7,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "만타가오리",
       "filename": "",
       "startDelaySeconds": 3468,
-      "elapsedMinutes": 30.2,
+      "elapsedMinutes": 32.5,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
