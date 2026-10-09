@@ -37,4 +37,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["패션프루트","펄퍼스","15zclMO82E-cv1ZW-JrsaMcgGipKC0eOm"],
 ["바다코끼리","신수","1YD64mq3mUphT6Zbr8XnoDH5Lw2b0mEVk"],
 ["백룡","성수","1hDiCi2BHa96vfHDzcJ3vz0L-0FEP9Mjl"],
-["복숭아빛 물감 띠 햄스터","유영","1CMScX8mr6MjTWMjg1V06dfALZcroDkqV"]];
+["복숭아빛 물감 띠 햄스터","유영","1CMScX8mr6MjTWMjg1V06dfALZcroDkqV"],
+["푸른 물감 파도 수달","유영","1Gv1uGVM3WngSWHQAHAve3mcFJteSVHjB"]];
