@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-09T08:11:26.068Z",
+  "updatedAt": "2026-10-09T09:31:01.521Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 17,
+  "todayTotal": 19,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -64,10 +64,10 @@
     },
     {
       "name": "성수",
-      "todayCount": 1,
-      "totalCount": 18,
-      "lastSavedAt": "2026-10-08T22:23:48.032Z",
-      "lastFile": "백학 성수.png",
+      "todayCount": 2,
+      "totalCount": 19,
+      "lastSavedAt": "2026-10-09T09:26:19.139Z",
+      "lastFile": "백룡 성수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 1,
-      "totalCount": 22,
-      "lastSavedAt": "2026-10-08T22:23:41.202Z",
-      "lastFile": "사향소 신수.png",
+      "todayCount": 2,
+      "totalCount": 23,
+      "lastSavedAt": "2026-10-09T09:26:09.402Z",
+      "lastFile": "바다코끼리 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -279,11 +279,11 @@
     "success": 5,
     "failed": 3,
     "stalled": 0,
-    "missed": 2,
-    "running": 0,
-    "pending": 6,
+    "missed": 6,
+    "running": 2,
+    "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-09T08:11:37.762Z"
+    "checkedAt": "2026-10-09T09:32:06.244Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "큰뿔양",
       "filename": "큰뿔양 묵수.png",
       "startDelaySeconds": 2003,
-      "elapsedMinutes": 635.2,
+      "elapsedMinutes": 715.7,
       "diagnosis": "실행 완료"
     },
     {
@@ -347,7 +347,7 @@
       "subject": "큰부리새",
       "filename": "",
       "startDelaySeconds": 15803,
-      "elapsedMinutes": 399.2,
+      "elapsedMinutes": 479.7,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "오징어",
       "filename": "오징어 잉크.png",
       "startDelaySeconds": 1283,
-      "elapsedMinutes": 635.2,
+      "elapsedMinutes": 715.7,
       "diagnosis": "실행 완료"
     },
     {
@@ -411,7 +411,7 @@
       "subject": "반딧불이",
       "filename": "",
       "startDelaySeconds": 5760,
-      "elapsedMinutes": 554.6,
+      "elapsedMinutes": 635.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -427,7 +427,7 @@
       "subject": "사마귀",
       "filename": "사마귀 크레스트.png",
       "startDelaySeconds": 301,
-      "elapsedMinutes": 6.6,
+      "elapsedMinutes": 87.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -435,7 +435,7 @@
       "series": "묵수",
       "scheduledTime": "17:03",
       "scheduledAt": "2026-10-09T08:03:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -444,30 +444,30 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-09",
       "series": "신수",
       "scheduledTime": "17:06",
       "scheduledAt": "2026-10-09T08:06:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "status": "RUNNING",
+      "logRow": 95,
+      "runId": "신수-20261009-181930",
+      "stage": "COMPLETED_WITH_FORMAT_DEVIATION",
+      "result": "partial",
+      "subject": "바다코끼리",
+      "filename": "바다코끼리 신수.png",
+      "startDelaySeconds": 4410,
+      "elapsedMinutes": 12.6,
+      "diagnosis": "COMPLETED_WITH_FORMAT_DEVIATION 단계 진행 중"
     },
     {
       "date": "2026-10-09",
       "series": "수채화",
       "scheduledTime": "17:09",
       "scheduledAt": "2026-10-09T08:09:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -476,7 +476,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-09",
@@ -499,7 +499,7 @@
       "series": "잉크",
       "scheduledTime": "17:15",
       "scheduledAt": "2026-10-09T08:15:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -508,30 +508,30 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-09",
       "series": "성수",
       "scheduledTime": "17:18",
       "scheduledAt": "2026-10-09T08:18:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "status": "RUNNING",
+      "logRow": 96,
+      "runId": "성수-20261009-181930",
+      "stage": "COMPLETED_WITH_FORMAT_DEVIATION",
+      "result": "partial",
+      "subject": "백룡",
+      "filename": "백룡 성수.png",
+      "startDelaySeconds": 3690,
+      "elapsedMinutes": 12.6,
+      "diagnosis": "COMPLETED_WITH_FORMAT_DEVIATION 단계 진행 중"
     },
     {
       "date": "2026-10-09",
       "series": "융화",
       "scheduledTime": "17:21",
       "scheduledAt": "2026-10-09T08:21:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -540,7 +540,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     }
   ]
 }
