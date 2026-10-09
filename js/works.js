@@ -39,4 +39,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["백룡","성수","1hDiCi2BHa96vfHDzcJ3vz0L-0FEP9Mjl"],
 ["복숭아빛 물감 띠 햄스터","유영","1CMScX8mr6MjTWMjg1V06dfALZcroDkqV"],
 ["푸른 물감 파도 수달","유영","1Gv1uGVM3WngSWHQAHAve3mcFJteSVHjB"],
-["이슬빛 작은 소망","몽화","1wM4IFxsDR_HmbA4P4oixb63iKilBar82"]];
+["이슬빛 작은 소망","몽화","1wM4IFxsDR_HmbA4P4oixb63iKilBar82"],
+["아침이슬의 작은 기도","몽화","1QyuqDaTPYImULSM76uOuXWEHSSKG62Dw"]];
