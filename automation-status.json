@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-09T02:45:23.912Z",
+  "updatedAt": "2026-10-09T08:11:26.068Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 16,
+  "todayTotal": 17,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -190,10 +190,10 @@
     },
     {
       "name": "펄퍼스",
-      "todayCount": 1,
-      "totalCount": 26,
-      "lastSavedAt": "2026-10-09T01:36:50.641Z",
-      "lastFile": "스타프루트 펄퍼스.png",
+      "todayCount": 2,
+      "totalCount": 27,
+      "lastSavedAt": "2026-10-09T08:10:21.502Z",
+      "lastFile": "패션프루트 펄퍼스.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-09",
     "planned": 16,
-    "success": 4,
-    "failed": 2,
+    "success": 5,
+    "failed": 3,
     "stalled": 0,
     "missed": 2,
     "running": 0,
-    "pending": 8,
+    "pending": 6,
     "status": "error",
-    "checkedAt": "2026-10-09T02:45:36.521Z"
+    "checkedAt": "2026-10-09T08:11:37.762Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "큰뿔양",
       "filename": "큰뿔양 묵수.png",
       "startDelaySeconds": 2003,
-      "elapsedMinutes": 309.2,
+      "elapsedMinutes": 635.2,
       "diagnosis": "실행 완료"
     },
     {
@@ -347,7 +347,7 @@
       "subject": "큰부리새",
       "filename": "",
       "startDelaySeconds": 15803,
-      "elapsedMinutes": 73.2,
+      "elapsedMinutes": 399.2,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "오징어",
       "filename": "오징어 잉크.png",
       "startDelaySeconds": 1283,
-      "elapsedMinutes": 309.2,
+      "elapsedMinutes": 635.2,
       "diagnosis": "실행 완료"
     },
     {
@@ -411,7 +411,7 @@
       "subject": "반딧불이",
       "filename": "",
       "startDelaySeconds": 5760,
-      "elapsedMinutes": 228.6,
+      "elapsedMinutes": 554.6,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -419,16 +419,16 @@
       "series": "크레스트",
       "scheduledTime": "17:00",
       "scheduledAt": "2026-10-09T08:00:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "status": "FAILED",
+      "logRow": 91,
+      "runId": "크레스트-20261009-170501",
+      "stage": "FAILED",
+      "result": "failed",
+      "subject": "사마귀",
+      "filename": "사마귀 크레스트.png",
+      "startDelaySeconds": 301,
+      "elapsedMinutes": 6.6,
+      "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
       "date": "2026-10-09",
@@ -444,7 +444,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
@@ -460,7 +460,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
@@ -476,23 +476,23 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 경과 후 로그 생성 대기"
     },
     {
       "date": "2026-10-09",
       "series": "펄퍼스",
       "scheduledTime": "17:12",
       "scheduledAt": "2026-10-09T08:12:00.000Z",
-      "status": "PENDING",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "status": "SUCCESS",
+      "logRow": 92,
+      "runId": "펄퍼스-20261009-171030",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "패션프루트",
+      "filename": "패션프루트 펄퍼스.png",
+      "startDelaySeconds": 0,
+      "elapsedMinutes": 0,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-09",
