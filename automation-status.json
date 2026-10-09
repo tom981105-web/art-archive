@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-09T22:41:18.576Z",
+  "updatedAt": "2026-10-09T22:41:53.233Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 2,
+  "todayTotal": 4,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -22,10 +22,10 @@
   "series": [
     {
       "name": "몽화",
-      "todayCount": 0,
-      "totalCount": 39,
-      "lastSavedAt": "2026-10-09T02:35:43.300Z",
-      "lastFile": "가을빛 속 포근한 독서 몽화.png",
+      "todayCount": 2,
+      "totalCount": 41,
+      "lastSavedAt": "2026-10-09T22:41:47.904Z",
+      "lastFile": "아침이슬의 작은 기도 몽화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -263,16 +263,16 @@
     {
       "name": "뭉화",
       "folderName": "몽화",
-      "todayCount": 0,
-      "updatedToday": false,
-      "lastFile": "가을빛 속 포근한 독서 몽화.png",
-      "lastSavedAt": "2026-10-09T02:35:43.300Z",
-      "totalCount": 39,
+      "todayCount": 2,
+      "updatedToday": true,
+      "lastFile": "아침이슬의 작은 기도 몽화.png",
+      "lastSavedAt": "2026-10-09T22:41:47.904Z",
+      "totalCount": 41,
       "driveStatus": "ok"
     }
   ],
-  "manualTodayTotal": 2,
-  "manualUpdatedToday": 1,
+  "manualTodayTotal": 4,
+  "manualUpdatedToday": 2,
   "todayRunHealth": {
     "date": "2026-10-10",
     "planned": 16,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-09T22:41:34.713Z"
+    "checkedAt": "2026-10-09T22:42:09.036Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "오카피",
       "filename": "",
       "startDelaySeconds": 1954,
-      "elapsedMinutes": 66,
+      "elapsedMinutes": 66.6,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "매너티",
       "filename": "",
       "startDelaySeconds": 4188,
-      "elapsedMinutes": 25.8,
+      "elapsedMinutes": 26.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "바다거북",
       "filename": "",
       "startDelaySeconds": 1234,
-      "elapsedMinutes": 66,
+      "elapsedMinutes": 66.6,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "만타가오리",
       "filename": "",
       "startDelaySeconds": 3468,
-      "elapsedMinutes": 25.8,
+      "elapsedMinutes": 26.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
