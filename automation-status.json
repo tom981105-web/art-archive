@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T08:13:40.067Z",
+  "updatedAt": "2026-10-10T08:14:25.220Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 6,
     "status": "error",
-    "checkedAt": "2026-10-10T08:14:05.065Z"
+    "checkedAt": "2026-10-10T08:14:48.839Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "오카피",
       "filename": "",
       "startDelaySeconds": 1954,
-      "elapsedMinutes": 638.5,
+      "elapsedMinutes": 639.2,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "매너티",
       "filename": "",
       "startDelaySeconds": 4188,
-      "elapsedMinutes": 598.3,
+      "elapsedMinutes": 599,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -347,7 +347,7 @@
       "subject": "오카피",
       "filename": "",
       "startDelaySeconds": 6367,
-      "elapsedMinutes": 559,
+      "elapsedMinutes": 559.7,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "바다거북",
       "filename": "",
       "startDelaySeconds": 1234,
-      "elapsedMinutes": 638.5,
+      "elapsedMinutes": 639.2,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "만타가오리",
       "filename": "",
       "startDelaySeconds": 3468,
-      "elapsedMinutes": 598.3,
+      "elapsedMinutes": 599,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -411,7 +411,7 @@
       "subject": "청개구리",
       "filename": "",
       "startDelaySeconds": 5647,
-      "elapsedMinutes": 559,
+      "elapsedMinutes": 559.7,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
