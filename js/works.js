@@ -47,4 +47,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["노르웨이","붓결","1MG9DLxyHbKi694UO6cRZH2hV5YoEC39r"],
 ["별빛 역에서 기다린 밤","여운","1Rclso-4i8NqESqjPwSInUBWwmfVMyhRn"],
 ["사막의 여정 나야라","여운","1UUEimQ8T_qbXVOCHyD4rbjc_Qk_wW0eJ"],
-["거미","크레스트","1Ges6d-rzifpXb4MKUsgEMgeh4ZXwRvjW"]];
+["거미","크레스트","1Ges6d-rzifpXb4MKUsgEMgeh4ZXwRvjW"],
+["거미 크레스트 분리","크레스트","182um3o-V-ePbsGVdVv_ipLOn_98eYTcB"]];
