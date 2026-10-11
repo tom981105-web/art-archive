@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T08:49:30.295Z",
+  "updatedAt": "2026-10-11T08:50:10.237Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 4,
     "status": "error",
-    "checkedAt": "2026-10-11T08:49:53.482Z"
+    "checkedAt": "2026-10-11T08:50:29.217Z"
   },
   "todayRunSlots": [
     {
