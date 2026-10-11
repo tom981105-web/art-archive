@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-11T22:19:41.379Z",
+  "updatedAt": "2026-10-11T22:22:23.197Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 1,
+  "todayTotal": 2,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -64,10 +64,10 @@
     },
     {
       "name": "성수",
-      "todayCount": 0,
-      "totalCount": 19,
-      "lastSavedAt": "2026-10-09T09:26:19.139Z",
-      "lastFile": "백룡 성수.png",
+      "todayCount": 1,
+      "totalCount": 20,
+      "lastSavedAt": "2026-10-11T22:21:17.996Z",
+      "lastFile": "봉황 성수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -276,14 +276,14 @@
   "todayRunHealth": {
     "date": "2026-10-12",
     "planned": 16,
-    "success": 0,
-    "failed": 6,
+    "success": 2,
+    "failed": 5,
     "stalled": 0,
-    "missed": 2,
+    "missed": 1,
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-11T22:20:14.318Z"
+    "checkedAt": "2026-10-11T22:22:37.623Z"
   },
   "todayRunSlots": [
     {
@@ -315,7 +315,7 @@
       "subject": "카피바라",
       "filename": "",
       "startDelaySeconds": 2490,
-      "elapsedMinutes": 35.7,
+      "elapsedMinutes": 38.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -323,16 +323,16 @@
       "series": "신수",
       "scheduledTime": "06:06",
       "scheduledAt": "2026-10-11T21:06:00.000Z",
-      "status": "FAILED",
-      "logRow": 131,
-      "runId": "신수-20261012-003224",
-      "stage": "FAILED",
-      "result": "failed",
+      "status": "SUCCESS",
+      "logRow": 137,
+      "runId": "신수-20261012-071547",
+      "stage": "COMPLETED",
+      "result": "success",
       "subject": "일각고래",
-      "filename": "",
-      "startDelaySeconds": 0,
-      "elapsedMinutes": 407.8,
-      "diagnosis": "실행 로그가 실패로 종료됨"
+      "filename": "일각고래 신수.png",
+      "startDelaySeconds": 4187,
+      "elapsedMinutes": 6.8,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-12",
@@ -347,7 +347,7 @@
       "subject": "왕관앵무",
       "filename": "",
       "startDelaySeconds": 0,
-      "elapsedMinutes": 407.8,
+      "elapsedMinutes": 410.2,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "장수풍뎅이",
       "filename": "",
       "startDelaySeconds": 1770,
-      "elapsedMinutes": 35.7,
+      "elapsedMinutes": 38.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -387,16 +387,16 @@
       "series": "성수",
       "scheduledTime": "06:18",
       "scheduledAt": "2026-10-11T21:18:00.000Z",
-      "status": "MISSED",
-      "logRow": "",
-      "runId": "",
-      "stage": "",
-      "result": "",
-      "subject": "",
-      "filename": "",
-      "startDelaySeconds": null,
-      "elapsedMinutes": null,
-      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
+      "status": "SUCCESS",
+      "logRow": 138,
+      "runId": "성수-20261012-071547",
+      "stage": "COMPLETED",
+      "result": "success",
+      "subject": "봉황",
+      "filename": "봉황 성수.png",
+      "startDelaySeconds": 3467,
+      "elapsedMinutes": 6.8,
+      "diagnosis": "실행 완료"
     },
     {
       "date": "2026-10-12",
