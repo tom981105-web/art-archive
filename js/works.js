@@ -51,4 +51,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["거미 크레스트 분리","크레스트","182um3o-V-ePbsGVdVv_ipLOn_98eYTcB"],
 ["리치","펄퍼스","1fdHOMLaKP1WD3d6UkNOrIeusZQ4g7pCU"],
 ["거미","크레스트","1786FbDmzKLRXQgpYan3DqSzy3DBOwwce"],
-["천산갑","크레스트","1wQZU6aa1RqoZTDt18SqBU2EJjbGstbW-"]];
+["천산갑","크레스트","1wQZU6aa1RqoZTDt18SqBU2EJjbGstbW-"],
+["구아바","펄퍼스","1O6tmKgcM0jJEeqXnQEFIIRMOx947Lv80"]];
