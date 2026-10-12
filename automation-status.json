@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T08:21:55.863Z",
+  "updatedAt": "2026-10-12T08:23:02.338Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 6,
     "status": "error",
-    "checkedAt": "2026-10-12T08:22:38.048Z"
+    "checkedAt": "2026-10-12T08:23:55.916Z"
   },
   "todayRunSlots": [
     {
@@ -299,7 +299,7 @@
       "subject": "",
       "filename": "",
       "startDelaySeconds": 15900,
-      "elapsedMinutes": 417.6,
+      "elapsedMinutes": 418.9,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -315,7 +315,7 @@
       "subject": "카피바라",
       "filename": "",
       "startDelaySeconds": 2490,
-      "elapsedMinutes": 638.1,
+      "elapsedMinutes": 639.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "일각고래",
       "filename": "일각고래 신수.png",
       "startDelaySeconds": 4187,
-      "elapsedMinutes": 606.9,
+      "elapsedMinutes": 608.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "장수풍뎅이",
       "filename": "",
       "startDelaySeconds": 1770,
-      "elapsedMinutes": 638.1,
+      "elapsedMinutes": 639.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "봉황",
       "filename": "봉황 성수.png",
       "startDelaySeconds": 3467,
-      "elapsedMinutes": 606.9,
+      "elapsedMinutes": 608.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -427,7 +427,7 @@
       "subject": "바다거북",
       "filename": "바다거북 크레스트.png",
       "startDelaySeconds": 1071,
-      "elapsedMinutes": 4.8,
+      "elapsedMinutes": 6.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -491,7 +491,7 @@
       "subject": "망고스틴",
       "filename": "망고스틴 펄퍼스.png",
       "startDelaySeconds": 351,
-      "elapsedMinutes": 4.8,
+      "elapsedMinutes": 6.1,
       "diagnosis": "실행 완료"
     },
     {
