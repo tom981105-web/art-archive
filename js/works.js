@@ -57,4 +57,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["쥐가오리","잉크","1HMgmSRZmcyZdc8cR0sOj6Ao4fZpvGbMo"],
 ["일각고래","신수","1kse43moIQjtYCrdO1l6CG3_zD_zlsFJj"],
 ["봉황","성수","1-PbpFMStub8zxsyHpiYZKtHkkTyfqslg"],
-["바다거북","크레스트","1YEqDyAKP79_8SUVVWPeyL7r1erQh5jAz"]];
+["바다거북","크레스트","1YEqDyAKP79_8SUVVWPeyL7r1erQh5jAz"],
+["망고스틴","펄퍼스","1wEkjG1RF1mPqR6HMKR7VGYooU1h0pQ00"]];
