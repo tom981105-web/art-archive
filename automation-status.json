@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-12T10:07:57.748Z",
+  "updatedAt": "2026-10-12T10:09:08.547Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-12T10:08:38.986Z"
+    "checkedAt": "2026-10-12T10:09:53.474Z"
   },
   "todayRunSlots": [
     {
@@ -299,7 +299,7 @@
       "subject": "",
       "filename": "",
       "startDelaySeconds": 15900,
-      "elapsedMinutes": 523.6,
+      "elapsedMinutes": 524.9,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -315,7 +315,7 @@
       "subject": "카피바라",
       "filename": "",
       "startDelaySeconds": 2490,
-      "elapsedMinutes": 744.1,
+      "elapsedMinutes": 745.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -331,7 +331,7 @@
       "subject": "일각고래",
       "filename": "일각고래 신수.png",
       "startDelaySeconds": 4187,
-      "elapsedMinutes": 712.9,
+      "elapsedMinutes": 714.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -379,7 +379,7 @@
       "subject": "장수풍뎅이",
       "filename": "",
       "startDelaySeconds": 1770,
-      "elapsedMinutes": 744.1,
+      "elapsedMinutes": 745.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -395,7 +395,7 @@
       "subject": "봉황",
       "filename": "봉황 성수.png",
       "startDelaySeconds": 3467,
-      "elapsedMinutes": 712.9,
+      "elapsedMinutes": 714.1,
       "diagnosis": "실행 완료"
     },
     {
@@ -427,7 +427,7 @@
       "subject": "바다거북",
       "filename": "바다거북 크레스트.png",
       "startDelaySeconds": 1071,
-      "elapsedMinutes": 110.8,
+      "elapsedMinutes": 112,
       "diagnosis": "실행 완료"
     },
     {
@@ -443,7 +443,7 @@
       "subject": "바다수달",
       "filename": "",
       "startDelaySeconds": 2392,
-      "elapsedMinutes": 85.8,
+      "elapsedMinutes": 87,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -459,7 +459,7 @@
       "subject": "사이가영양",
       "filename": "",
       "startDelaySeconds": 4606,
-      "elapsedMinutes": 45.9,
+      "elapsedMinutes": 47.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -491,7 +491,7 @@
       "subject": "망고스틴",
       "filename": "망고스틴 펄퍼스.png",
       "startDelaySeconds": 351,
-      "elapsedMinutes": 110.8,
+      "elapsedMinutes": 112,
       "diagnosis": "실행 완료"
     },
     {
@@ -507,7 +507,7 @@
       "subject": "벌새",
       "filename": "",
       "startDelaySeconds": 1672,
-      "elapsedMinutes": 85.8,
+      "elapsedMinutes": 87,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -523,7 +523,7 @@
       "subject": "장수거북",
       "filename": "",
       "startDelaySeconds": 3887,
-      "elapsedMinutes": 45.9,
+      "elapsedMinutes": 47.1,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
