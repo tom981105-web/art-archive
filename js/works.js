@@ -62,4 +62,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["설표","수채화","1CSu__vNGQgOMQ9BDCpS9t6XejJs4VXGP"],
 ["설표","융화","1HaPxK051Bt64DcL6T-mj8ODxHrTIWzXm"],
 ["만타가오리","성수","1JqFJc7K07O-MxG8DbiT2LXbYFkUeYyqn"],
-["바다코끼리","수채화","1E6vNsAtv7X4RILrRy9Lti5YwWRKnyiJV"]];
+["바다코끼리","수채화","1E6vNsAtv7X4RILrRy9Lti5YwWRKnyiJV"],
+["사마귀","크레스트","1sd8dW5f3ydhGR2LZOT0ScpmX17rEAw4_"]];
