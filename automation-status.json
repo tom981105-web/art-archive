@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T11:13:32.945Z",
+  "updatedAt": "2026-10-15T11:14:24.425Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-15T11:13:55.365Z"
+    "checkedAt": "2026-10-15T11:14:38.129Z"
   },
   "todayRunSlots": [
     {
@@ -475,7 +475,7 @@
       "subject": "벌새",
       "filename": "a_high_resolution_watercolor_illustration_on_a_whi.png",
       "startDelaySeconds": 0,
-      "elapsedMinutes": 489.7,
+      "elapsedMinutes": 490.4,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -539,7 +539,7 @@
       "subject": "갯가재",
       "filename": "",
       "startDelaySeconds": 40,
-      "elapsedMinutes": 433.3,
+      "elapsedMinutes": 434,
       "diagnosis": "실행 로그가 실패로 종료됨"
     }
   ]
