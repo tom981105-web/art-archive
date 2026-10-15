@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-15T11:14:24.425Z",
+  "updatedAt": "2026-10-15T13:07:08.385Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 5,
+  "todayTotal": 6,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -78,10 +78,10 @@
     },
     {
       "name": "수채화",
-      "todayCount": 0,
-      "totalCount": 29,
-      "lastSavedAt": "2026-10-13T10:05:39.875Z",
-      "lastFile": "바다코끼리 수채화.png",
+      "todayCount": 1,
+      "totalCount": 30,
+      "lastSavedAt": "2026-10-15T13:02:19.715Z",
+      "lastFile": "천산갑 수채화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-15T11:14:38.129Z"
+    "checkedAt": "2026-10-15T13:08:10.041Z"
   },
   "todayRunSlots": [
     {
@@ -475,7 +475,7 @@
       "subject": "벌새",
       "filename": "a_high_resolution_watercolor_illustration_on_a_whi.png",
       "startDelaySeconds": 0,
-      "elapsedMinutes": 490.4,
+      "elapsedMinutes": 604,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -539,7 +539,7 @@
       "subject": "갯가재",
       "filename": "",
       "startDelaySeconds": 40,
-      "elapsedMinutes": 434,
+      "elapsedMinutes": 547.5,
       "diagnosis": "실행 로그가 실패로 종료됨"
     }
   ]
