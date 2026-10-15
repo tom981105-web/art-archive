@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-15T09:03:33.203Z",
+  "updatedAt": "2026-10-15T11:13:32.945Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 4,
+  "todayTotal": 5,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 0,
-      "totalCount": 24,
-      "lastSavedAt": "2026-10-11T22:18:56.215Z",
-      "lastFile": "일각고래 신수.png",
+      "todayCount": 1,
+      "totalCount": 25,
+      "lastSavedAt": "2026-10-15T11:02:20.582Z",
+      "lastFile": "오리너구리 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-15T09:04:10.550Z"
+    "checkedAt": "2026-10-15T11:13:55.365Z"
   },
   "todayRunSlots": [
     {
@@ -475,7 +475,7 @@
       "subject": "벌새",
       "filename": "a_high_resolution_watercolor_illustration_on_a_whi.png",
       "startDelaySeconds": 0,
-      "elapsedMinutes": 360,
+      "elapsedMinutes": 489.7,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -539,7 +539,7 @@
       "subject": "갯가재",
       "filename": "",
       "startDelaySeconds": 40,
-      "elapsedMinutes": 303.5,
+      "elapsedMinutes": 433.3,
       "diagnosis": "실행 로그가 실패로 종료됨"
     }
   ]
