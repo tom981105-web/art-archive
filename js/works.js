@@ -66,4 +66,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["사마귀","크레스트","1sd8dW5f3ydhGR2LZOT0ScpmX17rEAw4_"],
 ["해마","잉크","15F-EPOfJMhrwj0WXZGVisL-4K8L6MW0s"],
 ["호랑이","크레스트","1hugw4q2DQ4hTRA-BuQ6XH2rGQnroVVYw"],
-["아프리카호저","묵수","1WuGIZMZd8bmDrDU_R0t9-TgHfuepy6Ww"]];
+["아프리카호저","묵수","1WuGIZMZd8bmDrDU_R0t9-TgHfuepy6Ww"],
+["오리너구리","신수","15E8HVIyQTMFgV8T4-f_k632xHXYzHDOC"]];
