@@ -70,4 +70,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["오리너구리","신수","15E8HVIyQTMFgV8T4-f_k632xHXYzHDOC"],
 ["천산갑","수채화","1HOJOoQmsSvy7ZYeYkGKSGBilUIGubuJl"],
 ["쥐가오리","크레스트","1EVlNwpHHo5ggqoxnGjLAyRRfrRsrCqkQ"],
-["개구리","크레스트","1EX8kMtVlfBqNlRPmSf6-orZ3DtyjfEe6"]];
+["개구리","크레스트","1EX8kMtVlfBqNlRPmSf6-orZ3DtyjfEe6"],
+["카카포","묵수","1MiVEeepjz1QghfkrXtA02_ahk2T05FFl"]];
