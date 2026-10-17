@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-17T11:04:27.358Z",
+  "updatedAt": "2026-10-17T13:59:25.524Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 4,
+  "todayTotal": 5,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -78,10 +78,10 @@
     },
     {
       "name": "수채화",
-      "todayCount": 0,
-      "totalCount": 30,
-      "lastSavedAt": "2026-10-15T13:02:19.715Z",
-      "lastFile": "천산갑 수채화.png",
+      "todayCount": 1,
+      "totalCount": 31,
+      "lastSavedAt": "2026-10-17T13:57:30.420Z",
+      "lastFile": "홍학 수채화.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -283,7 +283,7 @@
     "running": 0,
     "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-17T11:04:44.674Z"
+    "checkedAt": "2026-10-17T14:00:52.705Z"
   },
   "todayRunSlots": [
     {
@@ -475,7 +475,7 @@
       "subject": "큰개미핥기",
       "filename": "a_dreamy_watercolor_illustration_on_white_backgrou.png",
       "startDelaySeconds": 111,
-      "elapsedMinutes": 482.9,
+      "elapsedMinutes": 659,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
