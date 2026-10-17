@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-17T09:03:26.958Z",
+  "updatedAt": "2026-10-17T11:04:27.358Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 3,
+  "todayTotal": 4,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 0,
-      "totalCount": 25,
-      "lastSavedAt": "2026-10-15T11:02:20.582Z",
-      "lastFile": "오리너구리 신수.png",
+      "todayCount": 1,
+      "totalCount": 26,
+      "lastSavedAt": "2026-10-17T11:03:39.268Z",
+      "lastFile": "큰홍학 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -279,11 +279,11 @@
     "success": 0,
     "failed": 1,
     "stalled": 0,
-    "missed": 14,
+    "missed": 15,
     "running": 0,
-    "pending": 1,
+    "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-17T09:03:51.273Z"
+    "checkedAt": "2026-10-17T11:04:44.674Z"
   },
   "todayRunSlots": [
     {
@@ -475,7 +475,7 @@
       "subject": "큰개미핥기",
       "filename": "a_dreamy_watercolor_illustration_on_white_backgrou.png",
       "startDelaySeconds": 111,
-      "elapsedMinutes": 362,
+      "elapsedMinutes": 482.9,
       "diagnosis": "실행 로그가 실패로 종료됨"
     },
     {
@@ -531,7 +531,7 @@
       "series": "융화",
       "scheduledTime": "17:21",
       "scheduledAt": "2026-10-17T08:21:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -540,7 +540,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예정시각 경과 후 로그 생성 대기"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     }
   ]
 }
