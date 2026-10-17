@@ -72,4 +72,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["쥐가오리","크레스트","1EVlNwpHHo5ggqoxnGjLAyRRfrRsrCqkQ"],
 ["개구리","크레스트","1EX8kMtVlfBqNlRPmSf6-orZ3DtyjfEe6"],
 ["카카포","묵수","1MiVEeepjz1QghfkrXtA02_ahk2T05FFl"],
-["잠자리","크레스트","1klks9Y94aSe08KVuUDh8xYB6fY7eVbhW"]];
+["잠자리","크레스트","1klks9Y94aSe08KVuUDh8xYB6fY7eVbhW"],
+["기린","크레스트","1rcSQgW3jzDliQllP3ld6a3HRo-HSzQg2"]];
