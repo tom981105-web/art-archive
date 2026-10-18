@@ -76,4 +76,5 @@ const works=[["부엉이","크레스트","1TOnYN51BDZLRKpabgDR47LBtIyraXMTo"],["
 ["기린","크레스트","1rcSQgW3jzDliQllP3ld6a3HRo-HSzQg2"],
 ["사이가영양","묵수","1CT2KDdIrQfNgFY2ez_MdhS48ibqqJ9wR"],
 ["큰홍학","신수","1cLknl6ZGaFqDJ7E_xsGNIA_C7R3lS2y8"],
-["홍학","수채화","1lHHP6z8pFvK2QPK3GHMdRLXPfbaxxqPm"]];
+["홍학","수채화","1lHHP6z8pFvK2QPK3GHMdRLXPfbaxxqPm"],
+["큰개미핥기","신수","1rQ0-yQrPVHrDBzNCtULUroGzh-42eikX"]];
