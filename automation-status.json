@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T01:01:26.971Z",
+  "updatedAt": "2026-10-19T02:05:29.456Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
@@ -64,10 +64,10 @@
     },
     {
       "name": "성수",
-      "todayCount": 0,
-      "totalCount": 21,
-      "lastSavedAt": "2026-10-12T22:28:02.648Z",
-      "lastFile": "만타가오리 성수.png",
+      "todayCount": 1,
+      "totalCount": 22,
+      "lastSavedAt": "2026-10-19T02:04:41.271Z",
+      "lastFile": "바다거북 성수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -92,7 +92,7 @@
     },
     {
       "name": "신수",
-      "todayCount": 1,
+      "todayCount": 0,
       "totalCount": 27,
       "lastSavedAt": "2026-10-18T01:01:06.867Z",
       "lastFile": "큰개미핥기 신수.png",
@@ -274,7 +274,7 @@
   "manualTodayTotal": 0,
   "manualUpdatedToday": 0,
   "todayRunHealth": {
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "planned": 16,
     "success": 0,
     "failed": 0,
@@ -283,14 +283,14 @@
     "running": 0,
     "pending": 8,
     "status": "error",
-    "checkedAt": "2026-10-18T01:01:44.023Z"
+    "checkedAt": "2026-10-19T02:05:46.414Z"
   },
   "todayRunSlots": [
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "크레스트",
       "scheduledTime": "06:00",
-      "scheduledAt": "2026-10-17T21:00:00.000Z",
+      "scheduledAt": "2026-10-18T21:00:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -303,10 +303,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "묵수",
       "scheduledTime": "06:03",
-      "scheduledAt": "2026-10-17T21:03:00.000Z",
+      "scheduledAt": "2026-10-18T21:03:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -319,10 +319,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "신수",
       "scheduledTime": "06:06",
-      "scheduledAt": "2026-10-17T21:06:00.000Z",
+      "scheduledAt": "2026-10-18T21:06:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -335,10 +335,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "수채화",
       "scheduledTime": "06:09",
-      "scheduledAt": "2026-10-17T21:09:00.000Z",
+      "scheduledAt": "2026-10-18T21:09:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -351,10 +351,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "펄퍼스",
       "scheduledTime": "06:12",
-      "scheduledAt": "2026-10-17T21:12:00.000Z",
+      "scheduledAt": "2026-10-18T21:12:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -367,10 +367,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "잉크",
       "scheduledTime": "06:15",
-      "scheduledAt": "2026-10-17T21:15:00.000Z",
+      "scheduledAt": "2026-10-18T21:15:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -383,10 +383,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "성수",
       "scheduledTime": "06:18",
-      "scheduledAt": "2026-10-17T21:18:00.000Z",
+      "scheduledAt": "2026-10-18T21:18:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -399,10 +399,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "융화",
       "scheduledTime": "06:21",
-      "scheduledAt": "2026-10-17T21:21:00.000Z",
+      "scheduledAt": "2026-10-18T21:21:00.000Z",
       "status": "MISSED",
       "logRow": "",
       "runId": "",
@@ -415,10 +415,10 @@
       "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "크레스트",
       "scheduledTime": "17:00",
-      "scheduledAt": "2026-10-18T08:00:00.000Z",
+      "scheduledAt": "2026-10-19T08:00:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -431,10 +431,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "묵수",
       "scheduledTime": "17:03",
-      "scheduledAt": "2026-10-18T08:03:00.000Z",
+      "scheduledAt": "2026-10-19T08:03:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -447,10 +447,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "신수",
       "scheduledTime": "17:06",
-      "scheduledAt": "2026-10-18T08:06:00.000Z",
+      "scheduledAt": "2026-10-19T08:06:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -463,10 +463,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "수채화",
       "scheduledTime": "17:09",
-      "scheduledAt": "2026-10-18T08:09:00.000Z",
+      "scheduledAt": "2026-10-19T08:09:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -479,10 +479,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "펄퍼스",
       "scheduledTime": "17:12",
-      "scheduledAt": "2026-10-18T08:12:00.000Z",
+      "scheduledAt": "2026-10-19T08:12:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -495,10 +495,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "잉크",
       "scheduledTime": "17:15",
-      "scheduledAt": "2026-10-18T08:15:00.000Z",
+      "scheduledAt": "2026-10-19T08:15:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -511,10 +511,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "성수",
       "scheduledTime": "17:18",
-      "scheduledAt": "2026-10-18T08:18:00.000Z",
+      "scheduledAt": "2026-10-19T08:18:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
@@ -527,10 +527,10 @@
       "diagnosis": "예약시각 전"
     },
     {
-      "date": "2026-10-18",
+      "date": "2026-10-19",
       "series": "융화",
       "scheduledTime": "17:21",
-      "scheduledAt": "2026-10-18T08:21:00.000Z",
+      "scheduledAt": "2026-10-19T08:21:00.000Z",
       "status": "PENDING",
       "logRow": "",
       "runId": "",
