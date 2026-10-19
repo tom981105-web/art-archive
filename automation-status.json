@@ -1,12 +1,12 @@
 {
-  "updatedAt": "2026-10-19T02:05:29.456Z",
+  "updatedAt": "2026-10-19T11:03:39.142Z",
   "timezone": "Asia/Seoul",
   "schedule": [
     "06:00–06:21",
     "17:00–17:21"
   ],
   "dailyPlanned": 16,
-  "todayTotal": 1,
+  "todayTotal": 2,
   "todayAttempts": null,
   "todayRegenerations": null,
   "avgAttemptsPerArtwork": null,
@@ -92,10 +92,10 @@
     },
     {
       "name": "신수",
-      "todayCount": 0,
-      "totalCount": 27,
-      "lastSavedAt": "2026-10-18T01:01:06.867Z",
-      "lastFile": "큰개미핥기 신수.png",
+      "todayCount": 1,
+      "totalCount": 28,
+      "lastSavedAt": "2026-10-19T11:02:18.755Z",
+      "lastFile": "바다이구아나 신수.png",
       "driveStatus": "ok",
       "todayAttempts": null,
       "todayRegenerations": null,
@@ -279,11 +279,11 @@
     "success": 0,
     "failed": 0,
     "stalled": 0,
-    "missed": 8,
+    "missed": 16,
     "running": 0,
-    "pending": 8,
+    "pending": 0,
     "status": "error",
-    "checkedAt": "2026-10-19T02:05:46.414Z"
+    "checkedAt": "2026-10-19T11:04:12.137Z"
   },
   "todayRunSlots": [
     {
@@ -419,7 +419,7 @@
       "series": "크레스트",
       "scheduledTime": "17:00",
       "scheduledAt": "2026-10-19T08:00:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -428,14 +428,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "묵수",
       "scheduledTime": "17:03",
       "scheduledAt": "2026-10-19T08:03:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -444,14 +444,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "신수",
       "scheduledTime": "17:06",
       "scheduledAt": "2026-10-19T08:06:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -460,14 +460,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "수채화",
       "scheduledTime": "17:09",
       "scheduledAt": "2026-10-19T08:09:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -476,14 +476,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "펄퍼스",
       "scheduledTime": "17:12",
       "scheduledAt": "2026-10-19T08:12:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -492,14 +492,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "잉크",
       "scheduledTime": "17:15",
       "scheduledAt": "2026-10-19T08:15:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -508,14 +508,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "성수",
       "scheduledTime": "17:18",
       "scheduledAt": "2026-10-19T08:18:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -524,14 +524,14 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     },
     {
       "date": "2026-10-19",
       "series": "융화",
       "scheduledTime": "17:21",
       "scheduledAt": "2026-10-19T08:21:00.000Z",
-      "status": "PENDING",
+      "status": "MISSED",
       "logRow": "",
       "runId": "",
       "stage": "",
@@ -540,7 +540,7 @@
       "filename": "",
       "startDelaySeconds": null,
       "elapsedMinutes": null,
-      "diagnosis": "예약시각 전"
+      "diagnosis": "예정시각 후 45분이 지났지만 실행 로그가 없음"
     }
   ]
 }
